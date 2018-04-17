@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta name="renderer" content="webkit"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>下拉框</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common/select-box.css">
+    <script type="text/javascript" src="../../js/require.js"></script>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script>require(['common/select-box']);</script>
+</head>
+<body>
+    <div class="select-box">
+        <!-- 下拉框 -->
+        <a href="javascript:void(0)" class="select-choice">
+            <!-- 选中 -->
+            <div class="select-text">列表内容1</div>
+            <input type="text" value="1" class="select-input" disabled hidden>
+            <!-- 下拉icon -->
+            <span class="select-arrow"><i class="fa fa-angle-down"></i></span>
+        </a>
+        <!-- 下拉列表 -->
+        <ul class="select-drop">
+            <!--下拉列表对应的内容-->
+            <li data="1">列表内容1</li>
+            <li data="2">列表内容2</li>
+            <li data="3">列表内容3</li>
+            <li data="4">列表内容4</li>
+        </ul>
+    </div>
+</body>
+</html>

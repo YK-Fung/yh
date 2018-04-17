@@ -1,0 +1,187 @@
+@import url(../hy-common2.less);
+
+/* 内容 */
+.ctn{
+	width: auto;
+	padding-bottom: 45px;
+}
+.main{
+	width: auto;
+	margin: 30px 35px 0;
+}
+/* 列表导航 */
+.toggle-top{
+	overflow: hidden;
+	.lis-nav{
+		overflow: hidden;
+		float: left;
+		li{
+			height: 38px;
+			line-height: 38px;
+			text-align: center;
+			float: left;
+			color:#333;
+			margin-right: 10px;
+			background-color: #f4f4f4;
+			cursor: pointer;
+			font-size: 14px;
+		}
+		li.active{
+			background-color: #fff;
+		}   
+		a{
+			display: block;
+			padding:0 15px;
+		}
+	}
+	.add{
+		width: 90px;
+		height: 27px;
+		background-color: @base;
+		float: right;
+		border:0;
+		color:#fff;
+		line-height: 27px;
+		text-align: center;
+	}
+}
+
+/* 账号设置 */
+.accounts-ctn{
+	min-height: 665px;
+	background-color: #fff;
+	padding:35px 30px 40px;
+	overflow: hidden;
+}
+/* 部门角色 */
+.role-edit{
+	width: 100%;
+	float: right;
+	/* 筛选条件 */
+	.condition{
+		padding-left: 10px;
+		height: 32px;
+	}
+	.select{
+		.tit{
+			color:#666;
+			float: left;
+			line-height: 32px;
+		}
+	}
+}
+/* 筛选结果 */
+.result{
+	width: 100%;
+	border:1px solid #ececec;
+	padding:0 7px 7px;
+	margin-top: 15px;
+	/* 表头 */
+	.thead{
+		width: 100%;
+		height: 42px;
+		line-height: 42px;
+		color:#2c2e2f;
+		text-align: left;
+		border-bottom: 1px solid #ececec;
+		margin-bottom: 1px;
+		li{
+			width: 20%;
+			float: left;
+			font-weight: bold;
+			padding: 0 5px;
+		}
+		li:first-child{
+			padding-left: 3%;
+		}
+		li.lenth{
+			width: 40%;
+		}
+	}
+	.tbody{
+		width: 100%;
+		color:#979898;
+		text-align: left;
+		border-top: 1px solid #ececec;
+		.line{
+			height: 42px;
+			border-bottom: 1px solid #ececec;
+			line-height: 42px;
+			position: relative;
+		}
+		.line:nth-of-type(odd){
+			background-color: #f9f9f9;
+		}
+		ul{
+			li{
+				width: 20%;
+				height: 42px;
+				float: left;
+			    padding: 0 5px;
+			}
+			li:first-child{
+				padding-left: 3%;
+			}		
+			li.lenth{
+				width: 40%;
+				white-space: nowrap;
+			    text-overflow: ellipsis;
+			    display: inline-block;
+			    overflow: hidden;
+			}
+			a{
+				cursor: pointer;
+			}
+		}
+	}
+}
+/*权限详情*/
+.jurisdiction{
+	width: 275px;
+	position: absolute;
+	top: 52px;
+	left: 40%;
+	z-index: 555;
+	display: none;
+	.detail-head{
+		width: 275px;
+		height: 34px;
+		padding: 0 15px;
+		line-height: 34px;
+		color: #fff;
+		background:#2c2e2f;
+		.head-l{
+			float: left;
+		}
+		.head-r{
+			float: right;
+		}
+	}
+	.detail-body{
+		width: 275px;
+		display: block;
+		padding: 10px 15px;
+		overflow: hidden;
+		background: #fff;
+		border: 1px solid #ddd;
+		line-height: 22px;
+	}
+	.detail-foot{
+		width: 0;
+	    height: 0;
+	    border-left: 10px solid transparent;
+	    border-right: 10px solid transparent;
+	    border-bottom: 10px solid #2c2e2f;
+	    position: absolute;
+	    top: -10px;
+	    left:50%;
+	    margin-left: -10px;
+	}
+}
+/* 下拉功能 */
+.select-box{
+	width: 135px;
+}
+.tb-id{
+	display: none;
+}

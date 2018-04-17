@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员中心-订单管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/order/gy-detail-common.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['order/order-detail']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-buyer" second-title="cg-order"></div>
+	
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">订单管理</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 订单管理 / 订单详情</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<div class="main-ctn">
+						<!-- 订单状态 -->
+						<div class="order-state">
+							<div class="middle">
+								<p>订单状态：待支付</p>
+							</div>
+						</div>
+						<!-- 类型名字 -->
+						<div class="type-name">订单信息<span class="arrow active"></span></div>
+						<!-- 订单信息 -->
+						<ul class="order-infor toggle-ctn active">
+							<!-- <li>
+								<div class="detail-title">付款信息</div>
+								<div class="overflow">
+									<div class="lf">
+										<div class="group">
+											<label>订单号：</label>
+											<span>1703200823157015</span>
+										</div>
+										<div class="group">
+											<label>下单时间：</label>
+											<span>2017-03-20 08:23:15</span>
+										</div>
+									</div>
+									<div class="rt">
+										<div class="group">
+											<label>交易方式：</label>
+											<span>担保支付</span>
+										</div>
+										<div class="group">
+											<label>付款时间：</label>
+											<span>未支付</span>
+										</div>
+									</div>
+								</div>
+							</li> -->
+							<li>
+								<div class="detail-title">采购商信息</div>
+								<div class="overflow">
+									<div class="lf">
+										<div class="group">
+											<label>采购商：</label>
+											<span>广州医药有限公司</span>
+										</div>
+									</div>
+									<div class="rt">
+										<div class="group">
+											<label>联系人：</label>
+											<span>李先生</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="position">
+								<div class="detail-title">收货信息</div>
+								<div class="overflow">
+									<div class="lf">
+										<div class="group">
+											<label>收货地址：</label>
+											<span>江X省-南X市-新X县 江X省南X市新建区子实路858号</span>
+										</div>
+										<div class="group">
+											<label>留言：</label>
+											<span>麻烦发德邦物流，货票同行，谢谢</span>
+										</div>
+									</div>
+									<div class="rt">
+										<div class="group">
+											<span>林先生</span>
+											<span>13645896214</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- 对公交易才有 -->
+							<li>
+								<div class="detail-title">商家收款信息</div>
+								<div class="overflow">
+									<div class="lf">
+										<div class="group">
+											<label>开户银行：</label>
+											<span>中国建设银行</span>
+										</div>
+										<div class="group">
+											<label>开户网点：</label>
+											<span>中国建设银行琶洲分行</span>
+										</div>
+									</div>
+									<div class="rt">
+										<div class="group">
+											<label>收款户名：</label>
+											<span>陆丰市医药公司</span>
+										</div>
+										<div class="group">
+											<label>收款账号：</label>
+											<span>3626254566665845632</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="pay-public">
+								<div class="detail-title">收款凭证</div>
+								<!-- 补全凭证 -->
+								<div class="certificate">
+									<div class="message">
+										<div class="pull-left">剩余尾款：<span class="red">￥<i id="tailSection">1000</i></span></div>
+										<a class="blue pull-right onload-proof"  href="javascript:void(0)">补全凭证</a>
+									</div>
+									<ul class="proof-list">
+										<!-- 循环图片 -->
+										<li>
+											<div class="img">
+												<img src="../../img/placeholder.jpg">
+												<!-- 放大镜 -->
+												<div class="magnifying-icon"></div>
+												<!-- 删除 -->
+												<span class="delete-icon"></span>
+											</div>
+											<p class="sum">本次转账￥<span>500</span></p>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<!-- 类型名字 -->
+						<div class="type-name">采购清单<span class="arrow active"></span></div>
+						<!-- 采购清单 -->
+						<div class="order-ctn toggle-ctn active">
+							<!-- 表格标题 -->
+							<ul class="table-tit">
+								<li>商品信息</li>
+								<li>单价/数量</li>
+								<li>小计</li>
+							</ul>
+							<!-- 产品列表 -->
+							<div class="product-list">
+								<ul>
+									<!-- 一个订单最多显示5个产品-->
+									<li>
+										<!-- 商品信息 -->
+										<div class="message">
+											<!-- 居中 -->
+											<div class="middle">
+												<div class="photo">
+													<a href="#"><img src="../../img/placeholder.jpg"></a>
+												</div>
+												<div class="product-ctn">
+													<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+													<p>成都倍特药业有限公司</p>
+													<p>规<span class="blank"></span>格：<span>0.1g*6s</span></p> 
+													<p>批<span class="blank"></span>号：<span>161005</span></p>    
+													<p>有效期至：<span>2019-10-10</span></p>
+												</div>
+											</div>
+										</div>
+										<!-- 单价/数量 -->
+										<div class="num">
+											<!-- 居中 -->
+											<div class="middle">
+												<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+												<p><label>数量(盒)：</label><span class="red">200</span></p>
+											</div>
+										</div>
+										<!-- 小计 -->
+										<div class="subtotal">
+											<!-- 居中 -->
+											<div class="middle">
+												<p class="total-price red">￥<span>700.00</span></p>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<!-- 超出五条信息插入》》查看更多商品 -->
+								<a href="#" class="more-link">查看更多商品</a>
+								<!-- 总计 -->
+								<div class="order-total">
+									<div class="total-ctn">
+										<div class="total-t">
+											<p>
+												<label>物流费用：</label>
+												<span class="red inline-block">¥<i>20</i></span>
+											</p>
+											<p>
+												<label>优惠金额：</label>
+												<span class="red discounts"><i class="float">-</i>¥<i>100</i></span>
+											</p>
+											<p>
+												<label>货品总金额：</label>
+												<span class="red inline-block">¥<i>3500</i></span>
+											</p>
+										</div>
+										<div class="total-b">
+											<p><label>应付总额（含运费）：</label><span class="red inline-block">¥<i class="pay-total-sum">3620</i></span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 按钮组 -->
+						<div class="btn-group">
+							<!-- 对公交易 立即发货 -->
+							<a href="javascript:void(0)" class="active immediately-deliver">立即发货</a>
+							<!-- 对公交易 确认收款 -->
+							<a href="javascript:void(0)" class="active confirm-gathering">确认收款</a>
+							<a href="javascript:void(0)" class="cancel-order">取消订单</a>
+							<a href="#">签订合同</a>
+							<a href="#">返回</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部信息 --> 
+			<include src="../include/footer.html"></include>
+		</div>
+		<!-- 查看图片 -->
+		<div class="check-photo">
+			<span class="close fa fa-remove"></span>
+			<img src="">
+		</div>
+		<!-- 弹窗 提示 -->
+		<div class="pop-shade" id="pop-tip-txt">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">提醒</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<p class="ctn-txt"></p>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-yes">确定</div>
+					<!-- 取消按钮 -->
+					<div class="btn btn-no">返回</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗 取消订单 -->
+		<div class="pop-shade" id="pop-cancel-order">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">提醒</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<p class="tip">请选择取消订单的原因：</p>
+					<div class="mar20">
+						<div class="radio active">
+							<label></label>
+							<input type="radio" name="a" checked>
+						</div>
+						<span>拍错了/不想要了</span>
+					</div>
+					<div class="mar20">
+						<div class="radio">
+							<label></label>
+							<input type="radio" name="a">
+						</div>
+						<span>缺货</span>
+					</div>
+					<div class="mar20">
+						<div class="radio">
+							<label></label>
+							<input type="radio" name="a">
+						</div>
+						<span>其他</span>
+					</div>
+					<textarea></textarea>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-yes">确定</div>
+					<!-- 取消按钮 -->
+					<div class="btn btn-no">返回</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗 补全转账凭证 -->
+		<div class="pop-shade" id="pop-onload-proof">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">补全转账凭证</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<div class="center">
+						<div class="form-group">
+							<label>小票编号：</label>
+							<input type="number" class="txt ticket-num">
+						</div>
+						<div class="form-group">
+							<label>本次转账金额：</label>
+							<input type="number" class="txt transfer-amount">元
+						</div>
+						<!-- 剩余尾款 -->
+						<p class="residue-payment">剩余尾款金额<span>22.22</span>元</p>
+						<div class="form-group">
+							<label>上传凭证：</label>
+							<div class="file-img img-add">
+								<input type="file" class="img-onload">
+								<img src="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!--提交按钮 -->
+					<div class="btn btn-yes">提交</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗 立即发货 -->
+		<div class="pop-shade" id="pop-immediately-deliver">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">提醒</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<div class="table">
+						<ul class="thead">
+							<li>
+								<div class="checkbox checkbox-all">
+									<input type="checkbox">
+									<label></label>
+								</div>
+								<span>全选</span>
+							</li>
+							<li>商品信息</li>
+							<li>单价／数量</li>
+						</ul>
+						<ul class="tbody">
+							<li>
+								<div class="choose">
+									<div class="checkbox">
+										<input type="checkbox">
+										<label></label>
+									</div>
+								</div>
+								<!-- 商品信息 -->
+								<div class="massage">
+									<div class="photo">
+										<a href="#"><img src="../../img/placeholder.jpg"></a>
+									</div>
+									<div class="product-ctn">
+										<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+										<p>成都倍特药业有限公司</p>
+										<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+										<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+										<p>有效期至：<span>2019-10-10</span></p>
+									</div>
+								</div>
+								<!-- 单价/数量 -->
+								<div class="price-num">
+									<p><label>数量：</label><input type="number" class="">盒</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- 选择发货方式 -->
+					<ul class="choose-way">
+						<li>
+							<div class="radio active">
+								<input type="radio" name="a" checked>
+								<label></label>
+							</div>
+							<span>第三方物流</span>
+						</li>
+						<li>
+							<div class="radio">
+								<input type="radio" name="a">
+								<label></label>
+							</div>
+							<span>自主发货</span>
+						</li>
+					</ul>
+					<!-- 请选择物流 -->
+					<div class="logisitic-del">
+						<div class="toggle-left">
+							<label>请选择物流：</label>
+							<div class="select-box">
+								<!-- 下拉框文字 -->
+								<a href="javascript:void(0)" class="select-choice">
+									<!-- 选中 -->
+									<div class="select-text">请选择</div>
+									<input type="text" class="select-input" value="1" name="">
+									<!-- 下拉icon -->
+									<span class="select-arrow">
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<!-- 下拉列表 -->
+								<div class="select-drop">
+									<ul>
+										<li data="1">请选择</li>
+										<li data="2">担保支付交易</li>
+									</ul>
+								</div>
+							</div>
+							<input type="text" placeholder="请输入物流单号" class="txt">
+						</div>
+						<div class="toggle-right">
+							<div class="group">
+								<label>送货人姓名：</label>
+								<input type="text" class="txt">
+							</div>
+							<div class="group">
+								<label>联系方式：</label>
+								<input type="text" class="txt">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-yes">发货</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

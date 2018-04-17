@@ -1,0 +1,280 @@
+@import url(../yhw-common2.less);
+/* 导航 */
+.yhw-nav{
+	.center .main-nav .num{
+		left: 66px;
+	}
+	.quick-order{
+		width: 143px;
+		height: 38px;
+		line-height: 38px;
+		text-align: center;
+		color:#fff;
+		font-size: 16px;
+		background: url(../../img/yhw2/detail-img01.png) no-repeat 0 0;
+		float: right;
+		margin-top: -10px;
+	}
+}
+
+/* 广告图 */
+.banner{
+	position: relative;
+	width: 100%;
+	height: 399px; 
+	overflow: hidden;
+	background: #a6ebff;
+	.banner-ctn{
+		position: relative;
+		width: 1200px;
+		height: 100%;
+		padding-right: 220px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	/* 店铺banner */
+	.banner-img{
+		width: 100%;
+		height: 100%;
+		background: url('') center center no-repeat/cover;
+	}
+	/* 店铺信息 */
+	.shop-infor{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 220px;
+		height: 100%;
+		padding: 0 10px;
+		background: #fff;
+	}
+	/* 企业简介 */
+	.shop-intro{
+		position: relative;
+		width: 100%;
+		height: 200px;
+		border-bottom: 1px dashed #ddd;
+	}
+	/* 供应商名字 */
+	.intro-name{
+		width: 100%;
+		height: 50px;
+		overflow: hidden;
+		font-size: 14px;
+		text-align: center;
+		line-height: 50px;
+		font-weight: bold;
+		color: #333;
+	}
+	/* 简介文字 */
+	.intro-text{
+		width: 100%;
+		height: 120px;
+		font-size: 12px;
+		text-indent: 2em;
+		text-align: left;
+		line-height: 24px;
+		color: #666;
+	}
+	/* 更多 */
+	.btn-more{
+		position: absolute;
+		right: 0;
+		bottom: 16px;
+		font-size: 12px;
+		color: #0066cc;
+		cursor: pointer;
+	}
+	/* 供应商评价 */
+	.shop-evaluate{
+		width: 100%;
+		height: 142px;
+	}
+	/* 标题 */
+	.evaluate-title{
+		height: 44px;
+		font-size: 12px;
+		text-align: center;
+		line-height: 38px;
+		color: #0066cc;
+		a{
+			cursor: pointer;
+		}
+	}
+	/* 评价百分比 */
+	.evaluate-percentage{
+		display: block;
+		width: 100%;
+		li{
+			display: block;
+			width: 100%;
+			margin-bottom: 18px;
+			white-space: nowrap;
+			&>div{
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 12px;
+				line-height: 16px;
+			}
+			&:nth-child(1){
+				.figure-color{
+					background: #ff9c8f;
+				}
+				.percentage-num{
+					color: #ff9c8f;
+				}
+			}
+			&:nth-child(2){
+				.figure-color{
+					background: #ffd18f;
+				}
+				.percentage-num{
+					color: #ffdeba;
+				}
+			}
+			&:nth-child(3){
+				.figure-color{
+					background: #ebe145;
+				}
+				.percentage-num{
+					color: #ebe145;
+				}
+			}
+		}
+		/* 评论类型 */
+		.evaluate-type{
+			width: 46px;
+			height: 16px;
+			color: #666;
+		}
+		/* 百分比 */
+		.percentage-figure{
+			width: 96px;
+			height: 10px;
+			margin: 0 3px;
+			background: #eee;
+			border-radius: 10px;
+			overflow: hidden;
+			&>div{
+				height: 100%;
+				border-radius: 10px;
+			}
+		}
+	}
+	/* 收藏店铺 */
+	.shop-collect{
+		width: 100%;
+		height: 54px;
+		line-height: 54px;
+		text-align: center;
+		border-top: 1px dashed #dddddd;
+		.btn-collect{
+			display: inline-block;
+			height: 16px;
+			padding-left: 26px;
+			font-size: 14px;
+			line-height: 16px;
+			color: #666;
+			background: url(../../img/icon/icon-collect02.png) left center no-repeat;
+			cursor: pointer;
+			input{
+				display: none;
+			}
+			&.active{
+				background: url(../../img/icon/icon-collect-active.png) left center no-repeat;
+			}
+		}
+	}
+}
+
+.main{
+	width: 100%;
+	overflow: hidden;
+	background-color: #f8f8f8;
+	.main-ctn{
+		width: 1200px;
+		margin:0 auto 30px;
+	}
+	/* 产品类别 */
+	.product-type{
+		width: 100%;
+		height: 65px;
+		padding-top: 22px;
+		padding-bottom: 14px;
+		overflow: hidden;
+		font-size: 22px;
+		white-space: nowrap;
+		color: #333;
+		.english{
+			font-size: 12px;
+			margin-left: 12px;
+		}
+		.btn-more{
+			float: right;
+			margin-top: 14px;
+			font-size: 12px;
+			color: #666;
+			cursor: pointer;
+		}
+	}
+	/*商品*/
+	.product{
+		display: block;
+		width: 100%;
+		height: 280px;
+		overflow: hidden;
+		/* 商品内容 */
+		.product-li{
+			position: relative;
+			display: block;
+			float: left;
+			width: 292px;
+			height: 280px;
+			margin: 0 4px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 24px;
+			background: #fff;
+			p{
+				padding: 0 10px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			/* 商品图片 */
+			.product-img{
+				position: relative;
+				width: 180px;
+				height: 180px;
+				margin: 18px auto 0;
+				img{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					max-width: 100%;
+					max-height: 100%;
+					transform: translate(-50%, -50%);
+				}
+			}
+			/* 商品名字 */
+			.product-name{
+				font-size: 14px;
+				color: #333;
+			}
+			/* 商品规格and价格 */
+			.product-standard,
+			.product-price{
+				color: #666;
+				.price-num{
+					display: inline-block;
+					height: 12px;
+					margin-left: 5px;
+					padding-left: 5px;
+					color: #ff0000;
+					line-height: 12px;
+					border-left: 1px solid #818181;
+				}
+			}
+		}
+	}
+}

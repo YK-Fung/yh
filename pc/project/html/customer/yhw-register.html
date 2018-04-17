@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>药荟健康网-注册</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/customer/yhw-register.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['customer/yhw-register']);</script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- 头部 -->
+		<div class="header-ctn">
+			<div class="center">
+				<!-- logo -->
+				<div class="lf">
+					<img src="../../img/yhw/logo2.png" class="logo">
+				</div>
+				<div class="lf">
+					<span class="wel">欢迎注册药荟账号!</span>
+				</div>
+				<div class="rt">
+					<span>客服电话：<i class="num">400-611-69110</i></span>
+					<span>已有账号，<a href="#" class="login">请登录></a></span>
+				</div>
+			</div>
+		</div>
+		<!-- 内容 -->
+		<div class="ctn">
+			<!-- 注册表单 -->
+			<div class="center">
+				<div class="form-box">
+					<form action="/register/" method="post" id="registerForm">
+						<!-- 用户账号 -->
+						<div class="form-group">
+							<div class="fill">
+								<label ><i class="require">*</i>用户账号:</label>
+								<input type="text" name="" method="/register/checkName" placeholder="请输入用户名（6-20位，由字母、数字或下划线组成）" class="mustWrite user-name">
+								<!-- 提示语 --> 
+								<p class="tip-true"></p>
+								<div class="tip-words">
+									<p class="error">用户名由字母、数字或下划线组成，6-20位字符</p>
+									<p class="empty">用户名不能为空</p>
+									<p class="exist">用户名已存在</p>
+								</div>
+							</div>
+						</div>
+						<!-- 登录密码 -->
+						<div class="form-group">
+							<div class="fill">
+								<label><i class="require">*</i>登录密码:</label>
+								<input type="password" name="" placeholder="您的登录密码(6-20位字母、数字、符号组成)" class="mustWrite customer-password">
+								<!-- 提示语 --> 
+								<p class="tip-true"></p>
+								<div class="tip-words">
+									<p class="error">6-20位，字母、数字、符号组成（除空格）,请检查是否填写错误</p>
+									<p class="empty">密码不能为空</p>
+								</div>
+							</div>
+						</div>
+						<!-- 确认密码 -->
+						<div class="form-group">
+							<div class="fill">
+								<label ><i class="require">*</i>确认密码:</label>
+								<input type="password" name="" placeholder="请再次输入您的密码" class="mustWrite confirm-password">
+								<!-- 提示语 --> 
+								<p class="tip-true"></p>
+								<div class="tip-words">
+									<p class="error">与前面输入的密码不一致</p>
+									<p class="empty">密码不能为空</p>
+								</div>
+							</div>
+						</div>
+						<!-- 公司名称 -->
+						<div class="form-group">
+							<div class="fill">
+								<label><i class="require">*</i>公司名称:</label>
+								<input type="text" name="" placeholder="请填写工商局注册的全称（4-50位中英文、数字组成）" class="mustWrite company-name">	
+								<!-- 提示语 -->
+								<p class="tip-true"></p>
+								<div class="tip-words">
+									<p class="error">请输入企业全称。4-50位字符，可由中文、英文及数字（不能包含特殊字符）</p>
+									<p class="empty">公司名称不能为空</p>
+								</div>
+							</div>
+						</div>
+						<!-- 公司注册地 -->
+						<div class="form-group">
+							<div class="fill">
+								<label><i class="require">*</i>公司注册地:</label>
+								<!-- 地址下拉框 -->
+								<div class="address-select">
+									<!-- 下拉框 -->
+									<a href="javascript:void(0)" class="select-choice">
+										<!-- 选中 -->
+										<input class="select-input mustWrite" name="" type="text" placeholder="请选择省市" value="" readonly>
+										<div class="address-arr">
+											<input name="" class="address" type="text" value="">
+											<input name="" class="address" type="text" value="">
+											<input name="" class="address" type="text" value="">
+										</div>
+										<!-- 下拉icon -->
+										<span class="select-arrow">
+											<i class="fa fa-angle-down"></i>
+										</span>
+									</a>
+									<!-- 下拉列表 -->
+									<div class="select-drop">
+										<!-- 地区类型 -->
+										<ul class="select-type">
+											<li class="active">省份</li>
+											<li>城市</li>
+											<li>县区</li>
+											<!-- <li>街道</li> -->
+										</ul>
+										<div class="select-type-ctn">
+											<!-- 省份 -->
+											<ul class="type-main">
+												<li>
+													<!-- 字母 -->
+													<div class="zm">A-G</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li class="">安微</li>
+														<li>安微</li>
+													</ul>
+												</li>
+												<li>
+													<!-- 字母 -->
+													<div class="zm">H-K</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li>安微</li>
+													</ul>
+												</li>
+												<li>
+													<!-- 字母 -->
+													<div class="zm">L-S</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li>安微</li>
+													</ul>
+												</li>
+												<li>
+													<!-- 字母 -->
+													<div class="zm">T-Z</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li>安微</li>
+													</ul>
+												</li>
+											</ul>
+											<!-- 城市 -->
+											<ul class="type-main">
+												<li>
+													<!-- 字母 -->
+													<div class="zm">A-G</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li class="">广州市</li>
+														<li>广州市</li>
+													</ul>
+												</li>
+												<li>
+													<!-- 字母 -->
+													<div class="zm">H-K</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li>广州市</li>
+													</ul>
+												</li>
+												<li>
+													<!-- 字母 -->
+													<div class="zm">L-S</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li>广州市</li>
+													</ul>
+												</li>
+												<li>
+													<!-- 字母 -->
+													<div class="zm">T-Z</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li>广州市</li>
+													</ul>
+												</li>
+											</ul>
+											<!-- 县区 -->
+											<ul class="type-main">
+												<li>
+													<!-- 字母 -->
+													<div class="zm">A-G</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li class="">海珠区</li>
+													</ul>
+												</li>
+												<li>
+													<!-- 字母 -->
+													<div class="zm">H-K</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li>海珠区</li>
+													</ul>
+												</li>
+												<li>
+													<!-- 字母 -->
+													<div class="zm">L-S</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li>海珠区</li>
+													</ul>
+												</li>
+												<li>
+													<!-- 字母 -->
+													<div class="zm">T-Z</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li>海珠区</li>
+													</ul>
+												</li>
+											</ul>
+											<!-- 街道 -->
+											<ul class="type-main">
+												<li>
+													<!-- 字母 -->
+													<div class="zm">A-G</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li class="">洛浦大道</li>
+													</ul>
+												</li>
+												<li>
+													<!-- 字母 -->
+													<div class="zm">H-K</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li>洛浦大道</li>
+													</ul>
+												</li>
+												<li>
+													<!-- 字母 -->
+													<div class="zm">L-S</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li>洛浦大道</li>
+													</ul>
+												</li>
+												<li>
+													<!-- 字母 -->
+													<div class="zm">T-Z</div>
+													<!-- 字母对应内容 -->
+													<ul class="zm-ctn">
+														<li>洛浦大道</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- 提示语 -->
+								<p class="tip-true"></p>
+								<div class="tip-words">
+									<p class="error">请输入正确的公司注册地</p>
+									<p class="empty">公司注册地不能为空</p>
+								</div>
+							</div>
+						</div>
+						<!-- 联系人姓名 -->
+						<div class="form-group">
+							<div class="fill">
+								<label><i class="require">*</i>联系人姓名:</label>
+								<input type="text" placeholder="请输入联系人姓名" class="mustWrite info-name">
+								<!-- 提示语 -->
+								<p class="tip-true"></p>
+								<div class="tip-words">
+									<p class="error">请输入正确的姓名</p>
+									<p class="empty">联系人不能为空</p>
+								</div>
+							</div>
+						</div>
+						<!-- 手机号码 -->
+						<div class="form-group">
+							<div class="fill">
+								<label><i class="require">*</i>手机号码:</label>
+								<input type="text" name="" placeholder="建议填写常用手机" class="mustWrite info-mobile">
+								<!-- 提示语 -->
+								<p class="tip-true"></p>
+								<div class="tip-words">
+									<p class="error">手机号码格式不正确</p>
+									<p class="empty">手机号码不能为空</p>
+								</div>
+							</div>
+						</div>
+						<!-- 手机验证码 -->
+						<div class="form-group">
+							<div class="fill">
+								<label ><i class="require">*</i>手机验证码:</label>
+								<input type="text" name="" placeholder="请输入手机短信收到的验证码" class="code-input mustWrite">
+								<div class="code">获取验证码</div>
+								<!-- 提示语 -->
+								<p class="tip-true"></p>
+								<div class="tip-words code-tip">
+									<p class="gray">短信已发，请注意查在您的手机上查收</p>
+									<p class="error">验证码不正确</p>
+									<p class="empty">验证码不能为空</p>
+									<p class="exist">验证码已超时，请重新获取</p>
+								</div>
+							</div>
+						</div>
+						<div class="agreement">
+							<div class="checkbox active">
+								<input type="checkbox" checked="checked">
+								<label></label>
+							</div>
+							<!-- 跳转到帮助中心的服务协议 -->
+							<p>创建药荟账号时的同时，我阅读并同意遵守<a class="open-agreement">《药荟平台服务协议》</a></p>
+						</div>
+						<!-- 注册按钮 -->
+						<a class="submit-btn">同意并注册</a>
+					</form>
+				</div>
+				<!-- 提示语 -->
+				<div class="right-tip">
+					<div>
+						<h3>注册成为采购商权益</h3>
+						<p>只要您是合法经营的药店或诊所，在注册并认证后，可享受以下服务：</p>
+						<p><i class="icon"></i>在平台上购买合法经营的供应商出售的合法正规药品</p>
+						<p><i class="icon"></i>享受一站式药品采购服务</p>
+						<p><i class="icon"></i>获得平台的活动补贴</p>
+						<p><i class="icon"></i>参与商家的促销活动</p>
+					</div>
+					<div class="supplier">
+						<h3>注册成为供应商权益</h3>
+						<p>只要您是合法经营的医药公司，或生产厂家获得注册认证后，可享受以下服务：</p>
+						<p><i class="icon"></i>出售合法经营的商品</p>
+						<p><i class="icon"></i>平台内的品牌广告、活动宣传</p>
+						<p><i class="icon"></i>获得更多潜在客户</p>
+						<p><i class="icon"></i>享受平台活动补贴</p>
+					</div>
+				</div>
+			</div>
+			<!-- 弹窗 -->
+			<div class="openWindow">
+				<div class="center">
+					<h3>药荟平台服务协议</h3>
+					<div class="agreement">
+						<p>欢迎您与“药荟网”平台经营者（即“广东汇瀚信息科技有限公司”）共同签署《“药荟网”平台服务协议》（下称“本协议”）并使用“药荟网”平台服务！为维护“药荟网”正常良好交易秩序,保障用户合法权益,实现交易双方共赢目标,本着公开、公平、公正的原则，根据《中华人民共和国药品管理法》、《药品经营质量管理规范》、《药品生产质量管理规范》及《医疗器械监督管理条例》等相关法律规定，制定本服务协议。</p>
+						<p>本服务协议，所列索引关键词仅为帮助您理解该条款表达的主旨之用，不影响或限制本协议条款的含义或解释。为维护您自身权益，建议您仔细阅读各条款的具体表述。</p>
+						<p>本协议包括协议正文及所有“药荟网”已经发布的，或未来可能发布或更新的各类规则。所有规则为本协议不可分割的组成部分，与本协议正文具有同等法律效力。【审慎阅读】您在申请注册流程中点击同意本协议之前，应当认真阅读本协议。请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款、法律适用和争议解决条款。免除或者限制责任的条款将以粗体下划线标识，您应重点阅读。如您对本协议有任何疑问，可向药荟网平台客服进行咨询。</p>
+						<p>【签约动作】当您按照注册页面提示填写信息、阅读并同意本协议且完成全部注册程序后，即表示您已充分阅读、理解并接受本协议的全部内容，并与“药荟网”经营者达成一致，成为“药荟网”平台“用户”。 您签订本协议的行为应当为您已完全理解本协议的各项内容后作出的合法有效的意思表示。阅读本协议的过程中，如果您不同意本协议或其中任何条款约定，您应立即停止注册程序。</p>
+						<p>一、定义</p>
+						<p>药荟网平台：指“药荟网”（域名为www.yaohjk.com，合法资质为：*********）网站、客户端及未来开发的其它应用.</p>
+					</div>
+					<div class="return">返回</div>
+				</div>
+			</div>
+			<!-- 弹窗-注册成功 -->
+			<div class="pop-shade" id="pop-succeed">
+				<!-- 弹窗 -->
+				<div class="pop-main">
+					<!-- 头部 -->
+					<div class="pop-header">
+						<!-- 头部文字 -->
+						<div class="header-text">注册</div>
+						<!-- 关闭按钮 -->
+						<div class="header-close"></div>
+					</div>
+					<!-- 内容 -->
+					<div class="pop-body">
+						<p>注册成功!</p>
+					</div>
+					<!-- 底部 -->
+					<div class="pop-footer">
+						<!-- 确定按钮 -->
+						<div class="btn btn-yes">确定</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<include src="../include/yhw-footer-btm.html"></include>
+	</div>
+	<!-- IE低版本提示 -->
+	<include src="../include/ie-tip.html"></include>
+</body>
+</html>

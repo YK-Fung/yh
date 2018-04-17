@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>供应商-优惠券设置</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/thirdstore/gy-discounts-set.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['thirdstore/gy-discounts-set']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-supplier" second-title="gy-discounts"></div>
+
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">优惠券设置</div>
+					<div class="path-right"><i class="fa fa-home"></i> 供应商 / 优惠券设置</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<div class="form-group">
+						<label><span class="must-star">*</span>优惠券类型：</label>
+						<div class="form-ctn">
+							<!-- 店铺类型下拉框 -->
+							<div class="select-box select-discounts">
+								<!-- 下拉框文字 -->
+								<a href="javascript:void(0)" class="select-choice">
+									<!-- 选中 -->
+									<div class="select-text">商品优惠券</div>
+									<input type="text" class="select-input" value="1" name="">
+									<!-- 下拉icon -->
+									<span class="select-arrow">
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<!-- 下拉列表 -->
+								<div class="select-drop">
+									<ul>
+										<li data="1">商品优惠券</li>
+										<li data="2">店铺优惠券</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>优惠券名称：</label>
+						<div class="form-ctn">
+							<input name="" class="must discounts-name" type="text" placeholder="不超过6个字">
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>有效期类型：</label>
+						<div class="form-ctn">
+							<!-- 有效期类型 -->
+							<ul class="date-type">
+								<li class="active"><input name="datetype" type="radio" checked>固定有效期</li>
+								<li><input name="datetype" type="radio">按天数</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>有效时间：</label>
+						<div class="form-ctn">
+							<!-- 不同有效期设置 ,错误error-->
+							<ul class="date-type-ctn">
+								<li class="">
+									<input name="" class="must date-start date-time date1" type="text">
+									<span class="line">-</span>
+									<input name="" class="must date-end date-time date2" type="text">
+									<p class="error-tip">请选择正确的有效期!</p>
+								</li>
+								<li>从领取日期开始， <input name="" class="must date-start date-day" type="text">天内有效。</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>单张面值：</label>
+						<div class="form-ctn">
+							<input name="" class="must discounts-money" type="text" placeholder="请输入1-999的正整数">元
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>可用产品：</label>
+						<div class="form-ctn discounts-scope">
+							<div class="scope-text goods-select">选择产品</div>
+							<!-- <div class="scope-text goods-all">全部产品</div> -->
+							<span class="warn-tip">请选择产品!</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>总发行量：</label>
+						<div class="form-ctn">
+							<input name="" class="must discounts-amount" type="text" placeholder="不超过1000张">张
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>使用条件：</label>
+						<div class="form-ctn conditon-ctn">
+							单笔订单中此优惠券指定货品金额满 <input name="" class="must discounts-condition" type="text" placeholder="大于或等于2元且不超过9999">元使用
+							<span class="warn-tip">请输入正确金额！</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>推广方式：</label>
+						<div class="form-ctn">
+							<ul class="generalize-type">
+								<li class="active"><input name="generalizetype" type="radio" checked>自主领取</li>
+								<li><input name="generalizetype" type="radio">定向发放</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-group channel">
+						<label>推广渠道：</label>
+						<div class="form-ctn">
+							<ul class="channel-type">
+								<li class="active"><input name="channeltype" type="radio" checked>展示到店铺</li>
+								<li><input name="channeltype" type="radio">不展示到店铺</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-ctn">
+							<div class="btn btn-new">创建优惠券</div>
+							<div class="btn btn-back">返回</div>
+						</div>
+					</div>
+
+					<!-- 优惠券查看 -->
+					<!-- 商品券discounts-sp、店铺券discounts-dp -->
+					<div class="discounts-view discounts-sp">
+						<div class="view">
+							<div class="view-l">
+								<p><span class="view-opt view-condition">可用条件</span></p>
+								<p><span class="view-opt view-goods">可用产品</span></p>
+								<p><span class="view-opt view-name">优惠券名称</span></p>
+								<p><span class="view-firm">公司名称</span></p>
+								<p><span class="view-opt view-time">有效期</span></p>
+							</div>
+							<div class="view-r">
+								<p class="view-money">
+									<span class="view-opt">0</span>
+								</p>
+								<div class="btn-view">立即领取</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<include src="../include/footer.html"></include>
+		</div>
+	</div>
+
+	<!-- 弹窗-产品 -->
+	<div class="pop-shade" id="pop-goods">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text">选择产品</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<!-- 产品类型 -->
+				<ul class="goods-type">
+					<li class="active">产品列表</li>
+					<li>已选择产品</li>
+					<li>已生效产品</li>
+				</ul>
+				<div class="goods-ctn">
+					<div class="goods-ctn-li">
+						<!-- 操作 -->
+						<div class="opt">
+							<div class="checkbox-all"><input name="" type="checkbox" value="1">全选1</div>
+							<!-- 筛选 -->
+							<ul class="filtrate">
+								<li>
+									<div class="select-box-name">产品类别：</div>
+									<div class="select-box select-product">
+										<!-- 下拉框文字 -->
+										<a href="javascript:void(0)" class="select-choice">
+											<!-- 选中 -->
+											<div class="select-text">1</div>
+											<input type="text" class="select-input" value="1" name="">
+											<!-- 下拉icon -->
+											<span class="select-arrow">
+												<i class="fa fa-angle-down"></i>
+											</span>
+										</a>
+										<!-- 下拉列表 -->
+										<div class="select-drop">
+											<ul>
+												<li data="1">1</li>
+												<li data="2">2</li>
+												<li data="2">2</li>
+												<li data="2">2</li>
+												<li data="2">2</li>
+												<li data="2">2</li>
+												<li data="2">2</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<input name="" class="search-input" type="text" placeholder="请输入产品名称/批准文号查询">
+									<div class="btn-search">查询</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 产品表格 -->
+						<div class="goods-table">
+							<ul class="table-header">
+								<li>产品名称</li>
+								<li>批准文号</li>
+								<li>规格</li>
+								<li>库存</li>
+								<li>操作</li>
+							</ul>
+							<div class="table-body">
+								<p class="empty-tip">您还未发布产品，请先<a href="#">发布产品</a></p>
+								<!-- <ul>
+									<li>三九感冒灵</li>
+									<li>HJK123455554</li>
+									<li>0.8g*8片*4板袋</li>
+									<li>100盒</li>
+									<li><span class="checkbox"><input name="" type="checkbox" value="1"></span></li>
+								</ul>
+								<ul>
+									<li>三九感冒灵</li>
+									<li>HJK123455554</li>
+									<li>0.8g*8片*4板袋</li>
+									<li>100盒</li>
+									<li><span class="checkbox"><input name="" type="checkbox" value="1"></span></li>
+								</ul> -->
+							</div>
+						</div>
+						<!-- 分页 -->
+						<include src="../include/pagination.html"></include>
+					</div>
+					<div class="goods-ctn-li">
+						<!-- 操作 -->
+						<div class="opt">
+							<div class="checkbox-all"><input name="" type="checkbox" value="1">全选1</div>
+							<!-- 筛选 -->
+							<ul class="filtrate">
+								<li>
+									<div class="select-box-name">产品类别：</div>
+									<div class="select-box select-product">
+										<!-- 下拉框文字 -->
+										<a href="javascript:void(0)" class="select-choice">
+											<!-- 选中 -->
+											<div class="select-text">1</div>
+											<input type="text" class="select-input" value="1" name="">
+											<!-- 下拉icon -->
+											<span class="select-arrow">
+												<i class="fa fa-angle-down"></i>
+											</span>
+										</a>
+										<!-- 下拉列表 -->
+										<div class="select-drop">
+											<ul>
+												<li data="1">1</li>
+												<li data="2">2</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<input name="" class="search-input" type="text" placeholder="请输入产品名称/批准文号查询">
+									<div class="btn-search">查询</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 产品表格 -->
+						<div class="goods-table">
+							<ul class="table-header">
+								<li>产品名称</li>
+								<li>批准文号</li>
+								<li>规格</li>
+								<li>库存</li>
+								<li>操作</li>
+							</ul>
+							<div class="table-body">
+								<p class="empty-tip">您还未选择产品！</p>
+								<!-- <ul>
+									<li>三九感冒灵</li>
+									<li>HJK123455554</li>
+									<li>0.8g*8片*4板袋</li>
+									<li>100盒</li>
+									<li><span class="btn-repeal">撤销</span></li>
+								</ul>
+								<ul>
+									<li>三九感冒灵</li>
+									<li>HJK123455554</li>
+									<li>0.8g*8片*4板袋</li>
+									<li>100盒</li>
+									<li><span class="btn-repeal">撤销</span></li>
+								</ul> -->
+							</div>
+						</div>
+						<!-- 分页 -->
+						<include src="../include/pagination.html"></include>
+					</div>
+					<div class="goods-ctn-li">
+						<!-- 操作 -->
+						<div class="opt">
+							<div class="checkbox-all"><input name="" type="checkbox" value="1">全选1</div>
+							<!-- 筛选 -->
+							<ul class="filtrate">
+								<li>
+									<div class="select-box-name">产品类别：</div>
+									<div class="select-box select-product">
+										<!-- 下拉框文字 -->
+										<a href="javascript:void(0)" class="select-choice">
+											<!-- 选中 -->
+											<div class="select-text">1</div>
+											<input type="text" class="select-input" value="1" name="">
+											<!-- 下拉icon -->
+											<span class="select-arrow">
+												<i class="fa fa-angle-down"></i>
+											</span>
+										</a>
+										<!-- 下拉列表 -->
+										<div class="select-drop">
+											<ul>
+												<li data="1">1</li>
+												<li data="2">2</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<input name="" class="search-input" type="text" placeholder="请输入产品名称/批准文号查询">
+									<div class="btn-search">查询</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 产品表格 -->
+						<div class="goods-table">
+							<ul class="table-header">
+								<li>产品名称</li>
+								<li>批准文号</li>
+								<li>规格</li>
+								<li>库存</li>
+								<li>操作</li>
+							</ul>
+							<div class="table-body">
+								<p class="empty-tip">没有已生效的产品！</p>
+								<!-- <ul>
+									<li>三九感冒灵</li>
+									<li>HJK123455554</li>
+									<li>0.8g*8片*4板袋</li>
+									<li>100盒</li>
+									<li><span class="checkbox"><input name="" type="checkbox" value="1"></span></li>
+								</ul>
+								<ul>
+									<li>三九感冒灵</li>
+									<li>HJK123455554</li>
+									<li>0.8g*8片*4板袋</li>
+									<li>100盒</li>
+									<li><span class="checkbox"><input name="" type="checkbox" value="1"></span></li>
+								</ul> -->
+							</div>
+						</div>
+						<!-- 分页 -->
+						<include src="../include/pagination.html"></include>
+					</div>
+				</div>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 确定按钮 -->
+				<div class="btn btn-yes">保存</div>
+				<!-- 取消按钮 -->
+				<div class="btn btn-no">返回</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 弹窗-撤销 -->
+	<div class="pop-shade" id="pop-repeal">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text">撤销产品</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p>确定要撤销该产品？</p>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 确定按钮 -->
+				<div class="btn btn-yes">确定</div>
+				<!-- 取消按钮 -->
+				<div class="btn btn-no">取消</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

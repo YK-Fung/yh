@@ -1,0 +1,812 @@
+@import url(../hy-common2.less);
+
+/*主要内容*/
+.main{
+	width: 100%;
+	padding: 28px 34px 50px 34px;
+	/*步骤*/
+	.step{
+		width: 94%;
+		height: 115px;
+		margin: 0 auto;
+		li{
+			position: relative;
+			float: left;
+			display: block;
+			width: 33.33333%;
+			height: 100%;
+			font-size: 14px;
+			text-align: center;
+			color: #999999;
+			&:first-child{
+				padding-left: 75px;
+				.rectangle{
+					border-top-left-radius: 5px;
+					border-bottom-left-radius: 5px;
+				}
+			}
+			&:last-child{
+				padding-right: 75px;
+				.rectangle{
+					border-top-right-radius: 5px;
+					border-bottom-right-radius: 5px;
+				}
+			}
+		}
+		.rectangle{
+			position: absolute;
+			top: (50-10)/2px;
+			left: 0;
+			width: 100%;
+			height: 10px;
+			background-color: #e2e2e2;
+		}
+		.num{
+			position: relative;
+			z-index: 2;
+			width: 50px;
+			height: 50px;
+			margin: 0 auto 20px;
+			font-size: 27px;
+			font-weight: bold;
+			line-height: 50px;
+			text-align: center;
+			color: #aaa;
+			background-color: #e2e2e2;
+			border-radius: 50px;
+		}
+		.active{
+			color: #40bbea;
+			.rectangle,
+			.num{
+				color: #fff;
+				background-color: #40bbea;
+			}
+		}
+	}
+	/*审核状态*/
+	.status{
+		width: 100%;
+		min-height: 120px;
+		padding: 0 30px 10px;
+		margin-bottom: 20px;
+		overflow: hidden;
+		background: #fff;
+		.status-title{
+			width: 100%;
+			font-size: 14px;
+			line-height: 34px;
+			text-align: left;
+			color: #000;
+		}
+		/* 不通过，通过 */
+		.status-no,
+		.status-yes{
+			position: relative;
+			width: 100%;
+			padding: 0 5%;
+			text-align: center;
+		}
+		/* 不通过 */
+		.status-no{
+			.status-ctn{
+				display: inline-block;
+				/* width: 890px; */
+				padding: 10px 0;
+				padding-left: 260px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-align: left;
+				background: url(../../img/hy/status-no.jpg) left center no-repeat;
+				&:after{
+					content: '';
+					display: inline-block;
+					width: 0;
+					height: 100%;
+					vertical-align: middle;
+				}
+			}
+			.status-text{
+				display: inline-block;
+				max-width: 98%;
+				padding: 10px 25px;
+				vertical-align: middle;
+				font-size: 12px;
+				white-space: pre-line;
+				text-align: left;
+				line-height: 18px;
+				color: #666;
+				background: #fff3e1;
+				border: 1px dashed #ff0000;
+				border-radius: 5px;
+			}
+		}
+		/* 通过 */
+		.status-yes{
+			.status-ctn{
+				display: inline-block;
+				/* height: 100px; */
+				padding-left: 56%;
+				overflow: hidden;
+				background: url(../../img/hy/status-yes.jpg) left center no-repeat;
+			}
+			.status-text{
+				float: right;
+				display: inline-block;
+				width: 100%;
+				padding: 10px 25px;
+				font-size: 12px;
+				/* white-space: nowrap; */
+				text-align: left;
+				line-height: 18px;
+				color: #666;
+				border: 1px dashed #ddd;
+				border-radius: 5px;
+			}
+		}
+	}
+	/* 类型 */
+	.type{
+		width: 100%;
+		height: 60px;
+		overflow: hidden;
+		font-size: 14px;
+		line-height: 60px;
+		color: #000;
+		border-bottom: 1px solid #f5f5f5;
+		/*标题*/
+		.type-title{
+			text-align: left;
+			color:#000;
+			.red{
+				color:#ff0000;
+			}
+			.green{
+				color: #26a126;
+			}
+		}
+		/*必填提示*/
+		.type-tip{
+			float: right;
+			span{
+				// padding: 0 2px;
+				color: #ff0000;
+			}
+		}
+	}
+	/*单位信息*/
+	.firm{
+		width: 100%;
+		padding: 0 30px 20px;
+		margin-top: 36px;
+		text-align: center;
+		background: #fff;
+		/*单位信息内容*/
+		.firm-infor{
+			position: relative;
+			display: inline-block;
+			padding-top: 10px;
+			padding-right: 450px;
+			padding-bottom: 10px;
+		}
+		/* 单位信息内容详情 */
+		.infor-detail{
+			position: relative;
+			width: 560px;
+			padding-left: 160px;
+			font-size: 12px;
+			line-height: 24px;
+			color: #615f5f;
+			&.detail-code{
+				display: none;
+			}
+			.infor-left{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 160px;
+				padding-top: 10px;
+				padding-right: 30px;
+				padding-bottom: 10px;
+				text-align: right;
+				line-height: 34px;
+			}
+			.infor-right{
+				position: relative;
+				display: inline-block;
+				width: 424px;
+				padding: 10px 24px 10px 0;
+				white-space: nowrap;
+				text-align: left;
+				&>p,
+				&>input{
+					width: 400px;
+					height: 34px;
+					padding: 0 10px;
+					font-size: 12px;
+					text-align: left;
+					color: #615f5f;
+				}
+				p{
+					line-height: 34px;
+				}
+				input{
+					line-height: 32px;
+				}
+				.w300{
+					width: 276px;
+					margin-right: 8px;
+				}
+				.w194{
+					width: 194px;
+				}
+				.w100{
+					width: 100px;
+				}
+				.w80{
+					width: 80px;
+				}
+				textarea{
+					width: 400px;
+					padding: 10px;
+					font-size: 12px;
+					text-align: left;
+					color: #615f5f;
+				}
+				input,
+				textarea{
+					border: 1px solid #dddddd;
+					outline: none;
+				}
+				/* 不可修改 */
+				.disabled{
+					background: #fff;
+					border: 1px solid transparent;
+					cursor: text;
+				}
+				/* 更换按钮，验证码按钮 */
+				.btn{
+					display: inline-block;
+					width: 114px;
+					height: 34px;
+					text-align: center;
+					line-height: 34px;
+					color: #fff;
+					background: #ccc;
+					border-radius: 5px;
+					&.active{
+						background: #40bbea;
+						cursor: pointer;
+					}
+				}
+				.btn-change{
+					background: #40bbea;
+					cursor: pointer;
+				}
+			}
+			/* 验证通过 */
+			.verify-success{
+				background: url(../../img/icon/icon-right.png) right center no-repeat;
+				&>input,
+				&>textarea{
+					background: #f4fffa;
+				}
+			}
+			/* 格式错误, 内容为空，警告内容*/
+			.error-tip,
+			.empty-tip,
+			.warn-tip{
+				position: absolute;
+				bottom: -8px;
+				left: 0;
+				display: none;
+				width: 100%;
+				height: 16px;
+				padding-left: 16px;
+				text-align: left;
+				line-height: 14px;
+				color: #ff0000;
+			}
+			.error-tip{
+				background: url(../../img/icon/icon-error.png) left center no-repeat;
+			}
+			.empty-tip{
+				background: url(../../img/icon/icon-forbid.png) left center no-repeat;
+			}
+			.warn-tip{
+				background: url(../../img/icon/icon-warn.png) left center no-repeat;
+			}
+			.verify-error{
+				&>input,
+				&>textarea{
+					border-color: #ff0000;
+				}
+				.error-tip{
+					display: block;
+				}
+			}
+			.verify-empty{
+				&>input,
+				&>textarea{
+					border-color: #ff0000;
+				}
+				.empty-tip{
+					display: block;
+				}
+			}
+		}
+		/*地址下拉框*/
+		.address-select{
+			position: relative;
+			display: inline-block;
+			width: 400px;
+			/* 下拉框 */
+			.select-choice{
+				display: block;
+				width: 100%;
+				height: 34px;
+				overflow: hidden;
+				background-color: #fff;
+			}
+			.address-arr{
+				display: none;
+			}
+			/* 选中 */
+			.select-chosen{
+		    	display: block;
+		    	width: 100%;
+				height: 100%;
+				padding-left: 6px;
+				padding-right: 36px;
+		    	overflow: hidden;
+				font-size: 12px;
+				line-height: 34px;
+		    	white-space: nowrap;
+		    	text-overflow: ellipsis;
+				color:#666;
+				background: #fff;
+				border: 1px solid #ddd;
+				outline: none;
+			}
+			/* 下拉icon */
+			.select-arrow{
+				position: absolute;
+				right: 0;
+				top:0;
+				width: 30px;
+				height: 100%;
+				text-align: center;
+				line-height: 30px;
+				color:#717272;
+				background-color: #f5f5f5;
+				border: 1px solid #ddd;
+				&>i{
+					transition:all 0.5s;
+				}
+			}
+			/* 内容下拉时 */
+			&.down{
+				.select-arrow i{
+					transform:rotate(180deg);
+				}
+				.select-drop{
+					display: block;
+				}
+			}
+			/* 下拉列表 */
+			.select-drop{
+				position: absolute;
+				z-index: 8;
+				display: none;
+				width: 100%;
+				margin-top: -1px;
+				font-size: 12px;
+				text-align: left;
+				background-color: #fff;
+				border: 1px solid #ddd;
+			}
+			/*选择类型*/
+			.select-type{
+				display: block;
+				width: 100%;
+				overflow: hidden;
+				font-size: 12px;
+				li{
+					display: block;
+					float: left;
+					width: 33.33333%;
+					height: 30px;
+					text-align: center;
+					line-height: 30px;
+					color: #666;
+					background: #f0f0f0;
+					cursor: pointer;
+				}
+				.active{
+					color: #ff6600;
+					background: #fff;			
+				}
+			}
+			/*对应类型内容*/
+			.type-main{
+				display: none;
+				width: 100%;
+				padding: 10px;
+				overflow: hidden;
+				font-size: 12px;
+				&:first-child{
+					display: block;
+				}				
+				&>li{
+					display: block;
+					width: 100%;
+					margin: 3px 0;
+					overflow: hidden;
+					font-size: 12px;
+					color: #333;
+				}
+			}
+			/* 字母 */
+			.zm{
+				float: left;
+				width: 15%;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+			}
+			/* 字母内容 */
+			.zm-ctn{
+				float: left;
+				display: block;
+				width: 85%;
+				text-align: left;
+				li{
+					display: inline-block;
+					width: auto;
+					padding: 0 10px;
+					line-height: 30px;
+					border-radius: 3px;
+					cursor: pointer;
+					&:hover{
+						background: #ff6600;
+						color: #fff;
+					}
+				}
+				.active{
+					background: #ff6600;
+					color: #fff;
+				}
+			}
+		}
+		/* 经营范围 */
+		.manage-range{
+			position: absolute;
+			top: 50%;
+			right: 100px;
+			width: 300px;
+			padding: 0 25px;
+			text-align: left;
+			background: #ebf7fb;
+			transform: translateY(-50%);
+			.range-head{
+				height: 50px;
+				font-size: 16px;
+				line-height: 50px;
+				color: #0883bb;
+				.fa{
+					position: relative;
+					top: 6px;
+					font-size: 34px;
+					color: #0686c0;
+				}
+			}
+			.range-body{
+				padding: 30px 20px;
+				font-size: 12px;
+				line-height: 24px;
+				color: #7c7c7c;
+				background: #fff;
+				span{
+					color: #363636;
+				}
+			}
+			.range-foot{
+				height: 34px;
+				font-size: 12px;
+				text-align: right;
+				line-height: 34px;
+				color: #ff0000;
+			}
+		}
+		/* 提交按钮 */
+		.btn-submit{
+			display: block;
+			width: 120px;
+			height: 40px;
+			margin: 20px auto 10px;
+			font-size: 12px;
+			line-height: 40px;
+			text-align: center;
+			color: #fff;
+			background: #ccc;
+			&.active{
+				background: #40bbea;
+				cursor: pointer;
+			}
+		}
+	}
+	/*资质文件上传*/
+	.file{
+		position: relative;
+		width: 100%;
+		padding: 0 30px 20px;
+		margin-top: 36px;
+		margin-bottom: 100px;
+		background: #fff;
+		/* 切换显示隐藏 */
+		.toggle-show{
+			height: 40px;
+			line-height: 40px;
+			font-size: 14px;
+			font-weight: normal;
+			color:#333;
+			background-color: #f8f8f8;
+			border: 1px solid #eee;
+			border-radius: 5px;
+			margin:25px 0;
+			padding: 0 25px 0 15px; 
+			cursor: pointer;
+			.arrow{
+				width: 12px;
+				height: 7px;
+				background: url(../../img/icon/arrow-btm.png) no-repeat 0 0;
+				float: right;
+				margin-top: 16px;
+			}
+			&.active{
+				.arrow{
+					transform: rotate(180deg);
+				}
+			}
+		}
+		/*资质文件内容*/
+		.file-ctn{
+			display: none;
+			width: 100%;
+			overflow: hidden;
+			background: #fff;
+			&.active{
+				display: block;
+			}
+			li{
+				float: left;
+				width: 19%;
+				padding: 10px 20px;
+				margin-right: 1.25%;
+				margin-bottom: 20px;
+				border: 1px solid #dddddd;
+				position: relative;
+				&:nth-child(5n){
+					margin-right: 0;
+				}
+			}
+			/* 文件类型 */
+			.file-type{
+				position: relative;
+				width: 100%;
+				height: 30px;
+				font-size: 14px;
+				text-align: left;
+				color: #333;
+				.red{
+					padding-right: 4px;
+					color: #ff0000;
+				}
+				/* 编辑资质 */
+				.file-edit{
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 15px;
+					height: 15px;
+					background: url(../../img/icon/icon-edit.gif) center center no-repeat;
+					cursor: pointer;
+				}
+			}
+			/* 文件图片 */
+			.file-img{
+				position: relative;
+				width: 100%;
+				padding-top: 100%;
+				margin-bottom: 5px;
+				overflow: hidden;
+				border: 1px solid transparent;
+				/* background: #ccc; */
+				&.img-add{
+					border-color: #dddddd;
+					background: url(../../img/icon/icon-add.gif) center center no-repeat;
+					.img-up{
+						top: 0;
+					}	
+				}
+				img{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					max-width: 100%;
+					max-height: 100%;
+					transform: translate(-50%, -50%);
+					cursor: pointer;
+				}
+				/* 快过期 */
+				.icon-due{
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					width: 72px;
+					height: 72px;
+					background: url(../../img/icon/icon-due.gif) right bottom no-repeat;
+				}
+				/* 图片上传 */
+				.img-up{
+					position: absolute;
+					top: 100%;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					opacity: 0;
+					cursor: pointer;
+				}
+			}
+			/* 上传进度 */
+			.upload-progress{
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,.5);
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: none;
+				.close{
+					width: 12px;
+					height: 12px;
+					background: url(../../img/icon/icon-close.png) no-repeat 0 0;
+					position: absolute;
+					right: 18px;
+					top: 18px;
+					cursor: pointer;
+				}
+				.center{
+					width: 100%;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				p{
+					color:#fff;
+					text-align: center;
+					font-size: 18px;
+					&.progress{
+						width: 83%;
+						height: 10px;
+						background: #fff;
+						border-radius: 5px;
+						margin: 10px auto;
+						position: relative;
+						span{
+							height: 100%;
+							background: #40bbea;
+							border-radius: 5px;
+							position: absolute;
+							left: 0;
+							top: 0;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/*预览图片*/
+.view-img{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 10%;
+	text-align: center;
+	background: rgba(0, 0, 0, .6);
+	img{
+		max-width: 80%;
+		max-height: 80%;
+		vertical-align: middle;
+		&:hover{
+			cursor: pointer;
+		};
+	}
+	&:after{
+		content: '';
+		display: inline-block;
+		width: 10px;
+		height: 100%;
+		vertical-align: middle;
+	};
+}
+/* 弹窗 */
+.pop-up{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 7;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.4);
+	.pop-ctn{
+		position: absolute;
+		top:40%;
+		left: 50%;
+		width: 421px;
+		background: #fff;
+		transform:translate(-50%,-50%);
+	}
+	/* 头部 */
+	.pop-header{
+		width: 100%;
+		padding: 0 20px;
+		overflow: hidden;
+		line-height: 36px;
+		background: #f5f5f5;
+		h4{
+			float: left;
+			font-size: 14px;
+			font-weight: normal;
+			color:#333;
+		}
+		.close{
+			float: right;
+			font-size: 18px;
+			line-height: 36px;
+			color:#ccc;
+			cursor: pointer;
+		}
+	}
+	/* 内容部分 */
+	.pop-body{
+		width: 100%;
+		padding: 75px 0;
+		p{
+			font-size: 16px;
+			text-align: center;
+			color:#333;
+		}
+	}
+	/* 底部 */
+	.pop-footer{
+		margin: 0 5px 25px 0;	
+		overflow: hidden;
+		.btn{
+			float: right;
+			width: 90px;
+			height: 32px;
+			margin:0 15px;
+			line-height: 32px;
+			text-align: center;
+			border:0;
+			cursor: pointer;
+		}
+		.btn-close{
+			color:#666;
+			background: transparent;
+			border:1px solid #eee;
+		}
+		.btn-yes{
+			color:#fff;
+			background:#40bbea;
+		}
+	}
+}

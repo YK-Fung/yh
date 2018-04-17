@@ -1,0 +1,478 @@
+@import url(../hy-common2.less);
+
+
+
+/*主要内容*/
+.main{
+	width: 100%;
+	padding: 34px 0 50px;
+	overflow: hidden;
+	/*tab菜单*/
+	.tab-menu{
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 38px;
+		padding: 0 30px;
+		li{
+			position: relative;
+			display: inline-block;
+			float: left;
+			height: 100%;
+			margin-right: 5px;
+			background: #f2f2f2;
+			cursor: pointer;
+		}
+		.active{
+			background: #fff;
+		}
+		a{
+			display: block;
+			width: 100%;
+			height: 100%;
+			padding: 0 20px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 38px;
+			color: #666;
+		}
+	}
+
+	/*标题文字*/
+	.header-text{
+		width: 100%;
+		padding: 20px 0;
+		font-size: 14px;
+		text-align: left;
+		color: #666666;
+	}
+
+	/*tab内容*/
+	.tab-ctn{
+		position: relative;
+		width: 100%;
+		min-height: 690px;
+		padding: 0 35px 30px;
+		margin-bottom: 34px;
+		background: #fff;
+		/* 必填星星 */
+		.must-star{
+			display: inline-block;
+			height: 32px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 32px;
+			color: #ff0000;
+		}
+	}
+
+	/* 交易信息内容 */
+	.deal-infor{
+		width: 100%;
+		padding: 20px 15px 0;
+		background: #f5f5f5;
+		overflow: hidden;	
+	}
+	/* 表单组 */
+	.form-group{
+		position: relative;
+		width: 100%;
+		margin-bottom: 20px;
+		overflow: hidden;
+		font-size: 12px;
+		color: #666;
+		label{
+			float: left;
+			display: inline-block;
+			width: 170px;
+			height: 30px;
+			text-align: right;
+			line-height: 30px;
+			color: #666666;
+		}
+		.form-ctn{
+			float: left;
+			input,
+			textarea{
+				width: 150px;
+				padding: 6px 10px;
+				margin-right: 6px;
+				font-size: 12px;
+				color: #666;
+				border: 1px solid #cccccc;
+				outline: none;
+			}
+			input{
+				height: 30px;
+			}
+			textarea{
+				height: 70px;
+				resize: none;
+			}
+		}
+	}
+
+	/*优惠政策表格*/
+	.favorable{
+		&>ul{
+			display: block;
+			width: 100%;
+			li{
+				position: relative;
+				display: block;
+				float: left;
+				padding: 15px;
+				font-size: 12px;
+				line-height: 26px;
+				text-align: center;
+				color: #666666;
+				input{
+					width: 86px;
+					height: 26px;
+					margin: 0 5px;
+					padding: 0 10px;
+					font-size: 12px;
+					text-align: center;
+					color: #666;
+					border: 1px solid #dddddd;
+					outline: none;
+				}
+			}
+			.wid10{
+				width: 10%;
+				color: #2eb4e8;
+			}
+			.wid30{
+				width: 30%;
+				text-align: left;
+			}
+			&:after{
+				content: '';
+				clear: both;
+				display: block;
+				width: 100%;
+				height: 0;
+			}
+		}
+		&>ul:nth-child(odd) {
+			background: #f2f2f2;
+		}
+		&>ul:nth-child(even) {
+			background: #ffffff;
+		}
+		.district,
+		.add-district,
+		.del-district{
+			cursor: pointer;
+		}
+		.district-detail{
+			text-decoration: underline;
+			&.active{
+				text-decoration: none;
+				color: #2eb4e8;
+			}
+		}
+	}
+
+	/* 控销表格 */
+	.market-table{
+		width: 100%;
+		border: 1px solid #eeeeee;
+		border-bottom: none;
+	}
+	.table-header,
+	.table-body{
+		display: block;
+		width: 100%;
+		text-align: center;
+		&:after{
+			content: '';
+			clear: both;
+			display: block;
+			width: 100%;
+			height: 0;
+		}
+		li{
+			position: relative;
+			float: left;
+			display: block;
+			width: 28%;
+			padding: 0 10px;
+			font-size: 12px;
+			text-align: center;
+			color: #666;
+			&:last-child{
+				width: 44%;
+			}
+		}
+		/* 拆零and整件的dom */
+		.market-one,
+		.market-whole{
+			display: none;
+			.empty-tip{
+				position: relative;
+				top: 6px;
+				bottom: initial;
+				left: initial;
+				/* display: inline-block; */
+				display: none;
+				width: auto;
+			}
+		}
+	}
+	/* 表格头部 */
+	.table-header{
+		li{
+			height: 40px;
+			line-height: 40px;
+			color: #666;
+			background: #f6f6f6;
+		}
+	}
+	/* 表格内容 */
+	.table-body{
+		border-bottom: 1px solid #eeeeee;
+		li{
+			padding-top: 15px;
+			padding-bottom: 15px;
+			color: #2eb4e8;
+		}
+		/* 区域，渠道 */
+		.district,
+		.channel{
+			display: inline-block;
+			line-height: 26px;
+			cursor: pointer;
+		}
+		/* 价格输入框 */
+		.price-input{
+			width: 70px;
+			height: 26px;
+			padding: 0 10px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 24px;
+			color: #999;
+			border: 1px solid #eeeeee;
+			outline: none;
+		}
+		/* 添加销往、禁销；删除 */
+		.district-add,
+		.district-reduce,
+		.district-del{
+			display: inline-block;
+			margin: 0 8px;
+			line-height: 26px;
+			cursor: pointer;
+		}
+		/* 禁销文字 */
+		.forbid{
+			color: #ff0000;
+		}
+	}
+
+	/* 金额警告 */
+	.money.warn{
+		border: 1px solid @red !important;
+	}
+
+	/*保存按钮*/
+	.btn-save{
+		position: relative;
+		width: 100px;
+		height: 30px;
+		margin: 80px auto 0;
+		font-size: 12px;
+		text-align: center;
+		line-height: 32px;
+		color: #fff;
+		background: #2eb4e8;
+		cursor: pointer;
+		.warn-tip{
+			position: absolute;
+			top: -30px;
+			left: 50%;
+			display: none;
+			font-size: 12px;
+			line-height: 30px;
+			white-space: nowrap;
+			color: @red;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+/*弹窗-删除规则*/
+#pop-del,#pop-warn,#pop-market{
+	.pop-main{
+		width: 436px;
+	}
+	.pop-body{
+		p{
+			padding: 75px 0;
+			font-size: 16px;
+			text-align: center;
+			color:#333;
+		}
+	}
+}
+
+/*弹窗-区域*/
+#pop-area{
+	/*display: block;*/
+	.pop-main{
+		width: 800px;
+	}
+	.pop-body{
+		padding: 20px 0 10px;
+		text-align: center;
+		overflow: hidden;
+	}
+	.district-big{
+		width: 100%;
+		overflow: hidden;
+		text-align: left;
+	}
+	/* 地区类型 */
+	.district-name{
+		position: relative;
+		float: left;
+		width: 100px;
+		height: 34px;
+		padding-left: 16px;
+		margin-left: 20px;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		line-height: 34px;
+		color: #333333;
+		cursor: pointer;
+	}
+	/* 地区选择 */
+	.district-select{
+		display: block;
+		float: right;
+		width: 640px;
+		li{
+			position: relative;
+			float: left;
+			display: inline-block;
+			height: 34px;
+			padding-left: 16px;
+			padding-right: 30px;
+			margin-right: 20px;
+			margin-bottom: 10px;
+			font-size: 14px;
+			line-height: 34px;
+			color: #666;
+			cursor: pointer;
+		}
+	}
+	.fa{
+		position: absolute;
+		top: 11px;
+		right: 10px;
+		display: none;
+	}
+	.default{
+		color: #ccc !important;
+	}
+	.active{
+		color: #666 !important;
+		background: #f2f2f2;
+		.fa{
+			display: inline-block;
+			color: #2cacdc;
+		}
+	}
+}
+
+/* 弹窗-选择区域 */
+#pop-district{
+	/* display: block; */
+	.pop-main{
+		width: 484px;
+	}
+	.pop-body{
+		padding: 18px 30px 24px;
+		text-align: left;
+	}
+	/* 区域类型 */
+	.district-type{
+		margin-top: 18px;
+		color: #333;
+	}
+	.district-big{
+		display: inline-block;
+		min-width: 46px;
+	}
+	.district-type{
+		margin-bottom: 8px;
+	}
+	/* 区域选项 */
+	.district-ul{
+		display: inline-block;
+		li{
+			display: inline-block;
+			padding-left: 6px;
+			padding-right: 7px;
+			font-size: 12px;
+			line-height: 12px;
+			color: #666;
+			border-right: 1px solid #666;
+			cursor: pointer;
+			&:first-child{
+				padding-left: 0;
+			}
+			&:last-child{
+				border-right: none;
+			}
+		}
+		.active{
+			color: #ff6a11;
+		}
+	}
+}
+/* 弹窗-渠道 */
+#pop-channel{
+	/* display: block; */
+	.pop-main{
+		width: 484px;
+	}
+	/* 渠道内容 */
+	.channel-select{
+		display: block;
+		width: 100%;
+		padding: 20px 30px 0;
+		text-align: left;
+		li{
+			display: inline-block;
+			padding-left: 6px;
+			padding-right: 7px;
+			margin-bottom: 20px;
+			font-size: 12px;
+			line-height: 12px;
+			color: #666;
+			cursor: pointer;
+		}
+		.active{
+			color: #ff6a11;
+		}
+	}
+	.pop-footer{
+		position: relative;
+	}
+	/* 全选渠道 */
+	.channel-all{
+		position: absolute;
+		top: 16px;
+		left: 36px;
+		font-size: 12px;
+		color: #40bbea;
+		cursor: pointer;
+		transform: translateY(-50%);
+		&.active{
+			color: #ff6a11;
+		}
+	}
+}

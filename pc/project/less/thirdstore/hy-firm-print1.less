@@ -1,0 +1,95 @@
+@import url(../hy-common2.less);
+
+/* 内容 */
+.ctn{
+	padding-bottom: 85px;
+}
+.main{
+	width: auto;
+	min-height: 730px;
+	margin: 30px 35px 0;
+	padding: 60px 26px;
+	background-color: #fff;
+	overflow: hidden;
+}
+// 查询
+.search-group{
+	margin: 0 auto 30px;	
+	overflow: hidden;
+	.form-group{
+		float: left;
+	}
+	label{
+		color:#999;
+		font-size: 12px;
+		line-height: 32px;
+	}
+	input{
+		width: 350px;
+		height: 32px;
+		border:1px solid #ccc;
+		padding:0 10px;
+	}
+	button{
+		width: 100px;
+		height: 32px;
+		border:0;
+		color:#fff;
+		background-color: #2eb4e8;
+		float: left;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+}
+/* 提示 */
+.search-tip{
+	width: 260px;
+	height: 30px;
+	background-color: #eee;
+	margin: 0 auto 70px;
+	color:#999;
+	font-size: 12px;
+	text-align: center;
+	line-height: 30px;
+}
+table{
+	width: 100%;
+	border-collapse: collapse;
+	thead{
+		background-color: #f2f2f2;
+	}
+	tr{
+		border:1px solid #f2f2f2;
+		border-left: 0;
+		border-right: 0;
+	}
+	th{
+		height: 40px;
+		text-align: center;
+		font-weight: 400;
+		color:#666;
+	}
+	td{
+		height: 45px;
+		text-align: center;
+		color:#999;
+	}
+	/* 已签订合同 */
+	tr.already{
+		.status{
+			color:#009933;
+		}
+		.link a{
+			color:#2eb4e8;
+		}
+	}
+	/* 未签订合同 */
+	tr.not{
+		.status{
+			color:#cc0000;
+		}
+		.link a{
+			color:#999;
+		}
+	}
+}

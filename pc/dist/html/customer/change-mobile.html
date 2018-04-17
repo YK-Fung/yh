@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员中心-修改认证手机</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/customer/change-mobile.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['customer/change-mobile']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-center" second-title="hy-infor"></div>
+	
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<div class="bar-slider">
+			<!-- 缩放异常的提示 -->
+			<div class="zoom-tip">
+				<p>您的浏览器缩放比例异常，请按<span class="red">ctrl+0</span>将页面比例缩放至100%，以达到最好的体验效果呢！	</p>
+				<i class="icon-close"></i>
+			</div>
+			<!-- 菜单栏顶部 -->
+			<div class="menu-header">
+				<a class="logo" href="#">
+					<img src="../../img/hy-center/hy-logo.png">
+				</a>
+				<a class="home" href="#">
+					<i class="fa fa-home"></i>
+				</a>
+			</div>
+			<!-- 菜单列表 -->
+			<div class="menu-list">
+				<!-- 左侧列表 -->
+				<ul class="lf-lis">
+					<li class="title hy-center">
+						<i class="icon"></i>
+						<span>会员中心</span>
+						<div class="inner-lis">
+							<ul>
+								<li class="hy-index">
+									<a href="../customer/hy-index.html">会员中心首页</a>
+									<span class="tip">12</span>
+								</li>
+								<li class="hy-infor">
+									<a href="../customer/hy-infor.html">个人信息</a>
+								</li>
+								<li class="hy-firm">
+									<a href="../thirdstore/hy-firm1.html">企业信息</a>
+								</li>
+								<li class="hy-adress">
+									<a href="../customer/hy-address.html">收货地址管理</a>
+								</li>
+								<li class="hy-notification">
+									<a href="../customer/hy-notification-self.html">消息中心</a>
+								</li>
+								<li class="hy-print">
+									<a href="../thirdstore/hy-firm-print1.html">企业资质打印</a>
+								</li>
+								<li class="bank">
+									<a href="../thirdstore/bank.html">银行帐号管理</a>
+								</li>
+								<li class="hy-accounts">
+									<a href="../thirdstore/hy-accounts-manage.html">账号管理</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="title hy-supplier">
+						<i class="icon"></i>
+						<span>供应商</span>
+						<div class="inner-lis">
+							<ul>		
+								<li class="gy-index">
+									<a href="../thirdstore/gy-index.html">供应商首页</a>
+								</li>
+								<li class="shop">
+									<a href="../thirdstore/gy-shop1.html">店铺设置</a>
+								</li>
+								<li class="gy-product-manage">
+									<a href="../goods/gy-product-manage.html">产品管理</a>
+								</li>
+								<li class="gy-product-publish">
+									<a href="../goods/gy-product-publish.html">产品发布</a>
+								</li>
+								<li class="gy-product-import">
+									<a href="../goods/gy-product-import.html">产品批量导入</a>
+								</li>
+								<li class="gy-order">
+									<a href="../order/gy-order-manage.html">订单管理</a>
+								</li>
+								<li class="gy-client">
+									<a href="../order/gy-client.html">客户管理</a>
+								</li>
+								<li class="gy-settlement">
+									<a href="../settlement/gy-settlement.html">结算管理</a>
+								</li>
+								<li class="gy-comment">
+									<a href="../order/gy-comment.html">评价管理</a>
+								</li>
+								<li class="gy-discounts">
+									<a href="../thirdstore/gy-discounts.html">优惠券管理</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="title hy-buyer">
+						<i class="icon"></i>
+						<span>采购商</span>
+						<div class="inner-lis">
+							<ul>	
+								<li class="cg-index">
+									<a href="../thirdstore/cg-index.html">采购商首页</a>
+								</li>
+								<li class="cg-order">
+									<a href="../order/cg-order-manage.html">订单管理</a>
+								</li>
+								<li class="cg-settlement">
+									<a href="../settlement/cg-settlement.html">结算管理</a>
+								</li>
+								<li class="cg-client">
+									<a href="../order/cg-client.html">客户管理</a>
+								</li>
+								<li class="cg-discounts">
+									<a href="../order/cg-discounts1.html">我的优惠券</a>
+								</li>
+								<li class="my-collect">
+									<a href="../seen/my-collect-single.html">我的收藏</a>
+								</li>
+								<li class="my-footprint">
+									<a href="../seen/cg-my-footprint.html">我的足迹</a>
+								</li>
+								<li class="cg-comment">
+									<a href="../order/cg-comment.html">评价管理</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<div class="bar-header">
+				<!-- 左侧功能列表 -->
+				<ul class="user-info-left">
+					<!-- 导航切换按钮 -->
+					<li class="toggle-btn">
+						<a href="#">
+							<i class="fa fa-bars"></i>
+						</a>
+					</li>
+					<!-- 未读消息 -->
+					<li class="message hover-line">
+						<a href="#" class="dropdown">
+							<i class="fa fa-envelope-o"></i>
+							<span class="badge">12</span>
+						</a>
+						<!-- 消息下拉列表 -->
+						<div class="dropdown-menu">
+							<ul class="lis-menu">
+								<li class="active">
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li class="active">
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>			
+							</ul>
+							<!-- 列表按钮 -->
+							<div class="btn">
+								<a href="#" class="all">查看全部消息</a>
+								<a href="javascript:void(0)" class="clear">清除已读</a>
+							</div>
+						</div>
+					</li>
+					<!-- 未读通知 -->
+					<li class="inform hover-line">
+						<a href="#" class="dropdown">
+							<i class="fa fa-bell-o"></i>
+							<span class="badge">7</span>
+						</a>
+						<!-- 通知下拉列表 -->
+						<div class="dropdown-menu">
+							<div class="top-tip">
+								<a href="#" class="news">你有一个新通知</a>
+								<a href="javascript:void(0)" class="read">标记所有为已读</a>
+							</div>
+							<ul class="lis-menu">
+								<li class="active">
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li class="active">
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>			
+							</ul>
+							<!-- 列表按钮 -->
+							<div class="btn">
+								<a href="#" class="all">查看全部消息</a>
+								<a href="javascript:void(0)" class="clear">清除已读</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- 右侧功能列表 -->
+				<ul class="user-info-right">
+					<!-- 个人资料 -->
+					<li class="user-data">
+						<a href="#" class="user">
+							<img src="../../img/hy-center/hy-user.png">
+							<span>DragonDragonDragonDragon&nbsp;<i class="fa fa-angle-down"></i></span>
+						</a>
+						<!-- 个人资料模块 -->
+						<ul>
+							<li>
+								<a href="#">
+									<i class="fa fa-edit"></i>
+									账号管理
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-wrench"></i>
+									修改密码
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-user"></i>
+									个人资料
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-info"></i>
+									帮助中心
+								</a>
+							</li>
+							<li class="last">
+								<a href="#">
+									<i class="fa fa-lock"></i>
+									退出登录
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- 团队工作状态 -->
+					<li class="team-state">
+						<!-- 展开按钮 -->
+						<span class="btn">
+							<i class="fa fa-twitch"></i>
+						</span>
+						<div class="box">
+							<div class="team-state-list">
+								<h2>团队工作动态<i class="fa fa-plus-circle close-team"></i></h2>
+								<!-- 部门 -->			
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+							</div>
+							<!-- 个人工作动态详细信息 -->
+							<div class="person-message">
+								<div class="arrows"></div>
+								<div class="header">
+									<span class="status"></span>
+									<span>陈嘉禾</span>
+									<span class="close">×</span>
+								</div>
+								<!-- 个人工作动态列表 -->
+								<div class="states">
+									<ul>
+										<li class="lis">
+											<p class="tit">
+												<span class="where">采购商后台</span>
+												<span class="time">09:00</span>
+											</p>
+											<p class="ctn">订单号：1704231242265037 - 签署合同成功！</p>
+										</li>										
+										<li class="lis">
+											<p class="tit">
+												<span class="where">采购商后台</span>
+												<span class="time">09:00</span>
+											</p>
+											<p class="ctn">订单号：1704231242265037 - 签署合同成功！</p>
+										</li>
+										<li class="lis">
+											<p class="tit">
+												<span class="where">采购商后台</span>
+												<span class="time">09:00</span>
+											</p>
+											<p class="ctn">订单号：1704231242265037 - 签署合同成功！</p>
+										</li>
+										<li class="lis">
+											<p class="tit">
+												<span class="where">采购商后台</span>
+												<span class="time">09:00</span>
+											</p>
+											<p class="ctn">订单号：1704231242265037 - 签署合同成功！</p>
+										</li>
+									</ul>
+								</div>
+								<div class="link">
+									<a href="#">查看 刘锋 所有动态 ></a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">修改认证手机</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 修改认证手机</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<!-- 修改认证手机 -->
+					<div class="main-ctn">
+						<!-- 头部 -->
+						<div class="main-head">
+							<!-- 标题 -->
+							<div class="main-title">修改认证手机</div>
+						</div>
+						<!-- 表单 -->
+						<div class="form">
+							<from>
+								<div class="form-input">
+									<label>输入新的手机号：</label>
+									<input name="" class="input-mobile" type="text">
+									<!-- 错误提示 -->
+									<p class="error-tip">请输入正确的格式！</p>
+								</div>
+								<div class="form-code">
+									<label>输入短信验证码：</label>
+									<input name="" type="text">
+									<div class="btn-code active">获取短信验证码</div>
+								</div>
+								<div class="btn-submit">确认提交</div>
+							</from>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<!-- 底部信息 -->
+			<div class="footer">
+				<div class="text">copyright © 2016-2017 Yaohuiw.com 药荟网 版权所有  互联网药品信息服务资格证书（粤）-经营性-2017-0051 </div>
+				<a class="go-up" href="#"><i class="fa fa-angle-up"></i></a>
+			</div>
+			<!-- IE低版本提示 -->
+			<!-- IE弹窗 -->
+			<div class="ie-tip">
+			    <div class="center">
+			        <h2><img src="../../img/ie-tip1.png"></h2>
+			        <div class="btm-ctn">
+			            <p>您当前浏览器版本过低，<span>可能影响到签订合同和报表的查看</span>，建议您切换到浏览器的<i>极速模式</i>或点击下载！</p>
+			            <div class="link">
+			                <a href="http://browser.qq.com/" target="blank"><img src="../../img/ie-tip3.png"></a>
+			                <a href="http://ie.sogou.com/" target="blank"><img src="../../img/ie-tip4.png"></a>
+			                <a href="http://se.360.cn/" target="blank"><img src="../../img/ie-tip2.png"></a>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+
+
+			<div class="login-pop">
+			    <div class="center-border">
+			        <div class="center">
+			            <i class="close"></i>
+			            <form class="login-form">
+			                <div class="form-group">
+			                    <input name="" class="login-user" type="text" placeholder="请您输入用户名/手机/邮箱">
+			                    <i class="input-del"></i>
+			                    <p class="error-tip">请输入用户名</p>
+			                </div>
+			                <div class="form-group">
+			                    <input name="" class="login-pwd" type="password" placeholder="请您输入密码">
+			                    <p class="error-tip">请输入密码</p>
+			                    <p class="login-fail">用户名或密码有误</p>
+			                </div>
+			                <div class="login-btn">登&nbsp;&nbsp;&nbsp;录</div>
+			                <a class="forget-pwd" href="../customer/forget-password1.html">忘记密码?</a>
+			            </form>
+			        </div>
+			    </div>
+			</div>
+
+
+
+
+
+
+		</div>
+	</div>
+	<!-- 弹窗-成功 -->
+	<div class="pop-shade" id="pop-success">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 改变字体大小的类名，默认14px。font16 font18-->
+				<div class="header-text">温馨提示</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p>验证成功！</p>
+			</div>
+			<!-- 底部 改变对齐方式的类名，默认居右。align-left align-center-->
+			<div class="pop-footer">
+				<div class="btn bg-white btn-no">关闭</div>
+			</div>
+		</div>
+	</div>
+	<!-- 弹窗-失败 -->
+	<div class="pop-shade" id="pop-fail">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 改变字体大小的类名，默认14px。font16 font18-->
+				<div class="header-text">温馨提示</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p>有缺漏项未填或者输入有误！</p>
+			</div>
+			<!-- 底部 改变对齐方式的类名，默认居右。align-left align-center-->
+			<div class="pop-footer">
+				<div class="btn bg-white btn-no">关闭</div>
+			</div>
+		</div>
+	</div>
+	<!-- IE低版本提示 -->
+	<!-- IE弹窗 -->
+	<div class="ie-tip">
+	    <div class="center">
+	        <h2><img src="../../img/ie-tip1.png"></h2>
+	        <div class="btm-ctn">
+	            <p>您当前浏览器版本过低，<span>可能影响到签订合同和报表的查看</span>，建议您切换到浏览器的<i>极速模式</i>或点击下载！</p>
+	            <div class="link">
+	                <a href="http://browser.qq.com/" target="blank"><img src="../../img/ie-tip3.png"></a>
+	                <a href="http://ie.sogou.com/" target="blank"><img src="../../img/ie-tip4.png"></a>
+	                <a href="http://se.360.cn/" target="blank"><img src="../../img/ie-tip2.png"></a>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+
+	<div class="login-pop">
+	    <div class="center-border">
+	        <div class="center">
+	            <i class="close"></i>
+	            <form class="login-form">
+	                <div class="form-group">
+	                    <input name="" class="login-user" type="text" placeholder="请您输入用户名/手机/邮箱">
+	                    <i class="input-del"></i>
+	                    <p class="error-tip">请输入用户名</p>
+	                </div>
+	                <div class="form-group">
+	                    <input name="" class="login-pwd" type="password" placeholder="请您输入密码">
+	                    <p class="error-tip">请输入密码</p>
+	                    <p class="login-fail">用户名或密码有误</p>
+	                </div>
+	                <div class="login-btn">登&nbsp;&nbsp;&nbsp;录</div>
+	                <a class="forget-pwd" href="../customer/forget-password1.html">忘记密码?</a>
+	            </form>
+	        </div>
+	    </div>
+	</div>
+
+
+
+
+
+
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta name="renderer" content="webkit" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>药荟健康网-优惠专区</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+    <link rel="stylesheet" type="text/css" href="../../css/index/discounts-link.css">
+    <script type="text/javascript" src="../../js/require.js"></script>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script>require(['index/discounts-link']);</script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="discounts-page">
+            <div class="discounts-top">
+                <img class="company-logo" src="../../img/yhw2/discounts-link-logo.png" alt="">
+                <p class="company-name">广州好辰医药有限公司</p>
+                <div  class="discounts-item">
+                    <img class="discounts-bg" src="../../img/yhw2/discounts-link-platform.png" alt="">
+                    <div class="discounts-item-left">
+                        <p class="desc1">满299元可用</p>
+                        <p class="desc2">此处促销范围最多文字不超过13个字超出换行</p>
+                        <p class="desc3">广州好辰医药有限公司</p>
+                        <p class="desc4">有效期：2017.09.29 ~ 2017.09.30</p>
+                    </div>
+                    <div class="discounts-item-right">
+                        <p class="price">5</p>
+                        <div class="btn">立即领取</div>
+                    </div>
+                    <img class="stamp" src="../../img/yhw2/discounts-link-stamp.png" alt="">
+                </div>
+                <!--优惠券失效-->
+                <div class="discounts-item" style="display: none;">
+                    <img class="discounts-bg" src="../../img/yhw2/discounts-link-invalid.png" alt="">
+                </div>
+            </div>
+            <div class="discounts-bottom">
+                <p class="discounts-info"><i></i>活动说明<i></i></p>
+                <p class="info">1. 点击“立即领取”按钮，领取成功后购买商品时使用，即可享受优惠。</p>
+                <p class="info">2. 在药荟网-会员中心-我的优惠券，可查询已发放到账户的优惠券。</p>
+                <p class="info">3. 因商品参与其它活动等原因，付款时优惠券可能无法使用，此时商品最终成交价以您实际付款时提示金额为准。</p>
+                <p class="info">4. 获取、使用优惠券时如存在违规行为（作弊领取、恶意套现、虚假交易等），将取消用户领取资格、撤销违规交易且收回全部优惠券（含已使用及未使用的），必要时追究法律责任。</p>
+                <p class="info">5. 请仔细核对优惠券使用期，商品价格以您当天实际支付金额为准。</p>
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗-立即使用 -->
+    <div class="pop-shade" id="pop-use">
+        <!-- 弹窗 -->
+        <div class="pop-main">
+            <!-- 头部 -->
+            <div class="pop-header">
+                <!-- 头部文字 -->
+                <div class="header-text">优惠券领取</div>
+                <!-- 关闭按钮 -->
+                <div class="header-close"></div>
+            </div>
+            <!-- 内容 -->
+            <div class="pop-body"></div>
+            <!-- 底部 -->
+            <div class="pop-footer">
+                <!-- 确定按钮 -->
+                <div class="btn btn-yes">立即使用</div>
+                <!-- 取消按钮 -->
+                <div class="btn btn-no">关闭</div>
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗-异常-去登录 -->
+    <div class="pop-shade pop-unusual" id="pop-login">
+        <!-- 弹窗 -->
+        <div class="pop-main">
+            <!-- 头部 -->
+            <div class="pop-header">
+                <!-- 头部文字 -->
+                <div class="header-text">温馨提示</div>
+                <!-- 关闭按钮 -->
+                <div class="header-close"></div>
+            </div>
+            <!-- 内容 -->
+            <div class="pop-body">
+                <p>您尚未登录，请登录</p>
+            </div>
+            <!-- 底部 -->
+            <div class="pop-footer">
+                <!-- 确定按钮 -->
+                <a class="btn btn-yes" href="#">去登录</a>
+                <!-- 取消按钮 -->
+                <div class="btn btn-no">取消</div>
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗-异常-去认证 -->
+    <div class="pop-shade pop-unusual" id="pop-authentication">
+        <!-- 弹窗 -->
+        <div class="pop-main">
+            <!-- 头部 -->
+            <div class="pop-header">
+                <!-- 头部文字 -->
+                <div class="header-text">温馨提示</div>
+                <!-- 关闭按钮 -->
+                <div class="header-close"></div>
+            </div>
+            <!-- 内容 -->
+            <div class="pop-body">
+                <p>请先认证成为采购商！</p>
+            </div>
+            <!-- 底部 -->
+            <div class="pop-footer">
+                <!-- 确定按钮 -->
+                <a class="btn btn-yes" href="#">去认证</a>
+                <!-- 取消按钮 -->
+                <div class="btn btn-no">取消</div>
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗-异常-供应商不能领取 -->
+    <div class="pop-shade pop-unusual" id="pop-supplier">
+        <!-- 弹窗 -->
+        <div class="pop-main">
+            <!-- 头部 -->
+            <div class="pop-header">
+                <!-- 头部文字 -->
+                <div class="header-text">温馨提示</div>
+                <!-- 关闭按钮 -->
+                <div class="header-close"></div>
+            </div>
+            <!-- 内容 -->
+            <div class="pop-body">
+                <p>供应商不支持领取优惠券！</p>
+            </div>
+            <!-- 底部 -->
+            <div class="pop-footer">
+                <!-- 取消按钮 -->
+                <div class="btn btn-no">返回</div>
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗-异常-领取失败 -->
+    <div class="pop-shade pop-unusual" id="pop-fail">
+        <!-- 弹窗 -->
+        <div class="pop-main">
+            <!-- 头部 -->
+            <div class="pop-header">
+                <!-- 头部文字 -->
+                <div class="header-text">温馨提示</div>
+                <!-- 关闭按钮 -->
+                <div class="header-close"></div>
+            </div>
+            <!-- 内容 -->
+            <div class="pop-body">
+                <p>优惠券领取失败</p>
+            </div>
+            <!-- 底部 -->
+            <div class="pop-footer">
+                <!-- 取消按钮 -->
+                <div class="btn btn-no">返回</div>
+            </div>
+        </div>
+    </div>
+    <!-- IE低版本提示 -->
+    <!-- IE弹窗 -->
+    <div class="ie-tip">
+        <div class="center">
+            <h2><img src="../../img/ie-tip1.png"></h2>
+            <div class="btm-ctn">
+                <p>您当前浏览器版本过低，<span>可能影响到签订合同和报表的查看</span>，建议您切换到浏览器的<i>极速模式</i>或点击下载！</p>
+                <div class="link">
+                    <a href="http://browser.qq.com/" target="blank"><img src="../../img/ie-tip3.png"></a>
+                    <a href="http://ie.sogou.com/" target="blank"><img src="../../img/ie-tip4.png"></a>
+                    <a href="http://se.360.cn/" target="blank"><img src="../../img/ie-tip2.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="login-pop">
+        <div class="center-border">
+            <div class="center">
+                <i class="close"></i>
+                <form class="login-form">
+                    <div class="form-group">
+                        <input name="" class="login-user" type="text" placeholder="请您输入用户名/手机/邮箱">
+                        <i class="input-del"></i>
+                        <p class="error-tip">请输入用户名</p>
+                    </div>
+                    <div class="form-group">
+                        <input name="" class="login-pwd" type="password" placeholder="请您输入密码">
+                        <p class="error-tip">请输入密码</p>
+                        <p class="login-fail">用户名或密码有误</p>
+                    </div>
+                    <div class="login-btn">登&nbsp;&nbsp;&nbsp;录</div>
+                    <a class="forget-pwd" href="../customer/forget-password1.html">忘记密码?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<script src="http://localhost:35729/livereload.js"></script></body>
+
+</html>

@@ -1,0 +1,141 @@
+@import url(../hy-common.less);
+
+.wrap{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+/* 内容 */
+.ctn{
+	height: 100%;
+}
+/*主要内容*/
+.main{
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 28px 34px 50px 34px;
+	/*多选or单选*/
+	.checkbox,
+	.radio{
+		position: relative;
+		top: 10px;
+		float: left;
+		display: block;
+		width: 15px;
+		height: 15px;
+		margin-right: 4px;
+	}
+	.checkbox{
+		background: url(../../img/hy-center/hy-firm-checkbox.png) center center no-repeat;
+	}
+	.radio{
+		background: url(../../img/hy-center/hy-firm-radio.png) center center no-repeat;
+	}
+	/*订阅and推送的设置*/
+	.dy-ctn,
+	.ts-ctn{
+		width: 100%;
+		padding: 20px 28px;
+		margin-bottom: 20px;
+		background: #fff;
+		/* 头部 */
+		.main-head{
+			width: 100%;
+			overflow: hidden;
+			border-bottom: 1px solid #f5f5f5;
+		}
+		/*标题*/
+		.main-title{
+			float: left;
+			width: 50%;
+			height: 38px;
+			font-size: 14px;
+			text-align: left;
+			color: #666;
+		}
+		/*表单组*/
+		.form-group{
+			width: 100%;
+			/*height: 70px;*/
+			padding-top: 18px;
+			overflow: hidden;
+			font-size: 12px;
+			/*标签*/
+			.label{
+				float: left;
+				width: 16%;
+				height: 34px;
+				padding-right: 38px;
+				line-height: 34px;
+				text-align: right;
+				color: #2c2e2f;
+			}
+		}
+	}
+	.dy-ctn{
+		height: 81%;
+		/*订阅消息选项*/
+		.dy-options{
+			display: block;
+			float: right;
+			width: 84%;
+			margin-bottom: 10px;
+			li{
+				display: inline-block;
+				height: 34px;
+				margin-right: 15px;
+				line-height: 36px;
+				color: #666666;
+				&:hover{
+					cursor: pointer;
+				};
+			}
+			.active .checkbox{
+				background: url(../../img/hy-center/hy-firm-checkbox-active.png) center center no-repeat;
+			}
+			.active .radio{
+				background: url(../../img/hy-center/hy-firm-radio-active.png) center center no-repeat;
+			}
+		}
+		/*修改绑定手机*/
+		.edit-mobile{
+			height: 34px;
+			font-size: 12px;
+			line-height: 34px;
+			color: #999999;
+			a{
+				color: #2eb4e8;
+				padding-left: 10px;
+			}
+		}
+	}
+	/*系统信息推送选项*/
+	/*.ts-ctn{
+		padding-bottom: 140px;
+		.ts-options {
+			display: block;
+			float: right;
+			width: 84%;
+			margin-bottom: 10px;
+			li{
+				display: inline-block;
+				width: 90px;
+				height: 34px;
+				margin-right: 15px;
+				text-align: center;
+				line-height: 32px;
+				color: #333333;
+				border: 1px solid #cccccc;
+				&:hover{
+					cursor: pointer;
+				};
+			}
+			.active{
+				color: #ffffff;
+				background: #2eb4e8;
+				border-color: #2eb4e8;
+			}
+		}
+	}*/
+}

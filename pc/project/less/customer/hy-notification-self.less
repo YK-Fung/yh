@@ -1,0 +1,314 @@
+@import url(../hy-common2.less);
+
+/* 主要内容 */
+.wrap{
+	height: 100%;
+}
+.ctn{
+	width: 100%;
+	padding-bottom: 85px;
+}
+.main{
+	position: relative;
+	padding: 34px;
+	.main-l{
+		position: absolute;
+		top: 82px;
+		left: 34px;
+		display: block;
+		width: 226px;
+		padding-right: 20px;
+		li{
+			display: block;
+			padding: 0 15px;
+			overflow: hidden;
+			font-size: 12px;
+			text-align: left;
+			line-height: 40px;
+			color: #999;
+			border-bottom: 1px solid #ccc;
+			cursor: pointer;
+			&:last-child{
+				border-bottom: none;
+			}
+			&.active{
+				color: #333333;
+			}
+			&>span{
+				float: right;
+				padding: 0 4px;
+				margin-top: 12px;
+				line-height: 15px;
+				color: #fff;
+				border-radius: 15px;
+				background: #2eb4e8;
+			}
+
+		}
+	}
+	.main-r{
+		width: 100%;
+		padding-left: 226px;
+	}
+}
+/* 下拉功能 */
+.select-box{
+	width: 135px;
+}
+/* 筛选项 */
+.filtrate{
+	/* 产品检索 */
+	.product-filtrate{
+		position: relative;
+		/* padding-right: 120px; */
+		.left{
+			float: left;
+			height: 32px;
+			margin-bottom: 15px;
+		}
+		.right{
+			float: left;
+			height: 32px;
+			margin-bottom: 15px;
+		}
+		/* 清除浮动 */
+		&:after{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 0;
+			clear: both;
+		}
+		.tit{
+			font-size: 12px;
+			color:#666;
+			line-height: 32px;
+			float: left;
+		}
+		/* 下拉 */
+		.select-box{
+			margin-right: 8px;
+		}
+		/* 库存 */
+		.kucun{
+			input{
+				width: 105px;
+			}
+		}
+		.product-classify{
+			width: 105px;
+			input{
+				width:74px;
+			}
+		}
+		.country-classify{
+			width: 92px;
+			input{
+				width:50px;
+			}
+		}
+		.date-times{
+			float: left;
+		}
+	}
+}
+/* 输入框 */
+.name-input{
+	float: left;
+	width: 200px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 12px;
+	border:1px solid #ddd;
+	margin-right:10px;
+	padding: 0 10px; 
+	color:#666;
+}
+/* 产品发布 */
+.publish{
+	width: 110px;
+	height: 32px;
+	background-color: #2eb4e8;
+	color:#fff;
+	text-align: center;
+	line-height: 32px;
+	font-size: 12px;
+	position: absolute;
+	right: 0;
+	top:0;
+}
+/* 查询 */
+.search{
+	height: 32px;
+	background-color: #2eb4e8;
+	color:#fff;
+	text-align: center;
+	line-height: 32px;
+	font-size: 12px;
+	width: 76px;
+	float: left;
+	border:0;
+	cursor: pointer;
+}
+/* 筛选结果 */
+.table-form{
+	position: relative;
+	width: 100%;
+	height: 620px;
+	padding: 20px;
+	padding-bottom: 70px;
+	overflow: hidden;
+	background-color: #fff;
+}
+/* 所有产品 */
+.all-product{
+	font-size: 12px;
+	.pull-left{
+		float: left;
+	}
+	.pull-right{
+		float: right;
+	}
+	.action{
+		height: 32px;
+		padding-left: 10px;
+		margin-bottom: 12px;
+		line-height: 32px;
+		/* 全选 */
+		.select-all{
+			color:#999;
+			.checkbox{
+				margin-top: 9px;
+			}
+		}
+		.btn{
+			color:#2eb4e8;
+			margin-left: 30px;
+			cursor: pointer;
+		}
+		/* 销售区域 */
+		.sell-area{
+			color:#666;
+			margin-right: 25px;
+			.name{
+				float: left;
+				margin-right: 10px;
+			}
+			.select-box{
+				width: 100px;
+				input{
+					width: 70px;
+				}
+			}
+		}
+		/* 销售渠道 */
+		.sell-channel{
+			color:#666;
+			margin-right: 25px;
+			.name{
+				float: left;
+				margin-right: 10px;
+			}
+			.select-box{
+				width: 150px;
+				input{
+					width: 120px;
+				}
+			}
+		}
+		/* 只显示控销药品 */
+		.show-control{
+			color:#666;
+			.checkbox{
+				margin-top: 9px;
+			}
+		}
+	}
+	/* 表格 */
+	.tabel-all{
+		width: 100%;
+		border-collapse:collapse;
+		th,td{
+			text-align: center;
+		}
+		.text-left{
+			padding-left: 10px;
+			text-align: left;
+		}
+		th{
+			height: 50px;
+			color:#999;
+			font-weight: normal;
+			&.text-left{
+				padding-left: 30px;
+			}
+		}
+		td{
+			height: 45px;
+			color:#666;
+		}
+		tr{
+			border: 1px solid #eee;
+			border-left: 0;
+			border-right: 0;
+			.detail,
+			.read-status{
+				color: #ff9900;
+			}
+			&.read-yes{
+				td{
+					color: #999999;
+				}
+				.detail,
+				.read-status{
+					color: #999999;
+				}
+			}
+			.detail{
+				cursor: pointer;
+			}
+		}
+		tr.active{
+			background-color: #ffffed;
+		}
+	}
+	/*分页*/
+	.pagination{
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+	}
+}
+/*弹窗-删除,弹窗-详情*/
+#pop-del,
+#pop-detail{
+	/*内容*/
+	.pop-body{
+		width: 540px;
+		padding: 30px 0;
+		p{
+			font-size: 14px;
+			line-height: 20px;
+			word-break:break-all; 
+		}
+	}
+}
+/*弹窗-删除*/
+#pop-del{
+	.pop-body{
+		p{
+			text-align: center;
+		}
+	}
+}
+/* 遮罩层-详情 */
+#pop-detail{
+	.pop-body{
+		max-height: 500px;
+		padding: 30px;
+		overflow-y: auto;
+		p{
+			text-indent: 2em;
+		}
+	}
+}

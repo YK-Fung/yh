@@ -1,0 +1,2110 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员中心-订单管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/order/cg-order-manage.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['order/cg-order-manage']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-buyer" second-title="cg-order"></div>
+	
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<div class="bar-slider">
+			<!-- 缩放异常的提示 -->
+			<div class="zoom-tip">
+				<p>您的浏览器缩放比例异常，请按<span class="red">ctrl+0</span>将页面比例缩放至100%，以达到最好的体验效果呢！	</p>
+				<i class="icon-close"></i>
+			</div>
+			<!-- 菜单栏顶部 -->
+			<div class="menu-header">
+				<a class="logo" href="#">
+					<img src="../../img/hy-center/hy-logo.png">
+				</a>
+				<a class="home" href="#">
+					<i class="fa fa-home"></i>
+				</a>
+			</div>
+			<!-- 菜单列表 -->
+			<div class="menu-list">
+				<!-- 左侧列表 -->
+				<ul class="lf-lis">
+					<li class="title hy-center">
+						<i class="icon"></i>
+						<span>会员中心</span>
+						<div class="inner-lis">
+							<ul>
+								<li class="hy-index">
+									<a href="../customer/hy-index.html">会员中心首页</a>
+									<span class="tip">12</span>
+								</li>
+								<li class="hy-infor">
+									<a href="../customer/hy-infor.html">个人信息</a>
+								</li>
+								<li class="hy-firm">
+									<a href="../thirdstore/hy-firm1.html">企业信息</a>
+								</li>
+								<li class="hy-adress">
+									<a href="../customer/hy-address.html">收货地址管理</a>
+								</li>
+								<li class="hy-notification">
+									<a href="../customer/hy-notification-self.html">消息中心</a>
+								</li>
+								<li class="hy-print">
+									<a href="../thirdstore/hy-firm-print1.html">企业资质打印</a>
+								</li>
+								<li class="bank">
+									<a href="../thirdstore/bank.html">银行帐号管理</a>
+								</li>
+								<li class="hy-accounts">
+									<a href="../thirdstore/hy-accounts-manage.html">账号管理</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="title hy-supplier">
+						<i class="icon"></i>
+						<span>供应商</span>
+						<div class="inner-lis">
+							<ul>		
+								<li class="gy-index">
+									<a href="../thirdstore/gy-index.html">供应商首页</a>
+								</li>
+								<li class="shop">
+									<a href="../thirdstore/gy-shop1.html">店铺设置</a>
+								</li>
+								<li class="gy-product-manage">
+									<a href="../goods/gy-product-manage.html">产品管理</a>
+								</li>
+								<li class="gy-product-publish">
+									<a href="../goods/gy-product-publish.html">产品发布</a>
+								</li>
+								<li class="gy-product-import">
+									<a href="../goods/gy-product-import.html">产品批量导入</a>
+								</li>
+								<li class="gy-order">
+									<a href="../order/gy-order-manage.html">订单管理</a>
+								</li>
+								<li class="gy-client">
+									<a href="../order/gy-client.html">客户管理</a>
+								</li>
+								<li class="gy-settlement">
+									<a href="../settlement/gy-settlement.html">结算管理</a>
+								</li>
+								<li class="gy-comment">
+									<a href="../order/gy-comment.html">评价管理</a>
+								</li>
+								<li class="gy-discounts">
+									<a href="../thirdstore/gy-discounts.html">优惠券管理</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="title hy-buyer">
+						<i class="icon"></i>
+						<span>采购商</span>
+						<div class="inner-lis">
+							<ul>	
+								<li class="cg-index">
+									<a href="../thirdstore/cg-index.html">采购商首页</a>
+								</li>
+								<li class="cg-order">
+									<a href="../order/cg-order-manage.html">订单管理</a>
+								</li>
+								<li class="cg-settlement">
+									<a href="../settlement/cg-settlement.html">结算管理</a>
+								</li>
+								<li class="cg-client">
+									<a href="../order/cg-client.html">客户管理</a>
+								</li>
+								<li class="cg-discounts">
+									<a href="../order/cg-discounts1.html">我的优惠券</a>
+								</li>
+								<li class="my-collect">
+									<a href="../seen/my-collect-single.html">我的收藏</a>
+								</li>
+								<li class="my-footprint">
+									<a href="../seen/cg-my-footprint.html">我的足迹</a>
+								</li>
+								<li class="cg-comment">
+									<a href="../order/cg-comment.html">评价管理</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<div class="bar-header">
+				<!-- 左侧功能列表 -->
+				<ul class="user-info-left">
+					<!-- 导航切换按钮 -->
+					<li class="toggle-btn">
+						<a href="#">
+							<i class="fa fa-bars"></i>
+						</a>
+					</li>
+					<!-- 未读消息 -->
+					<li class="message hover-line">
+						<a href="#" class="dropdown">
+							<i class="fa fa-envelope-o"></i>
+							<span class="badge">12</span>
+						</a>
+						<!-- 消息下拉列表 -->
+						<div class="dropdown-menu">
+							<ul class="lis-menu">
+								<li class="active">
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li class="active">
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>			
+							</ul>
+							<!-- 列表按钮 -->
+							<div class="btn">
+								<a href="#" class="all">查看全部消息</a>
+								<a href="javascript:void(0)" class="clear">清除已读</a>
+							</div>
+						</div>
+					</li>
+					<!-- 未读通知 -->
+					<li class="inform hover-line">
+						<a href="#" class="dropdown">
+							<i class="fa fa-bell-o"></i>
+							<span class="badge">7</span>
+						</a>
+						<!-- 通知下拉列表 -->
+						<div class="dropdown-menu">
+							<div class="top-tip">
+								<a href="#" class="news">你有一个新通知</a>
+								<a href="javascript:void(0)" class="read">标记所有为已读</a>
+							</div>
+							<ul class="lis-menu">
+								<li class="active">
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li class="active">
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>			
+							</ul>
+							<!-- 列表按钮 -->
+							<div class="btn">
+								<a href="#" class="all">查看全部消息</a>
+								<a href="javascript:void(0)" class="clear">清除已读</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- 右侧功能列表 -->
+				<ul class="user-info-right">
+					<!-- 个人资料 -->
+					<li class="user-data">
+						<a href="#" class="user">
+							<img src="../../img/hy-center/hy-user.png">
+							<span>DragonDragonDragonDragon&nbsp;<i class="fa fa-angle-down"></i></span>
+						</a>
+						<!-- 个人资料模块 -->
+						<ul>
+							<li>
+								<a href="#">
+									<i class="fa fa-edit"></i>
+									账号管理
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-wrench"></i>
+									修改密码
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-user"></i>
+									个人资料
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-info"></i>
+									帮助中心
+								</a>
+							</li>
+							<li class="last">
+								<a href="#">
+									<i class="fa fa-lock"></i>
+									退出登录
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- 团队工作状态 -->
+					<li class="team-state">
+						<!-- 展开按钮 -->
+						<span class="btn">
+							<i class="fa fa-twitch"></i>
+						</span>
+						<div class="box">
+							<div class="team-state-list">
+								<h2>团队工作动态<i class="fa fa-plus-circle close-team"></i></h2>
+								<!-- 部门 -->			
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+							</div>
+							<!-- 个人工作动态详细信息 -->
+							<div class="person-message">
+								<div class="arrows"></div>
+								<div class="header">
+									<span class="status"></span>
+									<span>陈嘉禾</span>
+									<span class="close">×</span>
+								</div>
+								<!-- 个人工作动态列表 -->
+								<div class="states">
+									<ul>
+										<li class="lis">
+											<p class="tit">
+												<span class="where">采购商后台</span>
+												<span class="time">09:00</span>
+											</p>
+											<p class="ctn">订单号：1704231242265037 - 签署合同成功！</p>
+										</li>										
+										<li class="lis">
+											<p class="tit">
+												<span class="where">采购商后台</span>
+												<span class="time">09:00</span>
+											</p>
+											<p class="ctn">订单号：1704231242265037 - 签署合同成功！</p>
+										</li>
+										<li class="lis">
+											<p class="tit">
+												<span class="where">采购商后台</span>
+												<span class="time">09:00</span>
+											</p>
+											<p class="ctn">订单号：1704231242265037 - 签署合同成功！</p>
+										</li>
+										<li class="lis">
+											<p class="tit">
+												<span class="where">采购商后台</span>
+												<span class="time">09:00</span>
+											</p>
+											<p class="ctn">订单号：1704231242265037 - 签署合同成功！</p>
+										</li>
+									</ul>
+								</div>
+								<div class="link">
+									<a href="#">查看 刘锋 所有动态 ></a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">订单管理</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 订单管理</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<!-- 筛选项 -->
+					<div class="filtrate">
+						<span class="tit">交易类型：</span>
+						<!-- 产品分类 下拉框 -->
+						<div class="select-box">
+							<!-- 下拉框文字 -->
+							<a href="javascript:void(0)" class="select-choice">
+								<!-- 选中 -->
+								<div class="select-text">请选择</div>
+								<input type="text" class="select-input" value="1" name="">
+								<!-- 下拉icon -->
+								<span class="select-arrow">
+									<i class="fa fa-angle-down"></i>
+								</span>
+							</a>
+							<!-- 下拉列表 -->
+							<div class="select-drop">
+								<ul>
+									<li data="1">请选择</li>
+									<li data="2">担保支付交易</li>
+								</ul>
+							</div>
+						</div>
+						<!-- <span class="tit">交易状态：</span>
+						产品分类 下拉框
+						<div class="select-box">
+							下拉框文字
+							<a href="javascript:void(0)" class="select-choice">
+								选中
+								<div class="select-text">请选择</div>
+								<input type="text" class="select-input" value="1" name="">
+								下拉icon
+								<span class="select-arrow">
+									<i class="fa fa-angle-down"></i>
+								</span>
+							</a>
+							下拉列表
+							<div class="select-drop">
+								<ul>
+									<li data="1">请选择</li>
+									<li data="2">待付款</li>
+									<li data="3">待审核</li>
+									<li data="4">待验收</li>
+									<li data="4">已验收</li>
+								</ul>
+							</div>
+						</div> -->
+						<!-- <span class="tit">时间筛选：</span>
+						产品分类 下拉框
+						<div class="select-box">
+							下拉框文字
+							<a href="javascript:void(0)" class="select-choice">
+								选中
+								<div class="select-text">请选择</div>
+								<input type="text" class="select-input" value="1" name="">
+								下拉icon
+								<span class="select-arrow">
+									<i class="fa fa-angle-down"></i>
+								</span>
+							</a>
+							下拉列表
+							<div class="select-drop">
+								<ul>
+									<li data="1">请选择</li>
+									<li data="2">3天内</li>
+									<li data="3">7天内</li>
+									<li data="4">30天内</li>
+									<li data="4">3个月内</li>
+								</ul>
+							</div>
+						</div> -->
+						<!-- 发布日期： -->
+						<div class="date-times">
+							<span class="tit">发布日期：</span>
+							<div class="dates">
+								<div class="lf">
+									<i class="fa fa-calendar"></i>
+									<!-- 开始时间 -->
+									<input name="" type="text" class="date-time date1">
+								</div>
+								<span class="line"> - </span>
+								<div class="lf">
+									<i class="fa fa-calendar"></i>
+									<!-- 结束时间 -->
+									<input name="" type="text" class="date-time date2">
+								</div>
+							</div>
+						</div>
+						<!-- 查询 -->
+						<div class="search">
+							<input type="text" placeholder="请输入供应商名称/订单号" class="search-txt">
+							<div class="search-btn">查询</div>
+							<!-- <div class="order-export">快速下单导出</div> -->
+						</div>
+					</div>
+					<!-- 导航 -->
+					<ul class="toggle-navs">
+						<li class="active">全部订单<span class="num">10</span></li>
+						<li>待确认<span class="num">2</span></li>
+						<li>待支付<span class="num">2</span></li>
+						<li>待发货<span class="num">2</span></li>
+						<li>待收货<span class="num">2</span></li>
+						<li>待评价<span class="num">2</span></li>
+						<li>异议<span class="num">2</span></li>
+					</ul>
+					<!-- 表格标题 -->
+					<ul class="table-tit">
+						<li>商品信息</li>
+						<li>单价/数量</li>
+						<li>小计</li>
+						<li>应付总额</li>
+						<li>订单状态</li>
+						<li>交易操作</li>
+					</ul>
+					<!-- 一页循环5个订单-->
+					<!-- 全部订单 -->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<!-- 一个订单循环5个产品-->
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+								<a href="#" class="more-link">查看更多商品</a>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>	
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">交易成功</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="#" class="blue">查看合同</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 交易关闭 -->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<!-- 一个订单循环5个产品-->
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>	
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">交易关闭</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="javascript:void(0)" class="gray">无</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 待确定 -->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<!-- 一个订单循环5个产品-->
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p><span class="way">担保交易</span></p>	
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">待确认</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="javascript:void(0)" class="blue cancel-order">取消订单</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 待支付 担保交易-->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">待支付</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="#" class="btn-box">立即支付</a>
+										<a href="javascript:void(0)" class="blue cancel-order">取消订单</a>
+										<a href="#" class="blue">签订合同</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 待支付 对公交易-->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<!-- <span class="way guarantee">担保交易</span> -->
+											<span class="way to-public">对公交易</span>
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">待支付</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="#" class="btn-box">查看汇款信息</a>
+										<a href="javascript:void(0)" class="blue cancel-order">取消订单</a>
+										<a href="#" class="blue">签订合同</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 待发货 对公交易-->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<!-- <span class="way guarantee">担保交易</span> -->
+											<span class="way to-public">对公交易</span>
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">待发货<br><span class="red">(部分打款)</span></div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="#" class="btn-box">查看汇款信息</a>
+										<a href="javascript:void(0)" class="btn-box warn-deliver">提醒发货</a>
+										<a href="#" class="blue">申请售后</a>
+										<a href="#" class="blue">签订合同</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 待发货 担保交易-->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">待发货</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="#" class="btn-box">查看汇款信息</a>
+										<a href="javascript:void(0)" class="btn-box warn-deliver">提醒发货</a>
+										<a href="#" class="blue">申请售后</a>
+										<a href="#" class="blue">签订合同</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 待收货 -->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">待收货</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="javascript:void(0)" class="btn-box confirm-receipt">确认收货</a>
+										<a href="#" class="blue">签订合同</a>
+										<a href="javascript:void(0)" class="blue defer-delivery">延期收货</a>
+										<a href="#" class="blue">申请售后</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 待评价 -->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">待评价</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="#" class="btn-box">去评价</a>
+										<a href="#" class="blue">签订合同</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 异议 等待卖家同意-->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">等待卖家同意</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="javascript:void(0)" class="blue cancel-refund">取消退款</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 异议 卖家已同意退款-->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">买家退货</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="javascript:void(0)" class="btn-box sales-return">退货</a>
+										<a href="javascript:void(0)" class="blue cancel-refund">取消退款</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 异议 等待卖家收货-->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">	
+									<div class="center">等待卖家收货</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="javascript:void(0)" class="blue logistics-check">退货物流</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 异议 退款成功-->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">退款成功</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="javascript:void(0)" class="gray">无</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 异议 卖家拒绝退款-->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">卖家拒绝退款</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="javascript:void(0)" class="blue cancel-refund">取消退款</a>
+										<a href="javascript:void(0)" class="blue apply-service">申请客服介入</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 异议 客服介入-->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">客服介入</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="javascript:void(0)" class="blue cancel-refund">取消退款</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 异议 卖家已同意退款-->
+					<div class="order-one">
+						<!-- 订单详情 -->
+						<ul class="head-detail">
+							<li>订单号：<span class="blue">1704231242265037</span></li>
+							<li>下单时间：<span>2017-04-23</span> <span>12:42:26</span></li>
+							<li>陆丰市医药公司</li>
+							<li>李XX</li>
+							<li><a href="#" class="blue">订单详情</a></li>
+						</ul>
+						<div class="order-list">
+							<!-- 产品列表 -->
+							<ul class="product-list">
+								<li>
+									<!-- 商品信息 -->
+									<div class="left">
+										<div class="photo">
+											<a href="#"><img src="../../img/placeholder.jpg"></a>
+										</div>
+										<div class="product-ctn">
+											<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+											<p>成都倍特药业有限公司</p>
+											<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+											<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+											<p>有效期至：<span>2019-10-10</span></p>
+										</div>
+									</div>
+									<!-- 单价/数量 -->
+									<div class="center">
+										<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+										<p><label>数量（盒）：</label><span class="red">200</span></p>
+									</div>
+									<!-- 小计 -->
+									<div class="right">
+										<p class="total-price red">￥<span>700.00</span></p>
+									</div>
+								</li>
+							</ul>
+							<!-- 状态、按钮 -->
+							<ul class="state-list">
+								<!-- 应付总额 -->
+								<li class="pay-money">
+									<div class="center">
+										<p class="red">￥<span>3500.00</span></p>
+										<p>（含运费：￥<span>0.00</span>）</p>
+										<p>
+											<span class="way guarantee">担保交易</span>
+											<!-- <span class="way to-public">对公交易</span> -->
+										</p>
+									</div>
+								</li>
+								<!-- 订单状态 -->
+								<li class="confirm">
+									<div class="center">异议关闭</div>
+								</li>
+								<!-- 交易操作 -->
+								<li class="operate">
+									<div class="center">
+										<a href="javascript:void(0)" class="gray">无</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 分页 -->
+					<div class="overflow">
+										<div class="pagination">
+											<div class="show-num">
+												<span>每页显示</span>
+												<div class="pg-select-box">
+													<!-- 下拉框 -->
+													<a href="javascript:void(0)" class="pg-select-choice">
+														<!-- 选中 -->
+														<div class="pg-select-text">10</div>
+														<input type="text" value="1" class="pg-select-input" disabled hidden>
+													</a>
+													<!-- 下拉列表 -->
+													<ul class="pg-select-drop">
+														<!--下拉列表对应的内容-->
+														<li data="1">10</li>
+														<li data="2">20</li>
+														<li data="3">30</li>
+														<li data="4">50</li>
+													</ul>
+												</div>
+												<span>条记录</span>
+											</div>
+											<!-- 页码 -->
+											<ul>
+												<li class="page-first">首页</li>
+												<li class="page-prev">上一页</li>
+												<li class="page-num active">1</li>
+												<li class="page-num">2</li>
+												<li class="page-num">3</li>
+												<li class="page-num">4</li>
+												<li class="page-num">5</li>
+												<li class="page-next">下一页</li>
+												<li class="page-last">尾页</li>
+											</ul>
+											<!-- 总计 -->
+											<div class="all-num">
+												共<span class="page-view">1</span><span>/</span><span class="page-amount">12</span>页
+											</div>
+											<!-- 跳转 -->
+											<div class="page-go">
+												<input name="" type="text" value="">
+												<button>跳转</button>
+											</div>
+										</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<!-- 底部信息 -->
+			<div class="footer">
+				<div class="text">copyright © 2016-2017 Yaohuiw.com 药荟网 版权所有  互联网药品信息服务资格证书（粤）-经营性-2017-0051 </div>
+				<a class="go-up" href="#"><i class="fa fa-angle-up"></i></a>
+			</div>
+			<!-- IE低版本提示 -->
+			<!-- IE弹窗 -->
+			<div class="ie-tip">
+			    <div class="center">
+			        <h2><img src="../../img/ie-tip1.png"></h2>
+			        <div class="btm-ctn">
+			            <p>您当前浏览器版本过低，<span>可能影响到签订合同和报表的查看</span>，建议您切换到浏览器的<i>极速模式</i>或点击下载！</p>
+			            <div class="link">
+			                <a href="http://browser.qq.com/" target="blank"><img src="../../img/ie-tip3.png"></a>
+			                <a href="http://ie.sogou.com/" target="blank"><img src="../../img/ie-tip4.png"></a>
+			                <a href="http://se.360.cn/" target="blank"><img src="../../img/ie-tip2.png"></a>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+
+
+			<div class="login-pop">
+			    <div class="center-border">
+			        <div class="center">
+			            <i class="close"></i>
+			            <form class="login-form">
+			                <div class="form-group">
+			                    <input name="" class="login-user" type="text" placeholder="请您输入用户名/手机/邮箱">
+			                    <i class="input-del"></i>
+			                    <p class="error-tip">请输入用户名</p>
+			                </div>
+			                <div class="form-group">
+			                    <input name="" class="login-pwd" type="password" placeholder="请您输入密码">
+			                    <p class="error-tip">请输入密码</p>
+			                    <p class="login-fail">用户名或密码有误</p>
+			                </div>
+			                <div class="login-btn">登&nbsp;&nbsp;&nbsp;录</div>
+			                <a class="forget-pwd" href="../customer/forget-password1.html">忘记密码?</a>
+			            </form>
+			        </div>
+			    </div>
+			</div>
+
+
+
+
+
+
+		</div>
+		<!-- 弹窗 提示 -->
+		<div class="pop-shade" id="tip-txt">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">提醒</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<p class="ctn-txt"></p>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-yes">确定</div>
+					<!-- 取消按钮 -->
+					<div class="btn btn-no">返回</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗 退货 -->
+		<div class="pop-shade" id="logistics-form">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">填写物流单号</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<div class="group">
+						<label>请选择物流：</label>
+						<div class="search">
+					    	<input class="form-control" type="text">
+					    	<!-- 模糊搜索列表 -->
+					    	<ul class="search-list">
+								<li>复方胃友片</li>
+								<li>复方胃友片</li>
+								<li>复方胃友片</li>
+								<li>复方胃友片</li>
+								<li>复方胃友片</li>
+								<li>复方胃友片</li>
+							</ul>
+					    </div>
+					</div>
+					<div class="group">
+						<label>物流单号：</label>
+						<input type="text" class="order-num">
+					</div>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-yes">确定</div>
+					<!-- 取消按钮 -->
+					<div class="btn btn-no">返回</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗 查看物流信息 -->
+		<div class="pop-shade" id="logistics-detail">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">物流信息</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<!-- 快递号 -->
+					<p class="express"><span>顺丰快递</span>：<span>1234567987654323456</span></p>
+					<!-- 物流信息 -->
+					<div class="logistics-infor">
+						<!-- 物流详情 -->
+						<ul class="infor-detail">
+							<li>
+								<div class="logistics-date"><span class="dot"></span><span class="pad16">2017-06-18</span><span>周日</span></div>
+								<!-- 日期详情 -->
+								<ul class="date-detail">
+									<li><span class="pad16">17：23：12</span><span>卖家发货</span></li>
+									<li><span class="pad16">21：23：12</span><span>【湖北武汉大兴路公司】的收件员【李文照1】已收件</span></li>
+									<li><span class="pad16">21：38：12</span><span>由【湖北武汉大兴路公司】发往【湖北武汉中转部】</span></li>
+								</ul>
+							</li>
+							<li>
+								<div class="logistics-date"><span class="dot"></span><span class="pad16">2017-06-18</span>周日</div>
+								<!-- 日期详情 -->
+								<ul class="date-detail">
+									<li><span class="pad16">17：23：12</span><span>卖家发货</span></li>
+									<li><span class="pad16">21：23：12</span><span>【湖北武汉大兴路公司】的收件员【李文照1】已收件</span></li>
+									<li><span class="pad16">21：38：12</span><span>由【湖北武汉大兴路公司】发往【湖北武汉中转部】</span></li>
+								</ul>
+							</li>
+							<li>
+								<div class="logistics-date"><span class="dot"></span><span class="pad16">2017-06-18</span>周日</div>
+								<!-- 日期详情 -->
+								<ul class="date-detail">
+									<li><span class="pad16">17：23：12</span><span>卖家发货</span></li>
+									<li><span class="pad16">21：23：12</span><span>【湖北武汉大兴路公司】的收件员【李文照1】已收件</span></li>
+									<li><span class="pad16">21：38：12</span><span>由【湖北武汉大兴路公司】发往【湖北武汉中转部】</span></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-yes">确定</div>
+					<!-- 取消按钮 -->
+					<div class="btn btn-no">返回</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗 拒绝退款 -->
+		<div class="pop-shade" id="pop-refuse-refund">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">请填写拒绝原因</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<textarea></textarea>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-yes">确定</div>
+					<!-- 取消按钮 -->
+					<div class="btn btn-no">返回</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗 立即发货 -->
+		<div class="pop-shade" id="pop-immediately-deliver">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">提醒</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<div class="table">
+						<ul class="thead">
+							<li>
+								<div class="checkbox checkbox-all">
+									<input type="checkbox">
+									<label></label>
+								</div>
+								<span>全选</span>
+							</li>
+							<li>商品信息</li>
+							<li>单价／数量</li>
+						</ul>
+						<ul class="tbody">
+							<li>
+								<div class="choose">
+									<div class="checkbox">
+										<input type="checkbox">
+										<label></label>
+									</div>
+								</div>
+								<!-- 商品信息 -->
+								<div class="massage">
+									<div class="photo">
+										<a href="#"><img src="../../img/placeholder.jpg"></a>
+									</div>
+									<div class="product-ctn">
+										<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+										<p>成都倍特药业有限公司</p>
+										<p>规 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<span>0.1g*6s</span></p> 
+										<p>批 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span>161005</span></p>    
+										<p>有效期至：<span>2019-10-10</span></p>
+									</div>
+								</div>
+								<!-- 单价/数量 -->
+								<div class="price-num">
+									<p><label>拆零单价：</label><span class="red">￥<i>3.50</i></span></p>
+									<p><label>数量：</label><span class="red">200</span>盒</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- 选择发货方式 -->
+					<ul class="choose-way">
+						<li>
+							<div class="radio active">
+								<input type="radio" name="a" checked>
+								<label></label>
+							</div>
+							<span>第三方物流</span>
+						</li>
+						<li>
+							<div class="radio">
+								<input type="radio" name="a">
+								<label></label>
+							</div>
+							<span>自主发货</span>
+						</li>
+					</ul>
+					<!-- 请选择物流 -->
+					<div class="logisitic-del">
+						<div class="toggle-left">
+							<label>请选择物流：</label>
+							<div class="select-box">
+								<!-- 下拉框文字 -->
+								<a href="javascript:void(0)" class="select-choice">
+									<!-- 选中 -->
+									<div class="select-text">请选择</div>
+									<input type="text" class="select-input" value="1" name="">
+									<!-- 下拉icon -->
+									<span class="select-arrow">
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<!-- 下拉列表 -->
+								<div class="select-drop">
+									<ul>
+										<li data="1">请选择</li>
+										<li data="2">担保支付交易</li>
+									</ul>
+								</div>
+							</div>
+							<input type="text" placeholder="请输入物流单号" class="txt">
+						</div>
+						<div class="toggle-right">
+							<div class="group">
+								<label>送货人姓名：</label>
+								<input type="text" class="txt">
+							</div>
+							<div class="group">
+								<label>联系方式：</label>
+								<input type="text" class="txt">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-yes">发货</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗 取消订单 -->
+		<div class="pop-shade" id="pop-cancel-order">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">提醒</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<p class="tip">请选择取消订单的原因：</p>
+					<div class="mar20">
+						<div class="radio active">
+							<label></label>
+							<input type="radio" name="a" checked>
+						</div>
+						<span>拍错了/不想要了</span>
+					</div>
+					<div class="mar20">
+						<div class="radio">
+							<label></label>
+							<input type="radio" name="a">
+						</div>
+						<span>缺货</span>
+					</div>
+					<div class="mar20">
+						<div class="radio">
+							<label></label>
+							<input type="radio" name="a">
+						</div>
+						<span>其他</span>
+					</div>
+					<textarea></textarea>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-yes">确定</div>
+					<!-- 取消按钮 -->
+					<div class="btn btn-no">返回</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

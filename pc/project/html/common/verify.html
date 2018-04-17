@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta name="renderer" content="webkit"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>输入框验证</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common/verify.css">
+    <script type="text/javascript" src="../../js/require.js"></script>
+    <script type="text/javascript" src="../../js/config.js"></script>
+</head>
+<body>
+    <div class="form-group">
+        <!-- 表单类型 -->
+        <label><span>*</span>手机号码：</label>
+        <!-- 表单内容 -->
+        <!-- 正确verify-success、错误verify-error、警告vefify-warn-->
+        <div class="form-ctn">
+            <input name="" class="input-mobile" type="text">
+            <!-- 温馨提示 -->
+            <div class="success-tip"></div>
+            <div class="error-tip">内容格式不正确！</div>
+            <div class="warn-tip">内容格式不能为空！</div>
+        </div>
+    </div>
+</body>
+<script>
+require(['jquery', 'common/verify'], function ($) {
+    // 手机输入框
+    $('.input-mobile').on('blur', function (){
+        //获取父级
+        var parentDom = $(this).closest('.form-ctn');
+        // 或者验证的值
+        var val = $(this).val();
+        // 验证
+        if (val === '') {
+            //为空
+            parentDom.removeClass('verify-success');
+            parentDom.removeClass('verify-error');
+            parentDom.addClass('verify-warn');
+        } else if (!verifyArg.postal(val)){
+            //格式错误
+            parentDom.removeClass('verify-success');
+            parentDom.removeClass('verify-warn');
+            parentDom.addClass('verify-error');
+        } else {
+            //正确
+            parentDom.removeClass('verify-error');
+            parentDom.removeClass('verify-warn');
+            parentDom.addClass('verify-success');
+        }
+    });
+
+});
+</script>
+</html>

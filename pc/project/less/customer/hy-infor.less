@@ -1,0 +1,200 @@
+@import url(../hy-common2.less);
+
+.wrap,
+.ctn-right{
+	height: 100%;
+	min-height: 920px;
+}
+/* 内容 */
+.ctn{
+	height: 100%;
+	width: 100%;
+}
+/*主要内容*/
+.main{
+	width: 100%;
+	height: 100%;
+	padding: 28px 34px 202px;
+	/*个人中心*/
+	.infor{
+		width: 100%;
+		height: 100%;
+		padding: 20px 28px;
+		background: #fff;
+		/*标题*/
+		.infor-title{
+			width: 100%;
+			height: 38px;
+			font-size: 14px;
+			text-align: left;
+			color: #666;
+		}
+		.center{
+			width: 550px;
+			margin:0 auto;
+		}
+		/*表单组*/
+		.form-group{
+			width: 100%;
+			height: 66px;
+			min-height: 66px;
+			padding-top: 16px;
+			font-size: 12px;
+			/*标签*/
+			.label{
+				float: left;
+				width: 16%;
+				height: 34px;
+				padding-right: 38px;
+				white-space: nowrap;
+				line-height: 34px;
+				text-align: right;
+				color: #2c2e2f;
+			}
+			/*输入框*/
+			.input-txt{
+				float: left;
+				width: 84%;
+				height: 34px;
+				padding: 0 10px;
+				text-align: left;
+				line-height: 34px;
+				color: #959595;
+				background: #fff;
+				border: 1px solid #e4e4e4;
+				outline: none;
+			}
+			.input-wx{
+				width: 270px;
+			}
+			.input-qq{
+				width: 270px;
+			}
+			.form-ctn{
+				float: left;
+				display: inline-block;
+				width: 462px;
+				.qh{
+					width: 60px;
+				}
+				.phone-num{
+					width: 136px;
+				}
+				.fj{
+					width: 90px;
+				}
+			}
+			.ca-text{
+				float: left;
+				display: block;
+				width: 84%;
+				text-align: center;
+				line-height: 34px;
+				text-decoration: underline;
+				color: #40bbea;
+				background: #eee;
+				border: 1px solid #e4e4e4;
+			}
+			/*输入框不可修改*/
+			.readonly{
+				background: #eeeeee;
+			}
+			/*错误提示*/
+			.error-tip{
+				clear: both;
+				display: none;
+				font-size: 12px;
+				line-height: 24px;
+				color: #ce1a50;
+			}
+			/*操作*/
+			.form-opt{
+				position: relative;
+				float: right;
+				width: 84%;
+				height: 34px;
+				padding-right: 84px;
+				input{
+					width: 100%;
+				}
+				a{
+					position: absolute;
+					top: 0;
+					right: 0;
+					display: block;
+					width: 84px;
+					font-size: 12px;
+					font-weight: bold;
+					text-align: center;
+					line-height: 34px;
+					color: #40bbea;
+					&:hover{
+						color: #18a8df;
+					}
+				}
+			}
+			.input-num{
+				float: none;
+				padding:0 10px;
+			}
+		}
+		/*按钮组*/
+		.btn-group{
+			width: 100%;
+			padding-left: 16%;
+			margin: 20px 0;
+			.btn-save{
+				position: relative;
+				display: block;
+				width: 170px;
+				height: 48px;
+				padding-left: 48px;
+				overflow: hidden;
+				font-size: 14px;
+				text-align: center;
+				line-height: 48px;
+				color: #fff;
+				background: #40bbea;
+				&:hover{
+					background: #18a8df;
+				}
+			}
+			i{
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				width: 48px;
+				height: 48px;
+				font-size: 16px;
+				line-height: 48px;
+				background: #2eb4e8;
+				border-right: 1px solid #1baee6;
+			}
+		}
+	}
+}
+/* 下拉功能 */
+.ca-select{
+	width: 100%;
+	/*.select-chosen{		
+		display: block;
+	}*/
+}
+.gj-select{
+	width: 135px;
+}
+/* 提示弹窗 */
+#pop-success{
+	.pop-main{
+		width: 400px;
+		.pop-body{
+			padding: 70px;
+		}
+		.tip-text{
+			text-align: center;
+			font-size: 14px;
+			color:#333;
+		}
+	}
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta name="renderer" content="webkit"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>地址下拉框</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common/address-select.css">
+    <script type="text/javascript" src="../../js/require.js"></script>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script>require(['common/address-select']);</script>
+</head>
+<body>
+    <!-- 地址下拉框 -->
+    <!--左浮动可以添加类名fl-->
+    <div class="address-select">
+        <!-- 下拉框 -->
+        <a href="javascript:void(0)" class="select-choice">
+            <!-- 选中 -->
+            <input class="select-chosen" name="" type="text" placeholder="请选择省市" readonly>
+            <div class="address-arr">
+                <!--input的数量对应地区类型li的数量-->
+                <input name="" class="address" type="text" >
+                <input name="" class="address" type="text" >
+                <input name="" class="address" type="text" >
+            </div>
+            <!-- 下拉icon -->
+            <span class="select-arrow"><i class="fa fa-angle-down"></i></span>
+        </a>
+        <!-- 下拉列表 -->
+        <div class="select-drop">
+            <!-- 地区类型 -->
+            <!--根据select-type的子标签数量添加对应的类名s1 s2 s3 s4-->
+            <ul class="select-type s3">
+                <li class="active">省份</li>
+                <li>城市</li>
+                <li>县区</li>
+                 <!--<li>街道</li>-->
+            </ul>
+
+            <div class="select-type-ctn">
+                <!-- 省份 -->
+                <ul class="type-main">
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">A-G</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li class="">省名</li>
+                            <li>省名</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">H-K</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li>省名</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">L-S</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li>省名</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">T-Z</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li>省名</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- 城市 -->
+                <ul class="type-main">
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">A-G</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li class="">市名</li>
+                            <li>市名</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">H-K</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li>市名</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">L-S</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li>市名</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">T-Z</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li>市名</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- 县区 -->
+                <ul class="type-main">
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">A-G</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li class="">区名</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">H-K</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li>区名</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">L-S</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li>区名</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">T-Z</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li>区名</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- 街道 -->
+                <ul class="type-main">
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">A-G</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li class="">街道名</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">H-K</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li>街道名</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">L-S</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li>街道名</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- 字母 -->
+                        <div class="zm">T-Z</div>
+                        <!-- 字母对应内容 -->
+                        <ul class="zm-ctn">
+                            <li>街道名</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

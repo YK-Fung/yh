@@ -1,0 +1,407 @@
+@import url(../hy-common2.less);
+
+/*主要内容*/
+.main{
+	width: 100%;
+	padding: 34px 2% 50px;
+	overflow: hidden;
+	.main-ctn{
+		width: 100%;
+		padding: 20px 28px;
+		margin-bottom: 34px;
+		text-align: center;
+		background: #fff;
+		/*标题*/
+		.title{
+			width: 100%;
+			height: 38px;
+			font-size: 14px;
+			text-align: left;
+			color: #666;
+			border-bottom: 1px solid #f5f5f5;
+		}
+	}
+	/*步骤*/
+	.step{
+		width: 100%;
+		height: 190px;
+		&.step1{
+			background: url(../../img/bank-bundle-step1.png) center center no-repeat;
+		}
+		&.step2{
+			background: url(../../img/bank-bundle-step2.png) center center no-repeat;
+		}
+		&.step3{
+			background: url(../../img/bank-bundle-step3.png) center center no-repeat;
+		}
+	}
+	/*账户类型内容*/
+	.step1-ctn{
+		width: 420px;
+		padding: 1px;
+		margin: 0 auto;
+		/*表单组*/
+		.form-group{
+			display: inline-block;
+			padding: 10px 0;
+			width: 417px;
+			font-size: 12px;
+			&:after{
+				content: '';
+				display: block;
+				clear: both;
+				width: 100%;
+				height: 0;
+			}
+			/*标签*/
+			label{
+				float: left;
+				display: block;
+				width: 100px;
+				height: 30px;
+				padding-right: 10px;
+				text-align: right;
+				line-height: 30px;
+				color: #666;
+			}
+			/*表单内容*/
+			.form-ctn{
+				position: relative;
+				float: left;
+				display: block;
+				width: 317px;
+				&>p{
+					font-size: 12px;
+					text-align: left;
+					line-height: 30px;
+					color: #666;
+				}
+				&>input{
+					width: 317px;
+					height: 30px;
+					padding: 6px;
+					line-height: 28px;
+					border: 1px solid #cccccc;
+					outline: none;
+					&.opening-bank{
+						float: left;
+						width: 153px;
+					}
+					&.readonly{
+						background: #eee;
+						color: #959595;
+						border: 1px solid #e4e4e4;
+					}
+					// &.input-mobile{
+					// 	width: 317-112px;
+					// 	border-right: none;
+					// }
+				}
+				.btn-code{
+					display: inline-block;
+					width: 112px;
+					height: 30px;
+					text-align: center;
+					line-height: 30px;
+					color: #fff;
+					background: #ccc;
+					&.active{
+						background: #40bbea;
+						cursor: pointer;
+					}
+				}
+				/*错误提示*/
+				.error-tip{
+					position: absolute;
+					top: 30px;
+					left: 0;
+					clear: both;
+					display: none;
+					font-size: 12px;
+					text-align: left;
+					line-height: 24px;
+					color: #ce1a50;
+				}
+			}
+			/* 图片上传 */
+			.shop-img-up{
+				position: relative;
+				width: 98px;
+				height: 98px;
+				background: url(../../img/add-img.png) center center no-repeat;
+				border: 1px dashed #ddd;
+				cursor: pointer;
+				input {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					opacity: 0;
+					cursor: pointer;
+				}
+				img{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					cursor: pointer;
+				}
+				&:hover .shop-img-del{
+					display: block;
+				}
+			}
+			/* 删除 */
+			.shop-img-del{
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: 5;
+				display: none;
+				width: 24px;
+				height: 20px;
+				background: url(../../img/aptitude-img-del.gif) center center no-repeat;
+				cursor: pointer;
+			}
+			/*设置默认地址*/
+			.set-default{
+				float: right;
+				width: 130px;
+				cursor: pointer;
+				/*多选*/
+				.checkbox{
+					position: relative;
+					top: 1px;
+					float: left;
+					display: block;
+					width: 15px;
+					height: 15px;
+					margin-right: 4px;
+					background: url(../../img/hy-center/hy-firm-checkbox.png) center center no-repeat;
+					cursor: pointer;
+				}
+				&.active .checkbox{
+					background: url(../../img/hy-center/hy-firm-checkbox-active.png) center center no-repeat;
+				}
+			}
+		}
+		/* 下拉功能 */
+		.select-box{
+			position: relative;
+			float: left;
+			display: inline-block;
+			/*margin-right: 5px;*/
+			text-align: center;
+			margin:0;
+			&.w317{
+				width: 317px;
+			}
+			&.w153{
+				width: 153px;
+			}
+			&.w140{
+				width: 140px;
+			}
+			&.mid10{
+				margin-left: 10px;
+			}
+			/* 下拉框 */
+			.select-choice{
+				display: block;
+				width: 100%;
+				height: 30px;
+				overflow: hidden;
+				background-color: #fff;
+			}
+			/* 选中 */
+			.select-chosen{
+		    	display: block;
+		    	width: 100%;
+				height: 30px;
+				padding-left: 6px;
+				padding-right: 36px;
+		    	overflow: hidden;
+				font-size: 12px;
+				line-height: 30px;
+		    	white-space: nowrap;
+		    	text-overflow: ellipsis;
+				color:#666;
+				background: #fff;
+				border: 1px solid #ddd;
+				outline: none;
+			}
+			/* 下拉icon */
+			.select-arrow{
+				width: 30px;
+				height: 100%;
+				border: 1px solid #ddd;
+				text-align: center;
+				line-height: 30px;
+				color:#717272;
+				position: absolute;
+				right: 0;
+				top:0;
+				background-color: #f5f5f5;
+				i{
+					transition:all 0.5s;
+					-o-transition:all 0.5s;
+					-webkit-transition:all 0.5s;
+					-moz-transition:all 0.5s;
+				}
+			}
+			/* 下拉列表 */
+			.select-drop{
+				position: absolute;
+				z-index: 8;
+				display: none;
+				width: 100%;
+				max-height: 280px;
+				margin-top: -1px;
+				overflow-y: auto;
+				font-size: 12px;
+				text-align: left;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				li{
+					height: 26px;
+					padding: 0 6px;
+					overflow: hidden;
+					line-height: 26px;
+		    		white-space: nowrap;
+		    		text-overflow: ellipsis;
+					color:#7d7f7f;
+					&:hover{
+						color:#fff;
+						background-color: #40bbea;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+		/* 内容下拉时 */
+		.select-box.down{
+			.select-arrow i{
+				transform:rotate(180deg);
+				-o-transform:rotate(180deg);
+				-webkit-transform:rotate(180deg);
+				-moz-transform:rotate(180deg);	
+			}
+			.select-drop{
+				display: block;
+			}
+		}
+	}
+	.step2-ctn,
+	.step3-ctn{
+		width: 788px;
+		margin: 0 auto;
+		/*认证*/
+		.approve{
+			width: 100%;
+			padding: 30px 38px 30px 120px;
+			text-align: left;
+			color: #fff;
+			background: #fff url(../../img/bank-bundle-ok2.png) 38px center no-repeat;
+			border: 1px dashed #3cbf48;
+			border-radius: 10px;
+		}
+		.approve-header{
+			margin-bottom: 12px;
+			font-size: 16px;
+			color: #3cbf48;
+		}
+		.approve-body{
+			font-size: 12px;
+			line-height: 20px;
+			color: #666666;
+			span{
+				// font-weight: bold;
+				color: #ff0066;
+			}
+		}
+		/*账户信息*/
+		.card-infor{
+			width: 100%;
+			padding-left: 40px;
+			margin: 40px 0 150px;
+			font-size: 12px;
+			text-align: left;
+			line-height: 30px;
+			color: #666;
+			input{
+				width: 80px;
+				height: 26px;
+				margin: 0 4px;
+				font-size: 12px;
+				text-align: center;
+				line-height: 24px;
+				color: #666;
+				border: 1px solid #ccc;
+				outline: none;
+			}
+			/*错误提示*/
+			.error-tip{
+				display: none;
+				padding-left: 10px;
+				font-size: 12px;
+				text-align: left;
+				line-height: 24px;
+				color: #ce1a50;
+			}
+		}
+	}
+	/*提交*/
+	.btn-submit{
+		width: 180px;
+		height: 30px;
+		margin: 50px auto;
+		font-size: 12px;
+		text-align: center;
+		line-height: 30px;
+		color: #fff;
+		background: #2eb4e8;
+		cursor: pointer;
+	}
+}
+
+/*弹窗-删除,弹窗-警告*/
+#pop-del,
+#pop-warn{
+	.pop-main{
+		width: 436px;
+	}
+	.pop-body{
+		p{
+			padding: 75px 20px;
+			font-size: 14px;
+			text-align: center;
+			color:#333;
+		}
+	}
+}
+#pop-warn .btn-yes{
+	margin-right: 0;
+}
+
+/*预览图片*/
+.view-img{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: none;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0, 0, 0, .6);
+	img{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		max-width: 80%;
+		max-height: 80%;
+		cursor: pointer;
+		transform: translate(-50%, -50%);
+	}
+}

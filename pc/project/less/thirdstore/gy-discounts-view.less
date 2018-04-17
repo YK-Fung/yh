@@ -1,0 +1,194 @@
+@import url(../hy-common2.less);
+
+/*主要内容*/
+.main{
+	position: relative;
+	width: 100%;
+	height: 800px;
+	padding: 0 25px 50px;
+	overflow: hidden;
+	background: #fff;
+	border-top: 1px solid #ddd;
+
+
+	/* 必填星星 */
+	.must-star{
+		display: inline-block;
+		height: 30px;
+		padding-right: 8px;
+		font-size: 12px;
+		text-align: center;
+		line-height: 30px;
+		color: @red;
+	}
+
+	/*表单组*/
+	.form-group{
+		position: relative;
+		padding-left: 116px;
+		margin-top: 20px;
+		font-size: 12px;
+
+		/*标签*/
+		label{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 116px;
+			height: 30px;
+			padding-right: 22px;
+			text-align: right;
+			line-height: 30px;
+			color: #666;
+		}
+
+		/*表单内容*/
+		.form-ctn{
+			position: relative;
+			width: 100%;
+			height: 30px;
+			font-size: 12px;
+			line-height: 30px;
+			color: #666;
+		}
+
+		/* 按钮 */
+		.btn{
+			display: inline-block;
+			width: 136px;
+			height: 48px;
+			margin-top: 14px;
+			margin-right: 36px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 46px;
+			cursor: pointer;
+			&.btn-new{
+				color: #fff;
+				background: #40bbea;
+				border: 1px solid #40bbea;
+			}
+			&.btn-back{
+				color: #666;
+				background: #fff;
+				border: 1px solid #bfbfbf;
+			}
+		}
+
+	}
+
+	/* 优惠券查看 */
+	.discounts-view{
+		position: absolute;
+		top: 20px;
+		left: 600px;
+		width: 410px;
+		height: 216px;
+		padding: 10px;
+		border: 1px dashed #ccc;
+		border-radius: 3px;
+		.view{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			font-family: '微软雅黑';
+			white-space: nowrap;
+			color: #fff;	
+		}
+		p{
+			white-space: nowrap;
+		}
+		.view-opt{
+			display: inline-block;
+			max-width: 100%;
+			padding: 2px;
+			margin-bottom: 5px;
+			overflow: hidden;
+			font-size: 12px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			border: 1px dashed #fff;
+		}
+		.view-l{
+			float: left;
+			width: 211px;
+			padding: 20px;
+			height: 100%;
+			text-align: left;
+			border-right: 1px dashed #fff;
+		}
+		.view-r{
+			float: right;
+			width: 177px;
+			height: 100%;
+			padding: 0 8px;
+			text-align: center;
+		}
+		/* 公司 */
+		.view-firm{
+			display: inline-block;
+			height: 18px;
+			margin-top: 6px;
+			margin-bottom: 8px;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 18px;
+		}
+		/* 类型 */
+		.view-type{
+			margin-top: 20px;
+			margin-bottom: 12px;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		/* 金额 */
+		.view-money{
+			margin-bottom: 10px;
+			overflow: hidden;
+			&>span{
+				display: inline-block;
+				line-height: 66px;
+				vertical-align: middle;
+			}
+			.view-opt{
+				margin-left: 4px;
+				font-size: 48px;
+				font-weight: bold;
+			}
+		}
+		/* 按钮 */
+		.btn-view{
+			width: 100px;
+			height: 24px;
+			margin: 0 auto;
+			line-height: 24px;
+			background: #fff;
+		}
+		/* 商品券 */
+		&.discounts-sp{
+			.view{
+				background: url(../../img/hy/gy-discounts-bg01.png) center center no-repeat;
+			}
+			.view-condition{
+				background: #de5943;
+			}
+			.btn-view{
+				color: #fe985b;
+			}
+		}
+		/* 店铺券 */
+		&.discounts-dp{
+			.view{
+				background: url(../../img/hy/gy-discounts-bg02.png) center center no-repeat;
+			}
+			.view-condition{
+				background: #6a6d77;
+			}
+			.btn-view{
+				color: #15c0c4;
+			}
+		}
+	}
+
+}

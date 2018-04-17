@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员中心-绑定对公账号</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/thirdstore/bank-bundle.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['thirdstore/bank-bundle1']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-center" second-title="bank"></div>
+
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">绑定对公账号</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 绑定对公账号</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<div class="main-ctn">
+						<div class="title">企业账户</div>
+						<!-- 步骤 -->
+						<div class="step step1"></div>
+						<!-- 账号绑定内容 -->
+						<div class="step1-ctn">
+							<form>
+								<div class="form-group">
+									<label>企业名称：</label>
+									<div class="form-ctn"><p>广东汇瀚信息科技有限公司</p></div>
+
+								</div>
+								<div class="form-group">
+									<label>工商注册号：</label>
+									<div class="form-ctn">
+										<input name="" class="input-gs must readonly" type="text" readonly="true">
+										<!-- 错误提示 -->
+										<p class="error-tip">请输入正确的格式！</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>银行卡户名：</label>
+									<div class="form-ctn">
+										<input name="" class="input-name must readonly" type="text" readonly="true">
+										<!-- 错误提示 -->
+										<p class="error-tip">请输入正确的格式！</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>开户银行：</label>
+									<div class="form-ctn">
+										<div class="select-box w153">
+											<!-- 下拉框 -->
+											<a href="javascript:void(0)" class="select-choice">
+												<!-- 选中 -->
+												<input type="text" value="招商银行" class="select-chosen" disabled>
+												<!-- 下拉icon -->
+												<span class="select-arrow">
+													<i class="fa fa-angle-down"></i>
+												</span>
+											</a>
+											<!-- 下拉列表 -->
+											<ul class="select-drop">
+												<li>中国银行</li>
+												<li>中国工商银行</li>
+											</ul>
+										</div>
+										<div class="select-box w153 mid10">
+											<!-- 下拉框 -->
+											<a href="javascript:void(0)" class="select-choice">
+												<!-- 选中 -->
+												<input type="text" value="广东省" class="select-chosen" disabled>
+												<!-- 下拉icon -->
+												<span class="select-arrow">
+													<i class="fa fa-angle-down"></i>
+												</span>
+											</a>
+											<!-- 下拉列表 -->
+											<ul class="select-drop">
+												<li>广西省</li>
+												<li>广南省</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>开户网点：</label>
+									<div class="form-ctn">
+										<input name="" class="input-wd opening-bank must" type="text">
+										<!-- 错误提示 -->
+										<p class="error-tip">请输入正确的格式！</p>
+										<div class="select-box w153 mid10">
+											<!-- 下拉框 -->
+											<a href="javascript:void(0)" class="select-choice">
+												<!-- 选中 -->
+												<input type="text" value="日本市" class="select-chosen" disabled>
+												<!-- 下拉icon -->
+												<span class="select-arrow">
+													<i class="fa fa-angle-down"></i>
+												</span>
+											</a>
+											<!-- 下拉列表 -->
+											<ul class="select-drop">
+												<li>美国市</li>
+												<li>印度市</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>企业银行账户：</label>
+									<div class="form-ctn">
+										<input name="" class="input-bank must" type="text">
+										<!-- 错误提示 -->
+										<p class="error-tip">请输入正确的格式！</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>手机号码：</label>
+									<div class="form-ctn">
+										<input name="" class="input-mobile must" type="text"><span class="btn btn-code active">发送验证码</span>
+										<!-- 错误提示 -->
+										<p class="error-tip">请输入正确的格式！</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>开发凭证：</label>
+									<div class="form-ctn">
+										<div class="shop-img-up"><input name="" class="must" type="file"></div>
+									</div>
+								</div>
+								<!-- <div class="form-group"> -->
+									<!-- 设置默认收货地址 -->
+									<!-- <div class="set-default">
+										<span class="checkbox"></span><input name="" class="hidden" type="checkbox" hidden>是否为默认支付账号
+									</div> -->
+								<!-- </div> -->
+								<div class="btn-submit">提交</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<include src="../include/footer.html"></include>
+		</div>
+	</div>
+
+	<!-- 弹窗-警告 -->
+	<div class="pop-shade" id="pop-warn">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text">提示</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p>请检查是否有带 * 的选项未填写以及填写的内容是否符合要求！</p>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 确定按钮 -->
+				<div class="btn btn-yes">确定</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 弹窗-删除批次 -->
+	<div class="pop-shade" id="pop-del">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text">删除</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p>确定要删除？</p>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 确定按钮 -->
+				<div class="btn btn-yes">确定</div>
+				<!-- 取消按钮 -->
+				<div class="btn btn-no">取消</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 预览图片 -->
+	<div class="view-img">
+		<!-- <img src="../img/slideshow1.jpg"> -->
+		<img src="">
+	</div>
+
+</body>
+</html>

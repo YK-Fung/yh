@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta name="renderer" content="webkit"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>会员中心-银行账号管理</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+    <link rel="stylesheet" type="text/css" href="../../css/thirdstore/bank.css">
+    <script type="text/javascript" src="../../js/require.js"></script>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script>require(['thirdstore/bank']);</script>
+</head>
+<body>
+<!-- 导航选中状态 -->
+<div id="navCur" style="display: none;" max-title="hy-center" second-title="bank"></div>
+
+<div class="wrap">
+    <!-- 左侧菜单栏 -->
+    <include src="../include/bar-slider.html"></include>
+    <!-- 右侧内容 -->
+    <div class="ctn-right">
+        <!-- 顶部导航 -->
+        <include src="../include/bar-header.html"></include>
+        <!-- 内容 -->
+        <div class="ctn">
+            <!-- 路径 -->
+            <div class="ctn-path">
+                <div class="path-left">银行账号管理</div>
+                <div class="path-right"><i class="fa fa-home"></i> 会员中心 / 银行账号管理</div>
+            </div>
+            <!-- 主要内容 -->
+            <div class="main">
+                <div class="main-ctn">
+                    <div class="title">企业账户</div>
+                    <!-- 储蓄卡 对公card-public；个人card-personal；默认加card-default；未认证card-unverified-->
+                    <!-- card-bank-gd光大；card-bank-gf广发；card-bank-gs工商；card-bank-hx华夏；card-bank-js建设；card-bank-jt交通；card-bank-ms民生；card-bank-ny农业；card-bank-pa平安；card-bank-pf浦发；card-bank-sf深发；card-bank-xy兴业；card-bank-yz邮政；card-bank-zg中国；card-bank-zs招商；card-bank-zx中信；card-bank-bj北京；card-bank-hz杭州；card-bank-sn上农；card-bank-sh上海-->
+                    <ul class="card">
+                        <li>
+                            <div class="li-ctn">
+                                <!-- 添加储蓄卡 ，上限4个储蓄卡-->
+                                <a class="card-ctn card-add">添加储蓄卡</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-ctn">
+                                <!-- 默认账号 -->
+                                <a class="card-ctn card-public card-default card-unverified">
+                                    <!-- 标签 -->
+                                    <div class="card-tag">对公</div>
+                                    <!-- 解绑 -->
+                                    <div class="card-del"></div>
+                                    <!-- 头部 -->
+                                    <div class="card-header">
+                                        <div class="card-bank card-bank-gs"></div>
+                                        <div class="card-type">储蓄卡</div>
+                                    </div>
+                                    <!-- 账号 -->
+                                    <div class="card-num">**** *** **** 6954</div>
+                                    <!-- 内容 -->
+                                    <div class="card-body">
+                                        <p>开户人名：广州泰和医药有限公司</p>
+                                        <p>开户行网点：海珠支行</p>
+                                        <p>开户行所在地：广州市</p>
+                                        <p>开通日期：2017/06/20</p>
+                                    </div>
+                                </a>
+                                <!-- 滑动按钮 -->
+                                <div class="btn-radio active"><span class="radio-text">默认账户</span></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-ctn">
+                                <!-- 对公账号 -->
+                                <a class="card-ctn card-public">
+                                    <!-- 标签 -->
+                                    <div class="card-tag">对公</div>
+                                    <!-- 解绑 -->
+                                    <div class="card-del"></div>
+                                    <!-- 头部 -->
+                                    <div class="card-header">
+                                        <div class="card-bank card-bank-sh"></div>
+                                        <div class="card-type">储蓄卡</div>
+                                    </div>
+                                    <!-- 账号 -->
+                                    <div class="card-num">**** *** **** 6954</div>
+                                    <!-- 内容 -->
+                                    <div class="card-body">
+                                        <p>开户人名：广州泰和医药有限公司</p>
+                                        <p>开户行网点：海珠支行</p>
+                                        <p>开户行所在地：广州市</p>
+                                        <p>开通日期：2017/06/20</p>
+                                    </div>
+                                </a>
+                                <!-- 滑动按钮 -->
+                                <div class="btn-radio"><span class="radio-text">默认账户</span></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-ctn">
+                                <!-- 个人账号 -->
+                                <a class="card-ctn card-personal">
+                                    <!-- 标签 -->
+                                    <div class="card-tag">个人</div>
+                                    <!-- 解绑 -->
+                                    <div class="card-del"></div>
+                                    <!-- 头部 -->
+                                    <div class="card-header">
+                                        <div class="card-bank card-bank-zg"></div>
+                                        <div class="card-type">储蓄卡</div>
+                                    </div>
+                                    <!-- 账号 -->
+                                    <div class="card-num">**** *** **** 6954</div>
+                                    <!-- 内容 -->
+                                    <div class="card-body">
+                                        <p>开户人名：广州泰和医药有限公司</p>
+                                        <p>开户行网点：海珠支行</p>
+                                        <p>开户行所在地：广州市</p>
+                                        <p>开通日期：2017/06/20</p>
+                                    </div>
+                                </a>
+                                <!-- 滑动按钮 -->
+                                <div class="btn-radio"><span class="radio-text">默认账户</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 底部信息 -->
+        <include src="../include/footer.html"></include>
+    </div>
+</div>
+
+<!-- 弹窗-绑定储蓄卡 -->
+<div class="pop-shade pop-add">
+    <!-- 弹窗 -->
+    <div class="pop-up">
+        <!-- 头部 -->
+        <div class="pop-header">
+            <!-- 头部文字 -->
+            <div class="header-text">添加银行账户</div>
+            <!-- 关闭按钮 -->
+            <div class="header-close"><i class="fa fa-close"></i></div>
+        </div>
+        <!-- 内容 -->
+        <div class="pop-body">
+            <!-- 账户类型 -->
+            <ul class="account-type">
+                <li class="active">个人账户</li>
+                <li>对公账户</li>
+            </ul>
+            <!-- 账户类型内容-个人 -->
+            <div class="account-ctn">
+                <form>
+                    <div class="form-group">
+                        <label>储蓄卡户名：</label>
+                        <div class="form-ctn">
+                            <input name="" class="input-name must" type="text">
+                            <!-- 错误提示 -->
+                            <p class="error-tip">请输入正确的格式！</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>开户银行：</label>
+                        <div class="form-ctn">
+                            <div class="select-box w153">
+                                <!-- 下拉框 -->
+                                <a href="javascript:void(0)" class="select-choice">
+                                    <!-- 选中 -->
+                                    <input type="text" value="招商银行" class="select-chosen" disabled>
+                                    <!-- 下拉icon -->
+                                    <span class="select-arrow">
+											<i class="fa fa-angle-down"></i>
+										</span>
+                                </a>
+                                <!-- 下拉列表 -->
+                                <ul class="select-drop">
+                                    <li>中国银行</li>
+                                    <li>中国工商银行</li>
+                                </ul>
+                            </div>
+                            <div class="select-box w153 mid10">
+                                <!-- 下拉框 -->
+                                <a href="javascript:void(0)" class="select-choice">
+                                    <!-- 选中 -->
+                                    <input type="text" value="广东省" class="select-chosen" disabled>
+                                    <!-- 下拉icon -->
+                                    <span class="select-arrow">
+											<i class="fa fa-angle-down"></i>
+										</span>
+                                </a>
+                                <!-- 下拉列表 -->
+                                <ul class="select-drop">
+                                    <li>广西省</li>
+                                    <li>广南省</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>开户网点：</label>
+                        <div class="form-ctn">
+                            <input name="" class="input-wd opening-bank must" type="text">
+                            <!-- 错误提示 -->
+                            <p class="error-tip">请输入正确的格式！</p>
+                            <div class="select-box w153 mid10">
+                                <!-- 下拉框 -->
+                                <a href="javascript:void(0)" class="select-choice">
+                                    <!-- 选中 -->
+                                    <input type="text" value="广东市" class="select-chosen" disabled>
+                                    <!-- 下拉icon -->
+                                    <span class="select-arrow">
+											<i class="fa fa-angle-down"></i>
+										</span>
+                                </a>
+                                <!-- 下拉列表 -->
+                                <ul class="select-drop">
+                                    <li>哈哈市</li>
+                                    <li>啦啦市</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>银行账户：</label>
+                        <div class="form-ctn">
+                            <input name="" class="input-bank must" type="text">
+                            <!-- 错误提示 -->
+                            <p class="error-tip">请输入正确的格式！</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>预留手机号码：</label>
+                        <div class="form-ctn">
+                            <input name="" class="input-mobile must" type="text">
+                            <!-- 错误提示 -->
+                            <p class="error-tip">请输入正确的格式！</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <!-- 设置默认收货地址 -->
+                        <div class="set-default">
+                            <span class="checkbox"></span><input name="" class="hidden" type="checkbox" hidden>是否为默认支付账号
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- 账户类型内容-对公 -->
+            <div class="account-ctn">
+                <!--资质已认证-->
+                <div class="account-certify">
+                    <!-- 对公账户绑定提示 -->
+                    <div class="account-tip">
+                        <p>绑定对公账号，是通过向企业的银行对公账号打款，核实账户是否真实存在。</p>
+                        <p>流程： 提交账号 → 药荟打款 → 填写金额 → 认证成功</p>
+                    </div>
+                    <!-- 去绑定 -->
+                    <p class="account-go">点击<a href="bank-bundle1.html">这里</a>绑定对公账号吧！</p>
+                </div>
+                <!--资质未认证-->
+                <!--<div class="account-uncertify">-->
+                    <!--对公账户资质认证提示-->
+                    <!--<div class="account-tip">-->
+                        <!--<p>尊敬的用户，企业资质认证成功后，方可绑定对公账户。请先进行资质认证。</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="pop-footer">
+            <!-- 取消按钮 -->
+            <div class="footer-btn btn-no">取消</div>
+            <!-- 提交按钮 -->
+            <div class="footer-btn btn-yes">提交</div>
+        </div>
+    </div>
+</div>
+
+<!-- 弹窗-绑定储蓄卡 -->
+<div class="pop-shade pop-del">
+    <!-- 弹窗 -->
+    <div class="pop-up">
+        <!-- 头部 -->
+        <div class="pop-header">
+            <!-- 头部文字 -->
+            <div class="header-text">解绑银行账户</div>
+            <!-- 关闭按钮 -->
+            <div class="header-close"><i class="fa fa-close"></i></div>
+        </div>
+        <!-- 内容 -->
+        <div class="pop-body">确定解绑该账户吗？</div>
+        <!-- 底部 -->
+        <div class="pop-footer">
+            <!-- 取消按钮 -->
+            <div class="footer-btn btn-no">取消</div>
+            <!-- 提交按钮 -->
+            <div class="footer-btn btn-yes">提交</div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

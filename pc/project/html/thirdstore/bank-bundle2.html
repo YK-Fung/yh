@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员中心-绑定对公账号</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/thirdstore/bank-bundle.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['thirdstore/bank-bundle2']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-center" second-title="bank"></div>
+
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">绑定对公账号</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 绑定对公账号</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<div class="main-ctn">
+						<div class="title">企业账户</div>
+						<!-- 步骤 -->
+						<div class="step step2"></div>
+						<!-- 账号绑定内容 -->
+						<div class="step2-ctn">
+							<!-- 这是第一步 -->
+							<div class="step2-type1">
+								<!-- 认证 -->
+								<div class="approve">
+									<div class="approve-header">提交成功</div>
+									<div class="approve-body">
+										<p>你已成功提交银行对公账号，请耐心等待药荟健康网的打款验证。打款将于2个工作日内完成。打款成功后，会通过站内信和手机短信通知您！</p>
+									</div>
+								</div>
+								<!-- 账户信息 -->
+								<div class="card-infor">
+									<p>银行开户名：广州泰和医药有限公司</p>
+									<p>&nbsp&nbsp&nbsp开户银行：中国银行广州海珠支行</p>
+									<p>&nbsp&nbsp&nbsp开户银行：231515111XXXXXXXX</p>
+								</div>
+							</div>
+							<!-- 这是第二步 -->
+							<div class="step2-type2 hidden">
+								<!-- 认证 -->
+								<div class="approve">
+									<div class="approve-header">打款成功</div>
+									<div class="approve-body">
+										<p>药荟健康网已于2017年5月25号向中国银行银行账号（231515111XXXXXXXX）打入一笔款项（<span>1.00元以下</span>），请查看打款金额，并在此页面填写打款金额。</p>
+										<p>如确认金额出错两次，需重新提交对公账号进行认证！</p>
+									</div>
+								</div>
+								<!-- 账户信息 -->
+								<div class="card-infor">
+									<p>银行开户名：广州泰和医药有限公司</p>
+									<p>&nbsp&nbsp&nbsp开户银行：中国银行广州海珠支行</p>
+									<p>&nbsp&nbsp&nbsp开户银行：231515111XXXXXXXX</p>
+									<p>&nbsp&nbsp&nbsp打款金额：<input name="" class="input-money must" type="text" value="">元<span class="error-tip">请输入正确的金额！</span></p>					
+								</div>
+								<!-- 提交按钮 -->
+								<div class="btn-submit">提交</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<include src="../include/footer.html"></include>
+		</div>
+	</div>
+
+</body>
+</html>

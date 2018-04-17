@@ -1,0 +1,145 @@
+.pad-r{
+	padding-right: 35px;
+}
+.yh-header{
+	font-family: "微软雅黑";
+	height: 105px;
+	background: url(../../img/yhw/head-bg.jpg) center center;
+	font-size: 12px;
+	.center{
+		width: 1200px;
+		height: 100%;
+		margin:0 auto;
+		.pad-r;
+	}
+	/* logo */
+	.logo{
+		float: left;
+		margin-top: 20px;
+		a{
+			display: block;
+		}
+	}
+	/* 搜索 */
+	.top-search{
+		float: right;
+		margin-top: 34px;
+		border:2px solid #004799;
+		position: relative;
+		z-index: 3;
+		.choose-btn{
+			float: left;
+			width: 61px;
+			height: 34px;
+			border-left:1px solid #eee;
+			border-right:1px solid #eee;
+			li{
+				width: 100%;
+				height: 34px;
+				line-height: 34px;
+				background-color: #fff;
+				text-align: center;
+				font-size: 12px;
+				color:#999;
+				cursor: pointer;
+			}
+			.fa{
+				font-size: 14px;
+				margin-left: 3px;
+			}
+			.top{
+				background-color: #f5f5f5;
+			}
+			.btm{
+				padding-right: 13px;
+				display: none;
+			}
+		}
+		input{
+			width: 310px;
+			height: 34px;
+			float: left;
+			outline: none;
+			padding: 0 12px;
+			background-color: #fff;
+		}
+		.btn{
+			width: 85px;
+			height: 34px;
+			float: left;
+			background-color: #004799;
+			color:#fff;
+			outline: none;
+			cursor: pointer;
+		}
+		/* 下拉菜单 */
+		.pull-down{
+			width: 310px;
+			position: absolute;
+			left: 61px;
+			top: 36px;
+			border:1px solid #e5e5e5;
+			border-top: 0;
+			display: none;
+			li{
+				width: 100%;
+				background: #fff;
+				color:#333;
+				font-size: 12px;
+				line-height: 28px;
+				padding: 0 18px;
+				cursor:pointer; 
+				white-space: nowrap;
+			    text-overflow: ellipsis;
+			    display: block;
+			    overflow: hidden;
+				&:hover{
+					background-color: #fdf5d1;
+				}
+			}
+		}
+	}
+	/* 采购单 */
+	.cg-list-open{
+		float: right;
+		margin-left: 15px;
+		margin-top: 38px;
+		overflow: hidden;
+		cursor: pointer;
+		.lf{
+			width: 38px;
+			height: 30px;
+			background-color: #72c34c;
+			border-radius: 18px 0 0 18px;
+			float: left;
+			text-align: center;
+			color:#fff;
+			.fa{
+				line-height: 30px;
+				font-size: 14px;
+				margin-left: 7px;
+			}
+			.icon{
+				width: 16px;
+				height: 17px;
+				background: url(../../img/yhw/index-img5.png) no-repeat 0 -59px;
+				display: inline-block;
+				margin:6px 0 0 7px;
+			}
+		}
+		.rt{
+			width: 60px;
+			height: 30px;
+			background-color: #fff;
+			float: left;
+			border-radius: 0 18px 18px 0;
+			line-height: 30px;
+			text-align: center;
+			color:#579c36;
+		}
+	}
+	/* 采购历史 */
+	.cg-history-open{
+		.cg-list-open;
+	}
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>支付</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/order/order-pay-succeed.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['order/order-pay-succeed']);</script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- 头部 -->
+		<div class="pay-header">
+			<div class="center">
+				<!-- logo -->
+				<div class="logo">
+					<a href="../index/yhw-index.html"><img src="../../img/yhw2/logo2.png"></a>
+				</div>
+				<!-- 功能 -->
+				<ul class="function">
+					<li><span class="red">李小姐</span>，<a href="#">退出</a></li>
+					<li><a href="cg-order-manage.html">订单管理</a></li>
+					<li><a href="../help/help.html">支付帮助</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 内容 -->
+		<div class="ctn">
+			<!-- 主要内容 -->
+			<div class="main">
+				<div class="main-ctn">
+					<!-- 成功提示 -->
+					<div class="succeed-tip">
+						<i class="icon"></i>恭喜您，付款成功！请耐心等待卖家发货！
+					</div>
+					<!-- 付款信息 -->
+					<div class="massage">
+						<div class="float">订单号：<span>59105414040</span></div>
+						<div class="float">付款时间：<span>2018-01-11 14:26</span></div>
+						<div class="float">付款金额：<span class="red">￥<i>500.00</i></span></div>
+					</div>
+					<p class="call">订单如有疑问，请致电：400-611-6911</p>
+					<!-- 按钮 -->
+					<div class="btns">
+						<a href="../index/yhw-index.html">继续采购</a>
+						<a href="cg-order-manage.html">查看订单</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<include src="../include/yhw-footer-btm.html"></include>
+	</div>
+	<!-- IE低版本提示 -->
+	<include src="../include/ie-tip.html"></include>
+</body>
+</html>

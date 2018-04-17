@@ -1,0 +1,131 @@
+@import url(../yhw-common2.less);
+/* 导航 */
+.yhw-nav{
+	.center .main-nav .num{
+		left: 66px;
+	}
+	.quick-order{
+		width: 143px;
+		height: 38px;
+		line-height: 38px;
+		text-align: center;
+		color:#fff;
+		font-size: 16px;
+		background: url(../../img/yhw2/detail-img01.png) no-repeat 0 0;
+		float: right;
+		margin-top: -10px;
+	}
+}
+
+.main{
+	width: 100%;
+	overflow: hidden;
+	background-color: #fff;
+	.main-ctn{
+		width: 1200px;
+		margin:0 auto;
+		padding-top: 10px;
+		padding-bottom: 60px;
+		text-align: right;
+	}
+	/* 评论 */
+	.evaluate{
+		margin-bottom: 30px;
+		text-align: left;
+		border: 1px solid #dddddd;
+	}
+	/* 评论类型选择 */
+	.evaluate-select{
+		height: 40px;
+		width: 100%;
+		padding-left: 16px;
+		border-bottom: 1px solid #ddd;
+		li{
+			display: inline-block;
+			height: 100%;
+			margin: 0 34px;
+			font-size: 14px;
+			line-height: 38px;
+			color: #333;
+			cursor: pointer;
+		}
+		.active{
+			color: @red;
+		}
+	}
+	/* 内容 */
+	.evaluate-ctn{
+		display: block;
+		padding: 0 85px;
+		li{
+			width: 100%;
+			padding-top: 20px;
+			padding-bottom: 18px;
+			border-bottom: 1px solid #ddd;
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+	}
+	/* 用户 */
+	.customer{
+		position: relative;
+		font-size: 12px;
+		margin-bottom: 36px;
+		&>div{
+			display: inline-block;
+		}
+		/* 评论类型 */
+		.evaluate-type{
+			position: absolute;
+			top: 1px;
+			left: -66px;
+			width: 46px;
+			height: 18px;
+			text-align: center;
+			line-height: 18px;
+			color: #fff;
+			background: #ddd;
+			border-radius: 18px;
+			&.type1{
+				background: #ff9c8f;
+			}
+			&.type2{
+				background: #ffd18f;
+			}
+			&.type3{
+				background: #ebe145;
+			}
+		}
+		.customer-firm{
+			font-size: 14px;
+			color: #333;
+		}
+		.other-infor{
+			margin-left: 44px;
+			color: #999;
+		}
+		.evaluate-time{
+			margin-left: 80px;
+			color: #ccc;
+			span{
+				margin-left: 16px;
+			}
+		}
+	}
+	/* 内容 */
+	.evaluate-detail{
+		padding-bottom: 16px;
+		font-size: 12px;
+		line-height: 18px;
+		color: #666;
+	}
+	/* 回复 */
+	.evaluate-answer{
+		padding-top: 16px;
+		font-size: 12px;
+		line-height: 18px;
+		color: #ff9800;
+		border-top: 1px dashed #ddd;
+	}
+}

@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>药荟健康网-商品详情</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/goods/product-detail.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['goods/product-detail']);</script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- 头部 -->
+		<include src="../include/yhw-topbar2.html"></include>
+		<!-- 右侧边栏 -->
+		<include src="../include/yhw-sidebar2.html"></include>
+		<!-- 头部 -->
+		<include src="../include/yhw-header-shop.html"></include>
+		<!-- 主体部分 -->
+		<div class="main">
+			<!-- 路径 -->
+			<div class="path">
+				<div class="path-ctn">
+					<a href="#" class="home"><i class="fa fa-home"></i>惠州市济和堂药业有限公司</a>
+					<span class="arrows">></span>
+					<a href="#">中成药</a>
+					<span class="arrows">></span>
+					<a href="#" class="active">感冒发热</a>
+				</div>
+			</div>
+			<!-- 内容 -->
+			<div class="main-ctn">
+				<!-- 商品详情上部分 -->
+				<div class="detail-top">
+
+						<!-- 商品展示图 -->
+						<div class="goods-show">
+							<!-- 图片 -->
+							<div class="pic">
+								<img src="../../img/placeholder.jpg">
+								<!-- 鼠标选中框-->
+								<div class="move"></div>
+								<!-- 放大显示 -->
+								<canvas class="big-pic" width="338" height="338"></canvas>
+							</div>
+							<!-- 图片切换 -->
+							<ul class="pic-toggle">
+								<li class="active"><img src="../../img/test.jpg"></li>
+								<li><img src="../../img/placeholder.jpg"></li>
+								<li><img src="../../img/product/introduction1.png"></li>
+								<li><img src="../../img/product/introduction3.png"></li>
+								<li><img src="../../img/product/introduction2.png"></li>
+							</ul>
+							<!-- 收藏 -->
+							<div class="collect">
+								<div class="lf">
+									<i class="star"></i>
+									<span>收藏</span>
+									<span class="num">(<i>20</i>)</span>
+								</div>
+								<div class="rt message-pop">商品信息纠错</div>
+							</div>
+							<!-- 温馨提示 -->
+							<div class="warm-prompt"><span class="red">温馨提示：</span>部分商品包装更换频繁，如货品与图片不完全一致，请以收到的商品实物为准</div>
+
+						</div>
+						<!-- 下单区 -->
+						<div class="cg-order">
+							<!-- 商品名 -->
+							<h3 class="good-name">
+								<!--
+                                    Rx (处方药) ：rx
+                                    OTC (乙类非处方药)：otc-y
+                                    OTC(甲类非处方药): otc-j
+                                -->
+								<!-- 区分类名切换图片 -->
+								<span class="category otc-j"></span>
+								<!-- 渲染 下面四个其中一个 -->
+								<span class="import">进口 <!-- 国产 --> <!-- 医保 --> <!-- 基本 --></span>
+								<span class="name">【同仁堂】感冒清热颗粒(无蔗糖)</span>
+							</h3>
+							<!-- 采购价格 -->
+							<div class="cg-price">
+								<label>采购价格：</label>
+								<span class="has-login">¥12.90</span>
+								<!-- <span class="login">登录可见</span> -->
+							</div>
+							<!-- 详情 -->
+							<ul class="good-detail">
+								<li>
+									<label>生产厂家：</label>
+									<span>华润三九(枣庄)药业有限公司</span>
+								</li>
+								<li>
+									<label>批准文号：</label>
+									<span>国药准字Z11020361</span>
+								</li>
+								<li>
+									<label>规格：</label>
+									<span>12g*14袋/袋</span>
+								</li>
+								<li>
+									<label>件装量：</label>
+									<span>200 盒/件</span>
+								</li>
+								<li>
+									<label>生产日期：</label>
+									<span>2016-10-31</span>
+								</li>
+								<li>
+									<label>有效期至：</label>
+									<span>2018-12-31</span>
+								</li>
+							</ul>
+							<!-- 批次 -->
+							<div class="batch">
+								<label>批次：</label>
+								<ul>
+									<li class="active">
+										<span>20120210</span>
+										<i class="icon"></i>
+										<input type="radio" class="hidden" name="b" value="20120210">
+									</li>
+									<li>
+										<span>20120230</span>
+										<i class="icon"></i>
+										<input type="radio" class="hidden" name="b" value="20120230">
+									</li>
+									<li>
+										<span>20120230</span>
+										<i class="icon"></i>
+										<input type="radio" class="hidden" name="b" value="20120230">
+									</li>
+									<li>
+										<span>20120230</span>
+										<i class="icon"></i>
+										<input type="radio" class="hidden" name="b" value="20120230">
+									</li>
+								</ul>
+							</div>
+							<!-- 采购方式 -->
+							<div class="cg-way">
+								<label>采购方式：</label>
+								<ul>
+									<li class="active">
+										<span>拆零</span>
+										<i class="icon"></i>
+										<input type="radio" class="hidden" name="b" value="拆零">
+									</li>
+									<li>
+										<span>整件</span>
+										<i class="icon"></i>
+										<input type="radio" class="hidden" name="b" value="整件">
+									</li>
+								</ul>
+								<span class="tip">整件：1件起 &nbsp;&nbsp;&nbsp; 拆零：1盒起</span>
+							</div>
+							<!-- 采购数量 -->
+							<div class="buy-num">
+								<label>采购数量：</label>
+								<div class="operate">
+									<div class="amount-reduce">-</div>
+									<!-- 输入框 -->
+									<input name="" class="amount-num" type="number" value="1">
+									<div class="amount-add">+</div>
+								</div>
+								<span class="tip">当前库存：999 盒</span>
+							</div>
+							<!-- 物流费用 -->
+							<div class="logistics">
+								<label>物流费用：</label>
+								<span class="tip">订单满1000元免邮费，不满邮费20元</span>
+								<div class="explain">
+									<div class="tit">
+										<i class="icon"></i>配送说明
+										<div class="txt"><i class="arrow"></i>广东省内车配，广东以外物流20元起步</div>
+									</div>
+								</div>
+							</div>
+
+							<!--无法购买提示-->
+							<div class="buy-tip">供应商无法购买</div>
+
+							<!-- 按钮 三种状态选一个渲染 -->
+							<!-- 认证通过状态 -->
+							<div class="btns pass">
+								<a href="../order/yhw-cg-affirm2.html">立即购买</a>
+								<a href="javascript:void(0)" class="into-cg-list side-toggle-btn"><i class="icon"></i> &nbsp;加入采购单</a>
+							</div>
+							<!-- 认证未通过状态 -->
+							<!-- <div class="btns nopass">
+                                <a href="javascript:void(0)">立即购买</a>
+                            </div> -->
+							<!-- 定向供应，无法购买 -->
+							<!-- <div class="btns none">
+                                <a href="javascript:void(0)">立即购买</a>
+                                <span>定向供应，无法购买</span>
+                            </div> -->
+						</div>
+						<!-- 店铺介绍 -->
+						<div class="shop-introduce">
+							<!-- logo -->
+							<div class="shop-logo">
+								<img src="../../img/yhw2/brand-logo.png">
+							</div>
+							<!-- 公司名 -->
+							<h3 class="shop-name">惠州市济和堂药业有限公司</h3>
+							<!-- 地区 等级 -->
+							<div class="area">
+								<p>
+									<label>地区：</label>
+									<span>福建市/福州市</span>
+								</p>
+							</div>
+							<!-- 生产/经营范围 -->
+							<div class="range">
+								<label>生产/经营范围：</label>
+								<!-- 截取字数60 -->
+								<div class="rang-txt" title="生物制品、生化制剂、中成药、化学药制剂、化妆品、中西成药、进口药品、中药饮片、参茸补品、医疗器械、保健品、食品、日用产品、化妆品、计生用品、性保健品、眼镜">
+									生物制品、生化制剂、中成药、化学药制剂、化妆品、中西成药、进口药品
+								</div>
+							</div>
+							<!-- 工商认证 图标 -->
+							<!-- 银行帐号 认证图标 -->
+							<!-- 企业实名 认证图标 -->
+							<ul class="approve">
+								<li>
+									<img src="../../img/yhw2/detail-approve1.jpg">
+									<p>工商认证</p>
+								</li>
+								<li>
+									<img src="../../img/yhw2/detail-approve2.jpg">
+									<p>实名认证</p>
+								</li>
+								<li>
+									<img src="../../img/yhw2/detail-approve3.jpg">
+									<p>银行认证</p>
+								</li>
+							</ul>
+							<!-- 地址 -->
+							<div class="address">
+								<label>地址：</label>
+								<span>福州市仓山区盖山路6号9号楼第二层</span>
+							</div>
+							<!-- 按鈕 -->
+							<div class="btns">
+								<a href="../thirdstore/shop-index.html">进入店铺</a>
+								<a href="tencent://message/?Menu=yes&uin=649497201& Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45">联系客服</a>
+							</div>
+						</div>
+				</div>
+			</div>
+			<!-- 商品详情下部分 -->
+			<div class="detail-btm">
+				<div class="center">
+					<!-- 供应商其他商品 -->
+					<div class="other-goods">
+						<h3>供应商其他商品</h3>
+						<ul>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="../../img/yhw2/ad-img04.jpg">
+									</div>
+									<p>西瓜霜润喉片</p>
+									<p>规格：12片*2板</p>
+									<p>采购价:<span class="red">登录可见</span></p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="../../img/yhw2/ad-img04.jpg">
+									</div>
+									<p>西瓜霜润喉片</p>
+									<p>规格：12片*2板</p>
+									<p>采购价:<span class="red">登录可见</span></p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- 说明书等切换 --> 
+					<div class="toogle-ctn">
+						<ul class="title">
+							<li><span>说明书</span></li>
+							<li class="active"><span>服务保障</span></li>
+							<li><span>采购须知</span></li>
+						</ul>
+						<ul class="for-ctn">
+							<!-- 说明书 -->
+							<li class="toogle-li specification">
+								<div class="textarea">
+									富文本的内容
+								</div>
+								<div class="explain">
+									<!-- 两种情况 1.说明书为图片 2.说明书为文字 -->
+									<img src="../../img/product/introduction1.png">
+									<img src="../../img/product/product-small2.jpg">
+									富文本的内容
+								</div>
+								<div class="textarea">
+									富文本的内容
+								</div>
+								<p class="tips">本页面信息仅供参考，请以产品实际附带说明书为准。</p>
+							</li>
+							<!-- 服务保障 -->
+							<li class="toogle-li active">富文本的内容</li>
+							<!-- 采购须知 -->
+							<li class="toogle-li">富文本的内容</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 网站介绍 -->
+			<div class="web-introduce">
+				<div class="center">
+					<img src="../../img/yhw2/introduce01.jpg" class="icon">
+					<div class="rt">
+						<p>正品有保障</p>
+						<p>100%正品值得信赖</p>
+					</div>
+					<img src="../../img/yhw2/introduce02.jpg" class="icon">
+					<div class="rt">
+						<p>采购更安全</p>
+						<p>质效严格 票单安全</p>
+					</div>
+					<img src="../../img/yhw2/introduce03.jpg" class="icon">
+					<div class="rt">
+						<p>品类更优质</p>
+						<p>畅销品种 价优货足</p>
+					</div>
+					<img src="../../img/yhw2/introduce04.jpg" class="icon">
+					<div class="rt">
+						<p>付款更便捷</p>
+						<p>安心验收 放心支付</p>
+					</div>
+				</div>
+			</div>
+			<!-- 弹窗-商品信息纠错 -->
+			<div class="pop-shade" id="massage-error">
+				<!-- 弹窗 -->
+				<div class="pop-main">
+					<!-- 头部 -->
+					<div class="pop-header">
+						<!-- 头部文字 -->
+						<div class="header-text">商品信息纠错</div>
+						<!-- 关闭按钮 -->
+						<div class="header-close"></div>
+					</div>
+					<!-- 内容 -->
+					<div class="pop-body">
+						<div class="id">
+							<label>信息ID：</label>
+							<input type="text" value="987456123" readonly>
+						</div>
+						<div class="type">
+							<label>信息类型：</label>
+							<!-- 单选框 -->
+							<div class="radio active">
+								<i class="icon"></i>
+								<input type="radio" name="a" value="信息纠错">
+								<span>信息纠错</span>
+							</div>
+							<div class="radio">
+								<i class="icon"></i>
+								<input type="radio" name="a" value="投诉举报">
+								<span>投诉举报</span>
+							</div>
+						</div>
+						<div>
+							<label>内容描述：</label>
+							<textarea></textarea>
+						</div>
+					</div>
+					<!-- 底部 -->
+					<div class="pop-footer">
+						<!-- 确定按钮 -->
+						<div class="btn btn-yes">提交</div>
+					</div>
+				</div>
+			</div>
+			<!-- 弹窗-提醒 -->
+			<div class="pop-shade" id="succeed-tip">
+				<!-- 弹窗 -->
+				<div class="pop-main">
+					<!-- 头部 -->
+					<div class="pop-header">
+						<!-- 头部文字 -->
+						<div class="header-text">提醒</div>
+						<!-- 关闭按钮 -->
+						<div class="header-close"></div>
+					</div>
+					<!-- 内容 -->
+					<div class="pop-body">
+						<p><i class="icon"></i>提交成功！我们会尽快处理您提交的信息！</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<include src="../include/yhw-footer-top.html"></include>
+		<include src="../include/yhw-footer-btm.html"></include>
+	</div>
+	<!-- IE低版本提示 -->
+	<include src="../include/ie-tip.html"></include>
+</body>
+</html>

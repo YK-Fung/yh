@@ -1,0 +1,121 @@
+@import url(../yhw-common2.less);
+
+html,
+body{
+	background-color: #f8f8f8;
+}
+a{
+	font-size: inherit;
+	text-decoration: none;
+	color: inherit;
+}
+li{
+	list-style: none;
+}
+.red{
+	color:#ff0000;
+}
+.blue{
+	color:#40bbea;
+}
+/* 头部 */
+.pay-header{
+	height: 100px;
+	border:1px solid #eee;
+	background-color: #fff;
+	.center{
+		width: 990px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.logo{
+		float: left;
+	}
+	.function{
+		float: right;
+		overflow: hidden;
+		padding: 43px 0;
+		li{
+			float: left;
+			line-height: 12px;
+			font-size: 12px;
+			padding: 0 10px;
+			border-right: 1px solid #666;
+			&:nth-last-of-type(1){
+				border-right: 0;
+			}
+			a{
+				color:#666;
+				&:hover{
+					color:#0066cc;
+				}
+			}
+		}
+	}
+}
+.main-ctn{
+	width: 990px;
+	margin:0 auto;
+	padding-top: 60px;
+}
+/* 成功提示 */
+.succeed-tip{
+	width: 560px;
+	line-height: 66px;
+	font-size: 24px;
+	color:#009900;
+	margin:0 auto;
+	overflow: hidden;
+	.icon{
+		width: 67px;
+		height: 67px;
+		background: url(../../img/hy/pay-succeed.png) no-repeat 0 0;
+		margin-right: 26px;
+		float: left;
+	}
+}
+/* 付款信息 */
+.massage{
+	text-align: center;
+	margin-top: 12px;
+	.float{
+		line-height: 34px;
+		font-size: 14px;
+		color:#666;
+		margin-right: 40px;
+		display: inline-block;
+	}
+	i{
+		font-style: normal;
+	}
+}
+/* 电话 */
+.call{
+	line-height: 34px;
+	font-size: 14px;
+	color:#999;
+	text-align: center;
+}
+/* 按钮 */
+.btns{
+	text-align: center;
+	a{
+		width: 100px;
+		height: 32px;
+		text-align: center;
+		line-height: 32px;
+		color:#fff;
+		background-color: #40bbea;
+		font-size: 12px;
+		margin: 50px 15px;
+		display: inline-block;
+		&:nth-of-type(2){
+			background-color: #fa8c35;
+		}
+	}
+}
+.yhw-footer-btm{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}

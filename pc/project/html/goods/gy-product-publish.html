@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员中心-产品发布</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/goods/gy-product-publish.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['goods/gy-product-publish']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-supplier" second-title="gy-product-publish"></div>
+
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">产品管理 > 产品发布</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 产品管理 / 产品发布</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<!-- 页面标题 -->
+					<h2 class="title-top">产品库快速检索</h2>
+					<!-- 快速检索 -->
+					<div class="find-form">
+						<div class="form-group select">
+							<label><span class="star">*</span>基本目录：</label>
+							<div class="select-box">
+								<!-- 下拉框文字 -->
+								<a href="javascript:void(0)" class="select-choice">
+									<!-- 选中 -->
+									<div class="select-text must-text">请选择</div>
+									<input type="text" class="select-input" value="1" name="">
+									<!-- 下拉icon -->
+									<span class="select-arrow">
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<!-- 下拉列表 -->
+								<div class="select-drop">
+									<ul>
+										<li data="1">请选择</li>
+										<li data="2">中西成药</li>
+										<li data="3">中西成药</li>
+										<li data="4">中西成药</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="form-group select">
+							<label>产品分类：</label>
+							<div class="select-box class-lf">
+								<!-- 下拉框文字 -->
+								<a href="javascript:void(0)" class="select-choice">
+									<!-- 选中 -->
+									<div class="select-text">中西成药</div>
+									<input type="text" class="select-input" value="1" name="">
+									<!-- 下拉icon -->
+									<span class="select-arrow">
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<!-- 下拉列表 -->
+								<div class="select-drop">
+									<ul class="linkage-left">
+										<li data="1">请选择</li>
+										<li data="2">中藥材/中藥飲片</li>
+										<li data="3">中西成药</li>
+										<li data="4">中西成药</li>
+									</ul>
+								</div>
+							</div>
+							<div class="select-box class-rt">
+								<!-- 下拉框文字 -->
+								<a href="javascript:void(0)" class="select-choice">
+									<!-- 选中 -->
+									<div class="select-text">中西成药</div>
+									<input type="text" class="select-input" value="1" name="">
+									<!-- 下拉icon -->
+									<span class="select-arrow">
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<!-- 下拉列表 -->
+								<div class="select-drop">
+									<ul class="linkage-right">
+										<li data="1">请选择</li>
+										<li data="2">補充礦物質及微量元素</li>
+										<li data="3">中西成药</li>
+										<li data="4">中西成药</li>
+									</ul>
+								</div>
+							</div>
+							<span class="tips">（只能选择生产/经营范围内的产品！）</span>
+						</div>
+						<div class="form-group">
+							<label>产品名称：</label>
+							<input type="text">
+						</div>
+						<div class="form-group">
+							<label>生产企业：</label>
+							<input type="text">
+						</div>
+						<div class="form-group">
+							<label>批准文号：</label>
+							<input type="text">
+						</div>
+						<!-- 点击按钮 -->
+						<button class="btn search-btn">快速检索</button>
+					</div>
+					<!-- 检索结果 -->
+					<div class="result">
+						<div class="result-top">
+							<h3>检索结果：</h3>
+							<div class="tip-ctn">没有您要发布的产品规格？请点击这里  <span class="product-add">新增产品</span></div>
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th>药品名称</th>
+									<th>批准文号</th>
+									<th>生产企业</th>
+									<th>规格</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- 最多5条 -->
+								<tr>
+									<td>丁酸氢化可的松乳膏</td>
+									<td>国药准字H20093962</td>
+									<td>湛江市弘安药业有限公司</td>
+									<td>1.6g/1盒</td>
+									<td class="select"><a href="gy-product-edit.html">选择</a> &nbsp;&nbsp;<span class="add-size-btn">新增规格</span></td>
+								</tr>
+								<tr>
+									<td>丁酸氢化可的松乳膏</td>
+									<td>国药准字H20093962</td>
+									<td>湛江市弘安药业有限公司</td>
+									<td>
+										<div class="select-box">
+											<!-- 下拉框文字 -->
+											<a href="javascript:void(0)" class="select-choice">
+												<!-- 选中 -->
+												<div class="select-text">请选择</div>
+												<input type="text" class="select-input" value="1" name="">
+												<!-- 下拉icon -->
+												<span class="select-arrow">
+													<i class="fa fa-angle-down"></i>
+												</span>
+											</a>
+											<!-- 下拉列表 -->
+											<div class="select-drop">
+												<ul>
+													<li data="1">请选择</li>
+													<li data="2">中西成药</li>
+													<li data="3">中西成药</li>
+													<li data="4">中西成药</li>
+												</ul>
+											</div>
+										</div>
+									</td>
+									<td class="select"><a href="gy-product-edit.html">选择</a> &nbsp;&nbsp;<span class="add-size-btn">新增规格</span></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- 分页 -->
+						<div class="overflow">
+							<include src="../include/pagination.html"></include>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<include src="../include/footer.html"></include>
+		</div>
+	</div>
+	<!-- 提示 -->
+	<div class="pop-shade" id="pop-tips">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text">提醒</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p>请选择基本目录！</p>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 取消按钮 -->
+				<div class="btn btn-no">取消</div>
+			</div>
+		</div>
+	</div>
+	<!-- 弹窗-新增规格弹窗 -->
+	<div class="pop-shade" id="add-size">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text"></div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<div class="form-group select">
+					<label><i>*</i> 基本目录：</label>
+					<div class="select-box">
+						<!-- 下拉框文字 -->
+						<a href="javascript:void(0)" class="select-choice">
+							<!-- 选中 -->
+							<div class="select-text">中西成药</div>
+							<input type="text" class="select-input" value="1" name="">
+							<!-- 下拉icon -->
+							<span class="select-arrow">
+								<i class="fa fa-angle-down"></i>
+							</span>
+						</a>
+						<!-- 下拉列表 -->
+						<div class="select-drop">
+							<ul>
+								<li data="1">请选择</li>
+								<li data="2">中西成药</li>
+								<li data="3">中西成药</li>
+								<li data="4">中西成药</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="form-group select">
+					<label><i>*</i> 产品分类：</label>
+					<!-- 下拉框 -->
+					<div class="select-box class-lf">
+						<!-- 下拉框文字 -->
+						<a href="javascript:void(0)" class="select-choice">
+							<!-- 选中 -->
+							<div class="select-text">中西成药</div>
+							<input type="text" class="select-input" value="1" name="">
+							<!-- 下拉icon -->
+							<span class="select-arrow">
+								<i class="fa fa-angle-down"></i>
+							</span>
+						</a>
+						<!-- 下拉列表 -->
+						<div class="select-drop">
+							<ul class="linkage-left">
+								<li data="1">请选择</li>
+								<li data="2">中藥材/中藥飲片</li>
+								<li data="3">中西成药</li>
+								<li data="4">中西成药</li>
+							</ul>
+						</div>
+					</div>
+					<div class="select-box class-rt">
+						<!-- 下拉框文字 -->
+						<a href="javascript:void(0)" class="select-choice">
+							<!-- 选中 -->
+							<div class="select-text">中西成药</div>
+							<input type="text" class="select-input" value="1" name="">
+							<!-- 下拉icon -->
+							<span class="select-arrow">
+								<i class="fa fa-angle-down"></i>
+							</span>
+						</a>
+						<!-- 下拉列表 -->
+						<div class="select-drop">
+							<ul class="linkage-right">
+								<li data="1">请选择</li>
+								<li data="2">補充礦物質及微量元素</li>
+								<li data="3">中西成药</li>
+								<li data="4">中西成药</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label><i>*</i> 批准文号：</label>
+					<input type="text" class="add-input">
+				</div>
+				<div class="form-group">
+					<label><i>*</i> 产品名称（全称）：</label>
+					<input type="text" class="add-input">
+				</div>
+				<div class="form-group">
+					<label><i>*</i> 生产厂家（全称）：</label>
+					<input type="text" class="add-input">
+				</div>
+				<div class="form-group">
+					<label><i>*</i> 包装规格：</label>
+					<input type="text" class="add-input packing-size">
+				</div>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 确定按钮 -->
+				<p class="error-tip">请检查带*号的内容是否填写完整！</p>
+				<div class="btn btn-yes">确定</div>
+				<!-- 取消按钮 -->
+				<div class="btn btn-no">取消</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

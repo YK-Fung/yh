@@ -1,0 +1,192 @@
+/* IE低版本提示 */
+.ie-tip{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.8);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000,endColorstr=#c8000000);
+	display: none;
+	z-index: 9;
+	.center{
+		width: 916px;
+		height: 470px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -458px;
+		margin-top: -235px;
+		h2{
+			margin-bottom: 54px;
+			text-align: center;
+		}
+		.btm-ctn{
+			border:1px dashed #fff;
+			border-radius: 10px;
+			p{
+				color:#fff;
+				font-size: 20px;
+				line-height: 34px;
+				margin: 42px 0 40px;
+				padding: 0 45px;
+			}
+			span{
+				color:#f54b26;
+				font-size: 20px;
+			}
+			i{
+				font-style: normal;
+				text-decoration: underline;
+			}
+			.link{
+				padding: 0 15px;
+				margin-bottom: 28px;
+			}
+			a{
+				margin:0 85px;
+				display: inline-block;
+			}
+			img{
+				border:0;
+			}
+		}
+	}
+}
+
+/* 登录弹窗 */
+.login-pop {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, .4);
+	z-index: 9;
+	display: none;
+	.center-border {
+		width: 420px;
+		height: 460px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background: rgba(255, 255, 255, .4);
+		padding: 6px;
+		.center {
+			width: 100%;
+			height: 100%;
+			background: #fff url(../../img/login2/login-logo.png) center 24px no-repeat;
+			padding: 151px 56px 0 56px;
+			.close {
+				cursor: pointer;
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				right: 16px;
+				top: 16px;
+				border-radius: 50%;
+				background: url(../../img/login2/login-close.png) no-repeat;
+			}
+			//登录失败的提示
+			form.fail {
+				.form-group {
+					.login-user, .login-pwd {
+						border: 1px solid #f00;
+					}
+					.login-fail {
+						display: block;
+					}
+				}
+			}
+			.form-group {
+				width: 100%;
+				height: 72px;
+				.login-user, .login-pwd {
+					width: 100%;
+					height: 40px;
+					line-height: 40px;
+					border: 1px solid #ccc;
+					font-size: 12px;
+					color: #333;
+					border-radius: 4px;
+					margin: 0 auto;
+					outline: none;
+					padding-left: 35px;
+				}
+				.login-user {
+					background: url(../../img/login2/login-user.png) 10px center no-repeat;
+				}
+				.login-pwd {
+					background: url(../../img/login2/login-pwd.png) 10px center no-repeat;
+				}
+				.login-fail,.error-tip {
+					display: none;
+					font-size: 12px;
+					line-height: 32px;
+					color: #f00;
+				}
+				&:nth-child(1) {
+					position: relative;
+					i {
+						cursor: pointer;
+						display: none;
+						width: 16px;
+						height: 16px;
+						position: absolute;
+						right: 11px;
+						top: 13px;
+						background: url(../../img/login2/login-del.png) no-repeat;
+					}
+				}
+				&.error {
+					.login-user, .login-pwd {
+						border: 1px solid #f00;
+					}
+					.error-tip {
+						display: block;
+					}
+				}
+			}
+			.login-btn {
+				cursor: pointer;
+				width: 100%;
+				height: 40px;
+				background: #ccc;
+				color: #fff;
+				margin-top: 25px;
+				margin-bottom: 9px;
+				line-height: 40px;
+				text-align: center;
+				font-size: 20px;
+				border-radius: 4px;
+				&.usable {
+					background: #0099ff;
+				}
+			}
+			.forget-pwd {
+				cursor: pointer;
+				float: right;
+				font-size: 12px;
+				color: #bbb;
+			}
+		}
+	}
+}
+
+//输入框占位符文字颜色
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #ccc;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #ccc;
+}
+
+input:-ms-input-placeholder{
+	color: #ccc;
+}
+
+input::-webkit-input-placeholder{
+	color: #ccc;
+}

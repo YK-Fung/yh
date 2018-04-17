@@ -1,0 +1,94 @@
+@import url(../hy-common2.less);
+
+/*合同*/
+.main{
+	padding-bottom: 40px;
+}
+.contract{
+	width: 1000px;
+	padding: 60px 80px;
+	margin: 0 auto;
+	background: #fff;
+	*{
+		font-family: '宋体';
+		font-size: 16px;
+	}
+	.empty{
+		margin: 0 14px;
+	}
+	.text-right{
+		text-align: right;
+	}
+	.text-center{
+		text-align: center;
+	}
+	/*合同文字*/
+	.contract-text{
+		width: 100%;
+		height: auto;
+		padding: 0;
+		margin: 0 auto;
+		overflow: auto;
+		font-size: 12px;
+		line-height: 30px;
+		color: #666;
+		background: #fff;
+		.font20{
+			font-size: 20px;
+		}
+	}
+	/*甲方乙方*/
+	.contract-people{
+		display: block;
+		width: 100%;
+		padding: 30px 0 100px;
+		overflow: hidden;
+		font-size: 12px;
+		color: #666;
+		li{
+			float: left;
+			width: 50%;
+			text-align: left;
+		}
+		.people-infor{
+			display: inline-block;
+			text-align: left;
+			&>div{
+				line-height: 30px;
+			}
+			p{
+				position: relative;
+				margin-bottom: 0;
+				line-height: 30px;
+				text-indent: 0;
+				span{
+					padding-right: 4px;
+				}
+				label{
+					color: #999;
+				}
+			}
+			.stamp{
+				position: absolute;
+				top: 0;
+				left: 110px;
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				background: url(../../img/stamp-active.png) center center no-repeat;
+			}
+		}
+	}
+}
+/*盖章按钮*/
+.btn-yes{
+    width: 100px;
+    margin: 50px auto 30px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 34px;
+    color: #fff;
+    border: 1px solid #40bbea;
+    background: #40bbea;
+    cursor: pointer;
+}

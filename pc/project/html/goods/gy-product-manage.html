@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>产品管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/goods/gy-product-manage.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['goods/gy-product-manage']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-supplier" second-title="gy-product-manage2"></div>
+	<!-- 产品展示分类导航 -->
+	<div id="navInnerCur" data-nav="product-all"></div>
+
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">产品管理</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 产品管理</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<!-- 筛选项 -->
+					<div class="filtrate">
+						<!-- 筛选项上： -->
+						<div class="filtrate-line">	
+							<a href="gy-product-publish.html" class="link">产品发布</a>
+							<!-- <a href="gy-product-edit.html" class="link">产品发布</a> -->
+							<a href="gy-product-import.html" class="link">产品批量导入</a>
+						</div>
+						<!-- 筛选项下： -->
+						<div class="filtrate-line">
+							<span class="tit">产品分类：</span>
+							<!-- 产品分类 下拉框 -->
+							<div class="select-box nation">
+								<!-- 下拉框文字 -->
+								<a href="javascript:void(0)" class="select-choice">
+									<!-- 选中 -->
+									<div class="select-text">全部</div>
+									<input type="text" class="select-input" value="1" name="">
+									<!-- 下拉icon -->
+									<span class="select-arrow">
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<!-- 下拉列表 -->
+								<div class="select-drop">
+									<ul>
+										<li data="1">全部</li>
+										<li data="2">国内</li>
+										<li data="3">进口</li>
+									</ul>
+								</div>
+							</div>
+							<!-- 产品分类 下拉框 -->
+							<div class="select-box classify">
+								<!-- 下拉框文字 -->
+								<a href="javascript:void(0)" class="select-choice">
+									<!-- 选中 -->
+									<div class="select-text">全部</div>
+									<input type="text" class="select-input" value="1" name="">
+									<!-- 下拉icon -->
+									<span class="select-arrow">
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<!-- 下拉列表 -->
+								<div class="select-drop">
+									<ul>
+										<li data="1">全部</li>
+										<li data="2">医疗器械</li>
+										<li data="3">保健食品</li>
+										<li data="4">中药饮片</li>
+									</ul>
+								</div>
+							</div>
+							<!-- 发布日期： -->
+							<div class="date-times">
+								<span class="tit">发布日期：</span>
+								<div class="dates">
+									<div class="lf">
+										<i class="fa fa-calendar"></i>
+										<!-- 开始时间 -->
+										<input name="" type="text" class="date-time date1">
+									</div>
+									<span class="line"> - </span>
+									<div class="lf">
+										<i class="fa fa-calendar"></i>
+										<!-- 结束时间 -->
+										<input name="" type="text" class="date-time date2">
+									</div>
+								</div>
+							</div>
+							<!-- 查询 -->
+							<input type="text" placeholder="请输入药品名称/批准文号/生产厂家" class="search-txt">
+							<div class="search-btn">查询</div>
+						</div>
+					</div>
+					<!-- 筛选结果 -->
+					<div class="table-form">
+						<!-- 导航 -->
+						<div class="navs">
+							<ul>
+								<li class="active">所有商品</li>
+								<li>上架产品</li>
+								<li>下架产品</li>
+								<li>待审核</li>
+								<li>审核未通过</li>
+								<li>草稿</li>
+							</ul>
+						</div>
+						<!-- 所有产品 -->
+						<div class="product-table">
+							<table class="table">
+								<thead>
+									<tr>
+										<th></th>
+										<th>药品名称</th>
+										<th>包装规格</th>
+										<th>批准文号</th>
+										<th>生产企业</th>
+										<th>状态</th>
+										<th>库存</th>
+										<th>发布日期</th>
+										<th>产品维护</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="checkbox">
+												<input type="checkbox">
+												<label></label>
+											</div>
+										</td>
+										<td>丁酸氢化可</td>
+										<td>6g*12袋</td>
+										<td>国药准字H20093962</td>
+										<td>湛江市弘安药店</td>
+										<td>上架产品</td>
+										<td>999</td>
+										<td>2017-2-13</td>
+										<td>
+											<a href="#">编辑</a>
+											<a href="javascript:void(0)" class="orange">下架</a>
+											<a href="javascript:void(0)" class="batch-btn">批次管理</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="checkbox">
+												<input type="checkbox">
+												<label></label>
+											</div>
+										</td>
+										<td>丁酸氢化可</td>
+										<td>6g*12袋</td>
+										<td>国药准字H20093962</td>
+										<td>湛江市弘安药店</td>
+										<td>下架产品</td>
+										<td>999</td>
+										<td>2017-2-13</td>
+										<td>
+											<a href="#">编辑</a>
+											<a href="javascript:void(0)">上架</a>
+											<a href="javascript:void(0)" class="batch-btn">批次管理</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="checkbox">
+												<input type="checkbox">
+												<label></label>
+											</div>
+										</td>
+										<td>丁酸氢化可</td>
+										<td>6g*12袋</td>
+										<td>国药准字H20093962</td>
+										<td>湛江市弘安药</td>
+										<td>审核未通过</td>
+										<td>10</td>
+										<td>2017-2-13</td>
+										<td>
+											<a href="#">编辑</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="action">
+								<!-- 全选 -->
+								<div class="select-all">
+									<div class="checkbox select-all-checkbox">
+										<input type="checkbox">
+										<label></label>
+									</div>
+									<span>全选</span>
+								</div>
+								<!-- 批量上架 -->
+								<div class="btn batch-delete-btn">批量删除</div>
+								<!-- 批量下架 -->
+								<div class="btn table-down-btn">导出表格</div>
+							</div>
+							<!-- 分页 -->
+							<div class="overflow">
+								<include src="../include/pagination.html"></include>
+								<!--<div class="pagination">-->
+									<!--&lt;!&ndash;每页显示数量&ndash;&gt;-->
+									<!--<div class="show-num">-->
+										<!--<span>每页显示</span>-->
+										<!--<div class="select-box">-->
+											<!--&lt;!&ndash; 下拉框 &ndash;&gt;-->
+											<!--<a href="javascript:void(0)" class="select-choice">-->
+												<!--&lt;!&ndash; 选中 &ndash;&gt;-->
+												<!--<div class="select-text">10</div>-->
+												<!--<input type="text" value="1" class="select-input" disabled hidden>-->
+												<!--&lt;!&ndash; 下拉icon &ndash;&gt;-->
+												<!--<span class="select-arrow"><i class="fa fa-angle-down"></i></span>-->
+											<!--</a>-->
+											<!--&lt;!&ndash; 下拉列表 &ndash;&gt;-->
+											<!--<ul class="select-drop">-->
+												<!--&lt;!&ndash;下拉列表对应的内容&ndash;&gt;-->
+												<!--<li data="1">10</li>-->
+												<!--<li data="2">20</li>-->
+												<!--<li data="3">30</li>-->
+												<!--<li data="4">50</li>-->
+											<!--</ul>-->
+										<!--</div>-->
+										<!--<span>条记录</span>-->
+									<!--</div>-->
+									<!--&lt;!&ndash; 页码 &ndash;&gt;-->
+									<!--<ul>-->
+										<!--<li class="page-first">首页</li>-->
+										<!--<li class="page-prev">上一页</li>-->
+										<!--<li class="page-num active">1</li>-->
+										<!--<li class="page-num">2</li>-->
+										<!--<li class="page-num">3</li>-->
+										<!--<li class="page-num">4</li>-->
+										<!--<li class="page-num">5</li>-->
+										<!--<li class="page-next">下一页</li>-->
+										<!--<li class="page-last">尾页</li>-->
+									<!--</ul>-->
+									<!--&lt;!&ndash; 总计 &ndash;&gt;-->
+									<!--<div class="all-num">-->
+										<!--共<span class="item-amount">110</span>条 / 共<span class="page-amount">15</span>页-->
+									<!--</div>-->
+									<!--&lt;!&ndash; 跳转 &ndash;&gt;-->
+									<!--<div class="page-go">-->
+										<!--<span class="lf">到第</span><input name="" type="text" value=""><span class="lf">页</span>-->
+										<!--<button>确定</button>-->
+									<!--</div>-->
+								<!--</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<include src="../include/footer.html"></include>
+		</div>
+		<!-- 弹窗 批次管理 -->
+		<div class="pop-shade" id="batch">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">批次管理</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<div class="tbale">
+						<div class="thead">
+							<span>批次/库存</span>
+							<span>操作</span>
+						</div>
+						<ul class="tbody">
+							<li>
+								<span>20170202 / 99</span>
+								<span class="operation">上架</span>
+							</li>
+							<li>
+								<span>20170202 / 99</span>
+								<span class="operation orange">下架</span>
+							</li>
+							<li class="gray">
+								<span>20170202 / 99</span>
+								<span>(已过期)</span>
+							</li>
+						</ul>
+					</div>
+					<p class="all-putaway blue">全部上架</p>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-no">返回</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗 提示 -->
+		<div class="pop-shade" id="tip-txt">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">删除产品</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<p class="ctn-txt"></p>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-yes">确定</div>
+					<!-- 取消按钮 -->
+					<div class="btn btn-no">返回</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

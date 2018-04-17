@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员中心-我的收藏</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/seen/my-collect-single.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['seen/my-collect-single']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-buyer" second-title="my-collect"></div>
+
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">我的收藏</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 我的收藏</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<!-- 筛选条件 -->
+					<div class="select-ctn">
+						<!-- 分类： -->
+						<span class="name">分类：</span>
+						<!-- 产地 -->
+						<div class="select-box">
+							<!-- 下拉框 -->
+							<a href="javascript:void(0)" class="select-choice">
+								<!-- 选中 -->
+								<div class="select-text">请选择</div>
+								<input type="text" placeholder="请选择" class="select-input" readonly value="" name="">
+								<!-- 下拉icon -->
+								<span class="select-arrow">
+									<i class="fa fa-angle-down"></i>
+								</span>
+							</a>
+							<!-- 下拉列表 -->
+							<div class="select-drop">
+								<ul>
+									<li>全部</li>
+									<li>国产</li>
+									<li>进口</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 产品类别 -->
+						<div class="select-box classes">
+							<!-- 下拉框 -->
+							<a href="javascript:void(0)" class="select-choice">
+								<!-- 选中 -->
+								<div  class="select-text">请选择</div>
+								<input type="text" placeholder="请选择" class="select-input" readonly value="" name="">
+								<!-- 下拉icon -->
+								<span class="select-arrow">
+									<i class="fa fa-angle-down"></i>
+								</span>
+							</a>
+							<!-- 下拉列表 -->
+							<div class="select-drop">
+								<ul>
+									<li data="1">全部</li>
+									<li>药品</li>
+									<li>化妆品</li>
+									<li>保健食品</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 搜索 -->
+						<div class="search-ctn">
+							<input type="text" placeholder="请输入产品名称">
+							<button>搜索</button>
+						</div>
+					</div>
+					<!-- 一级导航 -->
+					<ul class="nav1">
+						<!-- 单品收藏 -->
+						<li class="active"><a href="my-collect-single.html">单品收藏</a></li>
+						<!-- 企业收藏 -->
+						<li><a href="my-collect-firm.html">企业收藏</a></li>
+					</ul>
+					<!-- 搜索结果 -->
+					<div class="result-all">
+						<!-- 二级导航 -->
+						<ul class="nav2">
+							<li class="active">全部产品</li>
+							<li>已下架</li>
+							<li>同店铺产品</li>
+						</ul>
+						<div class="center">
+							<!-- 产品列表 -->
+							<div class="detail-lis">
+								<!-- 全部产品 -->
+								<div class="toggle-ctn all-product active">
+									<ul class="list">
+										<!-- 循环li 一页放8个数据-->
+										<li class="product-one">
+											<a class="pic-box" href="../goods/product-detail2.html">
+												<img src="../../img/yhw2/ad-img04.jpg" class="photo">
+											</a>
+											<div class="details">
+												<a class="name" href="../goods/product-detail2.html">云南白药创可贴(防水超薄型)</a>
+												<p>规格：1.5cm*2.3cm*5片/盒</p>
+												<p>采购价 | <span class="red">￥19.90</span></p>
+											</div>
+											<!-- 选中 -->
+											<div class="checkbox">
+												<input type="checkbox">
+												<label></label>
+											</div>
+											<!-- 遮罩 -->
+											<div class="shadow"></div>
+										</li>
+										<li class="product-one">
+											<a href="../goods/product-detail2.html" class="pic-box">
+												<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+											</a>
+											<div class="details">
+												<a class="name" href="../goods/product-detail2.html">云南白药创可贴(防水超薄型)</a>
+												<p>规格：1.5cm*2.3cm*5片/盒</p>
+												<p>采购价 | <span class="red">￥19.90</span></p>
+											</div>
+											<!-- 选中 -->
+											<div class="checkbox">
+												<input type="checkbox">
+												<label></label>
+											</div>
+											<!-- 遮罩 -->
+											<div class="shadow"></div>
+										</li>
+										<li class="product-one">
+											<a href="../goods/product-detail2.html" class="pic-box">
+												<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+											</a>
+											<div class="details">
+												<a class="name" href="../goods/product-detail2.html">云南白药创可贴(防水超薄型)</a>
+												<p>规格：1.5cm*2.3cm*5片/盒</p>
+												<p>采购价 | <span class="red">￥19.90</span></p>
+											</div>
+											<!-- 选中 -->
+											<div class="checkbox">
+												<input type="checkbox">
+												<label></label>
+											</div>
+											<!-- 遮罩 -->
+											<div class="shadow"></div>
+										</li>
+										<li class="product-one">
+											<a href="../goods/product-detail2.html" class="pic-box">
+												<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+											</a>
+											<div class="details">
+												<a class="name" href="../goods/product-detail2.html">云南白药创可贴(防水超薄型)</a>
+												<p>规格：1.5cm*2.3cm*5片/盒</p>
+												<p>采购价 | <span class="red">￥19.90</span></p>
+											</div>
+											<!-- 选中 -->
+											<div class="checkbox">
+												<input type="checkbox">
+												<label></label>
+											</div>
+											<!-- 遮罩 -->
+											<div class="shadow"></div>
+										</li>
+										<li class="product-one">
+											<a href="../goods/product-detail2.html" class="pic-box">
+												<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+											</a>
+											<div class="details">
+												<a class="name" href="../goods/product-detail2.html">云南白药创可贴(防水超薄型)</a>
+												<p>规格：1.5cm*2.3cm*5片/盒</p>
+												<p>采购价 | <span class="red">￥19.90</span></p>
+											</div>
+											<!-- 选中 -->
+											<div class="checkbox">
+												<input type="checkbox">
+												<label></label>
+											</div>
+											<!-- 遮罩 -->
+											<div class="shadow"></div>
+										</li>
+										<li class="product-one">
+											<a href="../goods/product-detail2.html" class="pic-box">
+												<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+											</a>
+											<div class="details">
+												<a class="name" href="../goods/product-detail2.html">云南白药创可贴(防水超薄型)</a>
+												<p>规格：1.5cm*2.3cm*5片/盒</p>
+												<p>采购价 | <span class="red">￥19.90</span></p>
+											</div>
+											<!-- 选中 -->
+											<div class="checkbox">
+												<input type="checkbox">
+												<label></label>
+											</div>
+											<!-- 遮罩 -->
+											<div class="shadow"></div>
+										</li>
+
+									</ul>
+									<!-- 全选 -->
+									<div class="check-delete">
+										<!-- 选中 -->
+										<div class="checkbox check-all">
+											<input type="checkbox">
+											<label></label>
+										</div>
+										<span>全选</span>
+										<button class="batch-delete">批量删除</button>
+									</div>
+								</div>
+								<!-- 已下架 -->
+								<div class="toggle-ctn sold-out">
+									<ul class="list">
+										<!-- 循环li 一页放8个数据-->
+										<li class="product-one">
+											<a href="../goods/product-detail2.html" class="pic-box">
+												<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+											</a>
+											<div class="details">
+												<a class="name" href="../goods/product-detail2.html">治咳嗽</a>
+												<p>规格：1.5cm*2.3cm*5片/盒</p>
+												<p>采购价 | <span class="red">￥19.90</span></p>
+											</div>
+											<!-- 选中 -->
+											<div class="checkbox">
+												<input type="checkbox">
+												<label></label>
+											</div>
+											<!-- 已下架标签 -->
+											<i class="tag"></i>
+											<!-- 遮罩 -->
+											<div class="shadow"></div>
+										</li>
+									</ul>
+									<!-- 全选 -->
+									<div class="check-delete">
+										<!-- 选中 -->
+										<div class="checkbox check-all">
+											<input type="checkbox">
+											<label></label>
+										</div>
+										<span>全选</span>
+										<button class="batch-delete">批量删除</button>
+									</div>
+								</div>
+								<!-- 同店铺产品 -->
+								<div class="toggle-ctn same-store">
+									<ul class="list">
+										<!-- 循环2个一页 -->
+										<li>
+											<div class="head">
+												<h3 class="lf">泰和药业</h3>
+												<span class="lf">同店铺收藏货品：<i class="collect-num">3</i></span>
+												<span class="rt">
+													<i class="star"></i>
+													收藏店铺
+												</span>
+											</div>
+											<div class="carousel">
+												<div class="carousel-list">
+													<ul>
+														<!-- 循环li-->
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">1111</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">22222</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">33333</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">33333</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">444444</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">555555</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">66666</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">77777</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">88888</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+													</ul>
+												</div>
+												<!-- 箭头 -->
+												<div class="arrows carousel-left"></div>
+												<div class="arrows carousel-right"></div>
+											</div>
+										</li>
+										<li>
+											<div class="head">
+												<h3 class="lf">泰和药业</h3>
+												<span class="lf">同店铺收藏货品：<i class="collect-num">3</i></span>
+												<span class="rt">
+													<i class="star"></i>
+													收藏店铺
+												</span>
+											</div>
+											<div class="carousel">
+												<div class="carousel-list">
+													<ul>
+														<!-- 循环li-->
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">1111</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">1111</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">22222</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">33333</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">33333</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">444444</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">555555</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">66666</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">77777</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+														<li class="product-one">
+															<a href="../goods/product-detail2.html" class="pic-box">
+																<img src="../../img/hy-center/cg-my-footer.jpg" class="photo">
+															</a>
+															<div class="details">
+																<a class="name" href="../goods/product-detail2.html">88888</a>
+																<p>规格：1.5cm*2.3cm*5片/盒</p>
+																<p>采购价 | <span class="red">￥19.90</span></p>
+															</div>
+															<!-- 选中 -->
+															<div class="checkbox">
+																<input type="checkbox">
+																<label></label>
+															</div>
+															<!-- 遮罩 -->
+															<div class="shadow"></div>
+														</li>
+													</ul>
+												</div>
+												<!-- 箭头 -->
+												<div class="arrows carousel-left"></div>
+												<div class="arrows carousel-right"></div>
+											</div>
+										</li>
+									</ul>
+									<!-- 全选 -->
+									<div class="check-delete">
+										<!-- 选中 -->
+										<div class="checkbox check-all">
+											<input type="checkbox">
+											<label></label>
+										</div>
+										<span>全选</span>
+										<button class="batch-delete">批量删除</button>
+									</div>
+								</div>
+							</div>
+							<!-- 分页 -->
+							<include src="../include/pagination.html"></include>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<include src="../include/footer.html"></include>
+		</div>
+	</div>
+	<!-- 弹窗 -->
+	<div class="pop-shade" id="pop-cancel">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text">批量删除</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p class="main-text"></p>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 取消按钮 -->
+				<div class="btn btn-yes">确定</div>
+				<!-- 取消按钮 -->
+				<div class="btn btn-no">返回</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

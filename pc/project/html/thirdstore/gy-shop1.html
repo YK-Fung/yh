@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员中心-店铺设置</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/thirdstore/gy-shop1.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['thirdstore/gy-shop1']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-supplier" second-title="shop"></div>
+
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">店铺设置</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 店铺设置</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<!-- tab菜单 -->
+					<ul class="tab-menu">
+						<li class="active"><a href="#">信息设置</a></li>
+						<li><a href="gy-shop2.html">交易设置</a></li>
+						<li><a href="gy-shop3.html">商品设置</a></li>
+						<li><a href="gy-shop4.html">资讯设置</a></li>
+					</ul>
+					<!-- tab内容 -->
+					<div class="tab-ctn">
+						<div class="form-group logo">
+							<label>企业LOGO：</label>
+							<div class="form-ctn">
+								<input name="" class="logo-up" type="file">
+								<div class="logo-btn"></div>
+								<p>（建议上传尺寸：160px*160px）</p>
+								<img class="img-view" src="">
+							</div>
+						</div>
+						<div class="form-group shop-img">
+							<label>店铺图：</label>
+							<div class="form-ctn">
+								<li>
+									<!-- 店铺图片上传 -->
+									<div class="shop-img-up"><input name"" class="" type="file"></div>
+									<!-- 店铺图片类型 -->
+									<p class="shop-img-type">店铺首页banner</p>
+									<!-- 店铺图片尺寸 -->
+									<p class="shop-img-size">(980px*400px)</p>
+								</li>
+								<li>
+									<!-- 店铺图片上传 -->
+									<div class="shop-img-up"><input name"" class="" type="file"></div>
+									<!-- 店铺图片类型 -->
+									<p class="shop-img-type">企业简介海报</p>
+									<!-- 店铺图片尺寸 -->
+									<p class="shop-img-size">(560px*350px)</p>
+								</li>
+								<li>
+									<!-- 店铺图片上传 -->
+									<div class="shop-img-up">
+										<input name"" class="" type="file">
+										<!-- <span class="shop-img-del"></span>
+										<img class="img-view" src="../../img/403-bg.png"> -->
+									</div>
+									<!-- 店铺图片类型 -->
+									<p class="shop-img-type">首页供应商背景</p>
+									<!-- 店铺图片尺寸 -->
+									<p class="shop-img-size">(350px*480px)</p>
+								</li>
+							</div>
+						</div>
+						<div class="form-group">
+							<label><span class="must-star">*</span>banner背景色：</label>
+							<div class="form-ctn">
+								<input name="" class="must color-set" value="#f8f8f8" type="text">
+								<div class="color-view"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label><span class="must-star">*</span>店铺名称：</label>
+							<div class="form-ctn">
+								<input name="" class="must len20" type="text">
+								<p class="warm-tip">此处输入不能超过20个字</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label><span class="must-star">*</span>店铺标题：</label>
+							<div class="form-ctn">
+								<input name="" class="must len30" type="text">
+								<p class="warm-tip">此处输入30个字以内，25个字为宜</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label><span class="must-star">*</span>二级域名：</label>
+							<div class="form-ctn">
+								<input name="" class="must domain" type="text"> .yaohuiw.com
+								<p class="warm-tip">长度3-16的字母及数字，只能修改一次</p>
+								<p class="warn-tip">审核不通过：域名有问题。</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label><span class="must-star">*</span>店铺关键字：</label>
+							<div class="form-ctn">
+								<input name="" class="must keyword" type="text">
+								<p class="warm-tip">多个关键词用“，”分割，SEO建议关键词控制在40个汉字之内为宜</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>店铺描述：</label>
+							<div class="form-ctn">
+								<textarea name="" class="len80" rows="32" cols="4"></textarea>
+								<p class="warm-tip">店铺描述不超过80个字</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>企业简介：</label>
+							<div class="form-ctn">
+								<textarea name="" class="len300" rows="32" cols="4"></textarea>
+								<p class="warm-tip">企业简介300个字以内</p>
+							</div>
+						</div>
+						<div class="btn-save">保存</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<include src="../include/footer.html"></include>
+		</div>
+	</div>
+
+	<!-- 弹窗-删除批次 -->
+	<div class="pop-shade" id="pop-del">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text">删除</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p>确定要删除？</p>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 确定按钮 -->
+				<div class="btn btn-yes">确定</div>
+				<!-- 取消按钮 -->
+				<div class="btn btn-no">取消</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 弹窗-警告 -->
+	<div class="pop-shade" id="pop-warn">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text">提示</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p>请检查是否有带 * 的选项未填写以及填写的内容是否符合要求！</p>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 确定按钮 -->
+				<div class="btn btn-yes">确定</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 预览图片 -->
+	<div class="view-img">
+		<!-- <img src="../img/slideshow1.jpg"> -->
+		<img src="">
+	</div>
+
+</body>
+</html>

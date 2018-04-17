@@ -1,0 +1,412 @@
+@charset 'utf-8';
+@import url(../yhw-common2);
+@red: #ff0000;
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border:0;
+	font-family: '微软雅黑';
+}
+html,
+body{
+	width: 100%;
+	height: 100%;
+	min-width: 1200px;
+	min-height: 900px;
+	background: #fff;
+}
+a{
+	font-size: inherit;
+	text-decoration: none;
+	color: inherit;
+}
+li{
+	list-style: none;
+}
+.wrap{
+	position: relative;
+	width: 100%;
+	background: #1d7bef;
+	.main-header{
+		width: 100%;
+		height: 120px;
+		overflow: hidden;
+		background: #fff;
+		.header-ctn{
+			position: relative;
+			width: 1200px;
+			height: 100%;
+			margin: 0 auto;
+			overflow: hidden;
+			font-size: 26px;
+			text-align: center;
+			line-height: 120px;
+			color: #333;
+		}
+		.header-logo{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 346px;
+			height: 100%;
+			background: #fff url('../../img/yhw2/logo2.png') left center no-repeat;
+			cursor: pointer;
+		}
+		.header-text{
+			display: inline-block;
+		}
+	}
+	.main-ctn{
+		position: relative;
+		width: 1200px;
+		height: 570px;
+		margin: 0 auto;
+		background: #1d7bef url('../../img/login2/login-bg.jpg') left center no-repeat;
+	}
+	/*登录*/
+	.login{
+		position: absolute;
+		top: 50%;
+		right: 25px;
+		z-index: 5;
+		width: 380px;
+		height: 500px;
+		margin-top: -250px;
+		background: #fff;
+		/*登陆类型选择*/
+		.login-select{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 58px;
+			height: 58px;
+			cursor: pointer;
+			&>div{
+				height: 100%;
+			}
+			.zh{
+				display: none;
+				background: url(../../img/login2/login-zh-bg.jpg) center center no-repeat;
+			}
+			.ca{
+				background: url(../../img/login2/login-ca-bg.jpg) center center no-repeat;
+			}
+			&.active{
+				.ca{
+					display: none;
+				}
+				.zh{
+					display: block;
+				}
+			}
+		}
+		/*登录类型*/
+		.login-type{
+			width: 100%;
+			padding-left: 40px;
+			margin-top: 70px;
+			margin-bottom: 20px;
+			font-size: 24px;
+			text-align: left;
+			letter-spacing: 2px;
+			color: #333;
+		}
+		/*内容*/
+		.login-ctn{
+			width: 100%;
+			height: 260px;
+			text-align: center;
+			/*提交按钮*/
+			.btn-submit{
+				width: 300px;
+				height: 40px;
+				margin: 26px auto 16px;
+				font-size: 20px;
+				letter-spacing: 15px;
+				text-align: center;
+				line-height: 40px;
+				color: #fff;
+				background: #0066cc;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+		}
+		/*账号登录*/
+		.login-zh{
+			/*display: none;*/
+			/*表单组*/
+			.form-group{
+				position: relative;
+				width: 300px;
+				margin: 0 auto 30px;
+				font-size: 12px;
+				text-align: right;
+				/* 警告 */
+				&.warn{
+					input{
+						border-color: @red;
+					}
+					.warn-tip{
+						display: block;
+					}
+				}
+				/* 错误 */
+				&.error{
+					input{
+						border-color: @red;
+					}
+					.error-tip{
+						display: block;
+					}
+				}
+			}
+			.login-user,
+			.login-pwd{
+				width: 100%;
+				height: 40px;
+				padding-left: 36px;
+				border: 1px solid #cccccc;
+				border-radius: 5px;
+				outline: none;
+			}
+			.login-user{
+				background: #fff url(../../img/login2/login-user.png) 10px center no-repeat;
+			}
+			.login-pwd{
+				background: #fff url(../../img/login2/login-pwd.png) 10px center no-repeat;
+			}
+			/* 多选框 */
+			.check{
+				position: absolute;
+				top: 0;
+				left: 0;
+				input{
+					display: none;
+				}
+				.checkbox{
+					position: relative;
+					top: 3px;
+					display: inline-block;
+					width: 15px;
+					height: 15px;
+					background: url(../../img/icon/hy-firm-checkbox.png) center center no-repeat;
+					cursor: pointer;
+					&.active{
+						background: url(../../img/icon/hy-firm-checkbox-active.png) center center no-repeat;
+					}
+				}
+			}
+			/* 忘记密码 */
+			.forget{
+				float: right;
+				margin-right: 40px;
+				font-size: 12px;
+				color: #bbbbbb;
+			}
+			/*警告提示，错误提示*/
+			.warn-tip,
+			.error-tip{
+				position: absolute;
+				bottom: -30px;
+				display: none;
+				padding-left: 20px;
+				font-size: 12px;
+				white-space: nowrap;
+				line-height: 30px;
+				color: @red;
+			}
+			.warn-tip{
+				background: url(../../img/icon/icon-warn.png) left center no-repeat;
+			}
+			.error-tip{
+				background: url(../../img/icon/icon-error.png) left center no-repeat;
+			}
+		}
+		/*CA登录*/
+		.login-ca{
+			display: none;
+			/*表单组*/
+			.form-group{
+				width: 300px;
+				height: 34px;
+				margin: 0 auto 182px;
+				font-size: 12px;
+				.form-ctn{
+					display: inline-block;
+					width: 100%;
+				}
+			}
+			/* 下拉功能 */
+			.select-box{
+				position: relative;
+				float: left;
+				display: inline-block;
+				width: 100%;
+				text-align: left;
+				/* 下拉框 */
+				.select-choice{
+					display: block;
+					width: 100%;
+					height: 32px;
+					overflow: hidden;
+					background-color: #fff;
+				}
+				/* 选中 */
+				.show{
+					height: 32px;
+					line-height: 32px;
+					color:#666;
+					margin-right: 32px;
+					padding-left: 10px;
+			    	padding-right: 10px;
+			    	display: block;
+			    	overflow: hidden;
+			    	white-space: nowrap;
+			    	text-overflow: ellipsis;
+					float: none;
+			    	width: auto;
+			    	font-size: 12px;
+					border: 1px solid #ddd;
+				}
+				.select-chosen{		
+					display: block;
+					width: 100%;
+					height: 32px;
+					padding-left: 6px;
+					padding-right: 36px;
+			    	overflow: hidden;
+					font-size: 12px;
+					line-height: 32px;
+			    	white-space: nowrap;
+			    	text-overflow: ellipsis;
+					color:#666;
+					background: #fff;
+					border: 1px solid #ddd;
+					outline: none;
+				}
+				/* 下拉icon */
+				.select-arrow{
+					width:33px;
+					height: 100%;
+					border: 1px solid #ddd;
+					text-align: center;
+					line-height: 32px;
+					color:#717272;
+					position: absolute;
+					right: 0;
+					top:0;
+					background-color: #f5f5f5;
+					i{
+						transition:all 0.5s;
+						-o-transition:all 0.5s;
+						-webkit-transition:all 0.5s;
+						-moz-transition:all 0.5s;
+					}
+				}
+				/* 下拉列表 */
+				.select-drop{
+					position: absolute;
+					z-index: 8;
+					display: none;
+					width: 100%;
+					margin-top: -1px;
+					overflow-y: auto;
+					font-size: 12px;
+					text-align: left;
+					background-color: #fff;
+					border: 1px solid #ddd;
+					li{
+						line-height: 26px;
+						height: 26px;
+						color:#7d7f7f;
+						padding:0 7px 0 10px;
+						cursor: pointer;
+						overflow: hidden;
+			    		white-space: nowrap;
+			    		text-overflow: ellipsis;
+						&:hover{
+							background-color: #40bbea;
+							color:#fff;
+						}
+					}
+				}
+				/* 内容下拉时 */
+				&.down{
+					.select-arrow{
+						i{
+							transform:rotate(180deg);
+							-o-transform:rotate(180deg);
+							-webkit-transform:rotate(180deg);
+							-moz-transform:rotate(180deg);
+						}		
+					}
+					.select-drop{
+						display: block;
+					}
+				}
+			}
+			/*ca证书提示文字*/
+			.ca-text{
+				height: 160px;
+				p{
+					width: 300px;
+					margin: 0 auto;
+					font-size: 12px;
+					text-align: left;
+					line-height: 20px;
+					color: #666666;
+					a{
+						color: @red;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		/*尾部*/
+		.login-footer{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 50px;
+			padding: 0 20px;
+			overflow: hidden;
+			font-size: 12px;
+			line-height: 51px;
+			.back-index{
+				display: inline-block;
+				float: right;
+				height: 100%;
+				padding-right: 20px;
+				color: #3498db;
+				background: url(../../img/login/login-arrow.png) right center no-repeat;
+			}
+			.register{
+				display: none;
+			}
+		}
+		/* 注册 */
+		.register{
+			color: #999999;
+			a{
+				color: #ff7e00;
+			}
+		}
+	}
+	.main-footer{
+		width: 100%;
+		background: #fff;
+		.footer-ctn{
+			width: 1200px;
+			height: 230px;
+			margin: 0 auto;
+			font-size: 12px;
+			text-align: center;
+			line-height: 80px;
+			color: #666;
+		}
+	}
+}

@@ -1,0 +1,245 @@
+@import url(../yhw-common2.less);
+/* 导航 */
+.yhw-nav{
+	.center .main-nav .num{
+		left: 66px;
+	}
+	.quick-order{
+		width: 143px;
+		height: 38px;
+		line-height: 38px;
+		text-align: center;
+		color:#fff;
+		font-size: 16px;
+		background: url(../../img/yhw2/detail-img01.png) no-repeat 0 0;
+		float: right;
+		margin-top: -10px;
+	}
+}
+
+.main{
+	width: 100%;
+	overflow: hidden;
+	background-color: #f8f8f8;
+	.main-ctn{
+		width: 1200px;
+		margin: 20px auto 30px;
+	}
+	/* 公司 */
+	.firm{
+		position: relative;
+		width: 100%;
+		height: 350px;
+		overflow: hidden;
+		padding-left: 580px;
+		padding-right: 15px;
+		text-align: left;
+		background: #fff;
+	}
+	/* 公司图片 */
+	.firm-img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 560px;
+		height: 100%;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	/* 公司内容 */
+	.firm-ctn{
+		width: 100%;
+	}
+	/* 公司名字 */
+	.firm-name{
+		margin-top: 14px;
+		font-size: 24px;
+		font-weight: bold;
+		color: #333;
+	}
+	/* 公司资本 */
+	.firm-capital{
+		margin-top: 10px;
+		margin-bottom: 14px;
+		font-size: 14px;
+		color: #666;
+		span{
+			color: #0066cc;
+		}
+	}
+	/* 详细信息 */
+	.firm-detail{
+		display: block;
+		width: 100%;
+		height: 250px;
+		overflow: hidden;
+		font-size: 14px;
+		li{
+			min-height: 22px;
+			padding-left: 28px;
+			padding-bottom: 22px;
+			color: #333;
+			&.linkman{
+				background: url(../../img/icon/icon-linkman.png) left 2px no-repeat;
+			}
+			&.phone{
+				background: url(../../img/icon/icon-phone.png) left 2px no-repeat;
+			}
+			&.pos{
+				background: url(../../img/icon/icon-pos.png) left 2px no-repeat;
+			}
+			&.web{
+				background: url(../../img/icon/icon-web.png) left 2px no-repeat;
+			}
+			&.manage{
+				background: url(../../img/icon/icon-manage.png) left 2px no-repeat;
+			}
+		}
+		/* 信息类型 */
+		.detail-type{
+			display: inline-block;
+			height: 22px;
+			line-height: 22px;
+			color: #666;
+			.empty{
+				padding-left: 5px;
+			}
+		}
+	}
+	/* 标题 */
+	.title{
+		width: 100%;
+		height: 18px;
+		padding-left: 14px;
+		margin-bottom: 20px;
+		font-size: 18px;
+		line-height: 18px;
+		color: #333;
+		border-left: 4px solid #0066cc;
+	}
+	/* 简介 */
+	.intro{
+		width: 100%;
+		padding: 18px 20px;
+		margin-top: 10px;
+		font-size: 12px;
+		line-height: 30px;
+		color: #333;
+		background: #fff;
+		p{
+			text-indent: 2em;
+		}
+	}
+	/* 资质 */
+	.aptitude{
+		width: 100%;
+		padding: 18px 20px;
+		margin-top: 10px;
+		background: #fff;
+	}
+	/* 资质内容 */
+	.aptitude-ctn{
+		position: relative;
+		width: 100%;
+		height: 300px;
+		padding: 0 24px;
+		/* 操作按钮 */
+		.opt-btn{
+			position: absolute;
+			top: 50%;
+			width: 20px;
+			height: 24px;
+			margin-top: -16px;
+			transform: translateY(-50%);
+			cursor: pointer;
+		}
+		/* 左按钮 */
+		.opt-left{
+			left: 0;
+			background: url(../../img/icon/btn-left.png) center center no-repeat;
+		}
+		/* 右按钮 */
+		.opt-right{
+			right: 0;
+			background: url(../../img/icon/btn-right.png) center center no-repeat;
+		}
+		/* 资质详情 */
+		.aptitude-detail{
+			display: block;
+			width: 1112px;
+			height: 100%;
+			margin: 0 auto;
+			overflow: hidden;
+			ul{
+				display: block;
+				width: 100%;
+				height: 100%;
+				white-space: nowrap;
+				li{
+					display: inline-block;
+					width: 258px;
+					height: 100%;
+					margin: 0 10px;
+				}
+				.aptitude-img{
+					position: relative;
+					width: 100%;
+					height: 266px;
+					border: 1px solid #dddddd;
+					/* 放大镜 */
+					.magnify{
+						position: absolute;
+						top: 0;
+						right: 0;
+						z-index: 5;
+						width: 24px;
+						height: 24px;
+						background: url(../../img/icon/icon-magnify .png) center center no-repeat;
+					}
+					/* 图片 */
+					img{
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						max-width: 90%;
+						max-height: 90%;
+						transform: translate(-50%, -50%);
+						cursor: pointer;
+					}
+				}
+			}
+			.aptitude-type{
+				height: 16px;
+				margin-top: 16px;
+				font-size: 12px;
+				text-align: center;
+				line-height: 16px;
+				color: #333;
+			}
+		}
+	}
+}
+
+/*大图预览*/
+.view-img{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: none;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0, 0, 0, .6);
+	img{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		max-width: 80%;
+		max-height: 80%;
+		cursor: pointer;
+		transform: translate(-50%, -50%);
+	}
+}

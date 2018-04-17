@@ -1,0 +1,269 @@
+@charset 'utf-8';
+@import url(yhw-topbar.less);
+@import url(yhw-header.less);
+@import url(yhw-nav.less);
+@import url(yhw-footer.less);
+@import url(yhw-sidebar.less);
+@import url(ie-tip.less);
+
+@base:#3399cc;
+.pad-r{
+	padding-right: 35px;
+}
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border:0;
+	font-family: "微软雅黑";
+}
+html,
+body{
+	width: 100%;
+	height: 100%;
+	min-width: 1200px;
+	background: #fff;
+	font-size: 12px;
+}
+a{
+	font-size: inherit;
+	text-decoration: none;
+	color: inherit;
+}
+li{
+	list-style: none;
+}
+.hidden{
+	display: none !important;
+}
+/* 主体内容 */
+.wrap{
+	width: 100%;
+	background: #f1f1f1;
+	/*主体部分*/
+	.main{
+		width: 1200px;
+		margin: 0 auto 100px;
+		.pad-r;
+		overflow: hidden;
+	}
+}
+/*路径*/
+.path{
+	width: 1200px;
+	.pad-r;
+	margin: 0 auto 10px;
+	font-size: 12px;
+	color:#949494;
+	.path-ctn{
+		overflow: hidden;
+		padding-right: 18px;
+		display: inline-block;
+		background:url(../../img/yhw/nav-bg2.png) no-repeat top right;
+		a{
+			border-top:1px solid #e7e7e7;
+			border-bottom:1px solid #e7e7e7;
+			line-height: 32px;
+			float: left;
+		}
+		.link{
+			background:#fff url(../../img/yhw/nav-bg1.jpg) no-repeat left top;
+			padding: 0 10px 0 30px;
+		}
+		.home{
+			background: #fff;
+			border-left:1px solid #e7e7e7;
+			border-radius: 3px 0 0 3px;
+			padding: 0 10px 0 15px;
+			i{
+				color:#9f9f9f;
+				float: left;
+				margin:9px 6px 0 0;
+				font-size: 14px;
+			}
+		}
+	}
+}
+/* 分页 */
+.pagination{
+	display: inline-block;
+	margin: 80px auto;
+	overflow: hidden;
+	font-size: 12px;
+	color:#666;
+	/*页码*/
+	ul{
+		display: inline-block;
+		float: left;
+	}
+	li{
+		height: 32px;
+		padding: 0 12px;
+		text-align: center;
+		line-height: 30px;
+		float: left;
+		color: #666;
+		background: #fff;
+		border:1px solid #ddd;
+		cursor: pointer;
+		margin-right: 5px;
+		border-radius: 5px;
+	}
+	/*页码*/
+	.page-num{
+		&.active{
+			background-color: #3688da;
+			border-color:#3688da;
+			color:#fff;
+		}
+	}
+	/*总计*/
+	.all-num{
+		float: left;
+		line-height: 30px;
+		margin: 0 15px;
+		span{
+			color:#3688da;
+			font-weight: bold;
+		}
+	}
+	/* 跳转 */
+	.page-go{
+		width: 82px;
+		height: 32px;
+		float: left;
+		border:1px solid #ddd;
+		background:#fff;
+		border-radius: 3px;
+		.page-go-text{
+			display: inline-block;
+			float: left;
+			padding: 0 10px;
+			line-height: 30px;
+		}
+		input{
+			display: inline-block;
+			float: left;
+			width: 40px;
+			height: 30px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 30px;
+			color: #666;
+			outline: none;
+			background: transparent;
+		}
+		button{
+			display: inline-block;
+			float: left;
+			width: 38px;
+			height: 28px;
+			line-height: 28px;
+			color:#fff;
+			background-color: #3688da;
+			border:0;
+			cursor: pointer;
+			border-radius: 3px;
+			margin:1px;
+		}
+	}
+}
+/*遮罩层*/
+.pop-shade{
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-family: "微软雅黑";
+	background: rgba(0, 0, 0, .5);
+	 filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
+	/*弹窗*/
+	.pop-up{
+		display: inline-block;
+		margin-top: 30px;
+		padding: 30px;
+		background: #fff;
+		/*头部*/
+		.pop-header{
+			position: relative;
+			width: 540px;
+			height: 40px;
+			padding-bottom: 16px;
+			border-bottom: 2px solid #e5e5e5;
+			/*头部文字*/
+			.header-text{
+				width: 100%;
+				height: 100%;
+				font-size: 16px;
+				text-align: left;
+				line-height: 24px;
+				color: #2c2e2f;
+			}
+			/*关闭按钮*/
+			.header-close{
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 24px;
+				height: 24px;
+				font-size: 18px;
+				text-align: center;
+				line-height: 14px;
+				color: #e5e5e5;
+				&:hover{
+					color: #2c2e2f;
+					cursor: pointer;
+				};
+			}
+		}
+		/*内容*/
+		.pop-body{
+			width: 100%;
+			padding: 30px 40px;
+			font-size: 12px;
+			text-align: left;
+			color: #2c2e2f;
+		}
+		/*底部*/
+		.pop-footer{
+			width: 100%;
+			padding-top: 16px;
+			font-size: 12px;
+			text-align: right;
+			color: #2c2e2f;
+			border-top: 1px solid #e5e5e5;
+		}
+		/*底部按钮*/
+		.footer-btn{
+			display: inline-block;
+			height: 100%;
+			padding: 5px 10px;
+			margin-left: 5px;
+			text-align: center;
+		}
+		/*取消按钮*/
+		.footer-btn.btn-no{
+			color: #333;
+			background: #fff;
+			border: 1px solid #dddddd;
+			&:hover{
+				background: #f2f2f2;
+				cursor: pointer;
+			};
+		}
+		/*确认按钮*/
+		.footer-btn.btn-yes{
+			color: #fff;
+			background: #40bbea;
+			border: 1px solid #40bbea;
+			&:hover{
+				background: #18a8df;
+				border-color: #18a8df;
+				cursor: pointer;
+			};
+		}
+	}
+}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员中心-我的优惠券</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/order/cg-discounts.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['order/cg-discounts2']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-buyer" second-title="cg-discounts"></div>
+	
+
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">我的优惠券</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 订单管理 / 订单详情</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<a class="btn-more">领更多优惠券>></a>
+					<!-- 优惠券类型 -->
+					<ul class="discount-type">
+						<li><a href="cg-discounts1.html">未使用</a></li>
+						<li class="active"><a href="cg-discounts2.html">已使用</a></li>
+						<li><a href="cg-discounts3.html">已过期</a></li>
+					</ul>
+					<!-- 优惠券操作 -->
+					<div class="discount-opt">
+						<ul>
+							<li>按金额排序</li>
+						</ul>
+						<!-- 下拉框 -->
+						<div class="select-box2">
+							<!-- 下拉框文字 -->
+							<a href="javascript:void(0)" class="select-choice">
+								<!-- 选中 -->
+								<div class="select-text">选择类型</div>
+								<input type="text" class="select-input" value="1" name="">
+								<!-- 下拉icon -->
+								<span class="select-arrow">
+									<i class="fa fa-angle-down"></i>
+								</span>
+							</a>
+							<!-- 下拉列表 -->
+							<ul class="select-drop">
+								<li data="1">商品优惠券</li>
+								<li data="2">店铺优惠券</li>
+								<li data="3">平台优惠券</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 优惠券 -->
+					<!-- coupon-used-orange已使用店铺券 coupon-used-red已使用商品券 coupon-used-blue已使用平台券 -->
+					<!-- 每页8张 -->
+					<ul class="discounts">
+						<li class="coupon-used-orange">
+							<div class="coupon-l">
+								<div class="coupon-condition">满1000元可用</div>
+								<div class="coupon-info">奥术大师大所多阿斯达四大的</div>
+								<div class="coupon-company">广东好辰医药公司</div>
+								<div class="coupon-limit">有效期：<span>2017.12.29 ~ 2017.01.30</span></div>
+							</div>
+							<div class="coupon-r">
+								<!--优惠券价格3位数的需要添加类名 length3-->
+								<div class="coupon-price">55</div>
+								<div class="coupon-use-btn">已使用</div>
+							</div>
+						</li>
+						<li class="coupon-used-red">
+							<div class="coupon-l">
+								<div class="coupon-condition">满1000元可用</div>
+								<div class="coupon-info">奥术大师大所多阿斯达四大的</div>
+								<div class="coupon-company">广东好辰医药公司</div>
+								<div class="coupon-limit">有效期：<span>2017.12.29 ~ 2017.01.30</span></div>
+							</div>
+							<div class="coupon-r">
+								<!--优惠券价格3位数的需要添加类名 length3-->
+								<div class="coupon-price">5</div>
+								<div class="coupon-use-btn">已使用</div>
+							</div>
+						</li>
+						<li class="coupon-used-blue">
+							<div class="coupon-l">
+								<div class="coupon-condition">满1000元可用</div>
+								<div class="coupon-info">奥术大师大所多阿斯达四大的</div>
+								<div class="coupon-company">广东好辰医药公司</div>
+								<div class="coupon-limit">有效期：<span>2017.12.29 ~ 2017.01.30</span></div>
+							</div>
+							<div class="coupon-r">
+								<!--优惠券价格3位数的需要添加类名 length3-->
+								<div class="coupon-price length3">555</div>
+								<div class="coupon-use-btn">已使用</div>
+							</div>
+						</li>
+					</ul>
+					<!-- 分页 -->
+					<include src="../include/pagination.html"></include>
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<include src="../include/footer.html"></include>
+		</div>
+	</div>
+
+</body>
+</html>

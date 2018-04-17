@@ -1,0 +1,342 @@
+@import url(../hy-common2.less);
+.wrap{
+	height: 100%;
+}
+.ctn{
+	padding-bottom: 45px;
+}
+.red{
+	color:@red;
+}
+/* 居中 */
+.middle{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform:translateY(-50%);
+}
+/* 内容切换 */
+.toggle-ctn{
+	display: none !important;
+	&.active{
+		display: block !important;
+	}
+}
+.main-ctn{
+	padding: 12px 30px 120px;
+	background: #fff;
+	/*类型名字*/
+	.type-name{
+		width: 100%;
+		font-size: 14px;
+		line-height: 36px;
+		text-align: left;
+		color: #333;
+		font-weight: bold;
+		border-bottom: 1px solid #f2f2f2;
+		padding: 20px 30px 0 10px;
+		.arrow{
+			width: 25px;
+			height: 25px;
+			float: right;
+			background:url(../../img/icon/arrow-btm.png) no-repeat center center;
+			margin-top:6px;
+			cursor: pointer;
+			transform:rotate(0);
+			&.active{
+				transform:rotate(180deg);
+			}
+		}
+	}
+	/*采购清单*/
+	.order-ctn{
+		margin-top: 20px;
+		/* 表格标题 */
+		.table-tit{
+			height: 37px;
+			line-height: 37px;
+			background: #f8f8f8;
+			border-top:1px solid #ddd;
+			border-left:1px solid #ddd;
+			border-right:1px solid #ddd;
+			overflow: hidden;
+			li{
+				width: 30%;
+				float: left;
+				font-size: 12px;
+				color:#666;
+				text-align: center;
+				&:nth-of-type(1){
+					width: 40%;
+				}
+			}
+		}
+		/* 产品列表 */
+		.product-list{
+			width: 100%;
+			border:1px solid #ddd;
+			ul{
+				width: 100%;
+			}
+			li{
+				width: 100%;
+				height: 138px;
+				border-bottom: 1px solid #ddd;
+				font-size: 12px;
+				line-height: 22px;
+				color:#666;
+				&>div{
+					height: 100%;
+					float: left;
+					position: relative;
+				}
+				&:nth-last-of-type(1){
+					border-bottom:0;
+				}
+				/* 空格 */
+				.blank{
+					margin-right: 24px;
+				}
+				/* 商品信息 */
+				.message{
+					width: 40%;
+				}
+				.photo{
+					width: 90px;
+					height: 90px;
+					border:1px solid #ddd;
+					float: left;
+					margin: 10px 4% 0 5%;
+					img{
+						width: 100%;
+					}
+					a{
+						display: block;
+					}
+				}
+				.product-ctn{
+					float: left;
+					line-height: 22px;
+					p{
+						&.name{
+							font-size: 14px;
+							line-height: 24px;
+						}
+					}
+					a{
+						&:hover{
+							color:@base;
+						}
+					}
+				}
+				/* 单价/数量 */
+				.num{
+					width: 30%;
+					line-height: 22px;
+					text-align: center;
+					i{
+						font-style: normal;
+					}
+					label{
+						width: 72px;
+						text-align: right;
+						display: inline-block;
+					}
+					span{
+						width: 40px;
+						display: inline-block;
+						text-align: left;
+					}
+				}
+				/* 小计 */
+				.subtotal{
+					width: 30%;
+					text-align: center;
+				}
+				.total-price{
+					font-size: 12px;
+				}
+			}
+			/* 查看更多 */
+			.more-link{
+				height: 30px;
+				line-height: 30px;
+				border-top:1px solid #ddd;
+				text-align: center;
+				color:#999;
+				display: block;
+				&:hover{
+					color:@base;
+				}
+			}
+		}
+	}
+	/*总计*/
+	.order-total{
+		clear: both;
+		padding-top: 15px;
+		text-align: right;
+		font-size: 14px;
+		padding-right: 20px;
+		border-top:1px solid #ddd;
+		.total-ctn{
+			display: inline-block;
+			.total-t{
+				border-bottom: 1px dashed #cccccc;
+				.red{
+					width: 55px;
+		    		display: inline-block;
+		    		text-align: left;
+				}
+			}
+			.total-b{
+				p{
+					line-height: 34px;
+				}
+				.red{
+					width: 55px;
+		    		display: inline-block;
+		    		text-align: left;
+				}
+			}
+			p{
+				line-height: 24px;
+				color: #666;
+				i{
+					font-style: normal;
+				}
+			}
+		}
+	}
+	/*评价*/
+	.comment{
+		width: 100%;
+		margin-top: 20px;
+		.comment-header{
+			width: 100%;
+			height: 85px;
+			padding: 0 30px;
+			overflow: hidden;
+			border:1px solid #eee;
+		}
+		/*评论类型选择*/
+		.comment-type{
+			display: inline-block;
+			float: left;
+			text-align: right;
+			li{
+				display: inline-block;
+				width: 80px;
+				margin-right: 40px;
+				font-size: 14px;
+				line-height: 85px;
+				color: #666;
+				cursor: pointer;
+				&>input{
+					display: none;
+				}
+			}
+			.radio{
+				position: relative;
+    			top: 37px;
+				display: inline-block;
+				width: 13px;
+				height: 13px;
+				padding: 2px;
+				border: 1px solid #2eb4e8;
+				border-radius: 13px;
+				div{
+					display: none;
+					width: 7px;
+					height: 7px;
+					background: #2eb4e8;
+					border-radius: 7px;
+				}
+			}
+			.active .radio div{
+				display: block;
+			}
+			.fa{
+				position: relative;
+				top: 2px;
+				font-size: 20px;
+				margin: 0 7px;
+			}
+			.fa-smile-o{
+				color: #fa8a41;
+			}
+			.fa-meh-o{
+				color: #40bbea;
+			}
+			.fa-frown-o{
+				color: #999999;
+			}
+		}
+		/*内容*/
+		.comment-body{
+			position: relative;
+			padding: 30px 0;
+			&>div{
+				height: 214px;
+			}
+			.body-l{
+				position: absolute;
+				top: 30px;
+				left: 0;
+				width: 100px;
+				font-size: 12px;
+				text-align: center;
+				line-height: 214px;
+				color: #666;
+				background: #f6f6f6;
+			}
+			.body-r{
+				padding-left: 100px;
+				width: 100%;
+				position: relative;
+				textarea{
+					width: 100%;
+					height: 100%;
+					padding: 20px;
+					font-size: 12px;
+					line-height: 18px;
+					color: #666;
+					border: 1px solid #f6f6f6;
+					outline: none;
+					resize:none;
+				}
+				.tips{
+					position: absolute;
+					right: 20px;
+					bottom: 20px;
+					color:#ccc;
+				}
+			}
+		}
+	}
+}
+/*按钮组*/
+.btn-group{
+	display: block;
+	width: 100%;
+	margin-top: 50px;
+	text-align: center;
+	li{
+		display: inline-block;
+		width: 100px;
+		margin: 0 14px;
+		font-size: 12px;
+		text-align: center;
+		line-height: 34px;
+		color: #666;
+		background: #fff;
+		border: 1px solid #ddd;
+		cursor: pointer;
+		&.active{
+			color: #fff;
+			background: #40bbea;
+			border-color: #40bbea;
+		}
+	}
+}

@@ -1,0 +1,210 @@
+@import url(../hy-common2.less);
+
+.main{
+	width: 100%;
+	padding: 0 9px 85px;
+}
+/* 消息状态 */
+.status-num{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 38px;
+	li{
+		width:14.6%; 
+		height: 90px;
+		margin:0 1%;
+		background: #fff;
+		float: left;
+		text-align: center;
+		.num{
+			font-size: 30px;
+			color:#40bbea;
+			font-weight: bold;
+			margin-top: 15px;
+		}
+		.type{
+			color:#494949;
+			font-size: 12px;
+		}
+	}
+	/* 用户 */
+	.user-info{
+		.center{
+			margin:22px auto 0;
+			width: 133px;
+			overflow: hidden;
+		}
+		.icon{
+			float: left;
+		}
+		.inner{
+			height: 50px;
+			text-align: left;
+			float: left;
+		}
+		i{
+			float: left;
+			color:#cacaca;
+		}
+		i.active{
+			color:#40bbea;
+		}
+		span{
+			float: left;
+			color:#40bbea;
+			font-size: 40px;
+			margin-right: 20px;
+		}
+		p{
+			font-size: 16px;
+			color:#494949;
+			line-height: 24px;
+		}
+	}
+
+}
+/* 图表 */
+.form-echarts{
+	margin-top: 32px;
+	height: 380px;
+	overflow: hidden;
+	/* 折线图 */
+	.trade-chart{
+		width: 64.4%;
+		height: 100%;
+		margin:0 1%;
+		background-color: #fff;
+		float: left;
+		.chart-deal{
+			height: 340px;
+		}
+		.title{
+			padding: 10px 0 0 26px
+		}
+	}
+	/* 饼图 */
+	.pie-chart{
+		width: 31.2%;
+		height: 100%;
+		margin:0 1%;
+		background-color: #fff;
+		float: left;
+		.chart-hot-sell{
+			height: 340px;
+			margin-top: -22px;
+		}
+		/*暂无数据*/
+		.chart-no{
+			font-size: 14px;
+			text-align: center;
+			line-height: 360px;
+		}
+		.title{
+			padding: 10px 0 0 26px;
+		}
+	}
+}
+/* 列表 */
+.show-lis{
+	height: 290px;
+	overflow: hidden;
+	margin-top: 32px;
+	/* 我的足迹 */
+	.footprint{
+		width: 64.4%;
+		height: 100%;
+		margin:0 1%;
+		background-color: #fff;
+		float: left;
+		h3{
+			font-size: 16px;
+			color:#5d5d5d;
+			margin:30px 0 20px 27px;
+			font-weight: normal;
+		}
+		.product-lis{
+			padding: 0 12px 0 12px;
+		}
+		/* 单个产品 */
+		li{
+			width:20%;
+			height: 100%;
+			float: left;
+			text-align: center;
+			font-size: 12px;
+			line-height: 22px;
+			border-left: 1px solid #f4f4f4;
+			padding-top: 3px;
+			/* 产品图 */
+			.img{
+				border:1px solid #eee;
+				display: block;
+				width: 120px;
+				height: 120px;
+				margin:0 auto 15px;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			/* 产品名 */
+			a{
+				color:#353535;
+				&:hover{
+					text-decoration: underline;
+					color:#40bbea;
+				}
+			}
+			/* 规格和日销 */
+			p{
+				color:#a7a7a7;
+			}
+		}
+		li:nth-of-type(1){
+			border-left: 0;
+		}	
+	}
+	/* 常见问题 */
+	.problem{
+		width: 31.2%;
+		height: 100%;
+		margin:0 1%;
+		background-color: #fff;
+		float: left;
+		h3{
+			font-size: 16px;
+			color:#5d5d5d;
+			margin:30px 0 20px 27px;
+			font-weight: normal;
+		}
+		ul{
+			padding: 0 38px;
+		}
+		li{
+			overflow: hidden;
+			padding-left:20px; 
+			position: relative;
+		}
+		 i{
+			width: 10px;
+			height: 10px;
+			background-color: #40bbea;
+			border-radius: 3px;
+			-o-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			position: absolute;
+			left: 0;
+			top:8px;
+		} 
+		a{
+			color:#5d5d5d;
+			font-size: 12px;
+			line-height: 24px;
+			&:hover{
+				text-decoration: underline;
+				color:#40bbea;
+			}
+		}
+	}
+}

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>产品管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/goods/gy-import-table.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['goods/gy-import-table']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-supplier" second-title="gy-product-import"></div>
+
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">产品批量导入</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 产品管理</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<div class="filtrate">
+						<div class="file-import">
+							<span>导入产品数据</span>
+						</div>
+						<input type="file" class="file-up">
+						<span class="template">模板下载</span>
+						<!-- 搜索 -->
+						<span class="search-btn">搜索</span>
+						<!-- 发布日期： -->
+						<div class="date-times">
+							<div class="dates">
+								<div class="lf">
+									<i class="fa fa-calendar"></i>
+									<!-- 开始时间 -->
+									<input name="" type="text" class="date-time date1">
+								</div>
+								<span class="line"> - </span>
+								<div class="lf">
+									<i class="fa fa-calendar"></i>
+									<!-- 结束时间 -->
+									<input name="" type="text" class="date-time date2">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 产品数据表 -->
+					<div class="data-table">
+						<!-- 无数据导入！ -->
+						<!-- <div class="no-data">无数据导入！</div> -->
+						<!-- 有数据 -->
+						<ul>
+							<li>
+								<!-- 进度 -->
+								<div class="progress" style="width: 10%;"></div>
+								<div class="position">
+									<div class="left">
+										<span class="excel"></span>
+										<dl>
+											<dd>国产药品批量导入</dd>
+											<dt>文件大小：<span>2M</span> 上传时间：<span>2018年3月31日   12:00:00</span></dt>
+										</dl>
+									</div>
+									<div class="center">
+										<span class="loading"></span>
+										<dl>
+											<dd>正在上传</dd>
+										</dl>
+									</div>
+									<div class="right">
+										<span class="close"></span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<!-- 进度 -->
+								<div class="progress" style="width: 10%;"></div>
+								<div class="position">
+									<div class="left">
+										<span class="excel"></span>
+										<dl>
+											<dd>国产药品批量导入</dd>
+											<dt>文件大小：<span>2M</span> 上传时间：<span>2018年3月31日   12:00:00</span></dt>
+										</dl>
+									</div>
+									<div class="center">
+										<span class="loading"></span>
+										<dl>
+											<dd>正在处理数据</dd>
+											<dt>预计1分钟后可返回查看结果</dt>
+										</dl>
+									</div>
+									<div class="right">
+										<span class="close"></span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<!-- 进度 -->
+								<div class="progress"></div>
+								<div class="position">
+									<div class="left">
+										<span class="excel"></span>
+										<dl>
+											<dd>国产药品批量导入</dd>
+											<dt>文件大小：<span>2M</span> 上传时间：<span>2018年3月31日   12:00:00</span></dt>
+										</dl>
+									</div>
+									<div class="center">
+										<span class="success"></span>
+										<dl>
+											<dd>数据处理完成</dd>
+											<dt>成功456，失败12</dt>
+										</dl>
+									</div>
+									<div class="right">
+										<a href="gy-product-import.html">点击查看结果</a>
+									</div>
+								</div>
+							</li>						
+						</ul>
+					</div>
+					<!-- 分页 -->
+					<div class="overflow">
+						<div class="pagination">
+							<!-- 页码 -->
+							<ul>
+								<li class="page-first">首页</li>
+								<li class="page-prev">上一页</li>
+								<li class="page-num active">1</li>
+								<li class="page-num">2</li>
+								<li class="page-num">3</li>
+								<li class="page-num">4</li>
+								<li class="page-num">5</li>
+								<li class="page-next">下一页</li>
+								<li class="page-last">尾页</li>
+							</ul>
+							<!-- 总计 -->
+							<div class="all-num">
+								共<span class="item-amount">110</span>条 / 共<span class="page-amount">15</span>页
+							</div>
+							<!-- 跳转 -->
+							<div class="page-go">
+								<span class="lf">到第</span><input name="" type="text" value=""><span class="lf">页</span>
+								<button>确定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

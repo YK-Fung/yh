@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>供应商-优惠券设置</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/thirdstore/gy-discounts-set.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['thirdstore/gy-discounts-set']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-supplier" second-title="gy-discounts"></div>
+
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<div class="bar-slider">
+			<!-- 缩放异常的提示 -->
+			<div class="zoom-tip">
+				<p>您的浏览器缩放比例异常，请按<span class="red">ctrl+0</span>将页面比例缩放至100%，以达到最好的体验效果呢！	</p>
+				<i class="icon-close"></i>
+			</div>
+			<!-- 菜单栏顶部 -->
+			<div class="menu-header">
+				<a class="logo" href="#">
+					<img src="../../img/hy-center/hy-logo.png">
+				</a>
+				<a class="home" href="#">
+					<i class="fa fa-home"></i>
+				</a>
+			</div>
+			<!-- 菜单列表 -->
+			<div class="menu-list">
+				<!-- 左侧列表 -->
+				<ul class="lf-lis">
+					<li class="title hy-center">
+						<i class="icon"></i>
+						<span>会员中心</span>
+						<div class="inner-lis">
+							<ul>
+								<li class="hy-index">
+									<a href="../customer/hy-index.html">会员中心首页</a>
+									<span class="tip">12</span>
+								</li>
+								<li class="hy-infor">
+									<a href="../customer/hy-infor.html">个人信息</a>
+								</li>
+								<li class="hy-firm">
+									<a href="../thirdstore/hy-firm1.html">企业信息</a>
+								</li>
+								<li class="hy-adress">
+									<a href="../customer/hy-address.html">收货地址管理</a>
+								</li>
+								<li class="hy-notification">
+									<a href="../customer/hy-notification-self.html">消息中心</a>
+								</li>
+								<li class="hy-print">
+									<a href="../thirdstore/hy-firm-print1.html">企业资质打印</a>
+								</li>
+								<li class="bank">
+									<a href="../thirdstore/bank.html">银行帐号管理</a>
+								</li>
+								<li class="hy-accounts">
+									<a href="../thirdstore/hy-accounts-manage.html">账号管理</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="title hy-supplier">
+						<i class="icon"></i>
+						<span>供应商</span>
+						<div class="inner-lis">
+							<ul>		
+								<li class="gy-index">
+									<a href="../thirdstore/gy-index.html">供应商首页</a>
+								</li>
+								<li class="shop">
+									<a href="../thirdstore/gy-shop1.html">店铺设置</a>
+								</li>
+								<li class="gy-product-manage">
+									<a href="../goods/gy-product-manage.html">产品管理</a>
+								</li>
+								<li class="gy-product-publish">
+									<a href="../goods/gy-product-publish.html">产品发布</a>
+								</li>
+								<li class="gy-product-import">
+									<a href="../goods/gy-product-import.html">产品批量导入</a>
+								</li>
+								<li class="gy-order">
+									<a href="../order/gy-order-manage.html">订单管理</a>
+								</li>
+								<li class="gy-client">
+									<a href="../order/gy-client.html">客户管理</a>
+								</li>
+								<li class="gy-settlement">
+									<a href="../settlement/gy-settlement.html">结算管理</a>
+								</li>
+								<li class="gy-comment">
+									<a href="../order/gy-comment.html">评价管理</a>
+								</li>
+								<li class="gy-discounts">
+									<a href="../thirdstore/gy-discounts.html">优惠券管理</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="title hy-buyer">
+						<i class="icon"></i>
+						<span>采购商</span>
+						<div class="inner-lis">
+							<ul>	
+								<li class="cg-index">
+									<a href="../thirdstore/cg-index.html">采购商首页</a>
+								</li>
+								<li class="cg-order">
+									<a href="../order/cg-order-manage.html">订单管理</a>
+								</li>
+								<li class="cg-settlement">
+									<a href="../settlement/cg-settlement.html">结算管理</a>
+								</li>
+								<li class="cg-client">
+									<a href="../order/cg-client.html">客户管理</a>
+								</li>
+								<li class="cg-discounts">
+									<a href="../order/cg-discounts1.html">我的优惠券</a>
+								</li>
+								<li class="my-collect">
+									<a href="../seen/my-collect-single.html">我的收藏</a>
+								</li>
+								<li class="my-footprint">
+									<a href="../seen/cg-my-footprint.html">我的足迹</a>
+								</li>
+								<li class="cg-comment">
+									<a href="../order/cg-comment.html">评价管理</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<div class="bar-header">
+				<!-- 左侧功能列表 -->
+				<ul class="user-info-left">
+					<!-- 导航切换按钮 -->
+					<li class="toggle-btn">
+						<a href="#">
+							<i class="fa fa-bars"></i>
+						</a>
+					</li>
+					<!-- 未读消息 -->
+					<li class="message hover-line">
+						<a href="#" class="dropdown">
+							<i class="fa fa-envelope-o"></i>
+							<span class="badge">12</span>
+						</a>
+						<!-- 消息下拉列表 -->
+						<div class="dropdown-menu">
+							<ul class="lis-menu">
+								<li class="active">
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li class="active">
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>			
+							</ul>
+							<!-- 列表按钮 -->
+							<div class="btn">
+								<a href="#" class="all">查看全部消息</a>
+								<a href="javascript:void(0)" class="clear">清除已读</a>
+							</div>
+						</div>
+					</li>
+					<!-- 未读通知 -->
+					<li class="inform hover-line">
+						<a href="#" class="dropdown">
+							<i class="fa fa-bell-o"></i>
+							<span class="badge">7</span>
+						</a>
+						<!-- 通知下拉列表 -->
+						<div class="dropdown-menu">
+							<div class="top-tip">
+								<a href="#" class="news">你有一个新通知</a>
+								<a href="javascript:void(0)" class="read">标记所有为已读</a>
+							</div>
+							<ul class="lis-menu">
+								<li class="active">
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li class="active">
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<strong>陆丰医药公司</strong>
+										<span> - 14:30</span>
+										<p>提醒您发货，请您尽快按预定时间发货。</p>
+									</a>
+								</li>			
+							</ul>
+							<!-- 列表按钮 -->
+							<div class="btn">
+								<a href="#" class="all">查看全部消息</a>
+								<a href="javascript:void(0)" class="clear">清除已读</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- 右侧功能列表 -->
+				<ul class="user-info-right">
+					<!-- 个人资料 -->
+					<li class="user-data">
+						<a href="#" class="user">
+							<img src="../../img/hy-center/hy-user.png">
+							<span>DragonDragonDragonDragon&nbsp;<i class="fa fa-angle-down"></i></span>
+						</a>
+						<!-- 个人资料模块 -->
+						<ul>
+							<li>
+								<a href="#">
+									<i class="fa fa-edit"></i>
+									账号管理
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-wrench"></i>
+									修改密码
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-user"></i>
+									个人资料
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-info"></i>
+									帮助中心
+								</a>
+							</li>
+							<li class="last">
+								<a href="#">
+									<i class="fa fa-lock"></i>
+									退出登录
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- 团队工作状态 -->
+					<li class="team-state">
+						<!-- 展开按钮 -->
+						<span class="btn">
+							<i class="fa fa-twitch"></i>
+						</span>
+						<div class="box">
+							<div class="team-state-list">
+								<h2>团队工作动态<i class="fa fa-plus-circle close-team"></i></h2>
+								<!-- 部门 -->			
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+								<div class="bu-men">
+									<h3>
+										<span>市场部</span>
+										<i class="fa fa-angle-down"></i>
+									</h3>
+									<!-- 部门人员 -->
+									<ul>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+												<span class="badge">12</span>
+											</div>
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+										<li>
+											<div class="name">
+												<span>陈嘉禾</span>
+											</div>							
+										</li>
+									</ul>
+								</div>											
+							</div>
+							<!-- 个人工作动态详细信息 -->
+							<div class="person-message">
+								<div class="arrows"></div>
+								<div class="header">
+									<span class="status"></span>
+									<span>陈嘉禾</span>
+									<span class="close">×</span>
+								</div>
+								<!-- 个人工作动态列表 -->
+								<div class="states">
+									<ul>
+										<li class="lis">
+											<p class="tit">
+												<span class="where">采购商后台</span>
+												<span class="time">09:00</span>
+											</p>
+											<p class="ctn">订单号：1704231242265037 - 签署合同成功！</p>
+										</li>										
+										<li class="lis">
+											<p class="tit">
+												<span class="where">采购商后台</span>
+												<span class="time">09:00</span>
+											</p>
+											<p class="ctn">订单号：1704231242265037 - 签署合同成功！</p>
+										</li>
+										<li class="lis">
+											<p class="tit">
+												<span class="where">采购商后台</span>
+												<span class="time">09:00</span>
+											</p>
+											<p class="ctn">订单号：1704231242265037 - 签署合同成功！</p>
+										</li>
+										<li class="lis">
+											<p class="tit">
+												<span class="where">采购商后台</span>
+												<span class="time">09:00</span>
+											</p>
+											<p class="ctn">订单号：1704231242265037 - 签署合同成功！</p>
+										</li>
+									</ul>
+								</div>
+								<div class="link">
+									<a href="#">查看 刘锋 所有动态 ></a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">优惠券设置</div>
+					<div class="path-right"><i class="fa fa-home"></i> 供应商 / 优惠券设置</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<div class="form-group">
+						<label><span class="must-star">*</span>优惠券类型：</label>
+						<div class="form-ctn">
+							<!-- 店铺类型下拉框 -->
+							<div class="select-box select-discounts">
+								<!-- 下拉框文字 -->
+								<a href="javascript:void(0)" class="select-choice">
+									<!-- 选中 -->
+									<div class="select-text">商品优惠券</div>
+									<input type="text" class="select-input" value="1" name="">
+									<!-- 下拉icon -->
+									<span class="select-arrow">
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<!-- 下拉列表 -->
+								<div class="select-drop">
+									<ul>
+										<li data="1">商品优惠券</li>
+										<li data="2">店铺优惠券</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>优惠券名称：</label>
+						<div class="form-ctn">
+							<input name="" class="must discounts-name" type="text" placeholder="不超过6个字">
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>有效期类型：</label>
+						<div class="form-ctn">
+							<!-- 有效期类型 -->
+							<ul class="date-type">
+								<li class="active"><input name="datetype" type="radio" checked>固定有效期</li>
+								<li><input name="datetype" type="radio">按天数</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>有效时间：</label>
+						<div class="form-ctn">
+							<!-- 不同有效期设置 ,错误error-->
+							<ul class="date-type-ctn">
+								<li class="">
+									<input name="" class="must date-start date-time date1" type="text">
+									<span class="line">-</span>
+									<input name="" class="must date-end date-time date2" type="text">
+									<p class="error-tip">请选择正确的有效期!</p>
+								</li>
+								<li>从领取日期开始， <input name="" class="must date-start date-day" type="text">天内有效。</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>单张面值：</label>
+						<div class="form-ctn">
+							<input name="" class="must discounts-money" type="text" placeholder="请输入1-999的正整数">元
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>可用产品：</label>
+						<div class="form-ctn discounts-scope">
+							<div class="scope-text goods-select">选择产品</div>
+							<!-- <div class="scope-text goods-all">全部产品</div> -->
+							<span class="warn-tip">请选择产品!</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>总发行量：</label>
+						<div class="form-ctn">
+							<input name="" class="must discounts-amount" type="text" placeholder="不超过1000张">张
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>使用条件：</label>
+						<div class="form-ctn conditon-ctn">
+							单笔订单中此优惠券指定货品金额满 <input name="" class="must discounts-condition" type="text" placeholder="大于或等于2元且不超过9999">元使用
+							<span class="warn-tip">请输入正确金额！</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>推广方式：</label>
+						<div class="form-ctn">
+							<ul class="generalize-type">
+								<li class="active"><input name="generalizetype" type="radio" checked>自主领取</li>
+								<li><input name="generalizetype" type="radio">定向发放</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-group channel">
+						<label>推广渠道：</label>
+						<div class="form-ctn">
+							<ul class="channel-type">
+								<li class="active"><input name="channeltype" type="radio" checked>展示到店铺</li>
+								<li><input name="channeltype" type="radio">不展示到店铺</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-ctn">
+							<div class="btn btn-new">创建优惠券</div>
+							<div class="btn btn-back">返回</div>
+						</div>
+					</div>
+
+					<!-- 优惠券查看 -->
+					<!-- 商品券discounts-sp、店铺券discounts-dp -->
+					<div class="discounts-view discounts-sp">
+						<div class="view">
+							<div class="view-l">
+								<p><span class="view-opt view-condition">可用条件</span></p>
+								<p><span class="view-opt view-goods">可用产品</span></p>
+								<p><span class="view-opt view-name">优惠券名称</span></p>
+								<p><span class="view-firm">公司名称</span></p>
+								<p><span class="view-opt view-time">有效期</span></p>
+							</div>
+							<div class="view-r">
+								<p class="view-money">
+									<span class="view-opt">0</span>
+								</p>
+								<div class="btn-view">立即领取</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<!-- 底部信息 -->
+			<div class="footer">
+				<div class="text">copyright © 2016-2017 Yaohuiw.com 药荟网 版权所有  互联网药品信息服务资格证书（粤）-经营性-2017-0051 </div>
+				<a class="go-up" href="#"><i class="fa fa-angle-up"></i></a>
+			</div>
+			<!-- IE低版本提示 -->
+			<!-- IE弹窗 -->
+			<div class="ie-tip">
+			    <div class="center">
+			        <h2><img src="../../img/ie-tip1.png"></h2>
+			        <div class="btm-ctn">
+			            <p>您当前浏览器版本过低，<span>可能影响到签订合同和报表的查看</span>，建议您切换到浏览器的<i>极速模式</i>或点击下载！</p>
+			            <div class="link">
+			                <a href="http://browser.qq.com/" target="blank"><img src="../../img/ie-tip3.png"></a>
+			                <a href="http://ie.sogou.com/" target="blank"><img src="../../img/ie-tip4.png"></a>
+			                <a href="http://se.360.cn/" target="blank"><img src="../../img/ie-tip2.png"></a>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+
+
+			<div class="login-pop">
+			    <div class="center-border">
+			        <div class="center">
+			            <i class="close"></i>
+			            <form class="login-form">
+			                <div class="form-group">
+			                    <input name="" class="login-user" type="text" placeholder="请您输入用户名/手机/邮箱">
+			                    <i class="input-del"></i>
+			                    <p class="error-tip">请输入用户名</p>
+			                </div>
+			                <div class="form-group">
+			                    <input name="" class="login-pwd" type="password" placeholder="请您输入密码">
+			                    <p class="error-tip">请输入密码</p>
+			                    <p class="login-fail">用户名或密码有误</p>
+			                </div>
+			                <div class="login-btn">登&nbsp;&nbsp;&nbsp;录</div>
+			                <a class="forget-pwd" href="../customer/forget-password1.html">忘记密码?</a>
+			            </form>
+			        </div>
+			    </div>
+			</div>
+
+
+
+
+
+
+		</div>
+	</div>
+
+	<!-- 弹窗-产品 -->
+	<div class="pop-shade" id="pop-goods">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text">选择产品</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<!-- 产品类型 -->
+				<ul class="goods-type">
+					<li class="active">产品列表</li>
+					<li>已选择产品</li>
+					<li>已生效产品</li>
+				</ul>
+				<div class="goods-ctn">
+					<div class="goods-ctn-li">
+						<!-- 操作 -->
+						<div class="opt">
+							<div class="checkbox-all"><input name="" type="checkbox" value="1">全选1</div>
+							<!-- 筛选 -->
+							<ul class="filtrate">
+								<li>
+									<div class="select-box-name">产品类别：</div>
+									<div class="select-box select-product">
+										<!-- 下拉框文字 -->
+										<a href="javascript:void(0)" class="select-choice">
+											<!-- 选中 -->
+											<div class="select-text">1</div>
+											<input type="text" class="select-input" value="1" name="">
+											<!-- 下拉icon -->
+											<span class="select-arrow">
+												<i class="fa fa-angle-down"></i>
+											</span>
+										</a>
+										<!-- 下拉列表 -->
+										<div class="select-drop">
+											<ul>
+												<li data="1">1</li>
+												<li data="2">2</li>
+												<li data="2">2</li>
+												<li data="2">2</li>
+												<li data="2">2</li>
+												<li data="2">2</li>
+												<li data="2">2</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<input name="" class="search-input" type="text" placeholder="请输入产品名称/批准文号查询">
+									<div class="btn-search">查询</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 产品表格 -->
+						<div class="goods-table">
+							<ul class="table-header">
+								<li>产品名称</li>
+								<li>批准文号</li>
+								<li>规格</li>
+								<li>库存</li>
+								<li>操作</li>
+							</ul>
+							<div class="table-body">
+								<p class="empty-tip">您还未发布产品，请先<a href="#">发布产品</a></p>
+								<!-- <ul>
+									<li>三九感冒灵</li>
+									<li>HJK123455554</li>
+									<li>0.8g*8片*4板袋</li>
+									<li>100盒</li>
+									<li><span class="checkbox"><input name="" type="checkbox" value="1"></span></li>
+								</ul>
+								<ul>
+									<li>三九感冒灵</li>
+									<li>HJK123455554</li>
+									<li>0.8g*8片*4板袋</li>
+									<li>100盒</li>
+									<li><span class="checkbox"><input name="" type="checkbox" value="1"></span></li>
+								</ul> -->
+							</div>
+						</div>
+						<!-- 分页 -->
+										<div class="pagination">
+											<div class="show-num">
+												<span>每页显示</span>
+												<div class="pg-select-box">
+													<!-- 下拉框 -->
+													<a href="javascript:void(0)" class="pg-select-choice">
+														<!-- 选中 -->
+														<div class="pg-select-text">10</div>
+														<input type="text" value="1" class="pg-select-input" disabled hidden>
+													</a>
+													<!-- 下拉列表 -->
+													<ul class="pg-select-drop">
+														<!--下拉列表对应的内容-->
+														<li data="1">10</li>
+														<li data="2">20</li>
+														<li data="3">30</li>
+														<li data="4">50</li>
+													</ul>
+												</div>
+												<span>条记录</span>
+											</div>
+											<!-- 页码 -->
+											<ul>
+												<li class="page-first">首页</li>
+												<li class="page-prev">上一页</li>
+												<li class="page-num active">1</li>
+												<li class="page-num">2</li>
+												<li class="page-num">3</li>
+												<li class="page-num">4</li>
+												<li class="page-num">5</li>
+												<li class="page-next">下一页</li>
+												<li class="page-last">尾页</li>
+											</ul>
+											<!-- 总计 -->
+											<div class="all-num">
+												共<span class="page-view">1</span><span>/</span><span class="page-amount">12</span>页
+											</div>
+											<!-- 跳转 -->
+											<div class="page-go">
+												<input name="" type="text" value="">
+												<button>跳转</button>
+											</div>
+										</div>
+					</div>
+					<div class="goods-ctn-li">
+						<!-- 操作 -->
+						<div class="opt">
+							<div class="checkbox-all"><input name="" type="checkbox" value="1">全选1</div>
+							<!-- 筛选 -->
+							<ul class="filtrate">
+								<li>
+									<div class="select-box-name">产品类别：</div>
+									<div class="select-box select-product">
+										<!-- 下拉框文字 -->
+										<a href="javascript:void(0)" class="select-choice">
+											<!-- 选中 -->
+											<div class="select-text">1</div>
+											<input type="text" class="select-input" value="1" name="">
+											<!-- 下拉icon -->
+											<span class="select-arrow">
+												<i class="fa fa-angle-down"></i>
+											</span>
+										</a>
+										<!-- 下拉列表 -->
+										<div class="select-drop">
+											<ul>
+												<li data="1">1</li>
+												<li data="2">2</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<input name="" class="search-input" type="text" placeholder="请输入产品名称/批准文号查询">
+									<div class="btn-search">查询</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 产品表格 -->
+						<div class="goods-table">
+							<ul class="table-header">
+								<li>产品名称</li>
+								<li>批准文号</li>
+								<li>规格</li>
+								<li>库存</li>
+								<li>操作</li>
+							</ul>
+							<div class="table-body">
+								<p class="empty-tip">您还未选择产品！</p>
+								<!-- <ul>
+									<li>三九感冒灵</li>
+									<li>HJK123455554</li>
+									<li>0.8g*8片*4板袋</li>
+									<li>100盒</li>
+									<li><span class="btn-repeal">撤销</span></li>
+								</ul>
+								<ul>
+									<li>三九感冒灵</li>
+									<li>HJK123455554</li>
+									<li>0.8g*8片*4板袋</li>
+									<li>100盒</li>
+									<li><span class="btn-repeal">撤销</span></li>
+								</ul> -->
+							</div>
+						</div>
+						<!-- 分页 -->
+										<div class="pagination">
+											<div class="show-num">
+												<span>每页显示</span>
+												<div class="pg-select-box">
+													<!-- 下拉框 -->
+													<a href="javascript:void(0)" class="pg-select-choice">
+														<!-- 选中 -->
+														<div class="pg-select-text">10</div>
+														<input type="text" value="1" class="pg-select-input" disabled hidden>
+													</a>
+													<!-- 下拉列表 -->
+													<ul class="pg-select-drop">
+														<!--下拉列表对应的内容-->
+														<li data="1">10</li>
+														<li data="2">20</li>
+														<li data="3">30</li>
+														<li data="4">50</li>
+													</ul>
+												</div>
+												<span>条记录</span>
+											</div>
+											<!-- 页码 -->
+											<ul>
+												<li class="page-first">首页</li>
+												<li class="page-prev">上一页</li>
+												<li class="page-num active">1</li>
+												<li class="page-num">2</li>
+												<li class="page-num">3</li>
+												<li class="page-num">4</li>
+												<li class="page-num">5</li>
+												<li class="page-next">下一页</li>
+												<li class="page-last">尾页</li>
+											</ul>
+											<!-- 总计 -->
+											<div class="all-num">
+												共<span class="page-view">1</span><span>/</span><span class="page-amount">12</span>页
+											</div>
+											<!-- 跳转 -->
+											<div class="page-go">
+												<input name="" type="text" value="">
+												<button>跳转</button>
+											</div>
+										</div>
+					</div>
+					<div class="goods-ctn-li">
+						<!-- 操作 -->
+						<div class="opt">
+							<div class="checkbox-all"><input name="" type="checkbox" value="1">全选1</div>
+							<!-- 筛选 -->
+							<ul class="filtrate">
+								<li>
+									<div class="select-box-name">产品类别：</div>
+									<div class="select-box select-product">
+										<!-- 下拉框文字 -->
+										<a href="javascript:void(0)" class="select-choice">
+											<!-- 选中 -->
+											<div class="select-text">1</div>
+											<input type="text" class="select-input" value="1" name="">
+											<!-- 下拉icon -->
+											<span class="select-arrow">
+												<i class="fa fa-angle-down"></i>
+											</span>
+										</a>
+										<!-- 下拉列表 -->
+										<div class="select-drop">
+											<ul>
+												<li data="1">1</li>
+												<li data="2">2</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<input name="" class="search-input" type="text" placeholder="请输入产品名称/批准文号查询">
+									<div class="btn-search">查询</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 产品表格 -->
+						<div class="goods-table">
+							<ul class="table-header">
+								<li>产品名称</li>
+								<li>批准文号</li>
+								<li>规格</li>
+								<li>库存</li>
+								<li>操作</li>
+							</ul>
+							<div class="table-body">
+								<p class="empty-tip">没有已生效的产品！</p>
+								<!-- <ul>
+									<li>三九感冒灵</li>
+									<li>HJK123455554</li>
+									<li>0.8g*8片*4板袋</li>
+									<li>100盒</li>
+									<li><span class="checkbox"><input name="" type="checkbox" value="1"></span></li>
+								</ul>
+								<ul>
+									<li>三九感冒灵</li>
+									<li>HJK123455554</li>
+									<li>0.8g*8片*4板袋</li>
+									<li>100盒</li>
+									<li><span class="checkbox"><input name="" type="checkbox" value="1"></span></li>
+								</ul> -->
+							</div>
+						</div>
+						<!-- 分页 -->
+										<div class="pagination">
+											<div class="show-num">
+												<span>每页显示</span>
+												<div class="pg-select-box">
+													<!-- 下拉框 -->
+													<a href="javascript:void(0)" class="pg-select-choice">
+														<!-- 选中 -->
+														<div class="pg-select-text">10</div>
+														<input type="text" value="1" class="pg-select-input" disabled hidden>
+													</a>
+													<!-- 下拉列表 -->
+													<ul class="pg-select-drop">
+														<!--下拉列表对应的内容-->
+														<li data="1">10</li>
+														<li data="2">20</li>
+														<li data="3">30</li>
+														<li data="4">50</li>
+													</ul>
+												</div>
+												<span>条记录</span>
+											</div>
+											<!-- 页码 -->
+											<ul>
+												<li class="page-first">首页</li>
+												<li class="page-prev">上一页</li>
+												<li class="page-num active">1</li>
+												<li class="page-num">2</li>
+												<li class="page-num">3</li>
+												<li class="page-num">4</li>
+												<li class="page-num">5</li>
+												<li class="page-next">下一页</li>
+												<li class="page-last">尾页</li>
+											</ul>
+											<!-- 总计 -->
+											<div class="all-num">
+												共<span class="page-view">1</span><span>/</span><span class="page-amount">12</span>页
+											</div>
+											<!-- 跳转 -->
+											<div class="page-go">
+												<input name="" type="text" value="">
+												<button>跳转</button>
+											</div>
+										</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 确定按钮 -->
+				<div class="btn btn-yes">保存</div>
+				<!-- 取消按钮 -->
+				<div class="btn btn-no">返回</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 弹窗-撤销 -->
+	<div class="pop-shade" id="pop-repeal">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text">撤销产品</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p>确定要撤销该产品？</p>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 确定按钮 -->
+				<div class="btn btn-yes">确定</div>
+				<!-- 取消按钮 -->
+				<div class="btn btn-no">取消</div>
+			</div>
+		</div>
+	</div>
+
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

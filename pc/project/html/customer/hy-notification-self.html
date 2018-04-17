@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员中心-消息提醒</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/customer/hy-notification-self.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['customer/hy-notification-self']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-center" second-title="hy-notification"></div>
+	
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">消息中心</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 消息中心</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<ul class="main-l">
+						<li class="active"><a href="hy-notification-self.html">我的消息</a><span>1</span></li>
+						<li><a href="hy-notification-advice.html">反馈建议</a></li>
+					</ul>
+					<div class="main-r">
+						<!-- 筛选项 -->
+						<div class="filtrate">
+							<!-- 产品检索： -->
+							<div class="product-filtrate">
+								<div class="left">
+									<span class="tit">类型：</span>
+									<!-- 库存 -->
+									<div class="select-box kucun">
+								        <!-- 下拉框 -->
+								        <a href="javascript:void(0)" class="select-choice">
+								            <!-- 选中 -->
+								            <div class="select-text">全部消息</div>
+								            <input type="text" value="1" class="select-input" disabled hidden>
+								            <!-- 下拉icon -->
+								            <span class="select-arrow"><i class="fa fa-angle-down"></i></span>
+								        </a>
+								        <!-- 下拉列表 -->
+								        <ul class="select-drop">
+								            <!--下拉列表对应的内容-->
+								            <li data="1">全部消息</li>
+								            <li data="2">我的消息</li>
+								            <li data="3">反馈建议</li>
+								        </ul>
+								    </div>
+									<!-- 日期范围： -->
+									<div class="date-times">
+										<span class="tit">日期范围：</span>
+										<div class="dates">
+											<div class="lf">
+												<i class="fa fa-calendar"></i>
+												<!-- 开始时间 -->
+												<input name="" type="text" class="date-time date1">
+											</div>
+											<span class="line"> - </span>
+											<div class="lf">
+												<i class="fa fa-calendar"></i>
+												<!-- 结束时间 -->
+												<input name="" type="text" class="date-time date2">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="right">
+									<span class="tit">标题：</span>
+									<input type="text" placeholder="" class="name-input">
+									<!-- 查询 -->
+									<button class="search">查询</button>
+								</div>
+								<!-- <a href="../goods/gy-product-publish.html" class="publish">消息提醒设置</a>		 -->
+							</div>
+						</div>
+						<!-- 筛选结果 -->
+						<div class="table-form">
+							<!-- 所有产品 -->
+							<div class="all-product">
+								<div class="action">
+									<!-- 全选 -->
+									<div class="pull-left select-all">
+										<div class="checkbox select-all-checkbox">
+											<input type="checkbox">
+											<label></label>
+										</div>
+										<span>全选</span>
+									</div>
+									<!-- 批量上架 -->
+									<div class="pull-left btn btn-del">删除选中</div>
+									<!-- 批量下架 -->
+									<div class="pull-left btn btn-read">标记为已读</div>
+								</div>
+								<table class="tabel-all">
+									<thead>
+										<tr>
+											<th class="text-left">消息标题</th>
+											<th>发送时间</th>
+											<th>消息状态</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="read-yes">
+											<td class="text-left">
+												<div class="checkbox">
+													<input type="checkbox">
+													<label></label>
+												</div>
+												<!-- 在title现实完整的标题，外面只显示30个字，超出省略号 -->
+												<span class="detail" title="2017药企需看清医药营销7大态势2017药企需看清医药营销">2017药企需看清医药营销7大态势</span>
+											</td>
+											<td>2017/06/07</td>
+											<td class="read-status">已读</td>
+										</tr>
+										<tr>
+											<td class="text-left">
+												<div class="checkbox">
+													<input type="checkbox">
+													<label></label>
+												</div>
+												<!-- 在title现实完整的标题，外面只显示30个字，超出省略号 -->
+												<span class="detail" title="2017药企需看清医药营销7大态势">2017药企需看清医药营销7大态势</span>
+											</td>
+											<td>2017/06/07</td>
+											<td class="read-status">未读</td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- 分页 -->
+								<include src="../include/pagination.html"></include>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<include src="../include/footer.html"></include>
+		</div>
+	</div>
+	<!-- 弹窗-删除 -->
+	<div class="pop-shade" id="pop-del">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 改变字体大小的类名，默认14px。font16 font18-->
+				<div class="header-text">删除消息</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p>确定删除选中消息？</p>
+			</div>
+			<!-- 底部 改变对齐方式的类名，默认居右。align-left align-center-->
+			<div class="pop-footer">
+				<!-- 按钮颜色。 蓝色bg-blue 浅蓝色bg-tint 白色bg-white-->
+				<div class="btn bg-white btn-no">取消</div>
+				<div class="btn bg-tint btn-yes">确定</div>
+			</div>
+		</div>
+	</div>
+	<!-- 弹窗-详情 -->
+	<div class="pop-shade" id="pop-detail">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 改变字体大小的类名，默认14px。font16 font18-->
+				<div class="header-text">2017药企需看清医药营销7大态势</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p>1111111111111111111111111111111111111111111111111111111111111111111111111111111111</p>
+			</div>
+			<!-- 底部 改变对齐方式的类名，默认居右。align-left align-center-->
+			<div class="pop-footer">
+				<!-- 按钮颜色。 蓝色bg-blue 浅蓝色bg-tint 白色bg-white-->
+				<div class="btn bg-tint btn-yes">确定</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

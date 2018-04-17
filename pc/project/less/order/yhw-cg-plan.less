@@ -1,0 +1,604 @@
+@charset 'utf-8';
+@import url(../yhw-common2.less);
+
+@planW1: 32%;
+@planW2: 14%;
+@planW3: 13.5%;
+
+.wrap {
+  width: 100%;
+  min-height: 100%;
+  .main-header {
+    width: 100%;
+    background: #fff;
+    border-bottom: 2px solid @base;
+    .header-ctn {
+      width: 1200px;
+      height: 136px;
+      margin: 0 auto;
+      overflow: hidden;
+      font-size: 26px;
+      text-align: center;
+      color: #333;
+    }
+    /* logo */
+    .header-logo {
+      float: left;
+      display: block;
+      width: 345px;
+      height: 87px;
+      margin-top: (136-87)/2px;
+      background: #fff url('../../img/yhw2/logo2.png') left center no-repeat;
+      cursor: pointer;
+    }
+    /* 流程 */
+    .shop-flow {
+      float: right;
+      width: 752px;
+      height: 88px;
+      margin-top: 40px;
+      background: #fff url('../../img/yhw2/shop-car01.png') left center no-repeat;
+    }
+  }
+  .test {
+    width: 100%;
+    height: 0px;
+    background: #ccc;
+  }
+  /* 主体部分 */
+  .main {
+    background: #f8f8f8;
+    .main-ctn {
+      min-height: 416px;
+      padding-bottom: 110px;
+    }
+    .shop-empty {
+      padding-top: 224px;
+      padding-left: 488px;
+      text-align: left;
+      background: url('../../img/yhw2/shop-car-empty.png') center center no-repeat;
+      a {
+        font-size: 18px;
+        text-decoration: underline;
+        color: #0066cc;
+        cursor: pointer;
+      }
+    }
+  }
+  /* 全选 */
+  .checkbox-all {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /*多选框*/
+  .checkbox {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #cccccc;
+    transform: translateY(-50%);
+    cursor: pointer;
+    input {
+      display: none;
+    }
+  }
+  .active .checkbox {
+    background: url('../../img/icon/icon-checkbox-active.png') center center no-repeat;
+  }
+  /* 采购计划头部 */
+  .plan-header {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 26px;
+    margin-bottom: 20px;
+    background: #fff;
+    overflow: hidden;
+    li {
+      position: relative;
+      float: left;
+      height: 100%;
+      width: @planW3;
+      padding: 0 20px;
+      font-size: 12px;
+      text-align: center;
+      line-height: 40px;
+      color: #666;
+      &:nth-child(1) {
+        width: @planW1;
+      }
+      &:nth-child(2) {
+        width: @planW2;
+      }
+    }
+  }
+  /* 采购计划内容 */
+  .plan-body {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  /*供应商信息*/
+  .plan-gys {
+    position: relative;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 12px;
+    line-height: 40px;
+    background: #fff5e2;
+    overflow: hidden;
+    /*供应商*/
+    .gys-infor {
+      float: left;
+      height: 100%;
+      padding-left: 36px;
+      text-align: left;
+      line-height: 40px;
+      color: #666666;
+      .checkbox {
+        left: 20px;
+      }
+      .gys-firm {
+        margin-right: 100px;
+      }
+    }
+    /*凑单*/
+    .add-order{
+      margin-left: 20px;
+      float: right;
+      color: #f00;
+    }
+    /*领券*/
+    .get-coupon{
+      color: #f00;
+      width: 70px;
+      height: 100%;
+      float: right;
+      padding-left: 28px;
+      background: url("../../img/icon/get-coupon.png") left center no-repeat;
+      cursor: pointer;
+    }
+    /*供应商提示*/
+    .gys-tip,.order-tip {
+      float: right;
+      height: 100%;
+      line-height: 40px;
+      text-align: right;
+      color: #999;
+        .price {
+          display: inline;
+          color: #f82222;
+        }
+    }
+    .order-tip{
+      display: none;
+    }
+  }
+  /*采购计划中的商品*/
+  .plan-detail,.prod-cancel {
+    display: block;
+    height: 160px;
+    padding: 20px 0;
+    overflow: hidden;
+    background: #fff;
+    border-top: 1px dashed #e8e8e8;
+    &.active {
+      background: #fffbf2;
+
+    }
+    li {
+      position: relative;
+      float: left;
+      height: 100%;
+      width: @planW3;
+      padding: 0 10px;
+      font-size: 12px;
+      text-align: center;
+      color: #666;
+      /* overflow: hidden; */
+      &:nth-child(1) {
+        width: @planW1;
+        text-align: left;
+      }
+      &:nth-child(2) {
+        width: @planW2;
+      }
+    }
+    .product-img {
+      position: relative;
+      float: left;
+      width: 118px;
+      height: 118px;
+      margin-left: 44px;
+      margin-right: 18px;
+      border: 1px solid #ccc;
+      .img-mask {
+        display: none;
+        background: #f8f8f8;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0.7;
+        z-index: 2;
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 100%;
+        max-height: 100%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    /*商品信息*/
+    .product-infor {
+      position: relative;
+      float: left;
+      display: inline-block;
+      width: 184px;
+      height: 100%;
+      padding: 5px 0;
+      font-size: 12px;
+      line-height: 20px;
+      color: #666;
+      .product-name {
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #333;
+      }
+      .infor-b {
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+      }
+    }
+    .detail-ctn,.prod-tip {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 12px;
+      text-align: center;
+      line-height: 20px;
+      white-space: nowrap;
+      color: #666;
+      transform: translate(-50%, -50%);
+      &.red {
+        color: #ff0000;
+      }
+      /* 价格变动提示 */
+      .price-change{
+        color: #f00;
+        position: relative;
+        padding-right: 10px;
+        i{
+          transform: translateY(-50%);
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: 9px;
+          height: 14px;
+          background: url('../../img/icon/arrow-red.png') center center no-repeat;
+        }
+        &.price-up{
+          i{
+            transform: translateY(-50%) rotateZ(180deg);
+          }
+        }
+      }
+      /* 数量类型 */
+      .amount-type {
+        display: inline-block;
+        width: 48px;
+        height: 20px;
+        text-align: left;
+        line-height: 18px;
+        vertical-align: middle;
+        color: #999;
+      }
+      /* 数量增加or减少按钮 */
+      .amount-reduce,
+      .amount-add {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+        text-align: center;
+        line-height: 18px;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+        user-select: none;
+        cursor: pointer;
+      }
+      /* 数量输入框 */
+      .amount-input {
+        display: inline-block;
+        width: 46px;
+        height: 20px;
+        margin-left: -4px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 18px;
+        vertical-align: middle;
+        color: #666;
+        background: transparent;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        outline: none;
+      }
+      .amount-add {
+        margin-left: -4px;
+        background: #edf4fb;
+      }
+      /* 库存不足 */
+      .inventory {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        display: none;
+        height: 20px;
+        font-size: 12px;
+        text-align: left;
+        line-height: 20px;
+        color: @red;
+      }
+      .prod-tip{
+        color: #999;
+        display: none;
+      }
+    }
+    /* 收藏 */
+    .opt-collect {
+      padding-left: 24px;
+      margin-bottom: 34px;
+      background: url(../../img/icon/icon-collect.png) left center no-repeat;
+      cursor: pointer;
+      &.active {
+        background-image: url(../../img/icon/icon-collect-active.png);
+      }
+      input {
+        display: none;
+      }
+    }
+    /* 删除 */
+    .opt-del {
+      padding-left: 24px;
+      background: url(../../img/icon/icon-del.png) left center no-repeat;
+      cursor: pointer;
+    }
+    &.prod-cancel {
+      .checkbox{
+        display: none;
+      }
+      .product-img {
+        .img-mask {
+          display: block;
+        }
+      }
+      .opt-collect {
+        display: none;
+      }
+      li:nth-child(1), li:nth-child(2) {
+        p {
+          color: #ccc;
+        }
+      }
+      li:nth-child(3) {
+        .prod-tip {
+          color: #999;
+          display: block;
+        }
+      }
+    }
+  }
+
+  /*下单*/
+  .buy {
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    left: 50%;
+    width: 1200px;
+    height: 60px;
+    overflow: hidden;
+    font-size: 12px;
+    text-align: left;
+    line-height: 60px;
+    color: #666;
+    background: #fff;
+    transform: translateX(-50%);
+    &.fixed {
+      box-shadow: 0px -2px 5px 0px rgba(51, 51, 51, 0.06);
+    }
+    /* 全选 */
+    .buy-all {
+      position: relative;
+      float: left;
+      height: 100%;
+      padding-left: 44px;
+      margin-right: 40px;
+      cursor: pointer;
+    }
+    /*删除选中商品*/
+    .buy-del,.buy-cancel {
+      float: left;
+      height: 100%;
+      padding-left: 24px;
+      background: url(../../img/icon/icon-del.png) left center no-repeat;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+    /*提交*/
+    .btn-submit {
+      position: relative;
+      float: right;
+      width: 220px;
+      height: 100%;
+      font-size: 16px;
+      text-align: center;
+      color: #fff;
+      background: @gray;
+      cursor: pointer;
+      &.active {
+        background: #fa8c35;
+      }
+    }
+    /*订单信息*/
+    .buy-infor {
+      float: right;
+      display: inline-block;
+      height: 100%;
+      margin-right: 20px;
+      text-align: right;
+      li {
+        display: inline-block;
+        height: 100%;
+        margin-left: 20px;
+      }
+      .gys-amount {
+        color: @red;
+      }
+      .total {
+        font-size: 20px;
+        color: @red;
+      }
+    }
+  }
+}
+
+/*弹窗-删除收货地址*/
+#pop-del,#pop-remove,#pop-money {
+  .pop-main {
+    width: 436px;
+  }
+  .pop-body {
+    p {
+      padding: 75px 15px;
+      font-size: 16px;
+      text-align: center;
+      color: #333;
+    }
+  }
+}
+
+#pop-money{
+  .pop-footer{
+    text-align: center;
+    .btn-yes{
+      margin-right: 0;
+    }
+  }
+}
+
+/*弹窗-领取优惠券*/
+#pop-coupon{
+  .pop-main {
+    width: 600px;
+    height: 660px;
+    top: 50%;
+  }
+  .pop-body{
+    height: 623px;
+    overflow-y: auto;
+    padding: 30px;
+    /* 优惠卷 */
+    .discounts{
+      display: block;
+      width: 100%;
+      overflow-x: hidden;
+      li{
+        float: left;
+        width: 100%;
+        height: 192px;
+        margin-bottom: 5px;
+        position: relative;
+        &:nth-child(2n){
+          margin-right: 0;
+        }
+        .coupon-l{
+          position: absolute;
+          top: 50%;
+          left: 144px;
+          text-align: left;
+          transform: translateY(-50%);
+          .coupon-condition{
+            font-size: 28px;
+          }
+          .coupon-info{
+            word-break: break-all;
+            width: 190px;
+            font-size: 16px;
+            color: #666;
+          }
+          .coupon-company{
+            font-size: 14px;
+            color: #999;
+            line-height: 30px;
+          }
+          .coupon-limit{
+            font-size: 12px;
+            color: #999;
+          }
+        }
+        .coupon-r{
+          width: 170px;
+          position: absolute;
+          right: 0;
+          bottom: 22px;
+          .coupon-price{
+            font-size: 100px;
+            line-height: 100px;
+            color: #fff;
+            text-align: center;
+            &.length3{
+              font-size: 76px;
+            }
+          }
+          .coupon-use-btn{
+            width: 129px;
+            height: 36px;
+            border: 1px solid #fff;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 36px;
+            font-size: 22px;
+            color: #fff;
+            margin: 0 auto;
+            cursor: pointer;
+          }
+        }
+        .coupon-stamp{
+          position: absolute;
+          background: url(../../img/yhw2/discounts-link-stamp.png) no-repeat;
+          background-size: cover;
+          width: 159px;
+          height: 108px;
+          bottom: 5px;
+          right: 155px;
+          display: none;
+        }
+        &.coupon-red{
+          background: url(../../img/yhw2/coupon-bg-red.png) no-repeat;
+          background-size: contain;
+          .coupon-condition{
+            color: #fe635b;
+          }
+        }
+        &.coupon-orange{
+          background: url(../../img/yhw2/coupon-bg-orange.png) no-repeat;
+          background-size: contain;
+          .coupon-condition{
+            color: #fe985b;
+          }
+        }
+        &.is-received{
+          .coupon-stamp{
+            display: block;
+          }
+        }
+      }
+
+    }
+  }
+}

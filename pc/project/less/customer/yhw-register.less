@@ -1,0 +1,487 @@
+@import url(../yhw-common2.less);
+
+html,
+body,.wrap{
+	background: #fff;
+}
+/* 头部 */
+.header-ctn{
+	border-bottom: 2px solid #0066cc;
+	padding-bottom: 5px;
+	.center{
+		width: 1200px;
+		margin: 0 auto; 
+		overflow: hidden;
+		.lf{
+			float: left;
+		}
+		.logo{
+			margin-top: 8px;
+			margin-right: 40px;
+		}
+		.aptitude{
+			line-height: 42px;
+			color:#666
+		}
+		.wel{
+			line-height: 120px;
+			font-size: 24px;
+			color:#666;
+			margin-left: 60px;
+		}
+		.rt{
+			float: right;
+			span{
+				margin:88px 0 0 40px;
+				display: inline-block;
+			}
+			.num{
+				font-size: 20px;
+				color:#ef8d00;
+				font-style: normal;
+			}
+			.login{
+				color:#0066cc;
+			}
+		}
+	}
+}
+/* 主体内容 */
+.ctn{
+	padding-bottom: 85px;
+	/* 版心 */
+	.center{
+		width: 1200px;
+		margin:0 auto;
+		padding-top: 30px;
+		/* 清除浮动 */
+		&:after{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 0;
+			clear: both;
+		}
+	}
+}
+/* 注册表单 */
+.form-box{
+	width: 640px;
+	float: left;
+	padding-left: 110px;
+	.form-group{
+		height: 60px;
+		.fill{
+			position: relative;
+		}
+		label{
+			float: left;
+			text-align: right;
+			font-size: 12px;
+			color:#666;
+			line-height: 35px;
+			width: 90px;
+			margin-right: 12px;
+			.require{
+				font-style: normal;
+				color:#ff0000;
+				margin-right: 10px;
+			}
+		}
+		input{
+			display: inline-block;
+			width: 300px;
+			height: 35px;
+			line-height: 35px;
+			color:#666;
+			border:1px solid #ccc;
+			padding:0 5px;
+			font-size: 12px;
+		}
+		input.code-input{
+			width: 175px;
+		}
+		/*地址下拉框*/
+		.address-select{
+			position: relative;
+			display: inline-block;
+			width: 300px;
+			/* 下拉框 */
+			.select-choice{
+				display: block;
+				width: 100%;
+				height: 32px;
+				overflow: hidden;
+				background-color: #fff;
+			}
+			/* 下拉框 */
+			.select-input{
+				display: block;
+				width: 100%;
+				height: 100%;
+				padding-left: 5px;
+				padding-right: 35px;
+				overflow: hidden;
+		    	font-size: 12px;
+				line-height: 30px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				color: #666;
+				border: 1px solid  #ccc;
+			}
+			.address-arr{
+				display: none;
+			}
+			/* 选中 */
+			.select-chosen{
+		    	display: block;
+		    	width: 100%;
+				height: 100%;
+				padding-left: 6px;
+				padding-right: 36px;
+		    	overflow: hidden;
+				font-size: 12px;
+				line-height: 34px;
+		    	white-space: nowrap;
+		    	text-overflow: ellipsis;
+				color:#666;
+				background: #fff;
+				border: 1px solid #ccc;
+				outline: none;
+			}
+			/* 下拉icon */
+			.select-arrow{
+				position: absolute;
+				right: 0;
+				top:0;
+				width: 30px;
+				height: 100%;
+				text-align: center;
+				line-height: 30px;
+				color:#d9d9d9;
+				background-color: #f5f5f5;
+				border: 1px solid  #ccc;
+			}
+			/* 下拉列表 */
+			.select-drop{
+				position: absolute;
+				z-index: 8;
+				display: none;
+				width: 100%;
+				margin-top: -1px;
+				font-size: 12px;
+				text-align: left;
+				background-color: #fff;
+				border: 1px solid  #ccc;
+			}
+			/*选择类型*/
+			.select-type{
+				display: block;
+				width: 100%;
+				overflow: hidden;
+				font-size: 12px;
+				li{
+					display: block;
+					float: left;
+					width: 33.33333%;
+					height: 30px;
+					text-align: center;
+					line-height: 30px;
+					color: #666;
+					background: #f0f0f0;
+					cursor: pointer;
+				}
+				.active{
+					color: #ff6600;
+					background: #fff;			
+				}
+			}
+			/*对应类型内容*/
+			.type-main{
+				display: none;
+				width: 100%;
+				padding: 10px;
+				overflow: hidden;
+				font-size: 12px;
+				&:first-child{
+					display: block;
+				}				
+				&>li{
+					display: block;
+					width: 100%;
+					margin: 3px 0;
+					overflow: hidden;
+					font-size: 12px;
+					color: #333;
+				}
+			}
+			/* 字母 */
+			.zm{
+				float: left;
+				width: 15%;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+			}
+			/* 字母内容 */
+			.zm-ctn{
+				float: left;
+				display: block;
+				width: 85%;
+				text-align: left;
+				li{
+					display: inline-block;
+					width: auto;
+					padding: 0 10px;
+					line-height: 30px;
+					border-radius: 3px;
+					cursor: pointer;
+					&:hover{
+						background: #ff6600;
+						color: #fff;
+					}
+				}
+				.active{
+					background: #ff6600;
+					color: #fff;
+				}
+			}
+			/* 内容下拉时 */
+			&.down{
+				.select-arrow i{
+					transform:rotate(180deg);
+				}
+				.select-drop{
+					display: block;
+				}
+			}
+		}
+		/* 验证码 */
+		.code{
+			width: 112px;
+			height: 34px;
+			line-height: 34px;
+			text-align: center;
+			background: #00a0e9;
+			color:#fff;
+			display: inline-block;
+			font-size: 12px;
+			border-radius: 5px;
+			-o-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			margin-left: 12px;
+			cursor: pointer;
+		}
+		.tip-true{
+			position: absolute;
+			left: 420px;
+			top:12px;
+			width: 13px;
+			height: 12px;
+			background: url(../../img/icon/icon-right.png) no-repeat 0 center;
+			display: none;
+		}
+		.tip-words{
+			p{
+				width: 430px;
+				height: 20px;
+				line-height: 20px;
+				display: none;
+				margin-left: 106px;
+				span{
+					font-size: 12px;
+				}
+				&.error{
+					background: url(../../img/icon/icon-error.png) no-repeat 0 center;
+					color:@red;
+					padding-left: 18px;
+				}
+				&.empty{
+					background: url(../../img/icon/icon-forbid.png) no-repeat 0 center;
+					color:@red;
+					padding-left: 18px;
+				}
+				&.exist{
+					background: url(../../img/icon/icon-warn.png) no-repeat 0 center;
+					color:@red;
+					padding-left: 18px;
+				}
+				&.gray{
+					color:#bbb;
+				}
+				i{
+					margin-right: 12px;
+					font-size: 14px;
+					margin-top: 5px;
+					float: left;
+				}
+			}
+		}
+	}
+	/* 错误信息 */
+	.form-group.error{
+		input{
+			border:1px solid #ff0000;
+		}
+	}
+	/* 正确信息 */
+	.form-group.true{
+		input{
+			border:1px solid #ccc;
+			background-color:#f4fffa;
+		}
+	}
+ 	/* 提交 */
+	.submit-btn{
+		width: 200px;
+		height: 34px;
+		line-height: 34px;
+		text-align: center;
+		margin-left:102px;
+		display: block;
+		background-color: #ccc;
+		color:#fff;
+		border-radius: 5px;
+		-o-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		&.active{
+			cursor: pointer;
+			background-color:@base;
+		}
+	}
+	/* 同意协议 */
+	.agreement{
+		margin:15px 0 40px 0; 
+		padding-left: 102px;
+		line-height: 16px;
+		.checkbox{
+			margin-left: 0;
+		}
+		p{
+			font-size: 12px;
+			color:#333;
+		}
+		a{
+			color:#00a0e9;
+			cursor:pointer; 
+		}
+	}
+}
+/* 提示语 */
+.right-tip{
+	width: 560px;
+	float: left;
+	padding-left:25px;
+	border-left: 1px dashed #ccc;
+	h3{
+		font-size: 16px;
+		color:#333;
+		line-height: 28px;
+	}
+	p{
+		font-size: 12px;
+		color:#333;
+		line-height: 28px;
+	}
+	.icon{
+		width: 12px;
+		height: 10px;
+		background:url(../../img/icon/zuce-arrow.png) no-repeat 0 0;
+		display: inline-block;
+		margin-right: 6px;
+	}
+	.supplier{
+		margin:80px 0 40px 0;
+	}
+}
+/* 弹窗 */
+.openWindow{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top:0;
+	z-index: 9;
+	background-color:rgba(0,0,0,.5);
+	display: none;
+	.center{
+		width: 600px;
+		height: 560px;
+		position: absolute;
+		left: 50%;
+		top:50%;
+		z-index: 10;
+		margin-top: -280px;
+		margin-left: -300px;
+		padding: 20px;
+		background-color: #fff;
+		display: block;
+		h3{
+			text-align: center;
+			font-size: 16px;
+			color:#333;
+			line-height: 36px;
+			margin-bottom: 10px;
+		}
+		.agreement{
+			height: 400px;
+			overflow-y: auto;
+			padding:22px 15px 22px 20px;
+			font-size: 14px;
+			line-height: 30px;
+			background-color: #f6f6f6;
+			color:#666;
+			p{
+				text-indent: 2em;
+			}
+			&::-webkit-scrollbar  
+			{
+				width: 6px;  
+				height: 16px;  
+				background-color: #F5F5F5;  
+			}
+			&::-webkit-scrollbar-track  
+			{
+				/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+				border-radius: 10px;  
+				background-color: #F5F5F5;  
+			}
+			&::-webkit-scrollbar-thumb  
+			{
+				border-radius: 10px;  
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+				background-color: #ddd;  
+			}
+		}
+		.return{
+			width: 120px;
+			height: 34px;
+			line-height: 34px;
+			text-align: center;
+			color:#fff;
+			border-radius: 3px;
+			background-color: @base;
+			margin:32px auto 0;
+			cursor: pointer;
+		}
+	}
+}
+/*弹窗-删除收货地址*/
+#pop-succeed{
+	.pop-main{
+		width: 400px;
+	}
+	.pop-body{
+		p{
+			padding: 75px 0;
+			font-size: 16px;
+			text-align: center;
+			color:#333;
+		}
+	}
+	.btn-yes{
+		margin: 0;
+	}
+}

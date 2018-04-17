@@ -1,0 +1,176 @@
+@import url(../yhw-common2.less);
+
+/* 主体内容 */
+.wrap{
+	width: 100%;
+	min-height: 100%;
+}
+.main{
+	width: 1200px;
+	margin:0 auto;
+}
+/* 搜索 */
+.search-txt{
+	width: 532px;
+	margin:0 auto;
+	overflow: hidden;
+	input{
+		width: 450px;
+		height: 36px;
+		border:1px solid @base;
+		float: left;
+		padding:0 5px;
+	}
+	button{
+		width: 82px;
+		height: 36px;
+		color:#fff;
+		background-color: @base;
+		float: left;
+		cursor: pointer;
+	}
+}
+/* 帮助中心 */
+.help-center{
+	overflow: hidden;
+	margin: 30px 0;
+	/* 帮助导航 */
+	.lf-nav{
+		width: 200px;
+		float: left;
+		margin-right: 20px;
+		background-color: #fff;
+	}
+	/* 帮助内容 */
+	.rt-ctn{
+		width: 980px;
+		float: right;	
+		background-color: #fff;
+		padding:0 30px;
+	}
+}
+/* 帮助导航 */
+.lf-nav{
+	.list{
+		width: 100%;
+		cursor: pointer;
+		.category-name{
+			padding: 0 23px 0 50px;
+			span{
+				font-size: 16px;
+				color:#333;
+				line-height: 48px;
+			}
+			.fa{
+				font-size: 16px;
+				float: right;
+				line-height: 48px;
+				transition:all 300ms;
+				-o-transition:all 300ms;
+				-moz-transition:all 300ms;
+				-webkit-transition:all 300ms;
+			}
+		}
+		ul{
+			display: none;
+			background-color: #f7fbff;
+			padding: 5px 23px 5px 50px;
+			border: 1px solid #eef7ff;
+			li{
+				color:#666;
+				line-height: 28px;
+				font-size: 12px;
+				&:hover{
+					color:#ff0000;
+					text-decoration: underline;
+					font-weight: bold;
+				}
+			}
+			li.active{
+				color:#ff0000;
+				text-decoration: underline;
+				font-weight: bold;
+			}
+		}
+	}
+	.list.cur{
+		ul{
+			display: block;
+		}
+		.category-name{
+			.fa{
+				transform:rotate(90deg);
+				-o-transform:rotate(90deg);
+				-moz-transform:rotate(90deg);
+				-webkit-transform:rotate(90deg);
+			}
+		}
+	}
+}
+/* 帮助内容 */
+.rt-ctn{
+	table{
+		border-collapse: collapse;
+	}
+	/* 路径 */
+	.article-path{
+		font-size: 12px;
+		margin: 22px 0;
+		color:#666;
+	}
+	/* 标题 */
+	.tit{
+		width: 100%;
+		height: 20px;
+		margin:8px 0 20px 0;
+		position: relative;
+		.line{
+			width: 5px;
+			height: 20px;
+			background-color: @base;
+			float: left;
+			border-radius: 10px;
+			margin-right: 10px;
+		}
+		.bg{
+			width: 98%;
+			border-bottom: 1px solid #ddd;
+			float: left;
+			margin-top: 10px;
+		}
+		.txt{
+			float: left;
+			line-height: 20px;
+			color:#333;
+			font-size: 16px;
+			background-color: #fff;
+			position: absolute;
+			left:15px;
+			top:0;
+			padding-right: 8px;
+		}
+	}
+	/* 文章内容 */
+	.con{
+		width: 100%;
+		padding: 20px;
+		font-size: 14px;
+		div{
+			margin-bottom: 25px;
+		}
+		h4{
+			font-size: 14px;
+			color:#333;
+			line-height: 26px;
+			font-weight: 400;
+		}
+		p{
+			line-height: 26px;
+			color:#999;
+			padding-left: 20px;
+		}
+		.blue{
+			color:@base;
+		}
+	}
+}

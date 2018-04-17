@@ -1,0 +1,229 @@
+@import url(../hy-common2.less);
+
+/*主要内容*/
+.main{
+	width: 100%;
+	padding: 34px 2% 50px;
+	overflow: hidden;
+	/*店铺信息*/
+	.store{
+		display: block;
+		float: left;
+		width: 32%;
+		height: 334px;
+		overflow: hidden;
+		margin-bottom: 50px;
+		li{
+			display: block;
+			width: 46%;
+			height: 90px;
+			padding: 8px;
+			margin-bottom: 32px;
+			text-align: center;
+			background: #fff;
+			div{
+				height: 46px;
+				line-height: 46px;
+				color: #40bbea;
+			}
+		}
+		li:nth-child(odd){
+			float: left;
+		}
+		li:nth-child(even){
+			float: right;
+		}
+		/*星星*/
+		.store-star{
+			font-size: 22px;
+			color: #cacaca;
+			.fa-star.active{
+				color: #40bbea;
+			}
+		}
+		/*评分*/
+		.store-num{
+			font-size: 32px;
+			font-weight: bold;
+		}
+		/*文字*/
+		p{
+			width: 100%;
+			height: 27px;
+			font-size: 12px;
+			line-height: 27px;
+			color: #494949;
+		}
+	}
+	/*订单信息*/
+	.indent{
+		float: right;
+		width: 66%;
+		height:334px;
+		margin-bottom: 50px;
+		/*tab菜单*/
+		.tab-menu{
+			position: relative;
+			display: block;
+			width: 100%;
+			padding-right: 50%;
+			height: 38px;
+			li{
+				position: relative;
+				display: block;
+				float: left;
+				width: 23%;
+				height: 100%;
+				padding-right: 36px;
+				margin-right: 2%;
+				font-size: 12px;
+				text-align: center;
+				line-height: 38px;
+				color: #000;
+				background: #f4f4f4;
+				&:hover{
+					cursor: pointer;
+				};
+				/*数字*/
+				.num{
+					position: absolute;
+					top: 9px;
+					right: 16px;
+					display: inline-block;
+					min-width: 20px;
+					height: 20px;
+					padding: 0 2px;
+					line-height: 20px;
+					background: #40bbea;
+					border-radius: 3px;
+				}
+			}
+			li.active{
+				background: #fff;
+			}
+			/*所有订单*/
+			.all-indent{
+				position: absolute;
+				top: 4px;
+				right: 0;
+				width: 90px;
+				height: 30px;
+				font-size: 12px;
+				text-align: center;
+				line-height: 30px;
+				color: #fff;
+				background: #5d5d5d;
+				border-radius: 3px;
+				&:hover{
+					cursor: pointer;
+				};
+			}
+		}
+		/*tab内容*/
+		.tab-ctn{
+			display: block;
+			width: 100%;
+			height: 296px;
+			background: #fff;
+			li{
+				display: none;
+				width: 100%;
+				height: 100%;
+				padding: 26px 14px;		
+			}
+			li:first-child{
+				display: block;
+			}
+			/*表格*/
+			table{
+				width: 100%;
+				text-align: left;
+				th,
+				td{
+					padding: 12px;
+					font-size: 12px;
+				}
+				th{
+					font-weight: bold;
+					color: #444;
+					background: #f5f5f5;
+				}
+				td{
+					color: #959595;
+					background: #ffffff;
+					border-top: 1px solid #dddddd;
+					span:hover{
+						cursor: pointer;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	/*人数增长*/
+	.people{
+		float: left;
+		width: 32%;
+		height: 334px;
+		background: #fff;
+		margin-bottom: 50px;
+	}
+	/*交易趋势*/
+	.deal{
+		float: right;
+		width: 66%;
+		height:334px;
+		background: #fff;
+		margin-bottom: 50px;
+	}
+	/*热销供应产品*/
+	.hot-sell{
+		float: left;
+		width: 32%;
+		height: 500px;
+		background: #fff;
+		margin-bottom: 50px;
+	}
+	/*交易订单分布*/
+	.distribute{
+		float: right;
+		width: 66%;
+		height:500px;
+		background: #fff;
+		margin-bottom: 50px;
+	}
+	/*图表标题*/
+	.chart-title{
+		width: 100%;
+		height: 38px;
+		padding-left: 30px;
+		font-size: 16px;
+		text-align: left;
+		line-height: 38px;
+		color: #5d5d5d;
+		/*border-bottom: 1px solid #ddd;*/
+	}
+	/*周店铺浏览人数增长柱状图、月交易总额趋势曲线图*/
+	.chart-people,
+	.chart-deal{
+		width: 100%;
+		height: 296px;
+	}
+	/*热销供应产品饼状图*/
+	.chart-hot-sell{
+		width: 100%;
+		height: 462px;
+		/*暂无数据*/
+		.chart-no{
+			font-size: 14px;
+			text-align: center;
+			line-height: 420px;
+		}
+	}
+	/*月交易订单分布地图*/
+	.chart-distribute{
+		width: 90%;
+		margin: 0 auto;
+		height: 462px;
+	}
+}

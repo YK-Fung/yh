@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>支付</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/order/order-payment.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['order/order-payment']);</script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- 头部 -->
+		<div class="pay-header">
+			<div class="center">
+				<!-- logo -->
+				<div class="logo">
+					<a href="#"><img src="../../img/yhw2/logo2.png"></a>
+				</div>
+				<!-- 功能 -->
+				<ul class="function">
+					<li><span class="red">李小姐</span>，<a href="#">退出</a></li>
+					<li><a href="#">订单管理</a></li>
+					<li><a href="#">支付帮助</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 内容 -->
+		<div class="ctn">
+			<!-- 主要内容 -->
+			<div class="main">
+				<div class="main-ctn">
+					<!-- 订单信息 -->
+					<div class="order-massage">
+						<p class="tit">订单已生成，请尽快付款！</p>
+						<div class="line">
+							<div class="lf ">
+								<label>订单号：</label>
+								<span>59105414040</span>
+							</div>
+							<div class="lf">
+								<label>交易类型：</label>
+								<span>担保交易</span>
+							</div>
+							<div class="rt">
+								<label>应付金额：</label>
+								<span class="red">￥500.00</span>
+							</div>
+						</div>
+						<div class="line">
+							<div class="lf">
+								<label>供 应 商：</label>
+								<span>江西立达云医药有限公司</span>
+							</div>
+							<a href="#" class="rt blue">订单详情</a>
+						</div>
+					</div>
+					<!-- 付款类型 -->
+					<div class="pay-type">
+						<!-- 付款类型标题切换 -->
+						<div class="tab-toggle">
+							<ul>
+								<li class="active">支付宝<span class="arrow"></span></li>
+								<li>微信支付<span class="arrow"></span></li>
+								<li>个人网银<span class="arrow"></span></li>
+								<li>信用卡<span class="arrow"></span></li>
+								<li>企业网银<span class="arrow"></span></li>
+							</ul>
+						</div>
+						<!-- 付款类型详情切换 -->
+						<ul class="ctn-toggle">
+							<!-- 支付宝 -->
+							<li class="type01" style="display: block;">
+								<div class="lf">
+									<!-- logo -->
+									<img src="../../img/hy/pay-alipay.jpg" class="alipay">
+									<!-- 二维码 -->
+									<div class="code-box">
+										<img src="../../img/hy/pay-code.jpg" class="code">
+									</div>
+									<!-- 提示语 -->
+									<img src="../../img/hy/pay-txt.jpg">
+									<!-- 倒数 -->
+									<p class="count">距离二维码过期还剩 <span class="min">30</span> 分 <span class="second">0</span> 秒，过期后请重新刷新页面获取二维码</p>
+								</div>
+								<div class="center"></div>
+								<div class="rt">
+									<img src="../../img/hy/pay-phone.jpg">
+								</div>
+							</li>
+							<!-- 微信支付 -->
+							<li class="type02">
+								<div class="lf">
+									<!-- logo -->
+									<img src="../../img/hy/pay-wechat.jpg" class="alipay">
+									<!-- 二维码 -->
+									<div class="code-box">
+										<img src="../../img/hy/pay-code.jpg" class="code">
+									</div>
+									<!-- 提示语 -->
+									<img src="../../img/hy/pay-txt-wx.jpg">
+									<!-- 倒数 -->
+									<p class="count">距离二维码过期还剩 <span class="min">30</span> 分 <span class="second">0</span> 秒，过期后请重新刷新页面获取二维码</p>
+								</div>
+								<div class="center"></div>
+								<div class="rt">
+									<img src="../../img/hy/pay-phone2.jpg">
+								</div>
+							</li>
+							<!-- 个人网银 -->
+							<li class="type03">
+								<div class="bank-list">
+									<!-- 跳转到网银支付页面 -->
+									<a href="#" target="_blank" data="ICBC-NET-B2C"><img src="../../img/hy/bank-gs.png"></a>
+									<a href="#" target="_blank" data="CMBCHINA-NET-B2C"><img src="../../img/hy/bank-zs.png"></a>
+									<a href="#" target="_blank" data="CCB-NET-B2C"><img src="../../img/hy/bank-js.png"></a>
+									<a href="#" target="_blank" data="BOCO-NET-B2C"><img src="../../img/hy/bank-jt.png"></a>
+									<a href="#" target="_blank" data="CIB-NET-B2C "><img src="../../img/hy/bank-xy.png"></a>
+									<a href="#" target="_blank" data="CMBC-NET-B2C"><img src="../../img/hy/bank-ms.png"></a>
+									<a href="#" target="_blank" data="CEB-NET-B2C"><img src="../../img/hy/bank-gd.png"></a>
+									<a href="#" target="_blank" data="BOC-NET-B2C"><img src="../../img/hy/bank-zg.png"></a>
+									<a href="#" target="_blank" data="PINGANBANK-NET-B2C"><img src="../../img/hy/bank-pa.png"></a>
+									<a href="#" target="_blank" data="ECITIC-NET-B2C"><img src="../../img/hy/bank-zx.png"></a>
+									<a href="#" target="_blank" data="SDB-NET-B2C"><img src="../../img/hy/bank-sz.png"></a>
+									<a href="#" target="_blank" data="GDB-NET-B2C"><img src="../../img/hy/bank-gf.png"></a>
+									<a href="#" target="_blank" data="SHB-NET-B2C"><img src="../../img/hy/bank-sh.png"></a>
+									<a href="#" target="_blank" data="SHB-NET-B2C"><img src="../../img/hy/bank-shpd.png"></a>
+									<a href="#" target="_blank" data="HXB-NET-B2C"><img src="../../img/hy/bank-hx.png"></a>
+									<a href="#" target="_blank" data="BCCB-NET-B2C"><img src="../../img/hy/bank-bj.png"></a>
+									<a href="#" target="_blank" data="ABC-NET-B2C"><img src="../../img/hy/bank-ny.png"></a>
+									<a href="#" target="_blank" data="POST-NET-B2C"><img src="../../img/hy/bank-yz.png"></a>
+								</div>
+							</li>
+							<!-- 信用卡 -->
+							<li class="type04">
+								<div class="bank-list">
+									<!-- 跳转到网银支付页面 -->
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-gs.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-zg.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-js.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-yz.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-zx.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-gd.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-hx.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-zs.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-xy.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-pf.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-pa.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-bj.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-sh.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-ms.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank">
+										<img src="../../img/hy/bank-ny.png">
+										<span class="icon"></span>
+									</a>
+								</div>
+							</li>
+							<!-- 企业网银 -->
+							<li class="type05">
+								<div class="bank-list">
+									<!-- 跳转到网银支付页面 -->
+									<a href="#" target="_blank" data="ICBC-NET-B2B">
+										<img src="../../img/hy/bank-gs.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="CMBCHINA-NET-B2B">
+										<img src="../../img/hy/bank-zs.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="ABC-NET-B2B">
+										<img src="../../img/hy/bank-ny.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="CCB-NET-B2B">
+										<img src="../../img/hy/bank-js.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="CEB-NET-B2B">
+										<img src="../../img/hy/bank-gd.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="BOC-NET-B2B">
+										<img src="../../img/hy/bank-zg.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="SDB-NET-B2B">
+										<img src="../../img/hy/bank-pa.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="SPDB-NET-B2B">
+										<img src="../../img/hy/bank-shpd.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="CMBC-NET-B2B">
+										<img src="../../img/hy/bank-ms.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="SDB-NET-B2B">
+										<img src="../../img/hy/bank-sz.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="BOCO-NET-B2B">
+										<img src="../../img/hy/bank-jt.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="HXB-NET-B2B">
+										<img src="../../img/hy/bank-hx.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="BCCB-NET-B2B">
+										<img src="../../img/hy/bank-bj.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="ECITIC-NET-B2B">
+										<img src="../../img/hy/bank-zx.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="CIB-NET-B2B">
+										<img src="../../img/hy/bank-xy.png">
+										<span class="icon"></span>
+									</a>
+									<a href="#" target="_blank" data="GDB-NET-B2B">
+										<img src="../../img/hy/bank-gf.png">
+										<span class="icon"></span>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="yhw-footer-btm">
+			<div class="inner">
+				<p class="link">
+					<a href="#">关于我们</a> <span>|</span>   
+					<a href="#">联系我们</a> <span>|</span>
+					<a href="#">平台荣誉</a> <span>|</span>
+					<a href="#">媒体报道</a> <span>|</span>
+					<a href="#">广告服务</a> <span>|</span>
+					<a href="#">平台合作</a> <span>|</span>
+					<a href="#">法律声明</a> <span>|</span>
+					<a href="#">隐私声明</a> <span>|</span>
+					<a href="#">服务协议</a> <span>|</span>
+					<a href="#">合作伙伴</a> <span>|</span>
+					<a href="#">人才招聘</a> <span>|</span>
+					<a href="#">帮助中心</a> <span>|</span>
+					<a href="#">网站地图</a>
+				</p>
+				<p>
+					<a target="_blank" href="#">互联网药品信息服务资格证书（粤）-经营性-2017-0051</a>|
+					<a target="_blank" href="#">增值电信业务经营许可证：川B2-20150077 </a>|
+					<a target="_blank" href="#">营业执照</a>|
+					<a target="_blank" href="#">备案号:粤ICP备17049320号</a>
+				</p>
+				<p>药荟网 Copyright © 2010-2017   <a href="#">www.yaohuiw.com</a> All Rights Reserved   版权所有:广东汇瀚信息科技有限公司</p>
+				<!-- 静态屏蔽 -->
+				<div class="attestation">
+					<!-- 粤公网安备 44010502000728号 -->
+					<div class="certificate beianbgs">
+						<!-- <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010502000728"><img src="/img/yhw2/beianbgs.png" height="47"/></a> -->
+					</div>
+					<!--安全联盟-->
+					<div class="certificate">
+						<!-- <a key ="5a1f5e7912c3d5743acc329f"  logo_size="124x47"  logo_type="realname"  href="http://www.anquan.org" ><script src="//static.anquan.org/static/outer/js/aq_auth.js"></script></a> -->
+					</div>
+					<!-- 可信网站 -->
+					<div class="certificate">
+						<!--可信网站图片LOGO安装开始-->
+						<!-- <span id="kx_verify"></span><script type="text/javascript">(function (){var _kxs = document.createElement('script');_kxs.id  = 'kx_script';_kxs.async = true;_kxs.setAttribute('cid', 'kx_verify');_kxs.src = ('https:' == document.location.protocol ? 'https://ss.knet.cn' : 'http://rr.knet.cn')+'/static/js/icon3.js?sn=e17113011010670080hssl000000&tp=icon3';_kxs.setAttribute('size', 0);var _kx = document.getElementById('kx_verify');_kx.parentNode.insertBefore(_kxs, _kx);})();</script> -->
+						<!--可信网站图片LOGO安装结束-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 提醒：登录网上银行支付 -->
+		<div class="pop-shade" id="pop-login-pay">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">提醒：登录网上银行支付</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<p>请您在新打开的网上银行页面进行支付，在支付完成前不要关闭该窗口。</p>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-yes">支付成功</div>
+					<!-- 取消按钮 -->
+					<div class="btn btn-no">支付遇到问题</div>
+				</div>
+			</div>
+		</div>
+		<!-- 提醒：支付成功 -->
+		<div class="pop-shade" id="pop-succeed-pay">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">提醒</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<p>恭喜您，成功支付<span class="price">500.00</span>元！请耐心等待卖家发货！</p>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<a class="btn btn-yes" href="../index/yhw-index2.html">继续采购</a>
+					<!-- 取消按钮 -->
+					<a class="btn btn-no" href="cg-order-manage2.html">查看订单</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- IE低版本提示 -->
+	<!-- IE弹窗 -->
+	<div class="ie-tip">
+	    <div class="center">
+	        <h2><img src="../../img/ie-tip1.png"></h2>
+	        <div class="btm-ctn">
+	            <p>您当前浏览器版本过低，<span>可能影响到签订合同和报表的查看</span>，建议您切换到浏览器的<i>极速模式</i>或点击下载！</p>
+	            <div class="link">
+	                <a href="http://browser.qq.com/" target="blank"><img src="../../img/ie-tip3.png"></a>
+	                <a href="http://ie.sogou.com/" target="blank"><img src="../../img/ie-tip4.png"></a>
+	                <a href="http://se.360.cn/" target="blank"><img src="../../img/ie-tip2.png"></a>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+
+	<div class="login-pop">
+	    <div class="center-border">
+	        <div class="center">
+	            <i class="close"></i>
+	            <form class="login-form">
+	                <div class="form-group">
+	                    <input name="" class="login-user" type="text" placeholder="请您输入用户名/手机/邮箱">
+	                    <i class="input-del"></i>
+	                    <p class="error-tip">请输入用户名</p>
+	                </div>
+	                <div class="form-group">
+	                    <input name="" class="login-pwd" type="password" placeholder="请您输入密码">
+	                    <p class="error-tip">请输入密码</p>
+	                    <p class="login-fail">用户名或密码有误</p>
+	                </div>
+	                <div class="login-btn">登&nbsp;&nbsp;&nbsp;录</div>
+	                <a class="forget-pwd" href="../customer/forget-password1.html">忘记密码?</a>
+	            </form>
+	        </div>
+	    </div>
+	</div>
+
+
+
+
+
+
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

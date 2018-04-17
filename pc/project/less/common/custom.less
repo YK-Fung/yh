@@ -1,0 +1,176 @@
+@charset 'utf-8';
+@ctnW: 1190px;
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: '微软雅黑'
+}
+html,
+body{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+a{
+	font-size: inherit;
+	text-decoration: none;
+	color: inherit;
+}
+/*内容区*/
+.wrapper{
+	width: 100%;
+	height: 100%;
+	min-width: 1200px;
+	margin: 0 auto;
+}
+/*导航*/
+.nav{
+	width: 100%;
+	height: 50px;
+	font-size:14px;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	background: #27282D;
+}
+/*左侧部分*/
+.wrap-l{
+	float: left;
+	width: 300px;
+	height: 100%;
+	overflow: hidden;
+	background: #34373E;
+	box-shadow: 0 2px 4px #333;
+}
+/*操作类型*/
+.operate-type{
+	float: left;
+	display: block;
+	width: 80px;
+	height: 100%;
+	li{
+		width: 100%;
+		height: 80px;
+		font-size: 12px;
+		text-align: center;
+		line-height: 80px;
+		color: #9FA4B1;
+		&:hover{
+			color: #fff;
+			background: #3B3D48;
+			cursor: pointer;
+		};
+	}
+	.active{
+		color: #fff;
+		background: #3B3D48;
+	}
+}
+/*操作内容*/
+.operate-ctn{
+	float: left;
+	display: block;
+	width: 220px;
+	height: 100%;
+	background: #fff;
+	&>li{
+		display: none;
+		width: 100%;
+		height: 100%;
+		list-style: none;
+		/*头部*/
+		.header{
+			height: 30px;
+			padding-left: 10px;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 30px;
+			color: #333;
+			background: #EBEDF3;
+		}
+		/*列表*/
+		.list{
+			display: block;
+			list-style: none;
+			li{
+				padding-left: 20px;
+				height: 30px;
+				font-size: 12px;
+				line-height: 30px;
+				color: #666;
+				&:hover{
+					color: #000;
+					background: #f8f8f8;
+					cursor: pointer;
+				};
+			}
+		}
+		/*小图形*/
+		.rectangle{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+			width: 50px;
+			height: 50px;
+			opacity: .8;
+			font-size: 14px;
+			text-align: center;
+			line-height: 48px;
+			color: #333;
+			background: #fff;
+			border: 1px solid #333;
+		}
+	}
+	&>li:first-child{
+		display: block;
+	};
+}
+/*页面区*/
+.page{
+	float: left;
+	height: 100%;
+}
+/*操作按钮区*/
+.btn-group{
+	display: block;
+	height: 60px;
+	overflow: hidden;
+	font-size: 12px;
+	list-style: none;
+	background: #f2f2f2;
+	li{
+		float: right;
+		width: 100px;
+		height: 30px;
+		margin: 15px 5px;
+		text-align: center;
+		line-height: 28px;
+		color: #666;
+		background: #F4F4F4;
+		border: 1px solid #cfcfcf;
+		&:hover{
+			color: #fff;
+			background: #3487ec;
+			border-color: #3487ec;
+			cursor: pointer;
+		};
+		a{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	/*页面编辑按钮、布局管理按钮*/
+	.btn-custom.active{
+		color: #333;
+		background: #E0E1E5;
+		border-color: #E0E1E5;
+	}
+}
+/*iframe*/
+.iframe{
+	width: 100%;
+	height: 100%;
+}

@@ -1,0 +1,160 @@
+@import url(../yhw-common2.less);
+/* 主体内容 */
+	.wrap{
+		width: 100%;
+
+		background: #f8f8f8;
+		.discounts-page{
+
+			width: 750px;
+			margin: 0 auto;
+			border-right: 1px solid #e6e6e6;
+			border-left: 1px solid #e6e6e6;
+			.discounts-top{
+				width: 100%;
+				height: 539px;
+				margin-bottom: 16px;
+				background: url("../../img/yhw2/discounts-link-bg.png") no-repeat;
+				background-size: contain;
+				text-align: center;
+				padding: 0 60px;
+				.company-logo{
+					margin-top: 30px;
+					margin-bottom: 35px;
+				}
+				.company-name{
+					font-size: 32px;
+					color: #fff;
+					line-height: 32px;
+					margin-bottom: 48px;
+				}
+				.discounts-item{
+					width: 100%;
+					height: 212px;
+					position: relative;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+					.discounts-item-left{
+						position: absolute;
+						left: 165px;
+						top: 25px;
+						text-align: left;
+						.desc1{
+							font-size: 32px;
+							margin-bottom: 5px;
+						}
+						.desc2{
+							width: 238px;
+							font-size: 18px;
+							color: #666;
+							line-height: 28px;
+						}
+						.desc3{
+							font-size: 18px;
+							color: #999;
+							margin-bottom: 10px;
+						}
+						.desc4{
+							font-size: 14px;
+							color: #999;
+						}
+
+					}
+					.discounts-item-right{
+						position: absolute;
+						right: 20px;
+						bottom: 27px;
+						.price{
+							font-size: 114px;
+							line-height: 114px;
+							color: #fff;
+						}
+						.btn{
+							width: 151px;
+							height: 42px;
+							border-radius: 30px;
+							border: 2px solid #fff;
+							font-size: 26px;
+							color: #fff;
+
+						}
+					}
+					.stamp{
+						display: none;
+						width: 208px;
+						height: 134px;
+						position: absolute;
+						left: 246px;
+						bottom: 5px;
+					}
+				}
+			}
+			.discounts-bottom{
+				width: 100%;
+				height: 434px;
+				background: #fff;
+				padding: 30px 30px 0 30px;
+				.discounts-info{
+					font-size: 28px;
+					color: #666;
+					display: flex;
+					align-items: center;
+					margin-bottom: 30px;
+					i{
+						display: inline-block;
+						height: 1px;
+						width: 265px;
+						background: #ccc;
+						margin-right: 22px;
+					}
+					i:nth-last-child(1){
+						margin-right: 0;
+						margin-left: 22px;
+					}
+				}
+				.info{
+					font-size: 20px;
+					color: #666;
+					line-height: 36px;
+				}
+			}
+		}
+
+	}
+
+/* 弹窗-立即使用 */
+#pop-use{
+	.pop-main{
+		width: 480px;
+	}
+	.pop-body{
+		width: 100%;
+		height: 270px;
+		background: url(../../img/yhw2/discounts-success.png) center center no-repeat;
+	}
+	.pop-footer{
+		text-align: center;
+	}
+}
+/* 弹窗-异常 */
+.pop-unusual{
+	.pop-main{
+		width: 435px;
+	}
+	.pop-body{
+		p{
+			padding: 70px 0;
+			font-size: 16px;
+			text-align: center;
+			color:#333;
+		}
+	}
+}
+#pop-supplier,
+#pop-fail{
+	.pop-footer{
+		text-align: center;
+	}
+}

@@ -1,0 +1,488 @@
+@import url(../hy-common2.less);
+.blue{
+	color:#40bbea;
+}
+.red{
+	color:@red;
+}
+.ctn{
+	padding-bottom: 45px;
+}
+.main-ctn{
+	padding:0 15px 120px;
+	background: #fff;
+	/*类型名字*/
+	.type-name{
+		width: 100%;
+		font-size: 14px;
+		line-height: 36px;
+		text-align: left;
+		color: #333;
+		font-weight: bold;
+		border-bottom: 1px solid #f2f2f2;
+		padding: 20px 30px 0 10px;
+		.arrow{
+			width: 25px;
+			height: 25px;
+			float: right;
+			background:url(../../img/icon/arrow-btm.png) no-repeat center center;
+			margin-top:6px;
+			cursor: pointer;
+			transform:rotate(0);
+			&.active{
+				transform:rotate(180deg);
+			}
+		}
+	}
+	.toggle-ctn{
+		display: none !important;
+		&.active{
+			display: block !important;
+		}
+	}
+	/*合同信息*/
+	.contract{
+		/*合同文字*/
+		.contract-text{
+			width: 100%;
+			height: 450px;
+			margin: 0 auto;
+			padding: 15px 30px;
+			overflow: auto;
+			font-size: 12px;
+			line-height: 24px;
+			color: #666;
+			background: #f6f6f6;
+		}
+		.text-right{
+			text-align: right;
+		}
+		.text-center{
+			text-align: center;
+		}
+		/*甲方乙方*/
+		.contract-people{
+			display: block;
+			width: 100%;
+			padding: 30px 10px 0;
+			overflow: hidden;
+			font-size: 12px;
+			color: #666;
+			li{
+				float: left;
+				width: 50%;
+			}
+			.people-infor{
+				display: inline-block;
+				text-align: left;
+				p{
+					position: relative;
+					margin-bottom: 12px;
+					text-indent: 3em;
+					line-height: 24px;
+					span{
+						padding-right: 4px;
+					}
+				}
+			}
+		}
+	}
+	/* 采购双方清单 */
+	.inventory{
+		margin-top: 20px;
+		border:1px solid #ddd;
+		color:#666;
+		font-size: 12px;
+		.table-tit{
+			height: 36px;
+			line-height: 36px;
+			overflow: hidden;
+			background: #f8f8f8;
+			border-bottom:1px solid #ddd;
+			li{
+				width: 50%;
+				float: left;
+				text-align: center;
+				padding-left: 10px;
+			}
+		}
+		.table-ctn{
+			overflow: hidden;
+			padding: 12px 0;
+			li{
+				width: 50%;
+				float: left;
+				padding-left: 10px;
+				line-height: 26px;
+			}
+		}
+	}
+}
+/*按钮组*/
+.btn-group{
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+	li{
+		display: inline-block;
+		width: 100px;
+		margin: 0 14px;
+		font-size: 12px;
+		text-align: center;
+		line-height: 30px;
+		color: #666;
+		border: 1px solid #ddd;
+		cursor: pointer;
+		&.active{
+			color: #fff;
+			background: #40bbea;
+			border-color: #40bbea;
+		}
+	}
+}
+/* 选择银行卡 */
+#pop-choose-bank{
+	.pop-main{
+		width: 680px;
+	}
+	.pop-body{
+		padding: 30px 20px 0;
+		ul{
+			overflow: hidden;
+		}
+		li{
+			width: 280px;
+			height: 170px;
+			margin:0 20px 40px;
+			float: left;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		/*添加银行卡*/
+		.card-add{
+			font-size: 14px;
+			text-align: center;
+			color: #666;
+			background: url(../../img/card-add.png) center 50px no-repeat;
+			border: 2px dashed #d9d9d9;
+			a{
+				width: 100%;
+				height: 100%;
+				padding-top: 120px;
+				display: block;
+			}
+		}
+		/*对公账号*/
+		.card-public{
+			border: 1px solid #ddd;
+			.card-tag{
+				background-color: #b3d465;
+			}
+			&:hover,&.active{
+				border-color:#b3d465;
+				box-shadow: 2px 2px 8px 1px #ccc;
+			}
+		}
+		/*个人账号*/
+		.card-personal{
+			border:1px solid #ddd;
+			.card-tag{
+				background-color: #2eb4e8;
+			}
+			&:hover,&.active{
+				border-color:#2eb4e8;
+				box-shadow: 2px 2px 8px 1px #ccc;
+			}
+		}
+		/*默认账号*/
+		.card-default{
+			.card-del{
+				background-image: url(../../img/card-del-active.gif);
+			}
+		}
+		/*标签*/
+		.card-tag{
+			width: 46px;
+			height: 20px;
+			margin-bottom: 8px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 20px;
+			color: #fff;
+			border-top-left-radius: 8px;
+			border-bottom-right-radius: 5px;
+		}
+		/*头部*/
+		.card-header{
+			width: 100%;
+			padding: 0 15px;
+			overflow: hidden;
+			.card-bank{
+				float: left;
+				width: 185px;
+				height: 34px;
+			}
+			.card-type{
+				float: left;
+				width: 50px;
+				height: 24px;
+				margin: 8px 15px;
+				font-size: 12px;
+				text-align: center;
+				line-height: 24px;
+				color: #fff;
+				background: #b3a892;
+				border-radius: 5px;
+			}
+			/*光大银行*/
+			.card-bank-gd{
+				background: url(../../img/card-bank-gd.png) center center no-repeat/contain;
+			}
+			/*广发银行*/
+			.card-bank-gf{
+				background: url(../../img/card-bank-gf.png) center center no-repeat/contain;
+			}
+			/*工商银行*/
+			.card-bank-gs{
+				background: url(../../img/card-bank-gs.png) center center no-repeat/contain;
+			}
+			/*华夏银行*/
+			.card-bank-hx{
+				background: url(../../img/card-bank-hx.png) center center no-repeat/contain;
+			}
+			/*建设银行*/
+			.card-bank-js{
+				background: url(../../img/card-bank-js.png) center center no-repeat/contain;
+			}
+			/*交通银行*/
+			.card-bank-jt{
+				background: url(../../img/card-bank-jt.png) center center no-repeat/contain;
+			}
+			/*民生银行*/
+			.card-bank-ms{
+				background: url(../../img/card-bank-ms.png) center center no-repeat/contain;
+			}
+			/*农业银行*/
+			.card-bank-ny{
+				background: url(../../img/card-bank-ny.png) center center no-repeat/contain;
+			}
+			/*平安银行*/
+			.card-bank-pa{
+				background: url(../../img/card-bank-pa.png) center center no-repeat/contain;
+			}
+			/*浦发银行*/
+			.card-bank-pf{
+				background: url(../../img/card-bank-pf.png) center center no-repeat/contain;
+			}
+			/*深圳发展银行*/
+			.card-bank-sf{
+				background: url(../../img/card-bank-sf.png) center center no-repeat/contain;
+			}
+			/*兴业银行*/
+			.card-bank-xy{
+				background: url(../../img/card-bank-xy.png) center center no-repeat/contain;
+			}
+			/*中国邮政储蓄*/
+			.card-bank-yz{
+				background: url(../../img/card-bank-yz.png) center center no-repeat/contain;
+			}
+			/*中国银行*/
+			.card-bank-zg{
+				background: url(../../img/card-bank-zg.png) center center no-repeat/contain;
+			}
+			/*招商银行*/
+			.card-bank-zs{
+				background: url(../../img/card-bank-zs.png) center center no-repeat/contain;
+			}
+			/*中信银行*/
+			.card-bank-zx{
+				background: url(../../img/card-bank-zx.png) center center no-repeat/contain;
+			}
+			/*北京银行*/
+			.card-bank-bj{
+				background: url(../../img/card-bank-bj.png) center center no-repeat/contain;
+			}
+			/*杭州银行*/
+			.card-bank-hz{
+				background: url(../../img/card-bank-hz.png) center center no-repeat/contain;
+			}
+			/*上海农商银行*/
+			.card-bank-sn{
+				background: url(../../img/card-bank-sn.png) center center no-repeat/contain;
+			}
+			/*上海银行*/
+			.card-bank-sh{
+				background: url(../../img/card-bank-sh.png) center center no-repeat/contain;
+			}
+		}
+		/*账号*/
+		.card-num{
+			width: 100%;
+			height: 54px;
+			font-size: 24px;
+			text-align: center;
+			line-height: 54px;
+			font-weight: bold;
+			color: #333;
+		}
+		/*内容*/
+		.card-body{
+			width: 100%;
+			padding: 0 20px;
+			font-size: 12px;
+			text-align: left;
+			line-height: 20px;
+			color: #333;
+			.empty{
+				padding: 0 12px;
+			}
+		}
+	}
+	.btn-yes{
+		margin: 0 auto;
+    	display: block;
+	}
+}
+/*合同信息*/
+.contract{
+	.empty{
+		margin: 0 10px;
+	}
+	/*合同文字*/
+	.contract-text{
+		width: 96%;
+		height: 450px;
+		margin: 0 auto;
+		padding: 30px 50px;
+		overflow: auto;
+		font-size: 12px;
+		line-height: 24px;
+		color: #666;
+		background: #f6f6f6;
+	}
+	.text-right{
+		text-align: right;
+	}
+	.text-center{
+		text-align: center;
+	}
+	.underline{
+		padding: 0 5px;
+   		border-bottom: 1px solid #666;
+	}
+	/*甲方乙方*/
+	.contract-people{
+		display: block;
+		width: 100%;
+		padding: 30px 10px 0;
+		overflow: hidden;
+		font-size: 12px;
+		color: #666;
+		li{
+			float: left;
+			width: 50%;
+			position: relative;
+		}
+		.people-infor{
+			display: inline-block;
+			text-align: left;
+			p{
+				position: relative;
+				margin-bottom: 12px;
+				text-indent: 3em;
+				line-height: 24px;
+				span{
+					padding-right: 4px;
+				}
+			}
+			/* 绑定按钮 */
+			.binding{
+				width: 40px;
+				height: 20px;
+				line-height: 20px;
+				text-align: center;
+				color:#fff;
+				background-color: #40bbea;
+				display: inline-block;
+				font-size: 12px;
+				border-radius:3px;
+				cursor: pointer;
+				border:0;
+				&.already{
+					margin-left: 20px;
+				}
+			}
+		}
+		/* 已签订 */
+		.already-sign{
+			width: 70px;
+			height: 26px;
+			line-height:26px;
+			text-align: center;
+			color:@red;
+			border:1px solid @red;
+			border-radius: 3px;
+			position: absolute;
+			left: 215px;
+			top: 105px;
+			transform:rotate(-30deg);
+		}
+	}
+}
+/*预览合同*/
+.contract-view{
+	display: none;
+	width: 1000px;
+	margin: 0 auto;
+	background: #fff;
+	.btn-group{
+	    padding-bottom: 100px;
+	}
+}
+.contract-print{
+	width: 1000px;
+	padding: 30px 80px;
+	background: #fff;
+	*{
+		font-family: '宋体';
+		font-size: 16px;
+	}
+	.empty{
+		margin: 0 14px;
+	}
+	/*合同文字*/
+	.contract-text{
+		width: 100%;
+		height: auto;
+		padding: 0;
+		line-height: 30px;
+		background: #fff;
+		.font20{
+			font-size: 20px;
+		}
+	}
+	/*甲方乙方*/
+	.contract-people{
+		li{
+			width: 50%;
+			text-align: left;
+		}
+		.people-infor{
+			display: inline-block;
+			text-align: left;
+			&>div{
+				line-height: 30px;
+			}
+			p{
+				margin-bottom: 0;
+				line-height: 30px;
+				text-indent: 0;
+			}
+			input{
+				font-size: 16px;
+				border: none;
+			}
+		}
+	}
+}

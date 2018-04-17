@@ -1,0 +1,159 @@
+@import url(../yhw-common2.less);
+
+/* 主体内容 */
+.wrap{
+	min-height: 100%;
+	.main-ctn{
+		margin:20px auto 50px;
+		padding: 30px;
+		background-color: #fff;
+	}
+}
+/* 医药资讯导航 */ 
+.information-nav{
+	height: 68px;
+	background-color: #fff;
+	.center{
+		width: 1200px;
+		margin:0 auto;
+		overflow: hidden;
+		padding: 15px 0;
+		li{
+			width: 100px;
+			text-align: center;
+			line-height: 38px;
+			float: left;
+			font-size: 14px;
+			color:#333;
+			&.active{
+				color:@base;
+				border-bottom:1px solid @base;
+				background: url(../../img/icon/arrow-up.png) no-repeat bottom center;
+			}
+			a{
+				display: block;
+			}
+		}
+	}
+}
+/* 左侧 */
+.main-l{
+	width: 830px;
+	float: left;
+	.article-list{
+		margin-top: -26px;
+		li{
+			padding:26px 0;
+			border-bottom: 1px solid #ddd;
+			overflow: hidden;
+			a{
+				display: block;
+			}
+			img{
+				margin-right: 18px;
+				float: left;
+			}
+			.rt{
+				width: 650px;
+				float: right;
+				padding-right: 30px;
+			}
+			h3{
+				font-weight: 400;
+				font-size: 18px;
+				margin-bottom: 10px;
+				.title{
+					width: 520px;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					display: inline-block;
+					color:@base;
+				}
+				.time{
+					color:#999;
+					float: right;
+					font-size: 14px;
+				}
+			}
+			p{
+				color:#666;
+				line-height: 24px;
+				font-size: 14px;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 3;
+				overflow: hidden;
+			}
+		}
+	}
+}
+/* 右侧 */
+.main-r{
+	width: 280px;
+	float: right;
+	/* 右侧广告 */
+	.rt-ad{
+		width:280px;
+		height: 520px; 
+		display: block;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+/* 右侧介绍 */
+.hot-article{
+	width: 280px;
+	border:1px solid #ddd;
+	margin-bottom: 20px;
+	/* 热门文章 */
+	.article-ad{
+		margin:10px auto;
+		display: block;
+		border:1px solid #ddd;
+	}
+	h3{
+		height: 34px;
+		line-height: 34px;
+		font-size: 12px;
+		color:#666;
+		font-weight: 400;
+		background-color:#f4f4f4;
+		border-bottom: 1px solid #ddd;
+		padding:0 10px;
+	}
+	ul{
+		width: 100%;
+		padding:0 10px 10px;
+		li{
+			width: 100%;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			line-height: 32px;
+			color:#666;
+			font-size: 14px;
+			padding-left: 10px;
+			position: relative;
+			.dot{
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				background-color: #666;
+				position: absolute;
+				left: 0;
+				top: 14px;
+			}
+		}
+		a:hover{
+			color:@base;
+			text-decoration: underline;
+		}
+	}
+}
+.pagination{
+	margin:30px 0;
+}
+

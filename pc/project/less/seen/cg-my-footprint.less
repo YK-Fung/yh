@@ -1,0 +1,198 @@
+@import url(../hy-common2.less);
+
+.main{
+	margin: 30px 35px 0;
+	width: auto;
+	padding: 0 0 80px 0;
+}
+/* 筛选条件 */
+.select-ctn{
+	height: 32px;
+}
+/* 日期范围 */
+.look-times{
+	margin-left: 7px;
+	margin-right: 5px;
+	float: left;
+	.tit{
+		line-height: 32px;
+		font-size: 12px;
+		color:#666;
+		float: left;
+	}
+	/* 时间 */
+	.opt-time{
+		float: left;
+		margin-right: 30px;
+		font-size: 12px;
+		color: #666666;
+		.date-time{
+			width: 202px;
+			height: 32px;
+			padding-left: 10px;
+			padding-right: 36px;
+			color: #666;
+			font-size: 12px;
+			text-align: left;
+			line-height: 30px;
+			background: #fff url(../../img/icon/icon-date.png) 174px center no-repeat;
+			border: 1px solid #e4e4e4;
+			outline: none;
+		}
+		.line{
+			padding: 0 2px;
+			font-size: 16px;
+			color: #333;
+		}
+	}
+}
+/* 搜索 */
+.search-ctn{
+	float: left;
+	input{
+		width: 250px;
+		height: 32px;
+		border:1px solid #ccc;
+		padding: 0 10px;
+		color:#666;
+		margin-left: 20px;
+	}
+	button{
+		width: 100px;
+		height: 32px;
+		background-color: @base;
+		border:0;
+		color:#fff;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+}
+/* 批量删除 */
+.delete-all{
+	float: right;
+	width: 100px;
+	height: 32px;
+	background-color: @base;
+	color:#fff;
+	border:0;
+	cursor: pointer;
+	margin-right: 7px;
+}
+/* 自定义复选框 */
+.checkbox{
+	margin:4px 5px 0 4px;
+}
+/* 搜索结果 */
+.result-all{
+	width: 100%;
+	min-height: 684px;
+	background-color: #fff;
+	margin-top: 20px;
+	padding: 0 20px 50px;
+	overflow: hidden;
+	/* 头部 */
+	.head-lis{
+		border-bottom:1px solid #ccc;
+		line-height: 50px;
+		margin-top: 20px;
+		font-size: 14px;
+		color:#666;
+		font-weight: bold;
+		/* 日期 */
+		.time{
+			margin-right: 46px;
+		}
+		/* 个数 */
+		.num{
+			color:@base;
+			font-style: normal;
+		}
+	}
+	/* 产品列表 */
+	.detail-lis{
+		width: 100%;
+		overflow: hidden;
+		padding-bottom: 25px;
+		li{
+			width: 18%;
+			margin:30px 1% 0;
+			float: left;
+			box-shadow:0 2px 16px 0px #ccc;
+			border:1px solid #f2f2f2;
+			position: relative;
+			/* 选中 */
+			.choose{
+				width: 55px;
+				height: 25px;
+				line-height: 25px;
+				position: absolute;
+				left: 8px;
+				top:9px;
+				color:#fff;
+				border:1px solid #ddd;
+				background-color: @base;
+				display: none;
+			}
+			&:hover{
+				.choose{
+					display: block;
+				}
+			}
+		}
+		/* 图片 */
+		.pic-box{
+			width: 100%;
+			padding-top: 100%;
+			position: relative;
+			.photo{
+				max-width: 100%;
+				max-height: 100%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform:translate(-50%,-50%);
+			}
+		}
+		/* 详情 */
+		.details{
+			border-top:1px solid #eee;
+			padding:0 15px 8px;
+			color:#999;
+			p{
+				line-height: 18px;
+			}
+		}
+		/* 产品名 */
+		.name{
+			height: 16px;
+			margin:10px 0;
+			color:#333;
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+    		text-overflow: ellipsis;
+    		cursor: pointer;
+    		&:hover{
+    			color:@base;
+    			text-decoration: underline;
+    		}
+		}
+	}
+}
+/*遮罩层*/
+.pop-shade{
+	/*弹窗*/
+	.pop-main{
+		width: 400px;
+		.pop-body{
+			padding:60px;
+			font-size: 14px;
+			color:#333;
+		}
+	}
+}
+/* 加载中 */
+.loading{
+	text-align: center;
+	display: none;
+}

@@ -1,0 +1,1754 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>药荟健康网-确认订单</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/order/yhw-cg-affirm.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['order/yhw-cg-affirm']);</script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- 头部 -->
+		<!--网页顶部 -->
+		<div class="top-bar">
+			<!-- 缩放异常的提示 -->
+			<div class="zoom-tip">
+				<div class="center">
+					<p>您的浏览器缩放比例异常，请按<span class="red">ctrl+0</span>将页面比例缩放至100%，以达到最好的体验效果呢！	</p>
+					<i class="icon-close"></i>
+				</div>
+			</div>
+			<!-- 广告图 -->
+			<a class="top-ad" style="background-color: #fff" href="#">
+				<img src="../../img/yhw2/top-ad.jpg">
+				<i class="close"></i>
+			</a>
+			<div class="center">
+				<span class="left welcome">您好，欢迎来到药荟网，即刻开启药荟新机遇！</span>
+				<!-- 右侧下拉列表 -->
+				<ul class="right link">
+					<li>
+						<!-- 用户名渲染其中一个 -->
+						<div class="account"><a href="#">请登录</a></div>
+						<div class="account"><span class="red">林小姐</span>，<a href="#">请登录</a></div>
+						<div class="account"><a href="../customer/hy-index.html" class="red">林小姐</a>&nbsp;&nbsp;&nbsp;<a href="#">退出</a></div>
+					</li>
+					<li>
+						<a class="nav-drop red" href="#">免费注册</a>
+					</li>
+					<li>
+						<a class="nav-drop" href="#">会员中心</a>
+					</li>
+					<li>
+						<!-- 我的订单 -->
+						<div class="nav-drop">
+							<span>我的订单</span>
+							<span class="num all-num">5</span>
+							<i class="arrow"></i>
+							<ul class="pull-down has-longin order-num">
+								<!-- 买家登录 -->
+								<li><a href="#">待收货 <span class="num">0</span></a></li>
+								<li><a href="#">待确认 <span class="num">20</span></a></li>
+								<li><a href="#">待验收 <span class="num">3</span></a></li>
+								<!-- 卖家登录 -->
+								<li><a href="#">待发货 <span class="num">0</span></a></li>
+								<li><a href="#">待确认 <span class="num">2</span></a></li>
+								<li><a href="#">待评价 <span class="num">3</span></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a class="nav-drop" href="#">买家中心</a>
+					</li>
+					<li>
+						<a class="nav-drop red" href="#">卖家中心</a>
+					</li>
+					<li>
+						<!-- 新手引导  -->
+						<div class="nav-drop">
+							<span>新手引导 </span>
+							<i class="arrow"></i>
+						</div>
+						<ul class="pull-down">
+							<li><a href="#">新用户注册</a></li>
+							<li><a href="#">采购商入门</a></li>
+							<li><a href="#">供应商入门</a></li>
+							<li><a href="#">首营资质</a></li>
+							<li><a href="#">常见问题</a></li>
+						</ul>
+					</li>
+					<li>
+						<!-- 帮助中心 -->
+						<div class="nav-drop">
+							<span>帮助中心</span>
+							<i class="arrow"></i>
+						</div>
+						<ul class="pull-down">
+							<li><a href="#">在线帮助</a></li>
+							<li><a href="#">新手入门</a></li>
+							<li><a href="#">交易安全</a></li>
+							<li><a href="#">我是采购商</a></li>
+							<li><a href="#">我是供应商</a></li>
+							<li><a href="#">售后服务</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="main-header">
+			<!-- 头部内容 -->
+			<div class="header-ctn">
+				<!-- logo -->
+				<a class="header-logo" href="#"></a>
+				<!-- 流程 -->
+				<div class="shop-flow"></div>
+			</div>
+		</div>
+		<!-- 主体部分 -->
+		<div class="main">
+			<form>
+				<div class="main-ctn">
+					<!-- 地址 -->
+					<div class="address">
+						<div class="type">选择收货地址</div>
+						<!-- 地址内容 address-default默认地址 -->
+						<ul class="address-ctn">
+							<li class="address-select address-default active">
+								<!-- 地址信息 -->
+								<div class="address-infor">
+									<!-- 地址状态 -->
+									<span class="btn-status">默认地址</span>
+									<span class="address-name">李四李四李李</span>
+									<span class="address-mobile">18316548365</span>
+								</div>
+								<!-- 地址详情 -->
+								<div class="address-detail">
+									<span>广东省广州市海珠区新港街道新港东路中洲交易中心1510室</span>
+								</div>
+								<!-- 按钮组 -->
+								<div class="btn-group">
+									<span class="btn-edit">修改</span>
+								</div>
+								<!-- 选中的时候显示 -->
+								<div class="address-active"></div>
+								<!-- input传值给后端 -->
+								<input class="radio" type="radio" name="address" checked hidden>
+							</li>
+							<li class="address-select">
+								<div class="address-infor">
+									<span class="btn-status">设为默认</span>
+									<span class="address-name">李四</span>
+									<span class="address-mobile">18316548365</span>
+								</div>
+								<div class="address-detail">
+									<span>广东省广州市海珠区新港街道新港东路中洲交易中心1510室</span>
+								</div>
+								<div class="btn-group">
+									<span class="btn-edit">修改</span>
+									<span class="btn-del">删除</span>
+								</div>
+								<!-- 选中的时候显示 -->
+								<div class="address-active"></div>
+								<!-- input传值给后端 -->
+								<input class="radio" type="radio" name="address" hidden>
+							</li>
+							<li class="address-select">
+								<div class="address-infor">
+									<span class="btn-status">设为默认</span>
+									<span class="address-name">李四</span>
+									<span class="address-mobile">18316548365</span>
+								</div>
+								<div class="address-detail">
+									<span>广东省广州市海珠区新港街道新港东路中洲交易中心1510室</span>
+								</div>
+								<div class="btn-group">
+									<span class="btn-edit">修改</span>
+									<span class="btn-del">删除</span>
+								</div>
+								<!-- 选中的时候显示 -->
+								<div class="address-active"></div>
+								<!-- input传值给后端 -->
+								<input class="radio" type="radio" name="address" hidden>
+							</li>
+							<li class="address-select">
+								<div class="address-infor">
+									<span class="btn-status">设为默认</span>
+									<span class="address-name">李四</span>
+									<span class="address-mobile">18316548365</span>
+								</div>
+								<div class="address-detail">
+									<span>广东省广州市海珠区新港街道新港东路中洲交易中心1510室</span>
+								</div>
+								<div class="btn-group">
+									<span class="btn-edit">修改</span>
+									<span class="btn-del">删除</span>
+								</div>
+								<!-- 选中的时候显示 -->
+								<div class="address-active"></div>
+								<!-- input传值给后端 -->
+								<input class="radio" type="radio" name="address" hidden>
+							</li>
+							<!-- 增加地址 -->
+							<li class="address-add"></li>
+						</ul>
+						<!-- 地址底部 如果不超过四个地址就不渲染-->
+						<div class="address-footer">
+							<span class="btn-more">更多</span>
+						</div>
+					</div>
+					<!-- 订单信息 -->
+					<div class="order">
+						<div class="type">商品订单信息确认</div>
+						<div class="order-detail">
+							<!-- 供应商 -->
+							<div class="supplier">
+								<div class="supplier-firm">供应商：江西康力药品物流有限公司</div>
+								<div class="supplier-name">章敏军</div>
+								<div class="supplier-tip">供应商提醒：订单起配金额需满¥1元 订单满 ¥300元免运费， 不满收取 ¥20元运费</div>
+							</div>
+							<!-- 商品列表 -->
+							<div class="product-table">
+								<!-- 列表头部 -->
+								<ul class="table-header">
+									<li>商品信息</li>
+									<li>批次/有效日期</li>
+									<li>数量</li>
+									<li>单价</li>
+									<li>金额</li>
+									<li>运费</li>
+								</ul>
+								<!-- 列表内容 -->
+								<div class="table-body">
+									<ul>
+										<li>
+											<!-- 产品图片 -->
+											<div class="product-img">
+												<img src="../../img/yhw2/product.png" alt="">
+											</div>
+											<!-- 产品详情 -->
+											<div class="product-detail">
+												<p>小儿清肺止咳</p>
+												<p>0.8g*8片*4板袋</p>
+												<p>国药准字Z20073129</p>
+												<p>云南白药集团股份有限公司</p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p>20130220</p>
+												<p>2017-08-16</p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p>拆零：<span class="product-amount">3</span></p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p>￥13.00</p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p class="product-money">￥13.00</p>
+											</div>
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<div class="product-img">
+												<img src="../../img/yhw2/product.png" alt="">
+											</div>
+											<div class="product-detail">
+												<p>小儿清肺止咳</p>
+												<p>0.8g*8片*4板袋</p>
+												<p>国药准字Z20073129</p>
+												<p>云南白药集团股份有限公司</p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p>20130220</p>
+												<p>2017-08-16</p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p>拆零：<span class="product-amount">3</span></p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p>￥13.00</p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p class="product-money">￥13.00</p>
+											</div>
+										</li>
+									</ul>
+									<!-- 运费 -->
+									<div class="freight">
+										<div class="product-other">
+											<p class="freight-money">￥10.00</p>
+										</div>
+									</div>
+								</div>
+								<!-- 列表底部 -->
+								<div class="table-footer">
+									<!-- 供应商留言 -->
+									<div class="leave-message">
+										<span class="message-role">给供应商留言：</span>
+										<textarea placeholder="可以告诉供应商您的需求（不超过100字）"></textarea>
+									</div>
+									<!-- 列表统计 -->
+									<div class="table-amount">
+										<p>
+											<span class="amount-type">运费：</span>
+											<span class="amount-money">￥10.00</span>
+										</p>
+										<p>
+											<span class="amount-type">货物总价格：</span>
+											<span class="amount-money">￥10000.00</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- 交易方式 -->
+							<div class="deal">
+								交易方式:
+								<ul>
+									<li class="active">担保交易<input class="hidden" type="radio" name="deal-type1" value="1" checked></li>
+									<li>对公交易<input class="hidden" type="radio" name="deal-type1" value="2"></li>
+								</ul>
+							</div>
+							<!-- 使用优惠卷-->
+							<div class="discounts">
+								<!-- 优惠卷顶部 -->
+								<div class="discounts-header">
+									<span class="font14">使用优惠：</span>共抵用<span class="discounts-total">0.00</span>元;使用优惠券<span class="discounts-amount">0</span>张
+								</div>
+								<!-- 优惠卷选择 -->
+								<!-- coupon-orange店铺券 coupon-red商品券 coupon-blue平台券 -->
+								<!-- 关闭close -->
+								<ul class="discounts-select close">
+									<li class="coupon-blue">
+										<!-- 内容 -->
+										<div class="coupon-ctn">
+											<div class="coupon-price">￥<span>50</span></div>
+											<div class="coupon-condition">满100元可用</div>
+											<div class="coupon-info"><span class="cut">广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司</span></div>
+											<div class="coupon-company">广东浩诚医药公司</div>
+											<div class="coupon-limit">有效期：2018.01.10-2018.09.30</div>
+
+										</div>
+										<!-- 多选框 -->
+										<div class="checkbox"><input type="checkbox" name="" value=""></div>
+									</li>
+									<li class="coupon-red">
+										<!-- 内容 -->
+										<div class="coupon-ctn">
+											<div class="coupon-price">￥<span>500</span></div>
+											<div class="coupon-condition">满100元可用</div>
+											<div class="coupon-info"><span class="cut">广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司</span></div>
+											<div class="coupon-company">广东浩诚医药公司</div>
+											<div class="coupon-limit">有效期：2018.01.10-2018.09.30</div>
+
+										</div>
+										<!-- 多选框 -->
+										<div class="checkbox"><input type="checkbox" name="" value=""></div>
+									</li>
+									<li class="coupon-orange">
+										<!-- 内容 -->
+										<div class="coupon-ctn">
+											<div class="coupon-price">￥<span>5</span></div>
+											<div class="coupon-condition">满100元可用</div>
+											<div class="coupon-info"><span class="cut">广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司</span></div>
+											<div class="coupon-company">广东浩诚医药公司</div>
+											<div class="coupon-limit">有效期：2018.01.10-2018.09.30</div>
+
+										</div>
+										<!-- 多选框 -->
+										<div class="checkbox"><input type="checkbox" name="" value=""></div>
+									</li>
+									<li class="coupon-orange">
+										<!-- 内容 -->
+										<div class="coupon-ctn">
+											<div class="coupon-price">￥<span>50</span></div>
+											<div class="coupon-condition">满100元可用</div>
+											<div class="coupon-info"><span class="cut">广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司</span></div>
+											<div class="coupon-company">广东浩诚医药公司</div>
+											<div class="coupon-limit">有效期：2018.01.10-2018.09.30</div>
+
+										</div>
+
+										<!-- 多选框 -->
+										<div class="checkbox"><input type="checkbox" name="" value=""></div>
+									</li>
+
+								</ul>
+								<div class="discounts-footer"><div class="btn-more">更多</div></div>
+							</div>
+						</div>
+						<div class="order-detail">
+							<!-- 供应商 -->
+							<div class="supplier">
+								<div class="supplier-firm">供应商：江西康力药品物流有限公司</div>
+								<div class="supplier-name">章敏军</div>
+								<div class="supplier-tip">供应商提醒：订单起配金额需满¥1元 订单满 ¥300元免运费， 不满收取 ¥20元运费</div>
+							</div>
+							<!-- 商品列表 -->
+							<div class="product-table">
+								<!-- 列表头部 -->
+								<ul class="table-header">
+									<li>商品信息</li>
+									<li>批次/有效日期</li>
+									<li>数量</li>
+									<li>单价</li>
+									<li>金额</li>
+									<li>运费</li>
+								</ul>
+								<!-- 列表内容 -->
+								<div class="table-body">
+									<ul>
+										<li>
+											<!-- 产品图片 -->
+											<div class="product-img">
+												<img src="../../img/yhw2/product.png" alt="">
+											</div>
+											<!-- 产品详情 -->
+											<div class="product-detail">
+												<p>小儿清肺止咳</p>
+												<p>0.8g*8片*4板袋</p>
+												<p>国药准字Z20073129</p>
+												<p>云南白药集团股份有限公司</p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p>20130220</p>
+												<p>2017-08-16</p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p>拆零：<span class="product-amount">3</span></p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p>￥13.00</p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p class="product-money">￥13.00</p>
+											</div>
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<div class="product-img">
+												<img src="../../img/yhw2/product.png" alt="">
+											</div>
+											<div class="product-detail">
+												<p>小儿清肺止咳</p>
+												<p>0.8g*8片*4板袋</p>
+												<p>国药准字Z20073129</p>
+												<p>云南白药集团股份有限公司</p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p>20130220</p>
+												<p>2017-08-16</p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p>拆零：<span class="product-amount">3</span></p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p>￥13.00</p>
+											</div>
+										</li>
+										<li>
+											<div class="product-other">
+												<p class="product-money">￥13.00</p>
+											</div>
+										</li>
+									</ul>
+									<!-- 运费 -->
+									<div class="freight">
+										<div class="product-other">
+											<p class="freight-money">￥10.00</p>
+										</div>
+									</div>
+								</div>
+								<!-- 列表底部 -->
+								<div class="table-footer">
+									<!-- 供应商留言 -->
+									<div class="leave-message">
+										<span class="message-role">给供应商留言：</span>
+										<textarea placeholder="可以告诉供应商您的需求（不超过100字）"></textarea>
+									</div>
+									<!-- 列表统计 -->
+									<div class="table-amount">
+										<p>
+											<span class="amount-type">运费：</span>
+											<span class="amount-money">￥10.00</span>
+										</p>
+										<p>
+											<span class="amount-type">货物总价格：</span>
+											<span class="amount-money">￥10000.00</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- 交易方式 -->
+							<div class="deal">
+								交易方式:
+								<ul>
+									<li class="active">担保交易<input class="hidden" type="radio" name="deal-type1" value="1" checked></li>
+									<li>对公交易<input class="hidden" type="radio" name="deal-type1" value="2"></li>
+								</ul>
+							</div>
+							<!-- 使用优惠卷-->
+							<div class="discounts">
+								<!-- 优惠卷顶部 -->
+								<div class="discounts-header">
+									<span class="font14">使用优惠：</span>共抵用<span class="discounts-total">0.00</span>元;使用优惠券<span class="discounts-amount">0</span>张
+								</div>
+								<!-- 优惠卷选择 -->
+								<!-- coupon-orange店铺券 coupon-red商品券 coupon-blue平台券 -->
+								<ul class="discounts-select close">
+									<li class="coupon-blue">
+										<!-- 内容 -->
+										<div class="coupon-ctn">
+											<div class="coupon-price">￥<span>50</span></div>
+											<div class="coupon-condition">满100元可用</div>
+											<div class="coupon-info"><span class="cut">广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司</span></div>
+											<div class="coupon-company">广东浩诚医药公司</div>
+											<div class="coupon-limit">有效期：2018.01.10-2018.09.30</div>
+
+										</div>
+										<!-- 多选框 -->
+										<div class="checkbox"><input type="checkbox" name="" value=""></div>
+									</li>
+									<li class="coupon-red">
+										<!-- 内容 -->
+										<div class="coupon-ctn">
+											<div class="coupon-price">￥<span>500</span></div>
+											<div class="coupon-condition">满100元可用</div>
+											<div class="coupon-info"><span class="cut">广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司</span></div>
+											<div class="coupon-company">广东浩诚医药公司</div>
+											<div class="coupon-limit">有效期：2018.01.10-2018.09.30</div>
+
+										</div>
+										<!-- 多选框 -->
+										<div class="checkbox"><input type="checkbox" name="" value=""></div>
+									</li>
+									<li class="coupon-orange">
+										<!-- 内容 -->
+										<div class="coupon-ctn">
+											<div class="coupon-price">￥<span>5</span></div>
+											<div class="coupon-condition">满100元可用</div>
+											<div class="coupon-info"><span class="cut">广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司</span></div>
+											<div class="coupon-company">广东浩诚医药公司</div>
+											<div class="coupon-limit">有效期：2018.01.10-2018.09.30</div>
+
+										</div>
+										<!-- 多选框 -->
+										<div class="checkbox"><input type="checkbox" name="" value=""></div>
+									</li>
+									<li class="coupon-orange">
+										<!-- 内容 -->
+										<div class="coupon-ctn">
+											<div class="coupon-price">￥<span>50</span></div>
+											<div class="coupon-condition">满100元可用</div>
+											<div class="coupon-info"><span class="cut">广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司广东浩诚医药公司</span></div>
+											<div class="coupon-company">广东浩诚医药公司</div>
+											<div class="coupon-limit">有效期：2018.01.10-2018.09.30</div>
+
+										</div>
+
+										<!-- 多选框 -->
+										<div class="checkbox"><input type="checkbox" name="" value=""></div>
+									</li>
+								</ul>
+								<div class="discounts-footer"><div class="btn-more">更多</div></div>
+							</div>
+						</div>
+					</div>
+					<!-- 总计 -->
+					<div class="total">
+						<div class="total-ctn">
+							<!-- 金额统计 -->
+							<div class="total-money">
+								<p>
+									<!-- 统计类型 -->
+									<span class="total-type">货物总价格：</span>
+									<!-- 统计金额的数字 -->
+									<span class="total-num">¥ <span class="product-money-num">1150.00</span></span>
+								</p>
+								<p>
+									<span class="total-type">运费：</span>
+									<span class="total-num">¥ <span class="freight-money-num">20.00</span></span>
+								</p>
+								<p>
+									<span class="total-type">商品优惠：</span>
+									<span class="total-num discounts-total">-¥ 0.00</span>
+								</p>
+							</div>
+							<!-- 其他统计 -->
+							<span class="total-other">总计： 货品种类：1种       数量总计：100盒</span>
+						</div>
+						<!-- 总计 -->
+						<div class="total-footer">
+							<span class="total-type">应付总额：</span>
+							<span class="total-num red">¥ <span class="total-money-num">1170.00</span></span>
+						</div>
+					</div>
+					<!-- 订单操作 -->
+					<div class="main-footer">
+						<div class="btn-pay">下单</div>
+						<div class="btn-back">返回修改采购订单</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- 右侧边栏 -->
+		<!-- 右侧边栏 -->
+		<div class="yhw-sidebar" data="0">
+		    <!-- 左侧导航 -->
+		    <div class="navs">
+		        <!-- 功能列表 -->
+		        <ul>
+		            <!-- 会员中心 -->
+		            <li class="side-close  active">
+		                <span class="icon icon1"></span>
+		                <span class="tip tip1">会员中心</span>
+		            </li>
+		            <!-- 采购单 -->
+		            <li class="side-close cg-list-click">
+		                <span class="icon icon2"></span>
+		                <span class="tip tip2">采购计划</span>
+		            </li>
+		            <!-- 我的收藏 -->
+		            <li class="side-close">
+		                <span class="icon icon3"></span>
+		                <span class="tip tip3">我的收藏</span>
+		            </li>
+		            <!-- 我的优惠券 -->
+		            <li class="side-close">
+		                <span class="icon icon4"></span>
+		                <span class="tip tip4">我的优惠券</span>
+		            </li>
+		            <!-- 客服 -->
+		            <li class="side-close">
+		                <!-- 跳qq -->
+		                <a href="tencent://message/?Menu=yes&uin=2088730243& Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45">
+		                    <span class="icon icon5"></span>
+		                    <span class="tip tip5">客服</span>
+		                </a>
+		            </li>
+		            <!-- 收起展开 -->
+		            <li class="put-away open-icon">
+		                <span class="icon icon6"></span>
+		            </li>
+		            <!-- 收起展开 -->
+		            <li class="top-back">
+		                <span class="icon icon7"></span>
+		                <span class="txt">回顶部</span>
+		            </li>
+		        </ul>
+		    </div>
+		    <!-- 右侧详情 -->
+		    <div class="details">
+		        <!-- 已登录 -->
+		        <div class="list-ctn">
+		            <!-- 会员中心 -->
+		            <div class="toggle-ctn member-center">
+		                <div class="title">会员中心</div>
+		                <div class="overflow-auto">
+		                    <!-- 会员头像 -->
+		                    <div class="infor">
+		                        <div class="user">
+		                            <!-- 头像 -->
+		                            <div class="photo"><img src="../../img/yhw2/user-pic.png"></div>
+		                            <!-- 连接 -->
+		                            <div class="rt">
+		                                <span>yh_张三李四</span>
+		                                <span>感恩小主光临驾到~</span>
+		                            </div>
+		                        </div>
+		                        <!-- 入口 -->
+		                        <div class="entry">
+		                            <a href="#">修改手机</a>
+		                            <a href="#">进入会员中心</a>
+		                            <a href="#">修改密码</a>
+		                        </div>
+		                    </div>
+		                    <!-- 绑定信息 -->
+		                    <div class="binding">
+		                        <div class="top-title">
+		                            <span>绑定</span>
+		                        </div>
+		                        <ul>
+		                            <!-- 企业资质认证 -->
+		                            <li class="yes">
+		                                <div class="pic"></div>
+		                                <a href="#">已认证</a>
+		                            </li>
+		                            <!-- 手机绑定 -->
+		                            <li class="yes">
+		                                <div class="pic"></div>
+		                                <a href="#">已绑定</a>
+		                            </li>
+		                            <!-- 邮箱绑定 -->
+		                            <li class="no">
+		                                <div class="pic"></div>
+		                                <a href="#">去绑定</a>
+		                            </li>
+		                            <!-- 银行卡绑定 -->
+		                            <li class="no">
+		                                <div class="pic"></div>
+		                                <a href="#">去绑定</a>
+		                            </li>
+		                        </ul>
+		                    </div>
+		                    <!-- 会员中心入口 -->
+		                    <div class="links">
+		                        <!-- 会员中心 -->
+		                        <div class="member">
+		                            <div class="top-title">
+		                                <span>会员中心</span>
+		                            </div>
+		                            <ul>
+		                                <li><a href="#">个人信息</a></li>
+		                                <li><a href="#">企业信息</a></li>
+		                                <li><a href="#">收货地址管理</a></li>
+		                                <li><a href="#">消息中心</a></li>
+		                                <li><a href="#">企业资质打印</a></li>
+		                                <li><a href="#">银行帐号管理</a></li>
+		                                <li><a href="#">账号管理</a></li>
+		                            </ul>
+		                        </div>
+		                        <!-- 供应商 -->
+		                        <div class="member">
+		                            <div class="top-title">
+		                                <span>供应商</span>
+		                            </div>
+		                            <ul>
+		                                <li><a href="#">供应商首页</a></li>
+		                                <li><a href="#">店铺首页</a></li>
+		                                <li><a href="#">店铺设置</a></li>
+		                                <li><a href="#">产品管理</a></li>
+		                                <li><a href="#">订单管理</a></li>
+		                                <li><a href="#">客户管理</a></li>
+		                                <li><a href="#">结算管理</a></li>
+		                                <li><a href="#">评价管理</a></li>
+		                            </ul>
+		                        </div>
+		                        <!-- 采购商 -->
+		                        <div class="member">
+		                            <div class="top-title">
+		                                <span>采购商</span>
+		                            </div>
+		                            <ul>
+		                                <li><a href="#">采购商首页</a></li>
+		                                <li><a href="#">订单管理</a></li>
+		                                <li><a href="#">结算管理</a></li>
+		                                <li><a href="#">客户管理</a></li>
+		                                <li><a href="#">我的收藏</a></li>
+		                                <li><a href="#">我的足迹</a></li>
+		                                <li><a href="#">评价管理</a></li>
+		                            </ul>
+		                        </div>
+		                    </div>
+		                    <!-- 退出登录 -->
+		                    <div class="login-out">退出登录</div>
+
+		                </div>
+		            </div>
+		            <!-- 采购单 -->
+		            <div class="toggle-ctn cg-list">
+		                <div class="title">采购计划</div>
+		                <ul class="buy-list">
+		                    <div class="check-top">
+		                        <div class="cg-checkbox-all">
+		                            <input type="checkbox">
+		                            <label></label>
+		                        </div>
+		                        <span>全选</span>
+		                    </div>
+		                    <!-- 循环店铺 -->
+		                    <li class="plan-product">
+		                        <!-- 头部 -->
+		                        <div class="top supplier">
+		                            <div class="cg-checkbox-that">
+		                                <input type="checkbox">
+		                                <label></label>
+		                            </div>
+		                            <span>选中</span>
+		                            <a href="#" class="name">广州大众医药公司</a>
+		                        </div>
+		                        <!-- 循环产品 -->
+		                        <!-- 产品  正常商品 good-list 已下架商品 product-cancel -->
+		                        <div href="#" class="product-cancel">
+		                            <div class="overflow">
+		                                <div class="cg-checkbox-that">
+		                                    <input type="checkbox" value="11" class="checkGoodId">
+		                                    <label></label>
+		                                </div>
+		                                <a href="#">
+		                                    <div class="pic">
+		                                        <!--商品失效加上这个蒙版-->
+		                                        <div class="img-mask"></div>
+		                                        <img src="../../img/product/product-img.jpg">
+		                                    </div>
+		                                    <div class="size">
+		                                        <!-- 产品名 -->
+		                                        <p>奥美拉唑镁肠溶片</p>
+		                                        <p>批准文号:</p>
+		                                        <!-- 批准文号 -->
+		                                        <p>国药准字Z11020361</p>
+		                                        <!-- 产品规格 -->
+		                                        <p>规格：<span>6g*12袋</span></p>
+		                                        <!-- 批号 -->
+		                                        <p>批号：161005</p>
+		                                    </div>
+		                                </a>
+		                            </div>
+		                            <div class="price">
+		                                <!--<div class="amount-text">拆零：</div>-->
+		                                <!--<div class="amount-reduce">-</div>-->
+		                                <!--&lt;!&ndash; 输入框 &ndash;&gt;-->
+		                                <!--<input name="" class="amount-num" type="number" value="10">-->
+		                                <!--<div class="amount-add">+</div>-->
+		                                <!--&lt;!&ndash; 单价 &ndash;&gt;-->
+		                                <!--<div class="price-num">￥<span>10.00</span>/<span>盒</span></div>-->
+		                                <!--<div class="cancel-tip">商品已下架!</div>-->
+		                                <!--<div class="cancel-tip">批次已下架!</div>-->
+		                                <div class="cancel-tip">商品已失效!</div>
+		                            </div>
+		                            <!-- 起订量 -->
+		                            <span class="hidden minimum">5</span>
+		                            <!-- 库存不足提示 -->
+		                            <p class="inventory">（库存不足，剩余<span class="inventory-num">8</span>盒）</p>
+		                        </div>
+		                        <div href="#" class="good-list">
+		                            <div class="overflow">
+		                                <div class="cg-checkbox-that">
+		                                    <input type="checkbox" value="22" class="checkGoodId">
+		                                    <label></label>
+		                                </div>
+		                                <a href="#">
+		                                    <div class="pic">
+		                                        <img src="../../img/product/product-img.jpg">
+		                                    </div>
+		                                    <div class="size">
+		                                        <!-- 产品名 -->
+		                                        <p>奥美拉唑镁肠溶片</p>
+		                                        <p>批准文号:</p>
+		                                        <!-- 批准文号 -->
+		                                        <p>国药准字Z11020361</p>
+		                                        <!-- 产品规格 -->
+		                                        <p>规格：<span>6g*12袋</span></p>
+		                                        <!-- 批号 -->
+		                                        <p>批号：161005</p>
+		                                    </div>
+		                                </a>
+		                            </div>
+		                            <div class="price">
+		                                <div class="amount-text">拆零：</div>
+		                                <div class="amount-reduce">-</div>
+		                                <!-- 输入框 -->
+		                                <input name="" class="amount-num" type="number" value="10">
+		                                <div class="amount-add">+</div>
+		                                <!-- 单价 -->
+		                                <div class="price-num">￥<span>10.00</span>/<span>盒</span></div>
+		                            </div>
+		                            <!-- 起订量 -->
+		                            <span class="hidden minimum">5</span>
+		                            <!-- 库存不足提示 -->
+		                            <p class="inventory">（库存不足，剩余<span class="inventory-num">8</span>盒）</p>
+		                        </div>
+		                        <div href="#" class="good-list">
+		                            <div class="overflow">
+		                                <div class="cg-checkbox-that">
+		                                    <input type="checkbox" value="22" class="checkGoodId">
+		                                    <label></label>
+		                                </div>
+		                                <a href="#">
+		                                    <div class="pic">
+		                                        <img src="../../img/product/product-img.jpg">
+		                                    </div>
+		                                    <div class="size">
+		                                        <!-- 产品名 -->
+		                                        <p>奥美拉唑镁肠溶片</p>
+		                                        <p>批准文号:</p>
+		                                        <!-- 批准文号 -->
+		                                        <p>国药准字Z11020361</p>
+		                                        <!-- 产品规格 -->
+		                                        <p>规格：<span>6g*12袋</span></p>
+		                                        <!-- 批号 -->
+		                                        <p>批号：161005</p>
+		                                    </div>
+		                                </a>
+		                            </div>
+		                            <div class="price">
+		                                <div class="amount-text">拆零：</div>
+		                                <div class="amount-reduce">-</div>
+		                                <!-- 输入框 -->
+		                                <input name="" class="amount-num" type="number" value="10">
+		                                <div class="amount-add">+</div>
+		                                <!-- 单价 -->
+		                                <div class="price-num">￥<span>10.00</span>/<span>盒</span></div>
+		                            </div>
+		                            <!-- 起订量 -->
+		                            <span class="hidden minimum">5</span>
+		                            <!-- 库存不足提示 -->
+		                            <p class="inventory">（库存不足，剩余<span class="inventory-num">8</span>盒）</p>
+		                        </div>
+		                        <div href="#" class="good-list">
+		                            <div class="overflow">
+		                                <div class="cg-checkbox-that">
+		                                    <input type="checkbox" value="22" class="checkGoodId">
+		                                    <label></label>
+		                                </div>
+		                                <a href="#">
+		                                    <div class="pic">
+		                                        <img src="../../img/product/product-img.jpg">
+		                                    </div>
+		                                    <div class="size">
+		                                        <!-- 产品名 -->
+		                                        <p>奥美拉唑镁肠溶片</p>
+		                                        <p>批准文号:</p>
+		                                        <!-- 批准文号 -->
+		                                        <p>国药准字Z11020361</p>
+		                                        <!-- 产品规格 -->
+		                                        <p>规格：<span>6g*12袋</span></p>
+		                                        <!-- 批号 -->
+		                                        <p>批号：161005</p>
+		                                    </div>
+		                                </a>
+		                            </div>
+		                            <div class="price">
+		                                <div class="amount-text">拆零：</div>
+		                                <div class="amount-reduce">-</div>
+		                                <!-- 输入框 -->
+		                                <input name="" class="amount-num" type="number" value="10">
+		                                <div class="amount-add">+</div>
+		                                <!-- 单价 -->
+		                                <div class="price-num">￥<span>10.00</span>/<span>盒</span></div>
+		                            </div>
+		                            <!-- 起订量 -->
+		                            <span class="hidden minimum">5</span>
+		                            <!-- 库存不足提示 -->
+		                            <p class="inventory">（库存不足，剩余<span class="inventory-num">8</span>盒）</p>
+		                        </div>
+		                        <div href="#" class="good-list">
+		                            <div class="overflow">
+		                                <div class="cg-checkbox-that">
+		                                    <input type="checkbox" value="22" class="checkGoodId">
+		                                    <label></label>
+		                                </div>
+		                                <a href="#">
+		                                    <div class="pic">
+		                                        <img src="../../img/product/product-img.jpg">
+		                                    </div>
+		                                    <div class="size">
+		                                        <!-- 产品名 -->
+		                                        <p>奥美拉唑镁肠溶片</p>
+		                                        <p>批准文号:</p>
+		                                        <!-- 批准文号 -->
+		                                        <p>国药准字Z11020361</p>
+		                                        <!-- 产品规格 -->
+		                                        <p>规格：<span>6g*12袋</span></p>
+		                                        <!-- 批号 -->
+		                                        <p>批号：161005</p>
+		                                    </div>
+		                                </a>
+		                            </div>
+		                            <div class="price">
+		                                <div class="amount-text">拆零：</div>
+		                                <div class="amount-reduce">-</div>
+		                                <!-- 输入框 -->
+		                                <input name="" class="amount-num" type="number" value="10">
+		                                <div class="amount-add">+</div>
+		                                <!-- 单价 -->
+		                                <div class="price-num">￥<span>10.00</span>/<span>盒</span></div>
+		                            </div>
+		                            <!-- 起订量 -->
+		                            <span class="hidden minimum">5</span>
+		                            <!-- 库存不足提示 -->
+		                            <p class="inventory">（库存不足，剩余<span class="inventory-num">8</span>盒）</p>
+		                        </div>
+		                        <div href="#" class="good-list">
+		                            <div class="overflow">
+		                                <div class="cg-checkbox-that">
+		                                    <input type="checkbox" value="22" class="checkGoodId">
+		                                    <label></label>
+		                                </div>
+		                                <a href="#">
+		                                    <div class="pic">
+		                                        <img src="../../img/product/product-img.jpg">
+		                                    </div>
+		                                    <div class="size">
+		                                        <!-- 产品名 -->
+		                                        <p>奥美拉唑镁肠溶片</p>
+		                                        <p>批准文号:</p>
+		                                        <!-- 批准文号 -->
+		                                        <p>国药准字Z11020361</p>
+		                                        <!-- 产品规格 -->
+		                                        <p>规格：<span>6g*12袋</span></p>
+		                                        <!-- 批号 -->
+		                                        <p>批号：161005</p>
+		                                    </div>
+		                                </a>
+		                            </div>
+		                            <div class="price">
+		                                <div class="amount-text">拆零：</div>
+		                                <div class="amount-reduce">-</div>
+		                                <!-- 输入框 -->
+		                                <input name="" class="amount-num" type="number" value="10">
+		                                <div class="amount-add">+</div>
+		                                <!-- 单价 -->
+		                                <div class="price-num">￥<span>10.00</span>/<span>盒</span></div>
+		                            </div>
+		                            <!-- 起订量 -->
+		                            <span class="hidden minimum">5</span>
+		                            <!-- 库存不足提示 -->
+		                            <p class="inventory">（库存不足，剩余<span class="inventory-num">8</span>盒）</p>
+		                        </div>
+		                        <div href="#" class="good-list">
+		                            <div class="overflow">
+		                                <div class="cg-checkbox-that">
+		                                    <input type="checkbox" value="22" class="checkGoodId">
+		                                    <label></label>
+		                                </div>
+		                                <a href="#">
+		                                    <div class="pic">
+		                                        <img src="../../img/product/product-img.jpg">
+		                                    </div>
+		                                    <div class="size">
+		                                        <!-- 产品名 -->
+		                                        <p>奥美拉唑镁肠溶片</p>
+		                                        <p>批准文号:</p>
+		                                        <!-- 批准文号 -->
+		                                        <p>国药准字Z11020361</p>
+		                                        <!-- 产品规格 -->
+		                                        <p>规格：<span>6g*12袋</span></p>
+		                                        <!-- 批号 -->
+		                                        <p>批号：161005</p>
+		                                    </div>
+		                                </a>
+		                            </div>
+		                            <div class="price">
+		                                <div class="amount-text">拆零：</div>
+		                                <div class="amount-reduce">-</div>
+		                                <!-- 输入框 -->
+		                                <input name="" class="amount-num" type="number" value="10">
+		                                <div class="amount-add">+</div>
+		                                <!-- 单价 -->
+		                                <div class="price-num">￥<span>10.00</span>/<span>盒</span></div>
+		                            </div>
+		                            <!-- 起订量 -->
+		                            <span class="hidden minimum">5</span>
+		                            <!-- 库存不足提示 -->
+		                            <p class="inventory">（库存不足，剩余<span class="inventory-num">8</span>盒）</p>
+		                        </div>
+		                        <div href="#" class="good-list">
+		                            <div class="overflow">
+		                                <div class="cg-checkbox-that">
+		                                    <input type="checkbox" value="22" class="checkGoodId">
+		                                    <label></label>
+		                                </div>
+		                                <a href="#">
+		                                    <div class="pic">
+		                                        <img src="../../img/product/product-img.jpg">
+		                                    </div>
+		                                    <div class="size">
+		                                        <!-- 产品名 -->
+		                                        <p>奥美拉唑镁肠溶片</p>
+		                                        <p>批准文号:</p>
+		                                        <!-- 批准文号 -->
+		                                        <p>国药准字Z11020361</p>
+		                                        <!-- 产品规格 -->
+		                                        <p>规格：<span>6g*12袋</span></p>
+		                                        <!-- 批号 -->
+		                                        <p>批号：161005</p>
+		                                    </div>
+		                                </a>
+		                            </div>
+		                            <div class="price">
+		                                <div class="amount-text">拆零：</div>
+		                                <div class="amount-reduce">-</div>
+		                                <!-- 输入框 -->
+		                                <input name="" class="amount-num" type="number" value="10">
+		                                <div class="amount-add">+</div>
+		                                <!-- 单价 -->
+		                                <div class="price-num">￥<span>10.00</span>/<span>盒</span></div>
+		                            </div>
+		                            <!-- 起订量 -->
+		                            <span class="hidden minimum">5</span>
+		                            <!-- 库存不足提示 -->
+		                            <p class="inventory">（库存不足，剩余<span class="inventory-num">8</span>盒）</p>
+		                        </div>
+		                        <div href="#" class="good-list">
+		                            <div class="overflow">
+		                                <div class="cg-checkbox-that">
+		                                    <input type="checkbox" value="22" class="checkGoodId">
+		                                    <label></label>
+		                                </div>
+		                                <a href="#">
+		                                    <div class="pic">
+		                                        <img src="../../img/product/product-img.jpg">
+		                                    </div>
+		                                    <div class="size">
+		                                        <!-- 产品名 -->
+		                                        <p>奥美拉唑镁肠溶片</p>
+		                                        <p>批准文号:</p>
+		                                        <!-- 批准文号 -->
+		                                        <p>国药准字Z11020361</p>
+		                                        <!-- 产品规格 -->
+		                                        <p>规格：<span>6g*12袋</span></p>
+		                                        <!-- 批号 -->
+		                                        <p>批号：161005</p>
+		                                    </div>
+		                                </a>
+		                            </div>
+		                            <div class="price">
+		                                <div class="amount-text">拆零：</div>
+		                                <div class="amount-reduce">-</div>
+		                                <!-- 输入框 -->
+		                                <input name="" class="amount-num" type="number" value="10">
+		                                <div class="amount-add">+</div>
+		                                <!-- 单价 -->
+		                                <div class="price-num">￥<span>10.00</span>/<span>盒</span></div>
+		                            </div>
+		                            <!-- 起订量 -->
+		                            <span class="hidden minimum">5</span>
+		                            <!-- 库存不足提示 -->
+		                            <p class="inventory">（库存不足，剩余<span class="inventory-num">8</span>盒）</p>
+		                        </div>
+		                        <!-- 价格 -->
+		                        <div class="total-prices">小计:￥<span>0.00</span></div>
+		                    </li>
+		                    <li class="plan-product">
+		                        <!-- 头部 -->
+		                        <div class="top supplier">
+		                            <div class="cg-checkbox-that">
+		                                <input type="checkbox">
+		                                <label></label>
+		                            </div>
+		                            <span>选中</span>
+		                            <a href="#" class="name">广州大众医药公司</a>
+		                        </div>
+		                        <!-- 产品 -->
+		                        <div href="#" class="good-list">
+		                            <div class="overflow">
+		                                <div class="cg-checkbox-that">
+		                                    <input type="checkbox" value="33" class="checkGoodId">
+		                                    <label></label>
+		                                </div>
+		                                <a href="#">
+		                                    <div class="pic">
+		                                        <img src="../../img/product/product-img.jpg">
+		                                    </div>
+		                                    <div class="size">
+		                                        <!-- 产品名 -->
+		                                        <p>奥美拉唑镁肠溶片</p>
+		                                        <p>批准文号:</p>
+		                                        <!-- 批准文号 -->
+		                                        <p>国药准字Z11020361</p>
+		                                        <!-- 产品规格 -->
+		                                        <p>规格：<span>6g*12袋</span></p>
+		                                        <!-- 批号 -->
+		                                        <p>批号：161005</p>
+		                                    </div>
+		                                </a>
+		                            </div>
+		                            <div class="price">
+		                                <div class="amount-text">拆零：</div>
+		                                <div class="amount-reduce">-</div>
+		                                <!-- 输入框 -->
+		                                <input name="" class="amount-num" type="number" value="1">
+		                                <div class="amount-add">+</div>
+		                                <!-- 单价 -->
+		                                <div class="price-num">￥<span>10.00</span>/<span>盒</span></div>
+		                            </div>
+		                            <!-- 起订量 -->
+		                            <span class="hidden minimum">1</span>
+		                            <!-- 库存不足提示 -->
+		                            <p class="inventory">库存不足，剩余<span class="inventory-num">8</span>盒</p>
+		                        </div>
+		                        <!-- 价格 -->
+		                        <div class="total-prices">小计:￥<span>0.00</span></div>
+		                    </li>
+		                </ul>
+		                <div class="btm">
+		                    <div class="del">
+		                        <!-- 数量 -->
+		                        <div class="lf cg-choose-num">已选 <span>0</span> 款商品</div>
+		                        <!-- 总计 -->
+		                        <div class="rt total-num">总计：￥<span>10.00</span></div>
+		                    </div>
+		                    <div class="btns">
+		                        <div class="cg-plan-empty">删除</div>
+		                        <div class="cg-confirm">确认采购计划</div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- 我的收藏 -->
+		            <div class="toggle-ctn collect">
+		                <div class="title">我的收藏</div>
+		                <!-- tab切换 -->
+		                <ul class="tab">
+		                    <li class="active" data="0">供应商</li>
+		                    <span class="line"></span>
+		                    <li data="1">商品</li>
+		                </ul>
+		                <div class="overflow-auto">
+		                    <!-- 内容切换 -->
+		                    <div class="ctn-list">
+		                        <!-- 供应商 -->
+		                        <ul class="tab-ctn supplier">
+		                            <li>
+		                                <div class="logo"><img src="../../img/product/details-logo.png"></div>
+		                                <!-- 药店 -->
+		                                <div class="rt">
+		                                    <a href="#" class="name">惠州济和堂药业股份有限公司</a>
+		                                    <button>取消收藏</button>
+		                                </div>
+		                            </li>
+		                            <a href="#" class="link">查看更多店铺>></a>
+		                        </ul>
+		                        <!-- 商品 -->
+		                        <ul class="tab-ctn goods-list">
+		                            <li>
+		                                <div class="pic"><img src="../../img/yhw/index-img9.jpg" width="75"></div>
+		                                <div class="rt">
+		                                    <!-- 商品名 -->
+		                                    <a href="#" class="name">奥美拉唑镁肠溶片</a>
+		                                    <!-- 商品规格 -->
+		                                    <p>规格：6g*12袋</p>
+		                                    <button>取消收藏</button>
+		                                </div>
+		                            </li>
+		                            <a href="#" class="link">查看更多收藏商品>></a>
+		                        </ul>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- 我的优惠券 -->
+		            <div class="toggle-ctn coupon">
+		                <div class="title">我的优惠券</div>
+		                <!-- tab切换 -->
+		                <ul class="tab">
+		                    <li class="active" data="0">新领取</li>
+		                    <span class="line"></span>
+		                    <li data="1">即将过期</li>
+		                </ul>
+		                <div class="overflow-auto">
+		                    <ul class="tab-ctn new-coupon">
+		                        <!-- 三种颜色 类名为 平台券blue 店铺券orange 商品券red-->
+		                        <li class="blue">
+		                            <div class="coupon-ctn">
+		                                <div class="coupon-price">￥<span>30</span></div>
+		                                <div class="coupon-price">满1000可用</div>
+		                                <div class="coupon-info">[店铺商品通用 促销特惠]</div>
+		                                <div class="coupon-company">广东好辰医药公司</div>
+		                                <div class="coupon-company">有效期：2018.01.10-2018.09.30</div>
+		                            </div>
+		                            <a href="#" class="coupon-btn"></a>
+		                        </li>
+		                        <a href="#" class="more">查看更多优惠券</a>
+		                    </ul>
+		                    <ul class="tab-ctn old-coupon">
+		                        <!-- 三种颜色 类名为 green orange red-->
+		                        <li class="blue">
+		                            <div class="coupon-ctn">
+		                                <div class="coupon-price">￥<span>30</span></div>
+		                                <div class="coupon-price">满1000可用</div>
+		                                <div class="coupon-info">[店铺商品通用 促销特惠]</div>
+		                                <div class="coupon-company">广东好辰医药公司</div>
+		                                <div class="coupon-company">有效期：2018.01.10-2018.09.30</div>
+		                            </div>
+		                            <a href="#" class="coupon-btn"></a>
+		                        </li>
+		                        <a href="#" class="more">查看更多优惠券</a>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- 底部 -->
+		<div class="yhw-footer-top">
+			<div class="inner">
+				<ul>
+					<li class="line">
+						<ul>
+							<li><a href="#">新手入门</a></li>
+							<li><a href="#">免费注册</a></li>
+							<li><a href="#">采购商入门</a></li>
+							<li><a href="#">供应商入门</a></li>
+							<li><a href="#">常见问题</a></li>
+						</ul>
+					</li>
+					<li class="line">
+						<ul>
+							<li><a href="#">采购商服务</a></li>
+							<li><a href="#">采购流程</a></li>
+							<li><a href="#">快速下单</a></li>
+							<li><a href="#">找优惠</a></li>
+						</ul>
+					</li>
+					<li class="line">
+						<ul>
+							<li><a href="#">供应商服务</a></li>
+							<li><a href="#">智能定价</a></li>
+							<li><a href="#">订单管理</a></li>
+							<li><a href="#">平台营销</a></li>
+							<li><a href="#">资金结算</a></li>
+						</ul>
+					</li>
+					<li class="line">
+						<ul>
+							<li><a href="#">交易安全</a></li>
+							<li><a href="#">交易规则</a></li>
+							<li><a href="#">支付安全</a></li>
+							<li><a href="#">质量保证</a></li>
+							<li><a href="#">服务保证</a></li>
+						</ul>
+					</li>
+					<li class="line">
+						<ul>
+							<li><a href="#">售后服务</a></li>
+							<li><a href="#">纠纷处理</a></li>
+							<li><a href="#">退换货政策</a></li>
+							<li><a href="#">退款说明</a></li>
+							<li><a href="#">发票制度</a></li>
+						</ul>
+					</li>
+					<li class="line">
+						<ul>
+							<li><a href="#">增值服务</a></li>
+							<li><a href="#">广告投放</a></li>
+							<li><a href="#">活动促销</a></li>
+							<li><a href="#">招商合作</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- 分割线 -->
+				<div class="inner-line"></div>
+				<!-- 二维码 -->
+				<div class="code">
+					<p>微信公众号</p>
+					<img src="../../img/yhw2/index-img2.jpg">
+					<p>扫一扫活动早知道</p>
+				</div>
+				<div class="code">
+					<p>手机药荟网</p>
+					<img src="../../img/yhw2/index-img2.jpg">
+					<p>随时随地 想采就采</p>
+				</div>
+				<!-- 服务 -->
+				<div class="serve">
+					<!-- 在线客服 -->
+					<a href="tencent://message/?Menu=yes&uin=2088730243& Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45" class="online"><i class="icon"></i>在线客服</a>
+					<!-- 热线 -->
+					<dl class="hot-line">
+						<dd class="icon"></dd>
+						<dt>	
+							<span class="name">全国服务热线</span>
+							<span class="num">400-611-6911</span>
+						</dt>
+					</dl>
+					<p class="txt">服务时间：08：30-18：00</p>
+					<p class="txt">投诉邮箱：admin@yaohuiw.com</p>
+				</div>
+			</div>
+		</div>
+		<div class="yhw-footer-btm">
+			<div class="inner">
+				<p class="link">
+					<a href="#">关于我们</a> <span>|</span>   
+					<a href="#">联系我们</a> <span>|</span>
+					<a href="#">平台荣誉</a> <span>|</span>
+					<a href="#">媒体报道</a> <span>|</span>
+					<a href="#">广告服务</a> <span>|</span>
+					<a href="#">平台合作</a> <span>|</span>
+					<a href="#">法律声明</a> <span>|</span>
+					<a href="#">隐私声明</a> <span>|</span>
+					<a href="#">服务协议</a> <span>|</span>
+					<a href="#">合作伙伴</a> <span>|</span>
+					<a href="#">人才招聘</a> <span>|</span>
+					<a href="#">帮助中心</a> <span>|</span>
+					<a href="#">网站地图</a>
+				</p>
+				<p>
+					<a target="_blank" href="#">互联网药品信息服务资格证书（粤）-经营性-2017-0051</a>|
+					<a target="_blank" href="#">增值电信业务经营许可证：川B2-20150077 </a>|
+					<a target="_blank" href="#">营业执照</a>|
+					<a target="_blank" href="#">备案号:粤ICP备17049320号</a>
+				</p>
+				<p>药荟网 Copyright © 2010-2017   <a href="#">www.yaohuiw.com</a> All Rights Reserved   版权所有:广东汇瀚信息科技有限公司</p>
+				<!-- 静态屏蔽 -->
+				<div class="attestation">
+					<!-- 粤公网安备 44010502000728号 -->
+					<div class="certificate beianbgs">
+						<!-- <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010502000728"><img src="/img/yhw2/beianbgs.png" height="47"/></a> -->
+					</div>
+					<!--安全联盟-->
+					<div class="certificate">
+						<!-- <a key ="5a1f5e7912c3d5743acc329f"  logo_size="124x47"  logo_type="realname"  href="http://www.anquan.org" ><script src="//static.anquan.org/static/outer/js/aq_auth.js"></script></a> -->
+					</div>
+					<!-- 可信网站 -->
+					<div class="certificate">
+						<!--可信网站图片LOGO安装开始-->
+						<!-- <span id="kx_verify"></span><script type="text/javascript">(function (){var _kxs = document.createElement('script');_kxs.id  = 'kx_script';_kxs.async = true;_kxs.setAttribute('cid', 'kx_verify');_kxs.src = ('https:' == document.location.protocol ? 'https://ss.knet.cn' : 'http://rr.knet.cn')+'/static/js/icon3.js?sn=e17113011010670080hssl000000&tp=icon3';_kxs.setAttribute('size', 0);var _kx = document.getElementById('kx_verify');_kx.parentNode.insertBefore(_kxs, _kx);})();</script> -->
+						<!--可信网站图片LOGO安装结束-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 弹窗-新增or编辑收货地址 -->
+	<div class="pop-shade" id="pop-address">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text">编辑收货地址</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<!-- 格式错误 verify-error 内容为空 verify-empty-->
+			<div class="pop-body">
+				<form>
+					<div class="form-group">
+						<label><span>*</span>所属地区：</label>
+						<div class="form-ctn">
+							<!-- 地址下拉框 -->
+							<div class="address-select">
+								<!-- 下拉框 -->
+								<a href="javascript:void(0)" class="select-choice">
+									<!-- 选中 -->
+									<input class="select-input" name="" type="text" placeholder="请选择省市" value="" readonly>
+									<div class="address-arr">
+										<input name="" class="address" type="text" value="">
+										<input name="" class="address" type="text" value="">
+										<input name="" class="address" type="text" value="">
+										<input name="" class="address" type="text" value="">
+									</div>
+									<!-- 下拉icon -->
+									<span class="select-arrow">
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<!-- 下拉列表 -->
+								<div class="select-drop">
+									<!-- 地区类型 -->
+									<ul class="select-type">
+										<li class="active">省份</li>
+										<li>城市</li>
+										<li>县区</li>
+										<!-- <li>街道</li> -->
+									</ul>
+									<div class="select-type-ctn">
+										<!-- 省份 -->
+										<ul class="type-main">
+											<li>
+												<!-- 字母 -->
+												<div class="zm">A-G</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li class="">安微</li>
+													<li>安微</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">H-K</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>安微</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">L-S</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>安微</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">T-Z</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>安微</li>
+												</ul>
+											</li>
+										</ul>
+										<!-- 城市 -->
+										<ul class="type-main">
+											<li>
+												<!-- 字母 -->
+												<div class="zm">A-G</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li class="">广州市</li>
+													<li>广州市</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">H-K</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>广州市</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">L-S</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>广州市</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">T-Z</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>广州市</li>
+												</ul>
+											</li>
+										</ul>
+										<!-- 县区 -->
+										<ul class="type-main">
+											<li>
+												<!-- 字母 -->
+												<div class="zm">A-G</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li class="">海珠区</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">H-K</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>海珠区</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">L-S</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>海珠区</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">T-Z</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>海珠区</li>
+												</ul>
+											</li>
+										</ul>
+										<!-- 街道 -->
+										<ul class="type-main">
+											<li>
+												<!-- 字母 -->
+												<div class="zm">A-G</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li class="">洛浦大道</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">H-K</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>洛浦大道</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">L-S</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>洛浦大道</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">T-Z</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>洛浦大道</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- 异常提示 -->
+							<div class="error-tip">内容格式不正确！</div>
+							<div class="empty-tip">内容格式不能为空！</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span>*</span>街道地址：</label>
+						<div class="form-ctn">
+							<textarea name="" class="input-address" placeholder="建议您如实填写详细收货地址，例如街道名称，门牌号码，楼层和房间号等信息"></textarea>
+							<!-- 异常提示 -->
+							<div class="error-tip">内容格式不正确！</div>
+							<div class="empty-tip">内容格式不能为空！</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span>*</span>收货人：</label>
+						<div class="form-ctn">
+							<input name="" class="input-len25" type="text" placeholder="长度不超过25个字符">
+							<!-- 异常提示 -->
+							<div class="error-tip">内容格式不正确！</div>
+							<div class="empty-tip">内容格式不能为空！</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span>*</span>手机号码：</label>
+						<!-- 联系方式地区 -->
+						<div class="form-ctn">
+							<input name="" class="input-mobile" type="text">
+							<!-- 异常提示 -->
+							<div class="error-tip">内容格式不正确！</div>
+							<div class="empty-tip">内容格式不能为空！</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>电话号码：</label>
+						<!-- 联系方式地区 -->
+						<div class="form-ctn form-phone">
+							<!-- 区号 -->
+							<input name="" type="text" class="input-num qh" placeholder="区号">
+							<span class="line">-</span>
+							<!-- 号码 -->
+							<input name="" type="text" class="input-num phone-num" placeholder="电话号码">
+							<span class="line">-</span>
+							<!-- 分机 -->
+							<input name="" type="text" class="input-num fj" placeholder="分机">
+							<!-- 异常提示 -->
+							<div class="error-tip">内容格式不正确！</div>
+							<div class="empty-tip">内容格式不能为空！</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<!-- 设置默认收货地址 -->
+						<div class="set-default">
+							<span class="checkbox"></span><input name="" class="hidden" type="checkbox">设置为默认收货地址
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 确定按钮 -->
+				<div class="btn btn-yes">确定</div>
+				<!-- 取消按钮 -->
+				<div class="btn btn-no">取消</div>
+			</div>
+		</div>
+	</div>
+	<!-- 弹窗-删除收货地址 -->
+	<div class="pop-shade" id="pop-del">
+		<!-- 弹窗 -->
+		<div class="pop-main">
+			<!-- 头部 -->
+			<div class="pop-header">
+				<!-- 头部文字 -->
+				<div class="header-text">删除收货地址</div>
+				<!-- 关闭按钮 -->
+				<div class="header-close"></div>
+			</div>
+			<!-- 内容 -->
+			<div class="pop-body">
+				<p>确定要删除该收货地址？</p>
+			</div>
+			<!-- 底部 -->
+			<div class="pop-footer">
+				<!-- 确定按钮 -->
+				<div class="btn btn-yes">确定</div>
+				<!-- 取消按钮 -->
+				<div class="btn btn-no">取消</div>
+			</div>
+		</div>
+	</div>
+	<!-- IE低版本提示 -->
+	<!-- IE弹窗 -->
+	<div class="ie-tip">
+	    <div class="center">
+	        <h2><img src="../../img/ie-tip1.png"></h2>
+	        <div class="btm-ctn">
+	            <p>您当前浏览器版本过低，<span>可能影响到签订合同和报表的查看</span>，建议您切换到浏览器的<i>极速模式</i>或点击下载！</p>
+	            <div class="link">
+	                <a href="http://browser.qq.com/" target="blank"><img src="../../img/ie-tip3.png"></a>
+	                <a href="http://ie.sogou.com/" target="blank"><img src="../../img/ie-tip4.png"></a>
+	                <a href="http://se.360.cn/" target="blank"><img src="../../img/ie-tip2.png"></a>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+
+	<div class="login-pop">
+	    <div class="center-border">
+	        <div class="center">
+	            <i class="close"></i>
+	            <form class="login-form">
+	                <div class="form-group">
+	                    <input name="" class="login-user" type="text" placeholder="请您输入用户名/手机/邮箱">
+	                    <i class="input-del"></i>
+	                    <p class="error-tip">请输入用户名</p>
+	                </div>
+	                <div class="form-group">
+	                    <input name="" class="login-pwd" type="password" placeholder="请您输入密码">
+	                    <p class="error-tip">请输入密码</p>
+	                    <p class="login-fail">用户名或密码有误</p>
+	                </div>
+	                <div class="login-btn">登&nbsp;&nbsp;&nbsp;录</div>
+	                <a class="forget-pwd" href="../customer/forget-password1.html">忘记密码?</a>
+	            </form>
+	        </div>
+	    </div>
+	</div>
+
+
+
+
+
+
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

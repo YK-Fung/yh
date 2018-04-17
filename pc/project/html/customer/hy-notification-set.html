@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员中心-消息提醒设置</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/customer/hy-notification-set.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['customer/hy-notification-set']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-center" second-title="hy-notification"></div>
+	
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">消息提醒设置</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 消息中心 / 消息提醒设置</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<!-- 选择需要订阅的消息 -->
+					<div class="dy-ctn">
+						<!-- 头部 -->
+						<div class="main-head">
+							<!-- 标题 -->
+							<div class="main-title">选择需要订阅的消息</div>
+						</div>
+						<!-- 表单 -->
+						<div class="form-group">
+							<!-- 系统信息推送 -->
+							<div class="label">系统信息推送:</div>
+							<!-- 系统信息推送选项 -->
+							<ul class="dy-options">
+								<li class="active"><span class="checkbox"></span>客户订购通知</li>
+								<li><span class="checkbox"></span>市场信息</li>
+								<li><span class="checkbox"></span>优惠信息</li>
+								<li><span class="checkbox"></span>上新信息</li>
+							</ul>
+						</div>
+						<!-- 表单 -->
+						<div class="form-group">
+							<!-- 系统信息推送 -->
+							<div class="label">订单信息推送:</div>
+							<!-- 系统信息推送选项 -->
+							<ul class="dy-options">
+								<li class="active"><span class="checkbox"></span>新订单通知</li>
+								<li><span class="checkbox"></span>订单状态改变</li>
+								<li><span class="checkbox"></span>合同状态改变</li>
+								<li><span class="checkbox"></span>最新评价</li>
+								<li><span class="checkbox"></span>库存不足</li>
+								<li><span class="checkbox"></span>到货通知</li>
+							</ul>
+						</div>
+						<!-- 表单 -->
+						<div class="form-group">
+							<!-- 系统信息推送 -->
+							<div class="label">信息推送到:</div>
+							<!-- 系统信息推送选项 -->
+							<p class="edit-mobile">18316548365<a href="#">修改绑定手机</a></p>
+						</div>
+					</div>
+					<!-- 消息推送设置 -->
+					<!-- <div class="ts-ctn"> -->
+						<!-- 头部 -->
+						<!-- <div class="main-head"> -->
+							<!-- 标题 -->
+							<!-- <div class="main-title">消息推送设置</div> -->
+						<!-- </div> -->
+						<!-- 表单 -->
+						<!-- <div class="form-group"> -->
+							<!-- 系统信息推送 -->
+							<!-- <div class="label">手机短信交易信息提醒：</div> -->
+							<!-- 系统信息推送选项 -->
+							<!-- <ul class="ts-options">
+								<li class="active">开启</li>
+								<li>关闭</li>
+							</ul> -->
+						<!-- </div> -->
+						<!-- 表单 -->
+						<!-- <div class="form-group"> -->
+							<!-- 系统信息推送 -->
+							<!-- <div class="label">微信公众号消息推送：</div> -->
+							<!-- 系统信息推送选项 -->
+							<!-- <ul class="ts-options">
+								<li class="active">开启</li>
+								<li>关闭</li>
+							</ul> -->
+						<!-- </div> -->
+					<!-- </div> -->
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<include src="../include/footer.html"></include>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>供应商-优惠券查看</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/thirdstore/gy-discounts-view.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['thirdstore/gy-discounts-view']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-supplier" second-title="gy-discounts"></div>
+
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">优惠券查看</div>
+					<div class="path-right"><i class="fa fa-home"></i> 供应商 / 优惠券查看</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<div class="form-group">
+						<label><span class="must-star">*</span>店铺类型：</label>
+						<div class="form-ctn">商品优惠券</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>优惠券名称：</label>
+						<div class="form-ctn">我的名字是啥
+						</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>有效期类型：</label>
+						<div class="form-ctn">固定日期</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>有效时间：</label>
+						<div class="form-ctn">2017/10/31-2017/11/11</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>单张面值：</label>
+						<div class="form-ctn">999元</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>可用产品：</label>
+						<div class="form-ctn discounts-scope">指定商品可用</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>总发行量：</label>
+						<div class="form-ctn">1000张</div>
+					</div>
+					<div class="form-group">
+						<label><span class="must-star">*</span>使用条件：</label>
+						<div class="form-ctn">单笔订单中此优惠券指定货品金额满99999元使用</div>
+					</div>
+					<div class="form-group">
+						<label>推广方式：</label>
+						<div class="form-ctn">自主领取</div>
+					</div>
+					<div class="form-group channel">
+						<label>推广渠道：</label>
+						<div class="form-ctn">展示到店铺</div>
+					</div>
+					<div class="form-group">
+						<div class="form-ctn"><div class="btn btn-back">返回</div></div>
+					</div>
+
+					<!-- 优惠券查看 -->
+					<!-- 商品券discounts-sp、店铺券discounts-dp -->
+					<div class="discounts-view discounts-sp">
+						<div class="view">
+							<div class="view-l">
+								<p><span class="view-firm">公司名称</span></p>
+								<p><span class="view-opt view-condition">可用条件</span></p>
+								<p><span class="view-opt view-name">优惠券名称</span></p>
+								<p><span class="view-opt view-goods">可用产品</span></p>
+								<p><span class="view-opt view-time">有效时间</span></p>
+							</div>
+							<div class="view-r">
+								<p><span class="view-opt view-type">商品优惠券</span></p>
+								<p class="view-money">
+									<span class="money-icon">￥</span><span class="view-opt">0</span>
+								</p>
+								<div class="btn-view">立即领取</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<include src="../include/footer.html"></include>
+		</div>
+	</div>
+
+</body>
+</html>

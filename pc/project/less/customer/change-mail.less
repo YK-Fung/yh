@@ -1,0 +1,148 @@
+@import url(../hy-common2.less);
+
+.wrap,
+.ctn-right{
+	height: 100%;
+}
+/* 内容 */
+.ctn{
+	height: 100%
+}
+/*主要内容*/
+.main{
+	display: block;
+	height: 100%;
+	padding: 28px 34px 202px;
+}
+/*修改认证邮箱*/
+.main-ctn{
+	width: 100%;
+	height: 100%;
+	padding: 20px 28px;
+	background: #fff;
+	/* 头部 */
+	.main-head{
+		width: 100%;
+		overflow: hidden;
+		border-bottom: 1px solid #f5f5f5;
+	}
+	/*标题*/
+	.main-title{
+		float: left;
+		width: 50%;
+		height: 38px;
+		font-size: 14px;
+		text-align: left;
+		color: #2c2e2f;
+	}
+	/*表单*/
+	.form{
+		display: block;
+		width: 360px;
+		height: 200px;
+		margin: 90px auto 280px;
+		label{
+			float: left;
+			display: block;
+			width: 108px;
+			height: 34px;
+			margin-top: (66px-34px)/2;
+			line-height: 34px;
+			color: #666666;
+		}
+		.form-input,
+		.form-code{
+			width: 100%;
+			height: 66px;
+			font-size: 12px;
+		}
+		/*错误提示*/
+		.error-tip{
+			clear: both;
+			display: none;
+			padding-left: 108px;
+			font-size: 12px;
+			line-height: 24px;
+			color: #ce1a50;
+		}
+	}
+	/*表单组-输入*/
+	.form-input{
+		input{
+			float: left;
+			display: block;
+			width: 360px-108px;
+			height: 34px;
+			padding: 10px;
+			margin-top: (66px-34px)/2;
+			color: #666666;
+			border: 1px solid #cccccc;
+			outline: none;
+		}
+	}
+	/*表单组-验证码*/
+	.form-code{
+		input{
+			float: left;
+			display: block;
+			width: 120px;
+			height: 34px;
+			padding: 10px;
+			margin-top: (66px-34px)/2;
+			color: #666666;
+			border: 1px solid #cccccc;
+			outline: none;
+		}
+		/*获取验证码按钮*/
+		.btn-code{
+			float: left;
+			width: 120px;
+			height: 34px;
+			margin-top: (66px-34px)/2;
+			margin-left: 10px;
+			text-align: center;
+			line-height: 32px;
+			color: #cccccc;
+			border: 1px solid #cccccc;
+		}
+		.btn-code.active{
+			color: #00a0e9;
+			border: 1px solid #00a0e9;
+			&:hover{
+				cursor: pointer;
+			};
+		}
+	}
+	/*确认提交按钮*/
+	.btn-submit{
+		width: 200px;
+		height: 34px;
+		margin: 55px auto;
+		font-size: 12px;
+		text-align: center;
+		line-height: 34px;
+		color: #fff;
+		background: #00a0e9;
+		border-radius: 5px;
+		&:hover{
+			cursor: pointer;
+		};
+	}
+}
+
+/* 弹窗-成功，弹窗-失败 */
+#pop-success,
+#pop-fail{
+	/* display: block; */
+	.pop-main{
+		width: 436px;
+	}
+	.pop-body{
+		p{
+			padding: 75px 0;
+			font-size: 16px;
+			text-align: center;
+			color:#333;
+		}
+	}
+}

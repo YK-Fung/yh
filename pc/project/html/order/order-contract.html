@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员中心-订单管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/order/order-contract.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script type="text/javascript" src="../../js/jquery-1.11.2.js"></script>
+	<script>require(['order/order-contract']);</script>
+</head>
+<body>
+	<!-- 导航选中状态 -->
+	<div id="navCur" style="display: none;" max-title="hy-buyer" second-title="cg-order"></div>
+	
+	<div class="wrap">
+		<!-- 左侧菜单栏 -->
+		<include src="../include/bar-slider.html"></include>
+		<!-- 右侧内容 -->
+		<div class="ctn-right">
+			<!-- 顶部导航 -->
+			<include src="../include/bar-header.html"></include>
+			<!-- 内容 -->
+			<div class="ctn">
+				<!-- 路径 -->
+				<div class="ctn-path">
+					<div class="path-left">订单管理</div>
+					<div class="path-right"><i class="fa fa-home"></i> 会员中心 / 订单管理 / 订单详情</div>
+				</div>
+				<!-- 主要内容 -->
+				<div class="main">
+					<div class="main-ctn">
+						<!-- 类型名字 -->
+						<div class="type-name">合同信息<span class="arrow active"></span></div>
+						<!-- 合同 -->
+						<div class="contract toggle-ctn active">
+							<!-- 合同文字 -->
+							<div class="contract-text">
+								<p class="text-right">合同编号:16135132465168316813641516</p>
+								<br>
+								<h3 class="text-center font20">药荟健康网会员交易合同</h3>
+								<br>
+								<p>甲方（供应商）：</p>
+								<p>乙方（采购商）：</p>
+								<p>合同标的:详见药荟健康网采购商会员订单（订单号No.<span class="underline"></span>附后），此订单为本合同必备附件，与本合同具有同等法律效力。</p>
+								<p>经双方协商，供购双方在药荟健康网交易过程中，共同遵守如下条款：</p>
+								<p>一、质量要求：</p>
+								<p>1.产品符合国家质量标准和有关质量要求，进口产品提供进口产品注册证及口岸检验报告书；</p>
+								<p>2.产品包装符合有关规定和货物运输要求；</p>
+								<p>3.效期产品必须注明有效期；</p>
+								<p>4.供方对上述产品承担质量责任。</p>
+								<p>二、运输方式：<span class="underline"></span>。</p>
+								<p>三、收货单位：<span class="underline"></span>。</p>
+								<p>四、交货地点：<span class="underline"></span>。</p>
+								<p>五、运费承担：购方承担运费<span class="underline"></span>元 。</p>
+								<p>六、付款方式：按药荟健康网交易规则执行。</p>
+								<p>七、违约责任：本合同生效后，双方必须严格遵守，如单方因故不能履行时，必须征得对方同意方可终止合同，如有违约， 违约方应按《合同法》等有关法律规定承担违约责任。</p>
+								<p>八、解决合同争议方式：</p>
+								<p>1.由双方友好协商解决；</p>
+								<p>2.由药荟健康网按《交易规则》协调解决；</p>
+								<p>3.协商、协调解决不成时，可依法向被告住所地人民法院提起诉讼。</p>
+								<p>九、供购双方必须遵守《质量保证协议》。</p>
+								<p>十、其他约定。</p>
+								<p>十一、本合同一式二份，甲乙双方各执一份，自签订之日起生效。</p>
+							</div>
+							<!-- 甲方乙方 -->
+							<ul class="contract-people">
+								<li>
+									<div class="people-infor">
+										<div>甲方：</div>
+										<p>
+											<span>单<span class="empty"></span>位：</span>
+											<label>广西新华制药有限公司</label>
+										</p>
+										<p>
+											<span>代<span class="empty"></span>表：</span>
+											<label>李云龙</label>
+										</p>
+										<p>
+											<span>地<span class="empty"></span>址：</span>
+											<label>新余高新技术产业开发区南华路</label>
+										</p>
+										<!-- 银行账号自动识别 -->
+										<!-- <p>
+											<span>开户银行：</span>
+											<label class="bank-name">新余建行暨阳支行</label>
+										</p> -->
+										<!-- 开户银行自动识别 -->
+										<!-- <p>
+											<span>银行账号：</span>
+											<label class="account-ntm">360019500040251541XXXX</label>
+											编辑状态才显示 绑定按钮 -->
+											<!-- <button class="binding">绑定</button>
+										</p> -->
+										<p>
+											<span>电<span class="empty"></span>话：</span>
+											<label>0759-64646XX</label>
+										</p>
+									</div>
+									<!-- 已签订 显示 -->
+									<span class="already-sign">已签订</span>
+								</li>
+								<li>
+									<div class="people-infor">
+										<div>甲方：</div>
+										<p>
+											<span>单<span class="empty"></span>位：</span>
+											<label>广西新华制药有限公司</label>
+										</p>
+										<p>
+											<span>代<span class="empty"></span>表：</span>
+											<label>李云龙</label>
+										</p>
+										<p>
+											<span>地<span class="empty"></span>址：</span>
+											<label>新余高新技术产业开发区南华路</label>
+										</p>
+										<!-- 开户银行自动识别 -->
+										<!-- <p>
+											<span>开户银行：</span>
+											<label class="bank-name"></label>
+										</p> -->
+										<!-- 银行账号自动识别 -->
+										<!-- <p>
+											<span>银行账号：</span>
+											<label class="account-ntm"></label>
+											<button class="binding">绑定</button>
+										</p> -->
+										<p><span>电<span class="empty"></span>话：</span><label>0759-64646XX</label></p>
+									</div>	
+									<!-- 已签订 显示 -->
+									<!-- <span class="already-sign">已签订</span>		 -->	
+								</li>
+							</ul>
+						</div>
+						<!-- 采购双方清单 -->
+						<div class="type-name">采购双方清单</div>
+						<div class="inventory">
+							<ul class="table-tit">
+								<li>供应商</li>
+								<li>采购商</li>
+							</ul>
+							<ul class="table-ctn">
+								<li>
+									<p>企业名称（全称）：<span>江西康成药业有限公司</span></p>
+									<p>企业注册地：<span>江西省-宜春市-樟树市江西省樟树市xxx68号</span></p>
+									<p>企业法人代表：<span>李小二</span></p>
+									<p>联系人名称：<span>李小二</span></p>
+									<p>合同签订日期：<span>2017-11-13</span></p>
+								</li>
+								<li>
+									<p>企业名称（全称）：<span>江西康成药业有限公司</span></p>
+									<p>企业注册地：<span>江西省-宜春市-樟树市江西省樟树市xxx68号</span></p>
+									<p>企业法人代表：<span>李小二</span></p>
+									<p>联系人名称：<span>李小二</span></p>
+									<p>合同签订日期：<span>2017-11-13</span></p>
+								</li>
+							</ul>
+						</div>
+						<!-- 按钮组 -->
+						<ul class="btn-group">
+							<!-- 预览合同签订前隐藏，不能打印 -->
+							<li class="btn-view active">预览合同</li>
+							<li class="btn-sign active">签订合同</li>
+							<li class="btn-back">返回</li>
+						</ul>
+					</div>
+					<div class="contract-view">
+						<div class="contract-print"></div>
+						<!-- 按钮组 -->
+						<ul class="btn-group">
+							<li class="btn-print active">打印合同</li>
+							<li class="btn-back">返回</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 底部信息 -->
+			<include src="../include/footer.html"></include>
+		</div>
+		<!-- 弹窗 选择银行卡 -->
+		<div class="pop-shade" id="pop-choose-bank">
+			<!-- 弹窗 -->
+			<div class="pop-main">
+				<!-- 头部 -->
+				<div class="pop-header">
+					<!-- 头部文字 -->
+					<div class="header-text">选择银行卡</div>
+					<!-- 关闭按钮 -->
+					<div class="header-close"></div>
+				</div>
+				<!-- 内容 -->
+				<div class="pop-body">
+					<ul>
+						<!-- 个人 -->
+						<li class="card-ctn card-personal card-default">
+							<!-- 标签 -->
+							<div class="card-tag">个人</div>
+							<!-- 头部 -->
+							<div class="card-header">
+								<div class="card-bank card-bank-gs"></div>
+							</div>
+							<!-- 账号 -->
+							<div class="card-num">****  ***  ****  6954</div>
+							<!-- 内容 -->
+							<div class="card-body">
+								<p>开户行网点：海珠支行</p>
+								<p>开户行所在地：广州市</p>
+							</div>
+						</li>
+						<!-- 企业 -->
+						<li class="card-ctn card-personal card-default">
+							<!-- 标签 -->
+							<div class="card-tag">个人</div>
+							<!-- 头部 -->
+							<div class="card-header">
+								<div class="card-bank card-bank-gs"></div>
+							</div>
+							<!-- 账号 -->
+							<div class="card-num">****  ***  ****  6954</div>
+							<!-- 内容 -->
+							<div class="card-body">
+								<p>开户行网点：海珠支行</p>
+								<p>开户行所在地：广州市</p>
+							</div>
+						</li>
+						<!-- 企业 -->
+						<li class="card-ctn card-public card-default">
+							<!-- 标签 -->
+							<div class="card-tag">企业</div>
+							<!-- 头部 -->
+							<div class="card-header">
+								<div class="card-bank card-bank-gs"></div>
+							</div>
+							<!-- 账号 -->
+							<div class="card-num">****  ***  ****  6954</div>
+							<!-- 内容 -->
+							<div class="card-body">
+								<p>开户行网点：海珠支行</p>
+								<p>开户行所在地：广州市</p>
+							</div>
+						</li>
+						<!-- 添加储蓄卡 ，上限4个储蓄卡-->
+						<li class="card-ctn card-add">
+							<a href="../thirdstore/bank.html">添加储蓄卡</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 底部 -->
+				<div class="pop-footer">
+					<!-- 取消按钮 -->
+					<div class="btn btn-yes">确定</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
