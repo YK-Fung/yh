@@ -1,0 +1,340 @@
+@import url(../index/iframes.less);
+
+/*资质详情*/
+#audit-detail{
+	.wrap-ctn{
+		width: 100%;
+		padding: 20px 0 20px 20px;
+		text-align: center;
+		/*标题*/
+		.detail-head{
+			width: 100%;
+			overflow: hidden;
+			color: #666;
+			border-bottom: 1px solid #f5f5f5;
+			.title{
+				float: left;
+				width: 50%;
+				height: 38px;
+				font-size: 14px;
+				text-align: left;
+			}
+		}
+	}
+	/*单位信息、经营范围*/
+	.firm-detail,
+	.manage-range{
+		width: 100%;
+		padding: 0 28px;
+		margin-bottom: 20px;
+		background: #fff;
+		/*单位信息*/
+		.firm-infor{
+			position: relative;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.infor-detail{
+			position: relative;
+			width: 100%;
+			min-height: 64px;
+			overflow: hidden;
+			font-size: 12px;
+			line-height: 64px;
+			color: #615f5f;
+			border-bottom: 1px solid #eeeeee;
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+		.infor-left{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200px;
+			padding-right: 50px;
+			text-align: right;
+			/* 经营类型 */
+			.manage-type{
+				position: relative;
+				top: 2px;
+				width: 80px;
+				text-align: center;
+				cursor: pointer;
+			}
+		}
+		.infor-right{
+			width: 100%;
+			padding-left: 200px;
+			text-align: left;
+			&>input{
+				width: 100%;
+				padding: 0 10px;
+				line-height: 24px;
+			}
+			.service-tariffing{
+				position: relative;
+				top: 2px;
+				margin-left: 50px;
+				cursor: pointer;
+			}
+			.radio-inline .radio{
+				top: 26px;
+			}
+			.checkbox-inline .checkbox{
+				top: 26px;
+			}
+			.w400{
+				width: 400px;
+			}
+			.w600{
+				width: 600px;
+			}
+		}
+	}
+	.manage-range{
+		.infor-detail{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.infor-left{
+			top: 10px;
+		}
+	}
+	/*资质详情*/
+	.qualifications{
+		display: block;
+		width: 100%;
+		padding: 0 28px 20px;
+		overflow: hidden;
+		.detail-head{
+			margin-bottom: 30px;
+		}
+		li{
+			display: block;
+			width: 100%;
+			overflow: hidden;
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+			text-align: left;
+			border-bottom: 1px dashed #ddd;
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+		/*资质文字*/
+		.detail-text{
+			display: inline-block;
+			width: 23%;
+			line-height: 20px;
+			text-align: left;
+			vertical-align: middle;
+			p{
+				margin-bottom: 20px;
+				.red{
+					color: #ff0000;
+				}
+			}
+			input{
+				color: #999;
+				&.date-time{
+					width: 104px;
+				}
+			}
+			.long-time{
+				margin-left: 6px;
+				font-weight: normal;
+				input{
+					position: relative;
+					top: -1px;
+					margin-right: 2px;
+				}
+			}
+		}
+		/*资质内容*/
+		.detail-ctn{
+			display: inline-block;
+			width: 36%;
+			padding: 10px;
+			margin-left: 2%;
+			text-align: center;
+			vertical-align: middle;
+			border: 1px solid #e8e8e8;
+			box-shadow: 0 0 10px #e8e8e8;
+			p{
+				text-align: center;
+				font-size: 14px;
+				line-height: 30px;
+			}
+			/*资质图片*/
+			.detail-img{
+				position: relative;
+				width: 100%;
+				padding-top: 70%;
+				text-align: center;
+				overflow: hidden;
+				cursor: pointer;
+				&.qualifications-add{
+					background: url(../../img/iframe/card-add.png) center center no-repeat;
+					.qualifications-up{
+						top: 0;
+					}
+					.qualifications-del{
+						right: 100%;
+					}
+				}
+				&:hover .qualifications-del{
+					display: block;
+				}
+				.qualifications-up{
+					position: absolute;
+					top: 100%;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					opacity: 0;
+					cursor: pointer;
+				}
+				.detail-tip{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					border: 1px solid #ccc;
+				}
+				.detail-tip span,
+				img{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					max-width: 100%;
+					max-height: 100%;
+					font-size: 16px;
+					transform: translate(-50%, -50%);
+				}
+				.qualifications-del{
+					position: absolute;
+					top: 0;
+					right: 0;
+					z-index: 5;
+					display: none;
+					width: 24px;
+					height: 20px;
+					background: url(../../img/iframe/aptitude-img-del.gif) center center no-repeat;
+				}
+			}
+			/* 按钮 */
+			.btn{
+				margin-top: 10px;
+			}
+		}
+	}
+	/*审核*/
+	.audit{
+		.form-group{
+			width: 100%;
+			margin-bottom: 10px;
+			text-align: right;
+		}
+		label{
+			padding-top: 0;
+		}
+		textarea{
+			width: 80%;
+			margin-bottom: 10px;
+		}
+	}
+	/*按钮*/
+	.btn-group2 .btn{
+		margin: 40px 10px;
+	}
+	/* 服务费率 */
+	.modal-service{
+		.col-sm-2,
+		.col-sm-4{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.form-group{
+			width: 100%;
+			margin-top: 20px;
+			padding-left: 6px;
+			padding-right: 6px;
+			line-height: 34px;
+			white-space: nowrap;
+		}
+		.radio{
+			position: relative;
+			top: -1px;
+			margin-right: 4px;
+		}
+		/* 输入框 */
+		.service-input{
+			width: 60px;
+		}
+		/* 收费提示 */
+		.service-tip{
+			padding: 10px 16px 0;
+			margin-bottom: -10px;
+			font-weight: bold;
+		}
+	}
+	/*预览图片*/
+	.view-img{
+		padding: 50px;
+		text-align: center;
+		&:after{
+			content: '';
+			display: inline-block;
+			width: 0;
+			height: 100%;
+			vertical-align: middle;
+		}
+		.modal-ctn{
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			img{
+				max-width: 98%;
+				max-height: 98%;
+			}
+		}
+		.action-btn{
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 80px;
+			z-index: 10;
+			position: fixed;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			background: #fff;
+			i{
+				cursor: pointer;
+				margin: 0 56px;
+				display: inline-block;
+				width: 38px;
+				height: 80px;
+				&:nth-child(1){
+					background: url(../../img/iframe/icon-plus.png) center center no-repeat;
+				}
+				&:nth-child(2){
+					background: url(../../img/iframe/icon-minus.png) center center no-repeat;
+				}
+				&:nth-child(3){
+					background: url(../../img/iframe/icon-rotate.png) center center no-repeat;
+					background-size: 33px 30px;
+				}
+				&:nth-child(4){
+					background: url(../../img/iframe/icon-download.png) center center no-repeat;
+				}
+			}
+		}
+	}
+	.modal-submit .modal-body{
+		font-size: 14px;
+	}
+}

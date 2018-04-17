@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>安装包管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/setup/package-manage.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['setup/package-manage']);</script>
+</head>
+<body>
+	<div class="wrap" id="install">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">安装包管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<span>更新类型：</span>
+					<select class="form-control">
+						<option>请选择</option>
+						<option>热更新</option>
+						<option>强制更新</option>
+						<option>非强制更新</option>
+					</select>
+				</div>
+				<div class="form-group search-table pull-right">
+				    <input class="form-control" type="text" placeholder="请输入安装包名称、版本号">
+				</div>
+				<div class="form-group pull-right">
+					<input name="authenticationTimeBefore" class="form-control date-time beginTime" placeholder="上传开始时间">
+					-
+					<input name="authenticationTimeAfter" class="form-control date-time endTime" placeholder="上传结束时间">
+				</div>
+			</form>
+			<div class="overflow">
+				<div class="btn btn-primary pull-right add-package">新增</div>
+				<div class="blue pull-right all-delete">批量删除</div>
+			</div>
+			<div class="table-responsive tb-h">
+				<table class="table text-center table-view data">
+					<thead>
+						<tr>
+							<th><input type="checkbox" class="checkbox-all"></th>
+							<th>安装包名称</th>
+							<th>版本号</th>
+							<th>版本说明</th>
+							<th>更新类型</th>
+							<th>下载地址</th>
+							<th>上传时间</th>
+							<th>状态</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>热更新</td>
+							<td></td>
+							<td>2017/11/11</td>
+							<td>未启动</td>
+							<td>
+								<span class="add-package">编辑</span>
+								<span>启动</span>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>强制更新</td>
+							<td></td>
+							<td>2017/11/11</td>
+							<td>已启动</td>
+							<td>
+								<span>停止</span>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>非强制更新</td>
+							<td></td>
+							<td>2017/11/11</td>
+							<td></td>
+							<td>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade" id="package-delete" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除会员信息</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">删除会员信息</p>
+						<p class="text-muted">确定要删该改会员信息？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-新增 -->
+		<div class="modal fade" id="pop-add-package" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">新增/修改</h4>
+					</div>
+					<div class="modal-body">
+						<div class="form-group form-inline">
+						    <label>安装包名称：</label>
+						    <input type="text" class="form-control">
+						</div>
+						<div class="form-group form-inline">
+						    <label>版本号：</label>
+						    <input type="text" class="form-control">
+						</div>
+						<div class="form-group form-inline">
+						    <label>版本说明：</label>
+						    <textarea class="form-control"></textarea>
+						</div>
+						<div class="form-group form-inline">
+						    <label>更新类型：</label>
+						    <select class="form-control">
+								<option>请选择</option>
+								<option>热更新</option>
+								<option>强制更新</option>
+								<option>非强制更新</option>
+							</select>
+						</div>
+						<div class="form-group form-inline">
+						    <label>上传文件：</label>
+						    <input type="file">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="http://localhost:35729/livereload.js"></script><script src="http://localhost:35729/livereload.js"></script></body>
+</html>

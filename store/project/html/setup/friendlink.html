@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>友情链接</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/setup/friendlink.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['setup/friendlink']);</script>
+</head>
+<body>
+	<div class="wrap" id="friendlink">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">系统设置</p>
+			<p class="title-explain">友情链接</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<div class="btn btn-primary btn-add">新增信息+</div>
+				</div>
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="请输入页面标题/关键字进行搜索"></div>
+			</form>
+			<!-- 查询结果 -->
+			<div class="table-responsive tb-h">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>友情链接ID</th>
+							<th>名称</th>
+							<th>链接</th>
+							<th>图标地址</th>
+							<th>创建时间</th>
+							<th>修改时间</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<tr>
+							<td>中药材</td>
+							<td>中西成药</td>
+							<td>www.zycai.com</td>
+							<td><img src="../../img/iframe/link-logo.jpg" height="40"></td>
+							<td>2017-07-25</td>
+							<td>2017-07-25</td>
+							<td>
+								<i class="icon icon-edit"></i>
+								<i class="icon icon-del"></i>
+							</td>
+						</tr>
+					</tbody>
+			  	</table>
+			</div>
+			<!-- 分页 -->
+			<div class="pagination-div">
+				<span>共<span class="page-amount text-primary">20</span>页</span>
+				<ul class="pagination pull-right">
+					<li class="page-pre"><a href="#">‹</a></li>
+					<li class="page-number active"><a href="#">1</a></li>
+					<li class="page-number"><a href="#">2</a></li>
+					<li class="page-number"><a href="#">3</a></li>
+					<li class="page-number"><a href="#">4</a></li>
+					<li class="page-number"><a href="#">5</a></li>
+					<li class="page-next"><a href="#">›</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade delete-link" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">友情链接信息</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">删除友情链接信息记录</p>
+						<p class="text-muted">确定要删除友情链接信息记录？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-新增 -->
+		<div class="modal fade link-add" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">新增信息</h4>
+					</div>
+					<div class="modal-body">
+						<table class="table table-bordered text-center">
+							<tbody>
+								<tr>
+									<td class="text-right w186">友情链接ID</td>
+									<td><input name="" type="text" value=""></td>
+								</tr>
+								<tr>
+									<td class="text-right w186">名称</td>
+									<td><input name="" type="text" value=""></td>
+								</tr>
+								<tr>
+									<td class="text-right w186">链接</td>
+									<td><input name="" type="text" value=""></td>
+								</tr>
+								<tr>
+									<td class="text-right w186">图标地址</td>
+									<td>
+										<input name="" type="file" value="" class="hidden file-up">
+										<img src="" class="img-up" height="40" alt="添加图标">
+									</td>
+								</tr>
+								<tr>
+									<td class="text-right w186">创建时间</td>
+									<td><input name="" type="text" value="" class="date-time"></td>
+								</tr>
+								<tr>
+									<td class="text-right w186">修改时间</td>
+									<td><input name="" type="text" value="" class="date-time"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗 编辑 -->
+		<div class="modal fade link-detail" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">编辑信息</h4>
+					</div>
+					<div class="modal-body">
+						<table class="table table-bordered text-center">
+							<tbody>
+								<tr>
+									<td class="text-right w186">友情链接ID</td>
+									<td><input name="" type="text" value=""></td>
+								</tr>
+								<tr>
+									<td class="text-right w186">名称</td>
+									<td><input name="" type="text" value=""></td>
+								</tr>
+								<tr>
+									<td class="text-right w186">链接</td>
+									<td><input name="" type="text" value=""></td>
+								</tr>
+								<tr>
+									<td class="text-right w186">图标地址</td>
+									<td>
+										<input name="" type="file" value="" class="hidden file-up">
+										<img src="" class="img-up" height="40">
+									</td>
+								</tr>
+								<tr>
+									<td class="text-right w186">创建时间</td>
+									<td><input name="" type="text" value="" class="date-time"></td>
+								</tr>
+								<tr>
+									<td class="text-right w186">修改时间</td>
+									<td><input name="" type="text" value="" class="date-time"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

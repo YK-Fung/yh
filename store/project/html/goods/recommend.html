@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>产品推荐</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/goods/recommend.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['goods/recommend']);</script>
+</head>
+<body>
+	<div class="wrap" id="recommend">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">产品中心</p>
+			<p class="title-explain">产品推荐</p>
+			<div class="form-inline">
+				<div class="form-group">
+					<select class="form-control module-choose">
+						<option>请选择模块</option>
+						<option>新品优选</option>
+						<option>西药</option>
+						<option>中成药</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control type-choose">
+						<option>请选择类别</option>
+						<option>新品优选</option>
+						<option>西药</option>
+						<option>中成药</option>
+					</select>
+				</div>
+				<button type="button" class="btn btn-primary add-product">+推荐产品</button>
+				<span class="red">请先选择模块、产品类别、再推荐产品</span>
+			</div>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 查询条件 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">筛选：</label>
+					<select class="form-control">
+						<option>请选择</option>
+						<option>推荐</option>
+						<option>不推荐</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="control-label">推荐时间：</label>
+					<input name="authenticationTimeBefore" class="form-control date-time" placeholder="开始时间">
+					-
+					<input name="authenticationTimeAfter" class="form-control date-time" placeholder="结束时间">
+				</div>
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="请输入产品编码/产品名称/批准文号搜索"></div>
+			</form>
+			<!-- 查询结果 -->
+			<div class="table-responsive tb-h table-page">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>产品编码</th>
+							<th>产品名称</th>
+							<th>批准文号</th>
+							<th>规格</th>
+							<th>生产厂家</th>
+							<th>供应商名称</th>
+							<th>推荐时间</th>
+							<th>推荐人</th>
+							<th>状态</th>
+							<th>排序</th>
+							<th>是否推荐</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<tr>
+							<!-- 产品编码 -->
+							<td><input type="checkbox" class="pull-left">A5531553</td>
+							<!-- 产品名称 -->
+							<td></td>
+							<!-- 批准文号 -->
+							<td></td>
+							<!-- 规格 -->
+							<td></td>
+							<!-- 生产厂家 -->
+							<td></td>
+							<!-- 供应商名称 -->
+							<td></td>
+							<!-- 推荐时间 -->
+							<td></td>
+							<!-- 推荐人 -->
+							<td></td>
+							<!-- 状态 -->
+							<td>已上架</td>
+							<!-- 排序 -->
+							<td><input type="number" class="sort"></td>
+							<!-- 是否推荐 -->
+							<td>
+								<select class="form-control">
+									<option>不推荐</option>
+									<option>推荐</option>
+								</select>
+							</td>
+							<td>
+								<i class="icon icon-del"></i>
+							</td>
+						</tr>
+					</tbody>
+			  	</table>
+			  	<div class="table-btm">
+				  	<div class="checkbox pull-left">
+					    <label>
+					    	<input type="checkbox" class="checkbox-all">全选
+						</label>
+					</div>
+					<button type="button" class="btn btn-primary table-push">推荐</button>
+					<button type="button" class="btn btn-primary table-not-push">不推荐</button>
+			  	</div>
+			</div>
+		</div>
+		<!-- 弹窗-推荐产品 -->
+		<div class="modal fade module-product" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">推荐产品</h4>
+					</div>
+					<div class="modal-body">
+						<div class="top">
+							<div class="pull-left">模块：<span class="module-name"></span></div>
+							<div class="pull-left">产品类别：<span class="type-name"></span></div>
+							<input class="form-control pull-right product-search" type="text" placeholder="请输入产品编码/产品名称/批准文号搜索">
+						</div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>产品编码</th>
+									<th>产品名称</th>
+									<th>批准文号</th>
+									<th>规格</th>
+									<th>生产厂家</th>
+									<th>供应商</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="info">
+									<td class="hidden"><input type="checkbox" checked></td>
+									<td>65465141</td>
+									<td>999感冒灵</td>
+									<td>65465141</td>
+									<td>200g/盒</td>
+									<td>999</td>
+									<td>广州医药</td>
+									<td>
+										<!-- 跳到产品详情 -->
+										<a href="goods-edit.html">查看</a>
+										<a href="javascript:void(0)" class="check-recommend">撤销</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="hidden"><input type="checkbox"></td>
+									<td>65465141</td>
+									<td>999感冒灵</td>
+									<td>65465141</td>
+									<td>200g/盒</td>
+									<td>999</td>
+									<td>广州医药</td>
+									<td>
+										<!-- 跳到产品详情 -->
+										<a href="goods-edit.html">查看</a>
+										<a href="javascript:void(0)" class="check-recommend">选择</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- 分页 -->
+						<div class="pages">
+							<div class="pagination-div pull-right">
+								<span>共<span class="page-amount text-primary">20</span>页</span>
+								<ul class="pagination pull-right">
+									<li class="page-pre"><a href="#">‹</a></li>
+									<li class="page-number active"><a href="#">1</a></li>
+									<li class="page-number"><a href="#">2</a></li>
+									<li class="page-number"><a href="#">3</a></li>
+									<li class="page-number"><a href="#">4</a></li>
+									<li class="page-number"><a href="#">5</a></li>
+									<li class="page-next"><a href="#">›</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade delete-product" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除记录</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">删除产品记录</p>
+						<p class="text-muted">确定要删除该产品记录？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

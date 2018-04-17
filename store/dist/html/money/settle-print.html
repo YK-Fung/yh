@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>结算打印单据</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/money/settle-print.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['money/settle-print']);</script>
+</head>
+<body>
+
+	<!-- 主要内容 -->
+	<div class="wrap" id="settle-print">
+		<!-- 打印单据 -->
+		<div class="print-bills">
+			<div class="print-ctn">	
+				<div class="top">
+					<!-- logo -->
+					<div class="logo"><img src="../../img/iframe/logo.jpg"></div>
+					<!-- 编号： -->
+					<div class="num">编号： <span>1704061136332010</span></div>  
+				</div>
+				<div class="massage">
+					<h2>结算单据</h2>
+					<p class="time">结算日期：<span>2017-06-28</span> <span>至 2017-07-04</span></p>
+					<div class="tit">
+						<div class="name">
+							<p>供应商名称：广州医药公司</p>
+							<p class="cg">采购商名称：优胜镇秀溪村卫生站</p>
+						</div>
+						<p>结算信息</p>
+					</div>
+					<!-- 表格 -->
+					<!-- 供应商 -->
+					<div class="table">
+						<ul class="title">
+							<li>商家应收款项</li>
+							<li>货款</li>
+							<li>交易服务费</li>
+							<li>退款总额</li>
+							<li>商家应收小计</li>
+						</ul>
+						<ul class="detail">
+							<li>4500.00</li>
+							<li>0</li>
+							<li>0</li>
+							<li>0</li>
+							<li class="red">4500.00</li>
+						</ul>
+					</div>
+					<!-- 采购商 -->
+					<div class="table">
+						<ul class="title">
+							<li>商家应付款项</li>
+							<li>货款</li>
+							<li>交易服务费</li>
+							<li>退款总额</li>
+							<li>商家应付小计</li>
+						</ul>
+						<ul class="detail">
+							<li>4500.00</li>
+							<li>0</li>
+							<li>0</li>
+							<li>0</li>
+							<li class="red">-4500.00</li>
+						</ul>
+					</div>
+					
+					<p class="total-num">结算单总金额：<span><i>4500.00</i>元</span></p>
+				</div>
+			</div>
+		</div>
+		<!-- 打印按钮 -->
+		<div class="print-clone"></div>
+		<div class="print-btn">打印</div>
+	</div>
+
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

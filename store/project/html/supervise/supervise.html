@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>市场与交易监管</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/supervise/supervise.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['supervise/supervise']);</script>
+</head>
+<body>
+	<div class="wrap" id="supervise">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">市场与交易监管</p>
+			<p class="title-explain">市场与交易监管管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<form class="form-inline" role="form">
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="姓名/企业名称/订单搜索"></div>
+			</form>
+			<table class="table text-center">
+				<thead>
+					<tr>
+						<th>产品编号</th>
+						<th>产品名称</th>
+						<th>批号</th>
+						<th>生产企业</th>
+						<th>供应商企业名</th>
+						<th>供应商联系人</th>
+						<th>采购商企业名</th>
+						<th>采购商联系人</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>12345678</td>
+						<td>哈哈哈药丸</td>
+						<td>147028654</td>
+						<td>北京同仁堂有限公司</td>
+						<td>北京同仁堂有限公司</td>
+						<td>后羿</td>
+						<td>阿里巴巴与四十大盗公司</td>
+						<td>娜可露露</td>
+						<td><a class="view" href="supervise-detail1.html">查看详情</a></td>
+					</tr>
+					<tr>
+						<td>12345678</td>
+						<td>哈哈哈药丸</td>
+						<td>147028654</td>
+						<td>北京同仁堂有限公司</td>
+						<td>北京同仁堂有限公司</td>
+						<td>后羿</td>
+						<td>阿里巴巴与四十大盗公司</td>
+						<td>两个不一样的哦</td>
+						<td><a class="view" href="supervise-detail2.html">查看详情</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>	
+</body>
+</html>

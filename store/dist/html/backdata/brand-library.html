@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>品牌基本库</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/backdata/brand-library.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['backdata/brand-library']);</script>
+</head>
+<body>
+	<div class="wrap" id="brand">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">品牌基本库</p>
+			<p class="title-explain">品牌基本库管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">品牌名称名称：</label>
+				    <input class="form-control" type="text">
+				</div>
+				<div class="form-group">
+					<div class="btn btn-primary add-brand-btn">新增品牌</div>
+				</div>
+			</form>
+			<h2 class="table-title"><span class="name">品牌查询</span><span class="line"></span></h2>
+			<!-- 查询结果 -->
+			<div class="table-responsive tb-h">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>品牌logo</th>
+							<th>品牌名称</th>
+							<th>品牌说明</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<tr>
+							<td><img src="../../img/iframe/order-img.jpg" height="40" class="logo"></td>
+							<td>同仁堂</td>
+							<td>凭良心做，做良心药，“可以质鬼神，可以应病症”，童叟无欺，问心无愧。</td>
+							<td>
+								<i class="icon icon-edit"></i>
+								<i class="icon icon-del"></i>
+							</td>
+						</tr>
+					</tbody>
+			  	</table>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade delete-brand" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除品牌</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">您确定删除品牌数据？</p>
+						<p class="text-muted">一旦删除已有品牌数据将无法显示图片</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-新增品牌 编辑品牌 -->
+		<div class="modal fade pop-add-brand" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">新增品牌</h4>
+					</div>
+					<div class="modal-body">
+						<form action="">
+							<div class="form-group">
+								<label class="pull-left text-right">品牌LOGO：</label>
+								<input type="file" class="form-control pull-left add-img">
+								<p class="tips">建议上传图片大小300*300px 不超2M</p>
+								<div class="pic">
+									<img src="" class="pic-show">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="pull-left text-right">品牌名称：</label>
+								<input type="text" class="form-control pull-left brand-name">
+							</div>
+							<div class="form-group">
+								<label class="pull-left text-right">品牌描述：</label>
+								<textarea class="form-control pull-left text"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 查看放大图片 -->
+		<div class="check-img">
+			<!-- 关闭 -->
+			<span class="closed"></span>
+			<div class="shadow">
+				<img src="">
+			</div>
+		</div>
+	</div>	
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

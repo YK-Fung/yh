@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>国产药品目录</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/backdata/backdata.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['backdata/medicine-domestic']);</script>
+</head>
+<body>
+	<div class="wrap" id="backdata">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">国产药品目录</p>
+			<p class="title-explain">国产药品库管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">产品名称：</label>
+				    <input class="form-control" type="text">
+				</div>
+				<div class="form-group">
+					<label class="control-label">产品分类：</label>
+				    <input class="form-control" type="text">
+				</div>
+				<div class="form-group">
+					<label class="control-label">批准文号：</label>
+				    <input class="form-control" type="text">
+				</div>	
+				<div class="form-group">
+					<label class="control-label">生产单位：</label>
+				    <input class="form-control" type="text">
+				</div>
+				<div class="form-group">
+					<label class="control-label">是否违禁：</label>
+					<!-- 下拉 -->
+				    <select class="form-control type">
+				    	<option>全部</option>
+				    	<option>是</option>
+				    	<option>否</option>
+				    </select>
+				</div>
+				<div class="form-group">
+					<label class="control-label">审核状态：</label>
+					<!-- 下拉 -->
+				    <select class="form-control type">
+				    	<option>全部</option>
+				    	<option>待审核</option>
+				    	<option>待审核</option>
+				    	<option>审核不通过</option>
+				    </select>
+				</div>
+				<div class="form-group">
+					<div class="btn btn-primary add-form">新增</div>
+				</div>
+			</form>
+			<h2 class="table-title"><span class="name">国产药品目录</span><span class="line"></span></h2>
+			<table class="table text-center table-view data">
+				<thead>
+					<tr>
+						<th>产品编码</th>
+						<th>产品名称</th>
+						<th>批准文号</th>
+						<th>包装规格</th>
+						<th>生产单位</th>
+						<th>产品分类</th>
+						<th>是否违禁</th>
+						<th>审核状态</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>CM1000000001</td>
+						<td>氟康唑氯化钠注射液</td>
+						<td>国药准字H20043608</td>
+						<td>100ml:0.2g:0.9g</td>
+						<td>上海华源药业(宁夏)沙赛制药有限公司</td>
+						<td>化学药品-抗微生物药</td>
+						<td>否</td>
+						<td>审核通过</td>
+						<td>
+							<span class="icon blue edit-product">加工</span>
+							<span class="icon blue check-product">审核</span>
+							<span class="icon red stop-use">停用</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 弹窗-新增信息 -->
+		<div class="modal fade bs-example-modal-lg pop-backdata-add" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title"></h4>
+					</div>
+					<div class="modal-body">
+						<!-- 基础信息 -->
+						<h2 class="table-title"><span class="name">基础信息</span><span class="line"></span></h2>
+						<div class="base-massge">
+							<form class="form-inline" role="form">
+								<div class="form-group">
+									<label class="control-label"><span class="red">*</span> 批准文号：</label>
+								    <input class="form-control must" type="text">
+								</div>
+								<div class="form-group">
+									<label class="control-label">产品名称：</label>
+								    <input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label class="control-label">英文名称：</label>
+								    <input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label class="control-label">商品名：</label>
+								    <input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label class="control-label">剂型：</label>
+									<!-- 下拉 -->
+								    <select class="form-control">
+								    	<option>全部</option>
+								    	<option>AA</option>
+								    	<option>BB</option>
+								    </select>
+								</div>
+								<div class="form-group">
+									<label class="control-label">规格：</label>
+								    <input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label class="control-label">生产单位：</label>
+								    <input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label class="control-label">生产地址：</label>
+								    <input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label class="control-label">产品类别：</label>
+									<!-- 下拉 -->
+								    <select class="form-control">
+								    	<option>全部</option>
+								    	<option>AA</option>
+								    	<option>BB</option>
+								    </select>
+								</div>
+								<div class="form-group">
+									<label class="control-label">批准日期：</label>
+								   	<input name="authenticationTimeBefore" class="form-control date-time wid130" placeholder="开始时间">
+								</div>
+								<div class="form-group">
+									<label class="control-label">原批准文号：</label>
+								    <input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label class="control-label">药品本位码：</label>
+								    <input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label class="control-label">药品本位码备注：</label>
+								    <input class="form-control" type="text">
+								</div>
+							</form>
+						</div>
+						<!-- 关联信息 -->
+						<h2 class="table-title"><span class="name">关联信息</span><span class="line"></span></h2>
+						<div class="relevance-massge">
+							<form class="form-inline" role="form">
+								<div class="form-group">
+									<label class="control-label">国家基本药物：</label>
+									<!-- 下拉 -->
+								    <select class="form-control">
+								    	<option>全部</option>
+								    	<option>AA</option>
+								    	<option>BB</option>
+								    </select>
+								</div>
+								<div class="form-group">
+									<label class="control-label">平台分类：</label>
+									<!-- 下拉 -->
+								    <select class="form-control">
+								    	<option>全部</option>
+								    	<option>AA</option>
+								    	<option>BB</option>
+								    </select>
+								</div>
+								<div class="form-group">
+									<label class="control-label">计价单位：</label>
+									<!-- 下拉 -->
+								    <select class="form-control">
+								    	<option>全部</option>
+								    	<option>AA</option>
+								    	<option>BB</option>
+								    </select>
+								</div>
+								<div class="form-group">
+									<label class="control-label">经营范围：</label>
+									<!-- 查询 -->
+								    <div class="search-pull-down manage-range">
+								    	<input class="form-control" type="text">
+								    	<i class="glyphicon glyphicon-search"></i>
+								    	<!-- 模糊搜索列表 -->
+								    	<ul class="search-list">
+											<li>复方胃友片</li>
+											<li>复方胃友片</li>
+											<li>复方胃友片</li>
+											<li>复方胃友片</li>
+											<li>复方胃友片</li>
+											<li>复方胃友片</li>
+										</ul>
+								    </div>
+								</div>
+								<div class="form-group">
+									<label class="control-label">助记码：</label>
+								    <input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label class="control-label">包装规格：</label>
+								    <input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label class="control-label">品牌：</label>
+								    <!-- 查询 -->
+								    <div class="search-pull-down">
+								    	<input class="form-control" type="text">
+								    	<i class="glyphicon glyphicon-search"></i>
+								    	<!-- 模糊搜索列表 -->
+								    	<ul class="search-list">
+											<li>复方胃友片</li>
+											<li>复方胃友片</li>
+											<li>复方胃友片</li>
+											<li>复方胃友片</li>
+											<li>复方胃友片</li>
+											<li>复方胃友片</li>
+										</ul>
+								    </div>
+								</div>
+								<div class="form-group">
+									<label class="control-label">是否OTC：</label>
+									<!-- 下拉 -->
+								    <select class="form-control">
+								    	<option>全部</option>
+								    	<option>是</option>
+								    	<option>否</option>
+								    </select>
+								</div>
+								<div class="form-group">
+									<label class="control-label">OTC类型：</label>
+									<!-- 下拉 -->
+								    <select class="form-control">
+								    	<option>全部</option>
+								    	<option>AA</option>
+								    	<option>BB</option>
+								    </select>
+								</div>
+							</form>
+							<!-- 产品图片 -->
+							<div class="photo-product">
+								<label>产品图片：</label>
+								<div class="detail-group">
+									<canvas id="canvas" class="hidden"></canvas>
+									<!-- 详情内容 -->
+									<ul class="product-img">
+										<li><input name="" class="product-img-up" type="file" multiple></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary btn-submit">提交审核</button>
+						<button type="button" class="btn btn-primary btn-pass">审核通过</button>
+					</div>
+					<!-- 操作日志 -->
+					<div class="operation-log">
+						<h2 class="table-title" style="margin-top:40px;"><span class="name">操作日志</span><span class="line"></span></h2>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>操作时间</th>
+									<th>操作人</th>
+									<th>当前状态</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2017-10-10 10:00:00</td>
+									<td>admin</td>
+									<td>待审核</td>
+									<td>审核</td>
+								</tr>
+								<tr>
+									<td>2017-10-10 10:00:00</td>
+									<td>admin</td>
+									<td>已审核</td>
+									<td>加工</td>
+								</tr>
+								<tr>
+									<td>2017-10-10 10:00:00</td>
+									<td>admin</td>
+									<td>未提交审核</td>
+									<td>加工</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-停用 -->
+		<div class="modal fade pop-stop-use" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">提醒</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">停用</p>
+						<p class="text-muted">确定停用吗？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade pop-delete-photo" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除图片</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">删除图片</p>
+						<p class="text-muted">确定删除该图片？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 预览图片 -->
+		<div class="view-img">
+			<img src="">
+		</div>
+	</div>	
+</body>
+</html>

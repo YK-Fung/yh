@@ -1,0 +1,228 @@
+@import url(../index/iframes.less);
+/* 会员注册 */
+#install{
+	.blue{
+		color:#337ab7;
+		line-height: 32px;
+		margin: 0 20px;
+		cursor: pointer;
+	}
+	.btn{
+		cursor: pointer;
+	}
+	.overflow{
+		overflow: hidden;
+		margin: 20px 0;
+		width: 100%;
+	}
+	.date-time{
+		width: 140px;
+	}
+	table tr td:last-of-type{
+		span{
+			color:#337ab7;
+			cursor: pointer;
+		}
+	}
+	.search-table{
+		margin-bottom: 20px;
+		input{
+			width: 200px;
+		}
+	}
+	/* 新增 */
+	#pop-add-package{
+		.modal-body{
+			padding: 15px 90px;
+		}
+		.form-group{
+			label{
+				width: 80px;
+				line-height: 34px;
+				float: left;
+				text-align: right;
+			}
+			input{
+				width: 320px;
+				&.error{
+					border:1px solid #f00;
+					box-shadow:  0 0 8px rgba(255,0,0,.4);
+				}
+				&.date-time{
+					width: 150px;
+				}
+			}
+		}
+		textarea{
+			width: 320px;
+			height: 100px;
+			resize: none;
+		}
+		/*地址下拉框*/
+		.address-select{
+			position: relative;
+			display: inline-block;
+			width: 320px;
+			/* 下拉框 */
+			.select-choice{
+				display: block;
+				width: 100%;
+				height: 34px;
+				overflow: hidden;
+				background-color: #fff;
+			}
+			/* 下拉框 */
+			.select-input{
+				padding-right: 35px;
+				overflow: hidden;
+		    	font-size: 12px;
+				line-height: 34px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				background: transparent;
+			}
+			.address-arr{
+				display: none;
+			}
+			/* 选中 */
+			.select-chosen{
+		    	display: block;
+		    	width: 100%;
+				height: 100%;
+				padding-left: 6px;
+				padding-right: 36px;
+		    	overflow: hidden;
+				font-size: 12px;
+				line-height: 34px;
+		    	white-space: nowrap;
+		    	text-overflow: ellipsis;
+				color:#666;
+				background: #fff;
+				border: 1px solid #ccc;
+				outline: none;
+			}
+			/* 下拉icon */
+			.select-arrow{
+				position: absolute;
+				right: 0;
+				top:0;
+				width: 30px;
+				height: 100%;
+				text-align: center;
+				line-height: 30px;
+				color:#d9d9d9;
+				background-color: #f5f5f5;
+				border: 1px solid  #ccc;
+			}
+			/* 下拉列表 */
+			.select-drop{
+				position: absolute;
+				z-index: 8;
+				display: none;
+				width: 100%;
+				margin-top: -1px;
+				font-size: 12px;
+				text-align: left;
+				background-color: #fff;
+				border: 1px solid  #ccc;
+			}
+			/*选择类型*/
+			.select-type{
+				display: block;
+				width: 100%;
+				overflow: hidden;
+				font-size: 12px;
+				li{
+					display: block;
+					float: left;
+					width: 33.33333%;
+					height: 30px;
+					text-align: center;
+					line-height: 30px;
+					color: #666;
+					background: #f0f0f0;
+					cursor: pointer;
+				}
+				.active{
+					color: #ff6600;
+					background: #fff;			
+				}
+			}
+			/*对应类型内容*/
+			.type-main{
+				display: none;
+				width: 100%;
+				padding: 10px;
+				overflow: hidden;
+				font-size: 12px;
+				&:first-child{
+					display: block;
+				}				
+				&>li{
+					display: block;
+					width: 100%;
+					margin: 3px 0;
+					overflow: hidden;
+					font-size: 12px;
+					color: #333;
+				}
+			}
+			/* 字母 */
+			.zm{
+				float: left;
+				width: 15%;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+			}
+			/* 字母内容 */
+			.zm-ctn{
+				float: left;
+				display: block;
+				width: 85%;
+				text-align: left;
+				li{
+					display: inline-block;
+					width: auto;
+					padding: 0 10px;
+					line-height: 30px;
+					border-radius: 3px;
+					cursor: pointer;
+					&:hover{
+						background: #ff6600;
+						color: #fff;
+					}
+				}
+				.active{
+					background: #ff6600;
+					color: #fff;
+				}
+			}
+			/* 内容下拉时 */
+			&.down{
+				.select-arrow i{
+					transform:rotate(180deg);
+				}
+				.select-drop{
+					display: block;
+				}
+			}
+		}
+	}
+	/*弹窗*/
+	#package-delete{
+		.modal-body{
+			height: 220px;
+			padding-top: 100px;
+			text-align: center;
+			background: url(../../img/iframe/icon-warn.png) center 30px no-repeat;
+		}
+		.text-primary{
+			color: #1296db;
+			font-size: 18px;
+		}
+		.text-muted{
+			font-size: 12px;
+		}
+	}
+}

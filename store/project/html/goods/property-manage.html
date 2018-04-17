@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>属性管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/goods/property-manage.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['goods/property-manage']);</script>
+</head>
+<body>
+	<div class="wrap" id="property">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">产品中心</p>
+			<p class="title-explain">属性管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 左侧栏目 -->
+			<div class="nav-l pull-left">
+				<!-- 移动提示语 -->
+				<div class="move"></div>
+				<div class="catalogue">
+					<h3>属性管理</h3>
+					<i class="glyphicon glyphicon-minus-sign"></i>
+					<i class="glyphicon glyphicon-plus-sign"></i>
+				</div>
+				<div class="list">
+					<div class="box cur">
+						<input type="text" class="name" value="用途" placeholder="菜单名" readonly>
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="科室" placeholder="菜单名" readonly>
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="部位" placeholder="菜单名" readonly>
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="处方类型" placeholder="菜单名" readonly>
+					</div>
+				</div>
+			</div>
+			<!-- 列表内容 -->
+			<div class="list-detail pull-left">
+				<h3 class="tit-r" id="menu-title">属性详情</h3>
+				<div class="ctn-detail">
+					<div class="form-group">
+						<label class="pull-left">是否启用：</label>
+						<div class="radio pull-left">
+							<label>
+						    	<input type="radio" name="a" checked>启用
+							</label>
+						</div>
+						<div class="radio pull-left">
+							<label>
+						    	<input type="radio" name="a">禁用
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="pull-left">是否多选：</label>
+						<div class="radio pull-left">
+							<label>
+						    	<input type="radio" name="b" checked>单选
+							</label>
+						</div>
+						<div class="radio pull-left">
+							<label>
+						    	<input type="radio" name="b">多选
+							</label>
+						</div>
+					</div>
+					<div class="form-group btn-chooses">
+						<div class="radio pull-left radio-choose1">
+							<label>
+						    	<input type="radio" name="c" checked>固定选项
+
+							</label>
+						</div>
+						<div class="radio pull-left radio-choose2">
+							<label>
+						    	<input type="radio" name="c">可自增选项
+
+							</label>
+						</div>
+						<div class="radio pull-left radio-choose3">
+							<label>
+						    	<input type="radio" name="c">自定义选项
+							</label>
+						</div>
+					</div>
+					<div class="form-group tab-all">
+					    <div class="input-group">
+					      <input type="text" class="form-control" id="exampleInputAmount" placeholder="请输入标签">
+					      <div class="input-group-addon add-tag">添加</div>
+					    </div>
+					    <ul class="list-tag"></ul>
+					</div>
+					<div class="btn btn-primary submit">提交</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade delete-node" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除目录</h4>
+					</div>
+					<div class="modal-body">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,137 @@
+@import url(../index/iframes.less);
+
+/* 品牌管理 */
+#brand{
+	table{	
+		td{
+			line-height: 40px;
+			.logo{
+				border:1px solid #ddd;
+			}
+		}
+	}
+	.form-inline{
+		margin-bottom: 20px;
+		&:after{
+			content: '';
+			clear: both;
+			display: block;
+			width: 100%;
+			height: 0;
+		}
+	}
+	/* 标题 */
+	.table-title{
+	    margin-bottom: 20px;
+	    font-size: 14px;
+	    .line{
+			width: 100%;
+			border-bottom:1px solid #ddd;
+			display: block;
+	    }
+	    .name{
+	    	background-color: #fff;
+	    	margin-top: -7px;
+		    float: left;
+		    padding-right: 10px;
+	    }
+	}
+	.add-btn{
+		margin-bottom: 10px;
+	}
+	/*弹窗*/
+	.delete-brand{
+		.modal-body{
+			height: 220px;
+			padding-top: 100px;
+			text-align: center;
+			background: url(../../img/iframe/icon-warn.png) center 30px no-repeat;
+		}
+		.text-primary{
+			color: #1296db;
+			font-size: 18px;
+		}
+		.text-muted{
+			font-size: 12px;
+		}
+	}
+	/* 设置推荐品牌 */
+	.pop-add-brand{
+		.modal-body{
+			padding-left: 60px;
+		}
+		label{
+			width: 75px;
+			line-height: 34px;
+			font-weight: normal;
+		}
+		/* 品牌logo */
+		.add-img{
+			width: 250px !important;
+			border:0;
+			box-shadow: none;
+		}
+		.pic{
+			width: 50px;
+			height: 50px;
+			border:1px solid #ddd;
+			float: left;
+			text-align: center;
+			img{
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+		.form-group{
+			overflow: hidden;
+			position: relative;
+		}
+		/* 提示 */
+		.tips{
+			position: absolute;
+		    top: 32px;
+		    left: 86px;
+		    color: #999;
+		}
+		.form-control{
+			width: 300px;
+		}
+		.text{
+			width: 415px;
+			height: 75px;
+		}
+	}
+	/* 查看图片 */
+	.check-img{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top:0;
+		display: none;
+		z-index: 1051;
+		.closed{
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			cursor: pointer;
+			background: url(../../img/iframe/close.png) no-repeat;
+		}
+		.shadow{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.5);
+			z-index: 8;
+			display: -webkit-flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		img{
+			display: block;
+			margin:0 auto;
+		}
+	}
+}

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>产品推荐-模块管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/goods/module-manage.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['goods/module-manage']);</script>
+</head>
+<body>
+	<div class="wrap" id="module">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">产品推荐</p>
+			<p class="title-explain">模块管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 查询条件 -->
+			<form class="form-inline" role="form">
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="请输入模块名称"></div>
+			</form>
+			<div class="add-btn">
+				<button class="btn btn-primary pull-right">+添加模块</button>
+			</div>
+			<!-- 查询结果 -->
+			<div class="table-responsive tb-h">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>序号</th>
+							<th>模块名称</th>
+							<th>产品类别</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<tr>
+							<!-- 序号 -->
+							<td>1</td>
+							<!-- 模块名称 -->
+							<td>新品优选</td>
+							<!-- 产品类别 -->
+							<td>西药</td>
+							<!-- 操作 -->
+							<td>
+								<i class="icon icon-edit"></i>
+								<i class="icon icon-del"></i>
+							</td>
+						</tr>
+					</tbody>
+			  	</table>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade edit-module" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title"></h4>
+					</div>
+					<div class="modal-body">
+						<div class="form-group overflow">
+						    <label class="pull-left">模块名称：</label>
+						    <input type="text" class="form-control pull-left">
+						</div>
+						<div class="form-group overflow">
+						    <label class="pull-left">产品类别：</label>
+						   	<select class="form-control pull-left">
+								<option>无</option>
+								<option>新品优选</option>
+								<option>西药</option>
+								<option>中成药</option>
+							</select>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes"">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade delete-product" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除记录</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">删除产品记录</p>
+						<p class="text-muted">确定要删除该产品记录？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

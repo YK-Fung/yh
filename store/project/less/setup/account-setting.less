@@ -1,0 +1,44 @@
+@import url(../index/iframes.less);
+#account{
+	.center{
+		width: 420px;
+		margin: 0 auto;
+	}
+	.form-group{
+		position: relative;
+		margin-bottom: 26px;
+		label{
+			width: 100px;
+			text-align: right;
+		}
+		input{
+			width: 300px;
+			&.error{
+				border:1px solid #f00;
+				box-shadow:  0 0 8px rgba(255,0,0,.4);
+			}
+		}
+		/* 正确 */
+		.icon-true{
+			color:#00b511;
+			position: absolute;
+			right: -10px;
+    		top: 12px;
+    		display: none;
+		}
+		/* 错误提示 */
+		.tips{
+			padding-left: 104px;
+    		color: #ff0000;
+    		line-height: 24px;
+    		position: absolute;
+    		display: none;
+		}
+	}
+	.btns{
+		margin-top: 50px;
+		.btn{
+			margin: 0 10px;
+		}
+	}
+}

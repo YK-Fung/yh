@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>权限管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/setup/authority-manage.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['setup/authority-manage']);</script>
+</head>
+<body>
+	<div class="wrap" id="authority">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">系统设置</p>
+			<p class="title-explain">权限管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 左侧栏目 -->
+			<div class="nav-l pull-left">
+				<!-- 移动提示语 -->
+				<div class="move"></div>
+				<div class="catalogue">
+					<h3>权限管理</h3>
+					<i class="glyphicon glyphicon-minus-sign"></i>
+					<i class="glyphicon glyphicon-plus-sign"></i>
+				</div>
+				<div class="list">
+					<div class="box cur">
+						<i class="toggle-ctn"></i>
+						<input type="text" class="name" value="会员中心1" placeholder="菜单名" readonly="readonly">
+						<div class="box">
+							<input type="text" class="name" value="采购商入门2" placeholder="菜单名" readonly="readonly">
+						</div>
+					</div>
+					<div class="box">
+						<i class="toggle-ctn"></i>
+						<input type="text" class="name" value="会员中心7" placeholder="菜单名" readonly="readonly">
+						<div class="box" data="1">
+							<input type="text" class="name" value="采购商入门8" placeholder="菜单名" readonly="readonly">
+						</div>
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="1" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="2" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="3" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="4" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="5" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="6" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="7" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="8" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="9" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="10" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="11" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="12" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="13" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="14" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="15" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="16" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="17" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="18" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="19" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="20" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="21" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="22" placeholder="菜单名" readonly="readonly">
+					</div>
+					<div class="box">
+						<input type="text" class="name" value="23" placeholder="菜单名" readonly="readonly">
+					</div><div class="box">
+						<input type="text" class="name" value="24" placeholder="菜单名" readonly="readonly">
+					</div>
+				</div>
+			</div>
+			<!-- 列表内容 -->
+			<div class="list-detail pull-left">
+				<!-- 标题 -->
+				<h3 class="tit-r" id="menu-title">权限说明</h3>
+				<div class="tab-ctn">
+					<!-- 子分类新增 -->
+					<div class="add-sub">
+						<div class="form-group">
+							<label class="pull-left">权限描述：</label>
+							<textarea class="form-control pull-left"></textarea>
+						</div>
+						<div class="form-group">
+							<label class="pull-left">唯一标识：</label>
+    						<input type="text" class="form-control pull-left">
+						</div>
+						<div class="form-group text-center">
+							<button class="btn btn-primary">保存</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade delete-node" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除目录</h4>
+					</div>
+					<div class="modal-body">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

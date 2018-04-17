@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>二级域名审核</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/company/domain.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['company/domain']);</script>
+</head>
+<body>
+	<div class="wrap" id="accout">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">企业中心</p>
+			<p class="title-explain">二级域名审核</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 查询条件 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">状态：</label>
+					<select class="form-control">
+						<option>全部</option>
+						<option>待审核</option>
+						<option>已审核</option>
+						<option>不通过</option>
+					</select>
+				</div>
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="请输入域名或店铺名称"></div>
+			</form>
+			<!-- 查询结果 -->
+			<div class="table-responsive tb-h">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>店铺名称</th>
+							<th>二级域名</th>
+							<th>状态</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<tr>
+							<td>呵呵哈哈哈</td>
+							<td>taobao123</td>
+							<td>
+								待审核
+							</td>
+							<td>
+								<a class="text-primary">通过</a>
+								<a class="text-primary btn-no">不通过</a>
+							</td>
+						</tr>
+					</tbody>
+			  	</table>
+			</div>
+		</div>
+		<!-- 弹窗-不通过 -->
+		<div class="modal fade model-no" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">填写原因</h4>
+					</div>
+					<div class="modal-body">
+						<textarea name="" class="form-control nopass-reason" placeholder="原因不得超过30字"></textarea>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

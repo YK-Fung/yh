@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>角色管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/setup/role-manage.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['setup/role-manage']);</script>
+</head>
+<body>
+	<div class="wrap" id="role">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">系统设置</p>
+			<p class="title-explain">角色管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 左侧栏目 -->
+			<div class="nav-l pull-left">
+				<!-- 移动提示语 -->
+				<div class="move"></div>
+				<div class="catalogue">
+					<h3>角色管理</h3>
+					<i class="glyphicon glyphicon-minus-sign"></i>
+					<i class="glyphicon glyphicon-plus-sign"></i>
+				</div>
+				<div class="list">
+					<div class="box cur">
+						<i class="toggle-ctn"></i>
+						<input type="text" class="name" value="超级管理员" placeholder="菜单名" readonly data="ajaxUrl1">
+						<div class="box">
+							<input type="text" class="name" value="admin" placeholder="菜单名" readonly data="ajaxUrl2">
+						</div>
+					</div>
+					<div class="box">
+						<i class="toggle-ctn"></i>
+						<input type="text" class="name" value="交易审核部" placeholder="菜单名" readonly data="ajaxUrl3">
+						<div class="box" data="1">
+							<input type="text" class="name" value="资质审核" placeholder="菜单名" readonly data="ajaxUrl4">
+						</div>
+						<div class="box" data="1">
+							<input type="text" class="name" value="产品审核" placeholder="菜单名" readonly data="ajaxUrl5">
+						</div>
+						<div class="box" data="1">
+							<input type="text" class="name" value="企业审核" placeholder="菜单名" readonly data="ajaxUrl6">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 切换功能 -->
+			<div class="toggle-user">
+				<div id="menu-title">角色管理</div>
+				<ul class="toggle-title">
+					<li class="active">权限管理</li>
+					<li>现有用户</li>
+				</ul>
+				<div class="toggle-user-function">
+					<!-- 权限管理 -->
+					<div class="authority active">
+						<!-- 功能列表 -->
+						<ul class="function-tit">
+							<li>功能列表</li>
+							<li>已选择</li>
+						</ul>
+						<div class="select-function">
+							<!-- id为当前id data为父级id -->
+							<div class="unselected">
+								<div class="class-divide" id="1" data="0" data-index="0">
+									<!-- 层级命名 -->
+									<div class="class-txt"><span class="class-name">数据中心</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+									<!-- 子级 -->
+									<div class="class-divide" id="6" data="1" data-index="0">
+										<!-- 层级命名 -->
+										<div class="class-txt"><span class="class-name">国产化妆品目录</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+									</div>
+									<div class="class-divide" id="9" data="1" data-index="1">
+										<!-- 层级命名 -->
+										<div class="class-txt"><span class="class-name">国产消毒产品目录</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+									</div>
+									<div class="class-divide" id="2" data="1" data-index="2">
+										<!-- 层级命名 -->
+										<div class="class-txt"><span class="class-name">基本信息库</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+										<!-- 子级 -->
+										<div class="class-divide" id="3" data="2" data-index="0">
+											<div class="class-txt"><span class="class-name">国产产品目录</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+											<div class="class-divide" id="4" data="3" data-index="0">
+												<div class="class-txt"><span class="class-name">查看权限</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+												<div class="class-divide" id="41" data="4" data-index="0">
+													<div class="class-txt"><span class="class-name">123</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+												</div>
+												<div class="class-divide" id="42" data="4" data-index="1">
+													<div class="class-txt"><span class="class-name">345</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+												</div>
+											</div>
+											<div class="class-divide" id="5" data="3" data-index="1">
+												<div class="class-txt"><span class="class-name">加工</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+											</div>
+											<div class="class-divide" id="8" data="3" data-index="2">
+												<div class="class-txt"><span class="class-name">审核</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+											</div>
+										</div>
+									</div>
+									<div class="class-divide" id="12" data="1" data-index="3">
+										<!-- 层级命名 -->
+										<div class="class-txt"><span class="class-name">国产保健品目录</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+									</div>
+									<div class="class-divide" id="13" data="1" data-index="4">
+										<!-- 层级命名 -->
+										<div class="class-txt"><span class="class-name">国产医疗器械目录</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+									</div>
+								</div>
+								<div class="class-divide" id="7" data="0" data-index="1">
+									<!-- 层级命名 -->
+									<div class="class-txt"><span class="class-name">品牌基本库</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+									<div class="class-divide" id="10" data="7" data-index="0">
+										<!-- 层级命名 -->
+										<div class="class-txt"><span class="class-name">药品说明书</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+									</div>
+									<div class="class-divide" id="11" data="7" data-index="1">
+										<!-- 层级命名 -->
+										<div class="class-txt"><span class="class-name">进口产品目录</span><i class="add-group glyphicon glyphicon-plus"></i></div>
+									</div>
+								</div>
+							</div>
+							<!-- 已选择 -->
+							<div class="selected"></div>
+						</div>
+					</div>
+					<!-- 现有用户 -->
+					<div class="new-user">
+						<div class="search-ctn">
+							<div class="form-group form-inline pull-left">
+								<label class="control-label">账户分类：</label>
+								<!-- 下拉 -->
+							    <select class="form-control type">
+							    	<option>全部</option>
+							    	<option>正常</option>
+							    	<option>冻结</option>
+							    </select>
+							</div>
+							<!-- 搜索 -->
+							<div class="form-group pull-left">
+							    <input type="text" class="form-control" placeholder="请输入登录名">
+							</div>
+							<!-- 按钮 -->
+							<div class="btn btn-primary pull-right add-account-btn">添加账号</div>
+							<div class="btn btn-default pull-right delete-user-more">删除</div>
+						</div>
+						<!-- 查询结果 -->
+						<div class="table-responsive tb-h">
+							<table class="table">
+								<thead>
+									<tr>
+										<th><input type="checkbox" class="checkbox-all"></th>
+										<th>登录名</th>
+										<th>姓名</th>
+										<th>账户状态</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>	
+									<tr>
+										<td><input type="checkbox"></td>
+										<td>admin</td>
+										<td>管理员</td>
+										<td>正常</td>
+										<td>
+											<span class="blue reset-pass-btn">密码重置</span>
+											<span class="blue edit-account">修改</span>
+											<span class="blue freeze-using">冻结</span>
+											<span class="blue delete-user">删除</span>
+										</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox"></td>
+										<td>admin</td>
+										<td>管理员</td>
+										<td>正常</td>
+										<td>
+											<span class="blue reset-pass-btn">密码重置</span>
+											<span class="blue edit-account">修改</span>
+											<span class="blue freeze-using">启用</span>
+											<span class="blue delete-user">删除</span>
+										</td>
+									</tr>
+								</tbody>
+						  	</table>
+						  	<div class="pages">
+								<div class="pagination-div pull-right">
+									<span>共<span class="page-amount text-primary">20</span>页</span>
+									<ul class="pagination pull-right">
+										<li class="page-pre"><a href="#">‹</a></li>
+										<li class="page-number active"><a href="#">1</a></li>
+										<li class="page-number"><a href="#">2</a></li>
+										<li class="page-number"><a href="#">3</a></li>
+										<li class="page-number"><a href="#">4</a></li>
+										<li class="page-number"><a href="#">5</a></li>
+										<li class="page-next"><a href="#">›</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-删除目录 -->
+		<div class="modal fade delete-node" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除目录</h4>
+					</div>
+					<div class="modal-body">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-提示 -->
+		<div class="modal fade" id="pop-tips" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">提示</h4>
+					</div>
+					<div class="modal-body">
+						<p class="tip-text"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-添加账号/修改账号 -->
+		<div class="modal fade" id="pop-add-account" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">添加账号/修改账号</h4>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+						    <input type="text" class="form-control login-name" placeholder="登录名（6-20位，由字母、数字或下划线组成）">
+						    <input type="text" class="form-control user-name" placeholder="姓名（2-20位字母或中文组成）">
+						    <input type="password" class="form-control user-password" placeholder="密码（6-20位字母、数字、符号组成）">
+						    <select class="form-control type">
+						    	<option>全部</option>
+						    	<option>正常</option>
+						    	<option>冻结</option>
+						    </select>
+							<!-- 查询 -->
+						    <div class="search role-list">
+						    	<input class="form-control" type="text" placeholder="角色">
+						    	<i class="glyphicon glyphicon-search"></i>
+						    	<!-- 模糊搜索列表 -->
+						    	<ul class="search-list" style="display: none;">
+									<li>xxx</li>
+									<li>xxx</li>
+									<li>xxx</li>
+									<li>xxx</li>
+									<li>xxx</li>
+									<li>xxx</li>
+								</ul>
+						    </div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-重置密码 -->
+		<div class="modal fade bs-example-modal-sm" id="pop-reset-password" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">重置密码</h4>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<input type="text" class="form-control set-password-input" placeholder="密码（6-20位字母、数字、符号组成）">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes"">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

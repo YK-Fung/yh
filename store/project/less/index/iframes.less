@@ -1,0 +1,158 @@
+@charset 'utf-8';
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: '微软雅黑'
+}
+html,
+body{
+	width: 100%;
+	height: 100%;
+	font-size: 12px;
+}
+a,
+a:hover,
+a:focus{
+	text-decoration: none;
+}
+.wrap{
+	width: 100%;
+	padding: 1px;
+}
+/*标题*/
+.iframe-title{
+	width: 100%;
+	/*height: 50px;*/
+	margin-top: 10px;
+	padding-left: 20px;
+	border-bottom: 1px solid #ddd;
+	p{
+		margin-bottom: 10px;
+		line-height: 20px;
+	}
+	.title-text{
+		font-size: 16px;
+		color: #333;
+	}
+	.title-explain{
+		font-size: 14px;
+		color: #666;
+	}
+}
+.wrap-ctn{
+	position: relative;
+	padding: 20px;
+	&:after{
+		content: '';
+		clear: both;
+		display: block;
+		width: 100%;
+		height: 0;
+	}
+	.form-filtrate{
+		position: absolute;
+		top: 30px;
+		left: 20px;
+	}
+	/*表格*/
+	.table{
+		border-radius: 10px;
+		&>thead{
+			background: #f2f2f2;
+		}
+		&>thead>tr>th{
+			font-weight: normal;
+			border-bottom: 1px solid #ddd;
+			text-align: center;
+		}
+		&>tbody>tr>td{
+			padding: 12px 8px;
+			text-align: center;
+		}
+		tbody{
+			border-bottom: 1px solid #ddd;
+			color:#999;
+		}
+		.icon{
+			position: relative;
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			margin: 0 4px;
+			cursor: pointer;
+			&.icon-edit{
+				background: url(../../img/iframe/icon-edit.png) center center no-repeat;
+			}
+			&.icon-del{
+				background: url(../../img/iframe/icon-del.png) center center no-repeat;
+			}
+			&.icon-yes{
+				background: url(../../img/iframe/icon-yes.png) center center no-repeat;
+			}
+			&.icon-money{
+				background: url(../../img/iframe/icon-money.png) center center no-repeat;
+			}
+			a{
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	table{
+		.action{
+			width: 75px;
+			white-space: nowrap;
+		}
+		.fa{
+			position: relative;
+			top: -1.5px;
+			display: inline-block;
+			margin: 0 4px;
+			font-size: 18px;
+			color: #489EDA;
+			cursor: pointer;
+		}
+		tr{
+			td:nth-last-of-type(1){
+				white-space: nowrap;
+			}
+		}
+	}
+}
+/*表单*/
+.form-control{
+	font-size: 12px;
+}
+.radio-inline input{
+	margin-top: 2px;
+}
+/* 日期范围 */
+.form-group{
+	margin-right: 5px;
+	.date-time{
+		width: 116px;
+		padding-left: 36px;
+		background: url(../../img/iframe/icon-date.png) 12px center no-repeat;
+	}
+}
+/*分页*/
+.pagination-info{
+	margin-left: 10px;
+}
+.pagination{
+	margin-right: 10px;
+}
+/* 弹窗 */
+.modal-title{
+	font-size: 16px;
+}
+/* 导出 下拉 */
+.dropdown-menu{
+	left: auto;
+	right: 0;
+}

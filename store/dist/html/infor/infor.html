@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>消息类型管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/infor/infor.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['infor/infor']);</script>
+</head>
+<body>
+	<div class="wrap" id="infor">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">消息管理</p>
+			<p class="title-explain">消息管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<div class="btn btn-primary btn-del">批量删除</div>
+				</div>
+				<div class="form-group">
+					<a class="btn btn-primary btn-add" href="infor-set.html">发布消息</a>
+				</div>
+				<div class="form-group">
+					<label class="control-label">消息状态：</label>
+					<select class="form-control">
+						<option>全部</option>
+						<option>待发布</option>
+						<option>未读</option>
+						<option>已读</option>
+						<option>已删除</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="control-label">消息类别：</label>
+					<select class="form-control">
+						<option>全部</option>
+						<option>系统消息</option>
+						<option>订单消息</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="control-label">发送日期：</label>
+					<input name="authenticationTimeBefore" class="form-control date-time" placeholder="发送日期">
+				</div>
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="企业名称、企业法人"></div>
+			</form>
+			<table class="table text-center">
+				<thead>
+					<tr>
+						<th>
+							<label class="checkbox-inline checkall">
+        						<input type="checkbox">全部
+    						</label>
+						</th>
+						<th>消息标题</th>
+						<th>消息类别</th>
+						<th>创建人</th>
+						<th>接收人</th>
+						<th>消息状态</th>
+						<th>发送时间</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="text-center">
+							<label class="checkbox-inline">
+        						<input type="checkbox">
+    						</label>
+						</th>
+						<td><!-- <a class="detail"> -->上山打老虎<!-- </a> --></td>
+						<td>系统消息</td>
+						<td>啊啊啊</td>
+						<td>哈哈哈</td>
+						<td>已删除</td>
+						<td>2013/06/08</td>
+						<td>
+							<i class="icon icon-edit"><a href="infor-set.html"></a></i>
+							<i class="icon icon-del"></i>
+						</td>
+					</tr>
+					<tr>
+						<th class="text-center">
+							<label class="checkbox-inline">
+        						<input type="checkbox">
+    						</label>
+						</th>
+						<td><!-- <a class="detail"> -->上山打老虎<!-- </a> --></td>
+						<td>系统消息</td>
+						<td>啊啊啊</td>
+						<td>哈哈哈</td>
+						<td>已删除</td>
+						<td>2013/06/08</td>
+						<td>
+							<i class="icon icon-edit"><a href="infor-set.html"></a></i>
+							<i class="icon icon-del"></i>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+		<!-- 弹窗-删除 -->
+		<div class="modal fade infor-del" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">删除信息</p>
+						<p class="text-muted">确定要删除该信息？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

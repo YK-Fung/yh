@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>资质管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/qualifications/firm-type.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['qualifications/firm-type']);</script>
+</head>
+<body>
+	<div class="wrap" id="aptitude">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">资质中心</p>
+			<p class="title-explain">资质管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 左侧栏目 -->
+			<div class="nav-l pull-left">
+				<!-- 移动提示语 -->
+				<div class="move"></div>
+				<div class="catalogue">
+					<h3>资质管理</h3>
+					<i class="glyphicon glyphicon-minus-sign"></i>
+					<i class="glyphicon glyphicon-plus-sign"></i>
+				</div>
+				<div class="list">
+					<div class="box cur">
+						<i class="toggle-ctn"></i>
+						<input type="text" class="name" value="会员中心1" placeholder="菜单名" readonly data="id1">
+						<div class="box" data="1">
+							<input type="text" class="name" value="采购商入门2" placeholder="菜单名" readonly data="id2">
+						</div>
+						<div class="box" data="1">
+							<input type="text" class="name" value="采购商入门3" placeholder="菜单名" readonly data="id2">
+						</div>
+						<div class="box" data="1">
+							<input type="text" class="name" value="采购商入门4" placeholder="菜单名" readonly data="id2">
+						</div>
+					</div>
+					<div class="box" data="1">
+						<input type="text" class="name" value="采购商入门5" placeholder="菜单名" readonly data="id2">
+					</div>
+					<div class="box" data="1">
+						<input type="text" class="name" value="采购商入门6" placeholder="菜单名" readonly data="id2">
+					</div>
+				</div>
+			</div>
+			<!-- 列表内容 -->
+			<div class="list-detail pull-left">
+				<div class="tab-tit">
+					<span id="menu-title">资质管理</span>
+					<ul>
+						<li data-tit="role">请选择角色</li>
+						<li data-tit="range">属性设置</li>
+						<li data-tit="firm-aptitude">企业资质</li>
+					</ul>
+				</div>
+				<ul class="tab-ctn">
+					<!-- 请选择角色 -->
+					<li class="role" data-tit="role">
+						<div class="pull-left">
+							<label>
+						    	<input type="radio" name="role">供应商
+							</label>
+						</div>
+						<div class="pull-left">
+							<label>
+						    	<input type="radio" name="role">采购商
+							</label>
+						</div>
+						<div class="pull-left">
+							<label>
+						    	<input type="radio" name="role" data="">两者皆是
+							</label>
+						</div>
+					</li>
+					<!--范围设定 -->
+					<li class="range" data-tit="range">
+						<!-- 名称 -->
+						<div class="form-group name">
+							<label class="pull-left">企业分类码：</label>
+							<input type="text" class="form-control pull-left">
+						</div>
+						<button class="btn btn-primary" style="margin:80px auto;display: block;">保存</button>
+					</li>
+					<!-- 企业资质 -->
+					<li class="firm-aptitude" data-tit="firm-aptitude">
+						<div class="overflow page-top">
+							<div class="checkbox pull-left">
+								<label>
+									<input type="checkbox" class="checkbox-all">全选
+								</label>
+							</div>
+							<div class="pull-left alert-btn">
+								<i class="glyphicon glyphicon-plus add-group"></i>
+								<i class="glyphicon glyphicon-minus remove-group"></i>
+							</div>	
+						</div>
+						<!-- 已选 -->
+						<ul class="choosed name-list">
+							<!-- data存放id -->
+							<li data="aaa">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">企业营业执照</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+							<li data="bbb">
+								<div class="checkbox pull-left">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">药品经营许可证/药品生产许可证</span>
+									</label>
+								</div>
+								<div class="function pull-left">
+									<div class="checkbox pull-left">
+										<label>
+											<input type="checkbox" class="must">* 必填
+										</label>
+									</div>
+									<i class="glyphicon glyphicon-arrow-up into-top"></i>
+									<i class="glyphicon glyphicon-trash delete-this"></i>
+								</div>
+							</li>
+						</ul>
+						<ul class="page-btm">
+							<li class="sync pull-left aptitude-sync">同步到子类</li>
+							<li class="pull-left aptitude-copy">复制</li>
+							<li class="pull-left">黏贴</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade delete-node" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除目录</h4>
+					</div>
+					<div class="modal-body">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-同步到子类 -->
+		<div class="modal fade sync-alert" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">同步到子类</h4>
+					</div>
+					<div class="modal-body">
+						确定要同步到子类吗？
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-企业资质添加 删除 -->
+		<div class="modal fade aptitude-toggle" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">添加企业资质</h4>
+					</div>
+					<div class="modal-body">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" class="checkbox-all">
+								<span>全选</span>
+							</label>
+						</div>
+						<ul class="name-list">
+							<!-- data存放id -->
+							<li data="111">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">GSP证书</span>
+									</label>
+								</div>
+							</li>
+							<li data="222">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">被委托人身份证 （正反面）</span>
+									</label>
+								</div>
+							</li>
+							<li data="333">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" class="choose-this">
+										<span class="aptitude-name">法人授权委托书</span>
+									</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

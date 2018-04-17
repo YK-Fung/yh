@@ -1,0 +1,101 @@
+@charset 'utf-8';
+@import url(../index/iframes.less);
+
+/* 合同管理 */
+#evaluate-manage{
+	padding: 0 20px;
+	.tb-h{
+		min-height: 550px;
+	}
+	.form-inline{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		&:after{
+			content: '';
+			clear: both;
+			display: block;
+			width: 100%;
+			height: 0;
+		}
+	}
+	table{
+		thead{
+			background-color: #f2f2f3;
+		}
+		th,td{
+			text-align: center;
+		}
+		th{
+			border-bottom: 1px solid #ddd;
+			font-weight: 400;
+		}
+		tbody{
+			border-bottom: 1px solid #ddd;
+			color:#999;
+		}
+		a{
+			color:#0078cc;
+		}
+		.red{
+			color:#cc0000;
+		}
+	}
+	/* 分页 */
+	.record-num{
+		color:#666;
+		margin-top: 20px;
+		p{
+			margin:0;
+		}
+		.dropdown{
+			display: inline-block;
+		}
+	}
+	/* 弹窗 */
+	.evaluate-detail{
+		.modal-body{
+			height: 255px;
+			overflow-y: auto;
+		}
+		.talk{
+			font-size: 12px;
+			/* 采购商 */
+			.cg{
+				color:#666;
+				font-size: 12px;
+				font-weight: normal;
+				line-height: 22px;
+				margin:0;
+			}
+			.cg-txt{
+				font-size: 12px;
+				color:#666;
+				line-height: 22px;
+			}
+			.time{
+				color:#999;
+				line-height: 22px;
+			}
+			/* 供应商 */
+			.gy{
+				position: relative;
+				background-color: #f2f2f2;
+				padding: 7px 5px;
+				p{
+					line-height: 22px;
+					color:#999;
+				}
+				.arrow{
+					width: 0;
+				    height: 0;
+				    border-left: 8px solid transparent;
+				    border-right: 8px solid transparent;
+				    border-bottom: 8px solid #f2f2f2;
+				    position: absolute;
+				    top:-8px;
+				    left: 50%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>交易结算管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/money/settle-accounts.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['money/settle-accounts']);</script>
+</head>
+<body>
+	<div class="wrap" id="money">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">交易结算</p>
+			<p class="title-explain">交易结算管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">结算状态：</label>
+					<select name="" class="form-control">
+						<option>全部</option>
+						<option>已审核</option>
+						<option>待审核</option>
+						<option>已结算</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="control-label">下单时间：</label>
+					<input name="" class="form-control date-time" placeholder="开始时间">
+					-
+					<input name="" class="form-control date-time" placeholder="结束时间">
+				</div>
+				<div class="form-group">
+					<label class="control-label">结算时间：</label>
+					<input name="" class="form-control date-time" placeholder="开始时间">
+					-
+					<input name="" class="form-control date-time" placeholder="结束时间">
+				</div>
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="请输入订单号"></div>
+			</form>
+			<table class="table text-center main-table">
+				<thead>
+					<tr>
+						<th><input type="checkbox" class="select-all"></th>
+						<th>订单号</th>
+						<th>供货商</th>
+						<th>交易方式</th>
+						<th>交易总额（含物流）</th>
+						<th>退款总额</th>
+						<th>服务费率</th>
+						<th>交易服务费</th>
+						<th>结算金额</th>
+						<th>结算状态</th>
+						<th>结算日期</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" class="select-this"></td>
+						<td><a href="../order/order-details.html">201710102563</a></td>
+						<td>xxx药房</td>
+						<td>担保支付</td>
+						<td>￥10000.00</td>
+						<td>￥0.00</td>
+						<td><a href="javascript:void(0)" class="cost-detail">详情</a></td>
+						<td>￥100.00</td>
+						<td>￥9900.00</td>
+						<td>待结算</td>
+						<td></td>
+						<td>
+							<a href="../order/order-details.html">详情</a>
+							<a href="javascript:void(0)" class="check-order">审核</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="select-this"></td>
+						<td><a href="../order/order-details.html">201710102563</a></td>
+						<td>xxx药房</td>
+						<td>担保支付</td>
+						<td>￥10000.00</td>
+						<td>￥0.00</td>
+						<td><a href="javascript:void(0)" class="cost-detail">详情</a></td>
+						<td>￥100.00</td>
+						<td>￥9900.00</td>
+						<td>已审核</td>
+						<td>2017/11/11</td>
+						<td>
+							<a href="../order/order-details.html">详情</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="select-this"></td>
+						<td><a href="../order/order-details.html">201710102563</a></td>
+						<td>xxx药房</td>
+						<td>担保支付</td>
+						<td>￥10000.00</td>
+						<td>￥0.00</td>
+						<td><a href="javascript:void(0)" class="cost-detail">详情</a></td>
+						<td>￥100.00</td>
+						<td>￥9900.00</td>
+						<td>已结算</td>
+						<td>2017/11/11</td>
+						<td>
+							<a href="../order/order-details.html">详情</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="select-this"></td>
+						<td><a href="../order/order-details.html">201710102563</a></td>
+						<td>xxx药房</td>
+						<td>担保支付</td>
+						<td>￥10000.00</td>
+						<td>￥0.00</td>
+						<td>VIP</td>
+						<td>￥100.00</td>
+						<td>￥9900.00</td>
+						<td>结算失败</td>
+						<td>2017/11/11</td>
+						<td>
+							<a href="../order/order-details.html">详情</a>
+							<a href="javascript:void(0)" class="settle-accounts">结算</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 弹窗-提示 -->
+		<div class="modal fade pop-tips" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">提示</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary"></p>
+						<p class="text-muted"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-服务费率详情 -->
+		<div class="modal fade pop-cost-detail" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">提示</h4>
+					</div>
+					<div class="modal-body">
+						<table class="table table-bordered text-center">
+							<thead>
+								<tr>
+									<th>订单商品列表</th>
+									<th>数量</th>
+									<th>小计</th>
+									<th>服务费率</th>
+									<th>服务费</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>感冒灵颗粒 6g/包</td>
+									<td>10</td>
+									<td>￥<span>1000.00</span></td>
+									<td>1%</td>
+									<td>￥<span>10.00</span></td>
+								</tr>
+								<tr>
+									<td>感冒灵颗粒 6g/包</td>
+									<td>10</td>
+									<td>￥<span>1000.00</span></td>
+									<td>1%</td>
+									<td>￥<span>10.00</span></td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="text-right">服务费总计：￥<span>20.00</span></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-yes" data-dismiss="modal">返回</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

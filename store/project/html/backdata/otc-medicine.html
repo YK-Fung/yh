@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>OTC药品维护</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/backdata/otc-medicine.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['backdata/otc-medicine']);</script>
+</head>
+<body>
+	<div class="wrap" id="illicit">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">OTC药品维护</p>
+			<p class="title-explain">OTC药品管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">药品名称：</label>
+				    <input class="form-control" type="text">
+				</div>
+			</form>
+			<h2 class="table-title"><span class="name">OTC药品</span><span class="line"></span></h2>
+			<table class="table text-center table-view data">
+				<thead>
+					<tr>
+						<th>药品名称</th>
+						<th>规格</th>
+						<th>OTC类型</th>
+						<th>产品分类</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>三磷酸腺苷二钠肠溶胶囊</td>
+						<td></td>
+						<td></td>
+						<td>化学药品</td>
+						<td>
+							<a href="javascript:void(0)" class="cancel">取消</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 弹窗-取消 -->
+		<div class="modal fade pop-cancel" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">取消提示</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">您确定取消数据？</p>
+						<p class="text-muted">一旦取消已有数据将无法正常显示</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

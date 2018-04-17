@@ -1,0 +1,245 @@
+@import url(../index/iframes.less);
+@import url(../index/move-el.less);
+
+/*类目管理*/
+#role{
+	li{
+		list-style: none;
+	}
+	/* 删除节点 */
+	.delete-node{
+		.modal-dialog{
+			width: 450px;
+		}
+	}
+	/* 切换 */
+	.toggle-user{
+		width: 76%;
+	    margin-left: 2%;
+	    float: left;
+	    .toggle-title{
+			width: 100%;
+			line-height: 34px;
+			text-align: center;
+	    	border-bottom: 1px solid #ddd;
+	    	overflow: hidden;
+	    	li{
+	    		width: 90px;
+	    		float: left;
+	    		cursor: pointer;
+	    		font-size: 14px;
+	    		&.active{
+					font-weight: bold;
+					border-bottom: 1px solid #666;
+				}
+	    	}
+	    }
+	    #menu-title{
+	    	line-height: 34px;
+			border-bottom :1px solid #ddd;
+	    }
+	}
+	/* 切换内容 */
+	.toggle-user-function{
+		width: 100%;
+		border: 1px solid #ddd;
+	    min-height: 610px;
+	    margin-top: 20px;
+	    &>div{
+	    	display: none;
+	    	&.active{
+	    		display: block;
+	    	}
+	    }
+	}
+	/* 权限管理 */
+	.authority{
+		padding: 0 1%;
+		.function-tit{
+			width: 100%;
+			li{
+				width: 46%;
+				line-height: 34px;
+				font-size: 16px;
+				float: left;
+				margin: 0 2%;
+			}
+		}
+		/* 选中功能 */
+		.select-function{
+			&>div{
+				width: 46%;
+				height: 560px;
+				overflow-y: auto;
+				border:1px solid #ddd;
+				float: left;
+				margin: 0 2%;
+				padding:10px;
+			}
+			/* 层级 */
+			.class-divide{
+				line-height: 32px;
+				font-size: 14px;
+				padding-left: 20px;
+				position: relative;
+				transition:all 300ms;
+				-o-transition:all 300ms;
+				-moz-transition:all 300ms;
+				-webkit-transition:all 300ms;
+				/* 箭头 */
+				.arrow{
+					width: 0;
+				    height: 0;
+				    border-left: 5px solid transparent;
+				    border-right: 5px solid transparent;
+				    border-top: 7px solid #999;
+				    cursor: pointer;
+					position: absolute;
+					left: 4px;
+					top: 13px;
+					&:after{
+						content: '';
+					    position: absolute;
+					    left: -10px;
+					    top: -11px;
+					    width: 20px;
+					    height: 14px;
+					}
+				}
+				&>.class-divide{
+					display: none;
+				}
+				&.active{
+					&>.class-divide{
+						display: block;
+					}
+					&>.arrow{
+						transform:rotate(180deg);
+						-o-transform:rotate(180deg);
+						-moz-transform:rotate(180deg);
+						-webkit-transform:rotate(180deg);
+					}
+				}
+			}
+			/* 加减 */
+			.add-group,.reduce-group{
+				font-size: 12px;
+				margin-left: 10px;
+				cursor: pointer;
+				display: none;
+			}
+		}
+	}
+	/* 现有用户 */
+	.new-user{
+		padding: 20px;
+		.search-ctn{
+			overflow: hidden;
+			input{
+				width: 200px;
+				margin-left: 20px;
+			}
+			.btn{
+				margin: 0 10px;
+			}
+		}
+		.blue{
+			color:#0078cc;
+			cursor: pointer;
+		}
+		.pages{
+			overflow: hidden;
+			.pagination{
+				margin: 0;
+			}
+		}
+		.pagination-div{
+			overflow: hidden;
+			&>span{
+				float: right;
+				margin-left: 20px;
+				line-height: 34px;
+				white-space: nowrap;
+			}
+			.page-amount{
+				padding: 0 5px;
+			}
+		}
+	}
+	/* 添加账号 */
+	#pop-add-account{
+		.modal-body{
+			padding: 20px 40px;
+			input{
+				width: 100%;
+				margin:10px auto;
+				&.error{
+					border:1px solid #f00;
+					box-shadow:  0 0 8px rgba(255,0,0,.4);
+				}
+			}
+			select{
+				width: auto;
+			}
+		}
+		/* 查询 */
+		.search{
+			position: relative;
+			i{
+				position: absolute;
+				left: 6px;
+				top: 11px;
+				color:#999;
+			}
+			input{
+				padding-left: 20px;
+			}
+			.search-list{
+				width: 100%;
+				position: absolute;
+				left: 0px;
+				top: 34px;
+				background-color: #fff;
+				border:1px solid #e5e5e5;
+				border-top: 0;
+				z-index: 2;
+				display: none;
+				li{
+					width: 100%;
+					background: #fff;
+					color:#333;
+					font-size: 12px;
+					line-height: 28px;
+					padding: 0 18px;
+					cursor:pointer; 
+					white-space: nowrap;
+				    text-overflow: ellipsis;
+				    display: block;
+				    overflow: hidden;
+					&:hover{
+						background-color: #fdf5d1;
+					}
+					&.active{
+						background-color: #fdf5d1;
+					}
+				}
+			}
+		}
+	}
+	/* 重置密码 */
+	#pop-reset-password{
+		input.error{
+			border:1px solid #f00;
+			box-shadow:  0 0 8px rgba(255,0,0,.4);
+		}
+	}
+	/*弹窗*/
+	#pop-tips{
+		.modal-body{
+			height: 130px;
+			line-height: 130px;
+			padding: 0;
+			text-align: center;
+		}
+	}
+}

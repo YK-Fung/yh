@@ -1,0 +1,57 @@
+@import url(../index/iframes.less);
+
+/* 日志管理 */
+#log{
+	/* 查询条件 */
+	.search-condition{
+		height: 35px;
+		margin-bottom: 20px;
+		.group{
+			margin-right: 10px;
+			height: 35px;
+			line-height: 35px;
+			.type{
+				width: 132px;
+			}
+			.state{
+				width: 90px;
+			}
+		}
+		.tit{
+			line-height: 35px;
+		}
+		.search-txt{
+			width: 260px;
+		}
+	}
+	/*弹窗*/
+	.delete-brand{
+		.modal-body{
+			height: 220px;
+			padding-top: 100px;
+			text-align: center;
+			background: url(../../img/iframe/icon-warn.png) center 30px no-repeat;
+		}
+		.text-primary{
+			color: #1296db;
+			font-size: 18px;
+		}
+		.text-muted{
+			font-size: 12px;
+		}
+	}
+	/*分页*/
+	.pagination-div{
+		overflow: hidden;
+		&>span{
+			float: right;
+			margin-top: 20px;
+			margin-left: 20px;
+			line-height: 34px;
+			white-space: nowrap;
+		}
+		.page-amount{
+			padding: 0 5px;
+		}
+	}
+}

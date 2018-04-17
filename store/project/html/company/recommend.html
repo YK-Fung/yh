@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>供应商推荐</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/company/recommend.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['company/recommend']);</script>
+</head>
+<body>
+	<div class="wrap" id="recommend">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">企业中心</p>
+			<p class="title-explain">供应商推荐</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 查询条件 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">推荐时间：</label>
+					<input name="authenticationTimeBefore" class="form-control date-time" placeholder="开始时间">
+					-
+					<input name="authenticationTimeAfter" class="form-control date-time" placeholder="结束时间">
+				</div>
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="请输入企业名称、法人搜索"></div>
+			</form>
+			<div class="add-btn">
+				<button class="btn btn-primary pull-right add-company">+推荐供应商</button>
+			</div>
+			<!-- 查询结果 -->
+			<div class="table-responsive tb-h">
+				<table class="table table-page">
+					<thead>
+						<tr>
+							<th>企业编码</th>
+							<th>企业名称</th>
+							<th>企业法人</th>
+							<th>企业类型</th>
+							<th>企业注册地址</th>
+							<th>推荐时间</th>
+							<th>推荐人</th>
+							<th>排序</th>
+							<th>是否推荐</th>
+							<th>选择产品</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<tr>
+							<!-- 企业编码 -->
+							<td><input type="checkbox" class="pull-left">A5531553</td>
+							<!-- 企业名称 -->
+							<td>广州医药</td>
+							<!-- 企业法人 -->
+							<td></td>
+							<!-- 企业类型 -->
+							<td></td>
+							<!-- 企业注册地址 -->
+							<td></td>
+							<!-- 推荐时间 -->
+							<td></td>
+							<!-- 推荐人 -->
+							<td></td>
+							<!-- 排序 -->
+							<td><span style="width: 60px;display: inline-block;"><input type="number" class="sort"></span></td>
+							<!-- 是否推荐 -->
+							<td>
+								<select class="form-control">
+									<option>不推荐</option>
+									<option>推荐</option>
+								</select>
+							</td>
+							<!-- 选择产品 -->
+							<td><span class="choose-btn">选择</span></td>
+							<td>
+								<i class="icon icon-del"></i>
+							</td>
+						</tr>
+						<tr>
+							<!-- 企业编码 -->
+							<td><input type="checkbox" class="pull-left">A5531553</td>
+							<!-- 企业名称 -->
+							<td>广州医药</td>
+							<!-- 企业法人 -->
+							<td></td>
+							<!-- 企业类型 -->
+							<td></td>
+							<!-- 企业注册地址 -->
+							<td></td>
+							<!-- 推荐时间 -->
+							<td></td>
+							<!-- 推荐人 -->
+							<td></td>
+							<!-- 排序 -->
+							<td><span style="width: 60px;display: inline-block;"><input type="number" class="sort"></span></td>
+							<!-- 是否推荐 -->
+							<td>
+								<select class="form-control">
+									<option>不推荐</option>
+									<option>推荐</option>
+								</select>
+							</td>
+							<!-- 选择产品 -->
+							<td><span class="choose-btn">已选择（2）</span></td>
+							<td>
+								<i class="icon icon-del"></i>
+							</td>
+						</tr>
+					</tbody>
+			  	</table>
+			  	<div class="table-btm">
+				  	<div class="checkbox pull-left">
+					    <label>
+					    	<input type="checkbox" class="checkbox-all">全选
+						</label>
+					</div>
+					<button type="button" class="btn btn-primary table-push">推荐</button>
+					<button type="button" class="btn btn-primary table-not-push">不推荐</button>
+			  	</div>
+			</div>
+		</div>
+		<!-- 弹窗-推荐产品 -->
+		<div class="modal fade bs-example-modal-lg module-product" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">推荐产品</h4>
+					</div>
+					<div class="modal-body">
+						<div class="top">
+							<div class="pull-left">供应商：<span class="company-name"></span></div>
+							<input class="form-control pull-right product-search" type="text" placeholder="请输入产品编码/产品名称/批准文号搜索">
+						</div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>产品编码</th>
+									<th>产品名称</th>
+									<th>批准文号</th>
+									<th>规格</th>
+									<th>生产厂家</th>
+									<th>排序</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="info">
+									<td class="hidden"><input type="checkbox" checked></td>
+									<td>65465141</td>
+									<td>999感冒灵</td>
+									<td>65465141</td>
+									<td>200g/盒</td>
+									<td>999</td>
+									<td><input type="number" class="sort"></td>
+									<td>
+										<!-- 跳到产品详情 -->
+										<a href="../goods/goods-edit.html">查看</a>
+										<a href="javascript:void(0)" class="check-recommend">撤销</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- 分页 -->
+						<div class="pages">
+							<div class="pagination-div pull-right">
+								<span>共<span class="page-amount text-primary">20</span>页</span>
+								<ul class="pagination pull-right">
+									<li class="page-pre"><a href="#">‹</a></li>
+									<li class="page-number active"><a href="#">1</a></li>
+									<li class="page-number"><a href="#">2</a></li>
+									<li class="page-number"><a href="#">3</a></li>
+									<li class="page-number"><a href="#">4</a></li>
+									<li class="page-number"><a href="#">5</a></li>
+									<li class="page-next"><a href="#">›</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-推荐供应商 -->
+		<div class="modal fade bs-example-modal-lg company-recommend" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">推荐供应商</h4>
+					</div>
+					<div class="modal-body">
+						<div class="top">
+							<input class="form-control pull-right company-search" type="text" placeholder="请输入企业编码/企业名称/企业法人搜索">
+						</div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>企业编码</th>
+									<th>企业名称</th>
+									<th>企业法人</th>
+									<th>企业类型</th>
+									<th>企业注册地址</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="info">
+									<td class="hidden"><input type="checkbox" checked></td>
+									<td>16265465165</td>
+									<td>广州医药</td>
+									<td>李明</td>
+									<td>药品经营企业</td>
+									<td>广州</td>
+									<td>
+										<!-- 跳到产品详情 -->
+										<a href="../company/firm-audit-detail.html">查看</a>
+										<a href="javascript:void(0)" class="check-recommend">撤销</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="hidden"><input type="checkbox" checked></td>
+									<td>16265465165</td>
+									<td>广州医药</td>
+									<td>李明</td>
+									<td>药品经营企业</td>
+									<td>广州</td>
+									<td>
+										<!-- 跳到产品详情 -->
+										<a href="../company/firm-audit-detail.html">查看</a>
+										<a href="javascript:void(0)" class="check-recommend">推荐</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- 分页 -->
+						<div class="pages">
+							<div class="pagination-div pull-right">
+								<span>共<span class="page-amount text-primary">20</span>页</span>
+								<ul class="pagination pull-right">
+									<li class="page-pre"><a href="#">‹</a></li>
+									<li class="page-number active"><a href="#">1</a></li>
+									<li class="page-number"><a href="#">2</a></li>
+									<li class="page-number"><a href="#">3</a></li>
+									<li class="page-number"><a href="#">4</a></li>
+									<li class="page-number"><a href="#">5</a></li>
+									<li class="page-next"><a href="#">›</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade delete-product" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除记录</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">删除产品记录</p>
+						<p class="text-muted">确定要删除该产品记录？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>广告位管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/information/ad-manage.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['information/ad-manage']);</script>
+</head>
+<body>
+	<div class="wrap" id="ad-manage">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">资讯中心</p>
+			<p class="title-explain">广告位管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<div class="btn btn-primary btn-add">添加广告类型+</div>
+				</div>
+				<div class="form-group">
+					<label>图片类型：</label>
+					<select class="form-control">
+						<option>请选择</option>
+						<option>Banner广告位</option>
+						<option>活动专区</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>状态：</label>
+					<select class="form-control">
+						<option>请选择</option>
+						<option>正常</option>
+						<option>失效</option>
+					</select>
+				</div>
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="请输入类型名称查询"></div>
+			</form>
+			<!-- 查询结果 -->
+			<div class="table-responsive tb-h">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>类型</th>
+							<th>标题</th>
+							<th>图片</th>
+							<th>链接</th>
+							<th>状态</th>
+							<th>排序</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<tr>
+							<td>中药材</td>
+							<td>中西成药</td>
+							<td><img src="../../img/iframe/link-logo.jpg" height="40"></td>
+							<td>www.zycai.com</td>
+							<td>正常</td>
+							<td>排序</td>
+							<td>
+								<i class="icon icon-edit"></i>
+								<i class="icon icon-del"></i>
+							</td>
+						</tr>
+					</tbody>
+			  	</table>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade ad-del" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">广告位管理</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">删除广告位</p>
+						<p class="text-muted">确定要删除广告位？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-新增 编辑-->
+		<div class="modal fade ad-add" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title"></h4>
+					</div>
+					<div class="modal-body">
+						<table class="table table-bordered text-center">
+							<tbody>
+								<tr>
+									<td class="text-right w186">标题</td>
+									<td><input name="" type="text" class="form-control" value="" placeholder="请输入标题"></td>
+								</tr>
+								<tr>
+									<td class="text-right w186">类型</td>
+									<td>
+										<select class="form-control">
+											<option>请选择</option>
+											<option>Banner广告位</option>
+											<option>推广位</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-right w186">简介</td>
+									<td>
+										<textarea class="form-control" rows="3" placeholder="请输入简介"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-right w186">链接</td>
+									<td><input name="" class="form-control" type="text" value="" placeholder="请输入链接"></td>
+								</tr>
+								<tr>
+									<td class="text-right w186">状态</td>
+									<td>
+										<select class="form-control">
+											<option>请选择</option>
+											<option>正常</option>
+											<option>失效</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-right w186">排序</td>
+									<td><input name="" class="form-control" type="number" value="" placeholder="“0”排序级别最高"></td>
+								</tr>
+								<tr>
+									<td class="text-right w186">备注</td>
+									<td>
+										<textarea class="form-control" rows="3" placeholder="请输入备注"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-right w186">上传</td>
+									<td>
+										<input name="" type="file" value="" class="hidden file-up">
+										<img src="" class="img-up" height="40" alt="添加图片">
+									</td>
+								</tr>
+								<tr>
+									<td class="text-right w186">banner背景色</td>
+									<td class="banner-bgc">
+										<input name="" class="color-set" value="#ffffff" type="text">
+										<div class="color-view"></div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

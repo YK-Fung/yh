@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>投诉处理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/supervise/complaint.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['supervise/complaint']);</script>
+</head>
+<body>
+	<div class="wrap" id="complaint">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">投诉处理</p>
+			<p class="title-explain">投诉处理管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">状态：</label>
+					<!-- 下拉 -->
+				    <select class="form-control">
+				    	<option>全部</option>
+				    	<option>已回复</option>
+				    	<option>未回复</option>
+				    </select>
+				</div>
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="采购商名称/供应商名称/订单号"></div>
+			</form>
+			<table class="table text-center">
+				<thead>
+					<tr>
+						<th>意见ID</th>
+						<th>投诉者账号</th>
+						<th>投诉者企业名称</th>
+						<th>企业类型</th>
+						<th>手机号码</th>
+						<th>邮箱</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>12345678</td>
+						<td>2013d5646541365468</td>
+						<td>广东省回函嘻嘻公司</td>
+						<td>股份合作类型</td>
+						<td>18316548365</td>
+						<td>59695236@qq.com</td>
+						<td><span class="color-red">未回复</span></td>
+						<td><span class="answer">回复</span></td>
+					</tr>
+					<tr>
+						<td>12345678</td>
+						<td>2013d5646541365468</td>
+						<td>广东省回函嘻嘻公司</td>
+						<td>股份合作类型</td>
+						<td>18316548365</td>
+						<td>59695236@qq.com</td>
+						<td><span class="color-green">回复</span></td>
+						<td><span class="view">查看</span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 弹窗-查看 -->
+		<div class="modal fade complaint-view" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">意见详情</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="complaint-ctn">
+							<li>
+								<div class="ctn-header">
+									<span class="pull-left name1">投诉的那个人：</span>
+									<span class="pull-right date">2017/08/05</span>
+								</div>
+								<p>我是医药公司的，订单一天要几十个单，比较多，要对每一个快件与订单核对运单号来确定是哪一个客户的订单，强烈建议一下增加输入运单号来查询订单的功能，这样对我们来说可以省不少时间的。</p>
+							</li>
+							<li>
+								<div class="ctn-header">
+									<span class="pull-left name2">药荟健康网客服：</span>
+									<span class="pull-right date">2017/08/05</span>
+								</div>
+								<p>您好！我是药荟健康网客户服务部的凯。感谢您的反馈，非常感谢您对药荟健康网提出的建议，您的建议我们会及时反馈给产品与技术人员。如有最新消息，我们会第一时间通知您。您也可以将建议反馈给我们的客服热线：0571-XXXXXXX，后期有药荟健康网的疑问或建议可以及时与我们联系，谢谢您！</p>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-back" data-dismiss="modal">返回</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 弹窗-回复 -->
+		<div class="modal fade complaint-answer" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">意见详情</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="complaint-ctn">
+							<li>
+								<div class="ctn-header">
+									<span class="pull-left name1">投诉的那个人：</span>
+									<span class="pull-right date">2017/08/05</span>
+								</div>
+								<p>我是医药公司的，订单一天要几十个单，比较多，要对每一个快件与订单核对运单号来确定是哪一个客户的订单，强烈建议一下增加输入运单号来查询订单的功能，这样对我们来说可以省不少时间的。</p>
+							</li>
+							<li>
+								<div class="ctn-header">
+									<span class="pull-left name2">回复：</span>
+								</div>
+								<p>
+									<form class="form">
+										<textarea class="form-control"></textarea>
+									</form>
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-submit" data-dismiss="modal">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

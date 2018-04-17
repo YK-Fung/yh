@@ -1,0 +1,65 @@
+@import url(../index/iframes.less);
+
+li{
+	list-style: none;
+}
+/*资质*/
+#complaint{
+	.wrap-ctn{
+		position: relative;
+		min-height: 672px;
+		.color-red{
+			color: #cc0000;
+		}
+		.color-green{
+			color: #169d16;
+		}
+		.view,
+		.answer{
+			color: #0078cc;
+			cursor: pointer;
+		}
+	}
+	.form-inline{
+		margin-bottom: 20px;
+		&:after{
+			content: '';
+			clear: both;
+			display: block;
+			width: 100%;
+			height: 0;
+		}
+	}
+	/*弹窗*/
+	.modal{
+		.complaint-ctn{
+			display: block;
+			li{
+				display: block;
+				padding: 15px 20px;
+				margin-bottom: 20px;
+				background: #f2f2f2;
+				border-radius: 5px;
+				p{
+					word-break:break-all;
+				}
+			}
+			.ctn-header{
+				margin-bottom: 20px;
+				overflow: hidden;
+				.name1{
+					color: #ff9900;
+				}
+				.name2{
+					color: #00a0e9;
+				}
+				.date{
+					color: #999;
+				}
+			}
+			textarea{
+				height: 140px;
+			}
+		}
+	}
+}

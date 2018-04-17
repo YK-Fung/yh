@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>说明书范本数据维护</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/backdata/data-specification.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['backdata/data-specification']);</script>
+</head>
+<body>
+	<div class="wrap" id="illicit">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">说明书范本数据维护</p>
+			<p class="title-explain">说明书范本数据管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">说明书标题：</label>
+				    <input class="form-control" type="text">
+				</div>
+				<div class="form-group">
+					<label class="control-label">说明书类型：</label>
+				    <!-- 下拉 -->
+				    <select class="form-control type">
+				    	<option>全部</option>
+				    	<option>OTC化学药</option>
+				    	<option>OTC中成药</option>
+				    	<option>其他</option>
+				    </select>
+				</div>
+				<div class="form-group">
+					<div class="btn btn-primary add-specification">添加说明书</div>
+				</div>
+			</form>
+			<h2 class="table-title"><span class="name">说明书范本数据</span><span class="line"></span></h2>
+			<table class="table text-center table-view data">
+				<thead>
+					<tr>
+						<th>说明书标题</th>
+						<th>说明书类型</th>
+						<th>发布人</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>小儿氨酚黄那敏颗粒 解热镇痛药</td>
+						<td>OTC中成药</td>
+						<td>叶飞</td>
+						<td>
+							<i class="icon icon-edit"></i>
+							<i class="icon icon-del"></i>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 弹窗- 添加说明书 -->
+		<div class="modal fade bs-example-modal-lg pop-add-specification" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">添加说明书</h4>
+					</div>
+					<div class="modal-body">
+						<h2 class="table-title"><span class="name">说明书基本信息</span><span class="line"></span></h2>
+						<div class="form-group">
+							<label class="control-label">说明书标题：</label>
+				    		<input class="form-control title-txt" type="text">
+						</div>
+						<div class="form-group">
+							<label class="control-label">说明书类型：</label>
+				    		<select class="form-control type">
+						    	<option>全部</option>
+						    	<option>OTC化学药</option>
+						    	<option>OTC中成药</option>
+						    	<option>其他</option>
+						    </select>
+						</div>
+						<h2 class="table-title"><span class="name">说明书正文信息</span><span class="line"></span></h2>
+						<script id="editor" type="text/plain"></script>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade pop-cancel" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除提示</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">您确定删除数据？</p>
+						<p class="text-muted">一旦删除已有数据将无法正常显示</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!-- 引入富文本框 -->
+	<script type="text/javascript" src="../../js/ueditor.config.js"></script>
+	<script type="text/javascript" src="../../js/ueditor.all.js"></script>
+	<script>
+		var ue = UE.getEditor('editor',{
+			initialFrameWidth :100+'%',//设置编辑器宽度
+			initialFrameHeight:365,//设置编辑器高度
+			scaleEnabled:true
+		});
+		//获得内容
+		function getContent() {
+	       var html = ue.getContent();
+	       console.log(html)
+	    }
+	    //获取纯文本等 详细内容查看 api
+	</script>
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

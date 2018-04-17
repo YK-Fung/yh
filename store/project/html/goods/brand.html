@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>品牌管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/goods/brand.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['goods/brand']);</script>
+</head>
+<body>
+	<div class="wrap" id="brand">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">产品中心</p>
+			<p class="title-explain">品牌管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">品牌推荐：</label>
+					<!-- 下拉 -->
+				    <select class="form-control type">
+				    	<option>全部</option>
+				    	<option>推荐</option>
+				    	<option>不推荐</option>
+				    </select>
+				</div>
+				<div class="form-group">
+					<label class="control-label">地区：</label>
+					<!-- 下拉 -->
+				    <select class="form-control type">
+				    	<option>全部</option>
+				    	<option>广东</option>
+				    	<option>广西</option>
+				    </select>
+				</div>
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="请输入结算订单号搜索"></div>
+			</form>
+			<!-- 查询结果 -->
+			<div class="table-responsive tb-h">
+				<div class="btn btn-primary pull-right add-btn">添加</div>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>品牌ID</th>
+							<th>品牌Logo</th>
+							<th>品牌名称</th>
+							<th>品牌描述</th>
+							<th>是否为推荐品牌</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<!-- 是推荐品牌 -->
+						<tr>
+							<td>123456</td>
+							<td><img src="../../img/iframe/order-img.jpg" height="40" class="logo"></td>
+							<td>同仁堂</td>
+							<td>凭良心做，做良心药，“可以质鬼神，可以应病症”，童叟无欺，问心无愧。</td>
+							<td><img src="../../img/iframe/yes.png"></td>
+							<td>
+								<i class="icon icon-edit"></i>
+								<i class="icon icon-del"></i>
+							</td>
+						</tr>
+						<!-- 不是推荐品牌 -->
+						<tr>
+							<td>123456</td>
+							<td><img src="../../img/iframe/order-img.jpg" height="40" class="logo"></td>
+							<td>同仁堂</td>
+							<td>凭良心做，做良心药，“可以质鬼神，可以应病症”，童叟无欺，问心无愧。</td>
+							<td></td>
+							<td>
+								<i class="icon icon-edit"></i>
+								<i class="icon icon-del"></i>
+							</td>
+						</tr>
+					</tbody>
+			  	</table>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade delete-brand" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除记录</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">删除品牌记录</p>
+						<p class="text-muted">确定要删除该品牌记录？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-设置推荐品牌 -->
+		<div class="modal fade recommend" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">推荐品牌</h4>
+					</div>
+					<div class="modal-body">
+						<form action="">
+							<div class="form-group">
+								<label class="pull-left text-right">品牌名称：</label>
+								<input type="text" class="form-control pull-left">
+							</div>
+							<div class="form-group">
+								<label class="pull-left text-right">品牌LOGO：</label>
+								<input type="file" class="form-control pull-left add-img">
+								<div class="pic">
+									<img src="" class="pic-show">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="pull-left text-right">品牌描述：</label>
+								<textarea class="form-control pull-left text"></textarea>
+							</div>
+							<div class="form-group">
+								<input type="checkbox" class="check-box">
+								<span>设置为推荐品牌</span>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 查看放大图片 -->
+		<div class="check-img">
+			<!-- 关闭 -->
+			<span class="closed"></span>
+			<div class="shadow">
+				<img src="">
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

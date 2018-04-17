@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>资讯管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/information/information.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['information/information']);</script>
+</head>
+<body>
+	<div class="wrap" id="information">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">资讯中心</p>
+			<p class="title-explain">资讯管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 查询条件 -->
+			<div class="search-condition">	
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<label class="control-label">是否热门：</label>
+						<select class="form-control">
+							<option>全部</option>
+							<option>热门</option>
+					    	<option>非热门</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="control-label">资讯类型：</label>
+						<select class="form-control">
+							<option>全部</option>
+							<option>医药资讯首页</option>
+					    	<option>行情动态</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="control-label">创建时间：</label>
+						<input name="authenticationTimeBefore" class="form-control date-time" placeholder="开始时间">
+						-
+						<input name="authenticationTimeAfter" class="form-control date-time" placeholder="结束时间">
+					</div>
+					<div class="btn-group pull-right btn-function">
+						<!-- 刷新 按钮 -->
+					  	<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-refresh"></i></button>
+					  	<!-- 导出 按钮 -->
+					  	<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-share"></i></button>
+					</div>
+					<!-- 输入框 -->
+					<div class="group pull-right search-txt">
+						<input type="text" class="form-control" placeholder="请输入标题/作者">
+					</div>
+				</form>
+			</div>
+			<!-- 查询结果 -->
+			<div class="table-responsive tb-h">
+				<div class="btns">
+					<div class="pull-left">
+						<button type="button" class="btn btn-primary del-btn">批量删除</button>
+					</div>
+					<div class="pull-right">
+						<a href="info-detail.html" class="btn btn-primary add-btn">发布资讯</a>
+					</div>	
+				</div>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>
+								<label class="checkbox">
+						        	<input type="checkbox" class="checkall">全选
+						      	</label>
+						    </th>
+							<th>标题</th>
+							<th>副标题</th>
+							<th>类型</th>
+							<th>作者</th>
+							<th>图片</th>
+							<th>创建时间</th>
+							<th>是否热门</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div class="checkbox">
+									<input type="checkbox">
+								</div>
+							</td>
+							<td>福建药品交易中心</td>
+							<td>福建药品交易中心</td>
+							<td>行业动态</td>
+							<td>蒂姆</td>
+							<td><img src="../../img/iframe/firm-detail.png" height="40" class="pic"></td>
+							<td>20170812</td>
+							<td><img src="../../img/iframe/yes.png"></td>
+							<td>
+								<a href="info-detail.html" class="icon icon-edit"></a>
+								<i class="icon icon-del"></i>
+							</td>
+						</tr>
+					</tbody>
+			  	</table>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade delete-page" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除资讯详情</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">资讯详情</p>
+						<p class="text-muted">确定要删除该资讯详情？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-批量删除 -->
+		<div class="modal fade delete-all" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">批量删除资讯详情</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">资讯详情</p>
+						<p class="text-muted">确定要批量删除该资讯详情？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

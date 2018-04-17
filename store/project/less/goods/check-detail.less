@@ -1,0 +1,190 @@
+@charset 'utf-8';
+@import url(../index/iframes.less);
+li{
+	list-style: none;
+}
+/* 产品信息审核 */
+#check-detail{
+	width: 100%;
+	padding: 28px 34px 80px;
+	.detail-result{
+		line-height: 30px;
+	}
+	/*基本练习信息*/
+	.product{
+		width: 100%;
+		padding: 16px 28px;
+		background: #fff;
+		.product-head{
+			width: 100%;
+			overflow: hidden;
+			color: #666;
+			border-bottom: 1px solid #f5f5f5;
+		}
+		/*提示*/
+		.warm-tip{
+			float: right;
+			font-size: 12px;
+			color: #999;
+		}
+		/*标题*/
+		.product-title{
+			float: left;
+			width: 50%;
+			height: 38px;
+			font-size: 14px;
+			text-align: left;
+		}
+		/*基本联系信息内容*/
+		.product-ctn{
+			display: block;
+			width: 100%;
+			background: #fff;
+		}
+		.product-infor{
+			padding-right: 10px;
+			font-size: 12px;
+			text-align: left;
+			span{
+				display: inline-block;
+				width: 166px;
+				padding-right: 10px;
+				text-align: right;
+				line-height: 36px;
+				color: #666;
+			}	
+			input {
+				width: 50%;
+				line-height: 36px;
+				color: #999;
+				border: none;
+				outline: none;
+			}		
+		}
+	}
+	/*表单组*/
+	.form-group{
+		width: 100%;
+		padding-top: 15px;
+		font-size: 12px;
+		/*标签*/
+		label{
+			float: left;
+			display: inline-block;
+			width: 166px;
+			height: 30px;
+			padding-right: 10px;
+			font-weight: normal;
+			text-align: right;
+			line-height: 30px;
+			color: #666;
+		}
+		/*表单内容*/
+		.form-ctn{
+			position: relative;
+			float: left;
+			display: block;
+			width: 80%;
+			min-height: 30px;
+			line-height: 30px;
+			/*商品图片*/
+			.product-img{
+				float: left;
+				display: inline-block;
+				width: auto;
+				margin-top: 30px;
+				overflow: hidden;
+				li{
+					position: relative;
+					float: left;
+					width: 100px;
+					height: 100px;
+					margin-right: 30px;
+					border: 1px solid #ccc;
+					background: url('../../img/iframe/add-img.png') center center no-repeat;
+					&:hover{
+						 cursor: pointer;
+					}
+				}
+				img{
+					width: 100%;
+					height: 100%;
+					&:hover{
+						cursor: pointer;
+					};
+				}
+				/*封面*/
+				.cover{
+					position: absolute;
+					top: -1px;
+					left: -1px;
+					width: 40px;
+					height: 20px;
+					font-size: 12px;
+					text-align: center;
+					line-height: 20px;
+					color: #fff;
+					background: #2eb4e8;
+					&:hover{
+						cursor: default;
+					};
+				}
+			}
+		}
+		&:after{
+			content: '';
+			display: block;
+			clear: both;
+			width: 100%;
+			height: 0;
+		}
+	}
+	.form-group.form-inline .form-ctn{
+		display: inline-block;
+		width: auto;
+	}
+	/*审核*/
+	.audit{
+		.form-group{
+			padding: 0;
+			margin: 0;
+			margin-bottom: 15px;
+		}
+		.control-label{
+			width: 166px;
+			font-weight: bold;
+		}
+		label{
+			padding-top: 0;
+		}
+		.radio-inline{
+			width: auto;
+			line-height: 30px;
+			input{
+				margin-top: 8px;
+			}
+		}
+		textarea{
+			margin-top: 6px;
+		}
+	}
+	/*按钮*/
+	.btn{
+		margin: 0 15px;
+	}
+}
+/*图片预览*/
+.modal-view{
+	text-align: center;
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+/*提交,基础库数据是否完整*/
+.modal-submit,
+.modal-inspect{
+	.modal-body{
+		font-size: 14px;
+	}
+}

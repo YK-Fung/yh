@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>信息发布</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/supervise/issued.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['supervise/issued']);</script>
+</head>
+<body>
+	<div class="wrap" id="issued">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">信息发布</p>
+			<p class="title-explain">信息发布管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<form class="form-inline" role="form">
+				<a class="btn btn-primary" href="issued-edit.html">发布信息</a>
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="采购商名称/供应商名称/订单号"></div>
+				<div class="form-group pull-right">
+					<label class="control-label">信息主题：</label>
+					<select name="" class="form-control">
+						<option>请选择</option>
+						<option>表扬</option>
+						<option>处罚</option>
+						<option>相关政策</option>
+					</select>
+				</div>
+			</form>
+			<table class="table text-center">
+				<thead>
+					<tr>
+						<th>信息ID</th>
+						<th>信息主体</th>
+						<th>标题</th>
+						<th>发布者</th>
+						<th>发布时间</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>12345678</td>
+						<td><span class="color-green">表扬</span></td>
+						<td>这周集体通宵加班</td>
+						<td>杨戬</td>
+						<td>2017/06/06</td>
+						<td><span class="color-red">未发布</span></td>
+						<td>
+							<i class="icon icon-edit"><a href="issued-edit.html"></a></i>
+							<i class="icon icon-del"></i>
+						</td>
+					</tr>
+					<tr>
+						<td>12345678</td>
+						<td><span class="color-red">处罚</span></td>
+						<td>这周集体通宵加班</td>
+						<td>杨戬</td>
+						<td>2017/06/06</td>
+						<td><span class="color-green">已发布</span></td>
+						<td>
+							<i class="icon icon-edit"><a href="issued-edit.html"></a></i>
+							<i class="icon icon-del"></i>
+						</td>
+					</tr>
+					<tr>
+						<td>12345678</td>
+						<td><span class="color-gray">相关政策</span></td>
+						<td>这周集体通宵加班</td>
+						<td>杨戬</td>
+						<td>2017/06/06</td>
+						<td><span class="color-green">已发布</span></td>
+						<td>
+							<i class="icon icon-edit"><a href="issued-edit.html"></a></i>
+							<i class="icon icon-del"></i>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 弹窗-查看 -->
+		<div class="modal fade issued-del" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除信息</h4>
+					</div>
+					<div class="modal-body">
+						<p>确定删除这条信息吗？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>	
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

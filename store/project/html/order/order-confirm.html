@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>待确认</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/order/order-details.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['order/order-confirm']);</script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- 内容 -->
+		<div class="wrap-ctn">
+			<!-- 订单状态 --> 
+			<div class="order-state">
+				<div class="middle">
+					<p>订单状态：待确定</p>
+				</div>
+			</div>
+			<!-- 类型名字 -->
+			<div class="type-name order-massage-title">
+				<span>订单信息</span>
+				<span class="arrow active"></span>
+				<!-- 操作 -->
+				<div class="btns">
+					<a href="javascript:void(0)" class="blue fixedly-dom edit-btn">修改</a>
+					<a href="javascript:void(0)" class="blue-btn edit-dom sava-btn">保存</a>
+					<a href="javascript:void(0)" class="gray-btn edit-dom cancel-btn">取消</a>
+				</div>
+			</div>
+			<!-- 订单信息 -->
+			<ul class="order-infor confirm-order-edit toggle-ctn active">
+				<li>
+					<div class="detail-title">付款信息</div>
+					<div class="clear-float">
+						<div class="lf">
+							<div class="group">
+								<label>订单号：</label>
+								<span>1703200823157015</span>
+							</div>
+							<div class="group">
+								<label>下单时间：</label>
+								<span>2017-03-20 08:23:15</span>
+							</div>
+						</div>
+						<div class="rt">
+							<div class="group">
+								<label><span class="red edit-dom start">*</span> 交易方式：</label>
+								<!-- 下拉 与 文本的切换-->
+								<div class="input-toggle">
+									<span class="fixedly-dom">担保支付</span>
+									<select class="form-control edit-dom wid110">
+								    	<option>担保支付</option>
+								    	<option>对公交易</option>
+								    </select>
+								</div>
+							</div>
+							<div class="group">
+								<label>付款时间：</label>
+								<span>未支付</span>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="detail-title">采购商信息</div>
+					<div class="clear-float">
+						<div class="lf">
+							<div class="group">
+								<label>采购商：</label>
+								<!-- 输入框 与 文本的切换-->
+								<div class="input-toggle">
+									<span class="fixedly-dom">广州医药有限公司</span>
+									<input type="text" value="广州医药有限公司" class="edit-dom wid330">
+								</div>
+							</div>
+						</div>
+						<div class="rt">
+							<div class="group">
+								<label>联系人：</label>
+								<!-- 输入框 与 文本的切换-->
+								<div class="input-toggle">
+									<span class="fixedly-dom">李先生</span>
+									<input type="text" value="李先生" class="edit-dom wid110">
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="position">
+					<div class="detail-title">收货信息</div>
+					<div class="clear-float">
+						<div class="lf">
+							<div class="group">
+								<label><span class="red edit-dom start">*</span> 收货地址：</label>
+								<!-- 输入框 与 文本的切换-->
+								<div class="input-toggle address">
+									<span class="fixedly-dom">江X省-南X市-新X县 江X省南X市新建区子实路858号</span>
+									<input type="text" class="edit-dom wid330 must" value="江X省-南X市-新X县 江X省南X市新建区子实路858号">
+								</div>
+								<!-- 提示 -->
+								<span class="red tip">收货地址不能为空</span>
+							</div>
+							<div class="group">
+								<label>给供应商留言：</label>
+								<!-- 输入框 与 文本的切换-->
+								<div class="input-toggle">
+									<span class="fixedly-dom">麻烦发德邦物流，货票同行，谢谢</span>
+									<input type="text" class="edit-dom wid315" value="麻烦发德邦物流，货票同行，谢谢">
+								</div>
+							</div>
+						</div>
+						<div class="rt">
+							<div class="group">
+								<span class="red edit-dom">*</span>
+								<!-- 输入框 与 文本的切换-->
+								<div class="input-toggle name-or-num">
+									<span class="fixedly-dom">林先生</span>
+									<input type="text" placeholder="联系人" value="林先生" class="wid60 edit-dom must">
+								</div>
+								<span class="red edit-dom">*</span>
+								<!-- 输入框 与 文本的切换-->
+								<div class="input-toggle name-or-num">
+									<span class="fixedly-dom">13645896214</span>
+									<input type="text" placeholder="电话" value="13645896214" class="wid100 edit-dom must">
+								</div>
+								<!-- 提示 -->
+								<span class="red tip">联系人、电话不能为空</span>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<!-- 类型名字 -->
+			<div class="type-name">采购清单<span class="arrow active"></span></div>
+			<!-- 采购清单 确认订单-->
+			<div class="order-ctn toggle-ctn confirm-order-edit active">
+				<!-- 表格标题 -->
+				<ul class="table-tit">
+					<li>商品信息</li>
+					<li>单价/数量</li>
+					<li>小计</li>
+					<li>&nbsp;</li>
+				</ul>
+				<!-- 产品列表 -->
+				<div class="product-list">
+					<ul>
+						<!-- 一个订单最多显示5个产品-->
+						<li>
+							<!-- 商品信息 -->
+							<div class="message">
+								<!-- 居中 -->
+								<div class="middle">
+									<div class="photo">
+										<a href="#"><img src="../../img/placeholder.jpg"></a>
+									</div>
+									<div class="product-ctn">
+										<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+										<p>成都倍特药业有限公司</p>
+										<div>
+											<label>规<span class="blank"></span>格：</label>
+											<!-- 下拉 与 文本的切换 -->
+											<div class="input-toggle">
+												<div class="fixedly-dom"><span>0.1g*6s</span></div>
+												<select class="form-control edit-dom select-box-small">
+											    	<option>0.1g*6s</option>
+											    	<option>0.2g*6s</option>
+											    </select>
+											</div>
+										</div> 
+										<div>
+											<label>批<span class="blank"></span>号：</label>
+											<!-- 下拉 与 文本的切换 -->
+											<div class="input-toggle">
+												<div class="fixedly-dom"><span>161005</span></div>
+												<select class="form-control edit-dom select-box-small">
+											    	<option>161005</option>
+											    	<option>161006</option>
+											    </select>
+											</div>
+										</div>    
+										<p>有效期至：<span>2019-10-10</span></p>
+									</div>
+								</div>
+							</div>
+							<!-- 单价/数量 -->
+							<div class="num">
+								<!-- 居中 -->
+								<div class="middle">
+									<div class="line">
+										<label>拆零单价：</label>
+										<div class="input-toggle">
+											<!-- 输入框 与 文本的切换 -->
+											<div class="red fixedly-dom">￥ <span>3.50</span></div>
+											<div class="red edit-dom">￥ <input type="number" class="txt-input wid74 unit-price-num" value="3.50"></div>
+										</div>
+									</div>
+									<div class="line">
+										<label>数量(盒)：</label>
+										<div class="input-toggle">
+											<!-- 输入框 与 文本的切换 -->
+											<div class="red fixedly-dom"><span>200</span></div>
+											<div class="red edit-dom">
+												<div class="amount-reduce">-</div>
+												<!-- 输入框 -->
+												<input name="" class="amount-num" type="number" value="200">
+												<div class="amount-add">+</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 小计 -->
+							<div class="subtotal">
+								<!-- 居中 -->
+								<div class="middle">
+									<div class="input-toggle">
+										<p class="total-price red fixedly-dom">￥<span>700.00</span></p>
+										<p class="total-price red edit-dom">￥<input type="number" class="txt-input wid74 subtotal-num" value="700.00"></p>
+									</div>
+								</div>
+							</div>
+							<!-- 操作 -->
+							<div class="operate">
+								<!-- 居中 -->
+								<div class="middle">
+									<div class="btns blue fixedly-dom edit-btn">编辑</div>
+									<div class="btns red fixedly-dom delete-order">删除</div>
+									<div class="btns blue-btn edit-dom save-btn">保存</div>
+									<div class="btns gray-btn edit-dom cancel-btn">取消</div>
+								</div>
+							</div>
+						</li>
+						<!-- 编辑 li class="buyer-table-edit" -->
+						<li>
+							<!-- 商品信息 -->
+							<div class="message">
+								<!-- 居中 -->
+								<div class="middle">
+									<div class="photo">
+										<a href="#"><img src="../../img/placeholder.jpg"></a>
+									</div>
+									<div class="product-ctn">
+										<p class="name"><a href="#">特普宁(头孢克肟胶囊)</a></p>
+										<p>成都倍特药业有限公司</p>
+										<div>
+											<label>规<span class="blank"></span>格：</label>
+											<!-- 下拉 与 文本的切换 -->
+											<div class="input-toggle">
+												<div class="fixedly-dom"><span>0.1g*6s</span></div>
+												<select class="form-control edit-dom select-box-small">
+											    	<option>0.1g*6s</option>
+											    	<option>0.2g*6s</option>
+											    </select>
+											</div>
+										</div> 
+										<div>
+											<label>批<span class="blank"></span>号：</label>
+											<!-- 下拉 与 文本的切换 -->
+											<div class="input-toggle">
+												<div class="fixedly-dom"><span>161005</span></div>
+												<select class="form-control edit-dom select-box-small">
+											    	<option>161005</option>
+											    	<option>161006</option>
+											    </select>
+											</div>
+										</div>    
+										<p>有效期至：<span>2019-10-10</span></p>
+									</div>
+								</div>
+							</div>
+							<!-- 单价/数量 -->
+							<div class="num">
+								<!-- 居中 -->
+								<div class="middle">
+									<div class="line">
+										<label>拆零单价：</label>
+										<div class="input-toggle">
+											<!-- 输入框 与 文本的切换 -->
+											<div class="red fixedly-dom">￥ <span>3.50</span></div>
+											<div class="red edit-dom">￥ <input type="number" class="txt-input wid74 unit-price-num" value="3.50"></div>
+										</div>
+									</div>
+									<div class="line">
+										<label>数量(盒)：</label>
+										<div class="input-toggle">
+											<!-- 输入框 与 文本的切换 -->
+											<div class="red fixedly-dom"><span>200</span></div>
+											<div class="red edit-dom">
+												<div class="amount-reduce">-</div>
+												<!-- 输入框 -->
+												<input name="" class="amount-num" type="number" value="200">
+												<div class="amount-add">+</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 小计 -->
+							<div class="subtotal">
+								<!-- 居中 -->
+								<div class="middle">
+									<div class="input-toggle">
+										<p class="total-price red fixedly-dom">￥<span>700.00</span></p>
+										<p class="total-price red edit-dom">￥<input type="number" class="txt-input wid74 subtotal-num" value="700.00"></p>
+									</div>
+								</div>
+							</div>
+							<!-- 操作 -->
+							<div class="operate">
+								<!-- 居中 -->
+								<div class="middle">
+									<div class="btns blue fixedly-dom edit-btn">编辑</div>
+									<div class="btns red fixedly-dom delete-order">删除</div>
+									<div class="btns blue-btn edit-dom save-btn">保存</div>
+									<div class="btns gray-btn edit-dom cancel-btn">取消</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!-- 超出五条信息插入》》查看更多商品 -->
+					<a href="#" class="more-link">查看更多商品</a>
+					<!-- 总计 -->
+					<div class="order-total confirm-order-edit">
+						<!-- 操作按钮 -->
+						<div class="edit-btns">
+							<div class="btns blue fixedly-dom edit-btn">编辑</div>
+							<div class="btns blue-btn edit-dom save-btn">保存</div>
+							<div class="btns gray-btn edit-dom cancel-btn">取消</div>
+						</div>
+						<div class="total-ctn">
+							<div class="total-t">
+								<div class="input-toggle">
+									<label>物流费用：</label>
+									<div class="red fixedly-dom">￥<span>20</span></div>
+									<div class="red edit-dom">￥<input type="number" class="wid74 logistics-sum" value="20"></div>
+								</div>
+								<div>
+									<label>优惠金额：</label>
+									<span class="red discounts"><i class="float">-</i>￥<span class="discounts-sum">100</span></span>
+								</div>
+								<div class="input-toggle">
+									<label>货品总金额：</label>
+									<div class="red fixedly-dom">￥<span class="total-sum-txt">1400</span></div>
+									<div class="red edit-dom">￥<input type="number" class="wid74 total-sum-input" value="1400"></div>
+								</div>
+							</div>
+							<div class="total-b">
+								<label>应付总额（含运费）：</label>
+								<span class="red">￥<i class="pay-total-amount">1320</i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 按钮组 -->
+			<div class="btn-group">
+				<div class="form-group">
+					<a href="javascript:void(0)" class="btn btn-primary order-confirm">确认订单</a>
+					<a href="javascript:void(0)" class="btn btn-danger cancel-order">取消订单</a>
+					<a href="#" class="btn btn-default">返回</a>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗 提示 -->
+		<div class="modal fade" tabindex="-1" role="dialog" id="pop-tip-txt">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">提醒</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary"></p>
+						<p class="text-muted"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗 取消订单 -->
+		<div class="modal fade" tabindex="-1" role="dialog" id="pop-cancel-order">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">提醒</h4>
+					</div>
+					<div class="modal-body">
+						<p class="tip">请选择取消订单的原因：</p>
+						<div class="radio">
+						  <label>
+						    <input type="radio" name="a" checked>
+						    缺货
+						  </label>
+						</div>
+						<div class="radio">
+						  <label>
+						    <input type="radio" name="a">
+						    商品已下架
+						  </label>
+						</div>
+						<div class="radio">
+						  <label>
+						    <input type="radio" name="a">
+						   其他
+						  </label>
+						</div>
+					<textarea></textarea>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>角色管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/setup/role.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['setup/role']);</script>
+</head>
+<body>
+	<div class="wrap" id="role">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">系统设置</p>
+			<p class="title-explain">角色管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 列表导航 -->
+			<div class="toggle-top">
+				<a href="accounts.html" class="btn btn-default">账号管理</a>
+				<a href="role.html" class="btn btn-primary">角色管理</a>
+				<a href="add-role.html" class="btn btn-primary pull-right">添加角色</a>
+			</div>
+			<!-- 账号设置 -->
+			<div class="accounts-ctn">
+				<!-- 筛选结果 -->
+				<div class="result">
+					<!-- 表头 -->
+					<ul class="thead">
+						<li>角色名称</li>
+						<li>所属部门</li>
+						<li class="lenth">权限</li>
+						<li>操作</li>
+					</ul>
+					<!-- 内容 -->
+					<ul class="tbody">
+						<li class="line">
+							<ul>
+								<!-- 角色名称 -->
+								<li>BD经理</li>
+								<!-- 所属部门 -->
+								<li>市场部</li>
+								<!-- 权限 -->
+								<li class="lenth">订单管理/评价管理订单管理/评价管理订单管理/评价管理订单管理/评价管理</li>
+								<!-- 操作 -->
+								<li><a class="modification">修改</a> | <a class="delete-role">删除</a></li>
+								<!-- id -->
+								<li class="tb-id">11</li>
+							</ul>
+						</li>
+						<li class="line">
+							<ul>
+								<!-- 角色名称 -->
+								<li>BD经理</li>
+								<!-- 所属部门 -->
+								<li>市场部</li>
+								<!-- 权限 -->
+								<li class="lenth"></li>
+								<!-- 操作 -->
+								<li><a class="modification">修改</a> | <a class="delete-role">删除</a></li>
+								<!-- id -->
+								<li class="tb-id">11</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- 分页 -->
+				<div class="pagination-div">
+					<span>共<span class="page-amount text-primary">20</span>页</span>
+					<ul class="pagination pull-right">
+						<li class="page-pre"><a href="#">‹</a></li>
+						<li class="page-number active"><a href="#">1</a></li>
+						<li class="page-number"><a href="#">2</a></li>
+						<li class="page-number"><a href="#">3</a></li>
+						<li class="page-number"><a href="#">4</a></li>
+						<li class="page-number"><a href="#">5</a></li>
+						<li class="page-next"><a href="#">›</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>	
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

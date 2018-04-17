@@ -1,0 +1,90 @@
+@import url(../index/iframes.less);
+
+/*资质*/
+#firm-manage{
+	.wrap-ctn{
+		position: relative;
+		min-height: 672px;
+	}
+	.form-inline{
+		margin-bottom: 20px;
+		&:after{
+			content: '';
+			clear: both;
+			display: block;
+			width: 100%;
+			height: 0;
+		}
+	}
+	/*可编辑表格*/
+	.table-edit{
+		input{
+			width: 240px;
+			height: 30px;
+			text-align: center;
+			/*border: 1px solid #dddddd;*/
+			border: none;
+			outline: none;
+			background: #fff;
+			&.edit-ing{
+				border: 1px solid #dddddd;
+				outline: inherit;
+			}
+		}
+	}
+	/*查看详情*/
+	.detail{
+		cursor: pointer;
+	}
+	/*分页*/
+	.pagination-ctn{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	/*弹窗-详情*/
+	.firm-detail{
+		.modal-dialog{
+			width: 1030px;
+			margin-bottom: 60px;
+		}
+		.modal-body{
+			padding: 20px;
+			text-align: right;
+			color: #666;
+			.w186{
+				width: 186px;
+				background: #f8f8f8;
+			}
+			.input{
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				color: #666;
+				background: #fff;
+				border: none;
+				outline: none;
+			}
+			.add{
+				color: #0078cc;
+				cursor: pointer;
+			}
+		}
+	}
+	/*弹窗-删除*/
+	.firm-del{
+		.modal-body{
+			height: 220px;
+			padding-top: 100px;
+			text-align: center;
+			background: url(../../img/iframe/icon-warn.png) center 30px no-repeat;
+		}
+		.text-primary{
+			color: #1296db;
+			font-size: 18px;
+		}
+		.text-muted{
+			font-size: 12px;
+		}
+	}
+}

@@ -1,0 +1,84 @@
+@charset 'utf-8';
+@import url(../index/iframes.less);
+
+/* 查看合同 */
+#contact-detail{
+	/*合同信息*/
+	.contract{
+		padding: 30px 0;
+		.empty{
+			margin: 0 10px;
+		}
+		/*合同文字*/
+		.contract-text{
+			width: 80%;
+			margin: 0 auto;
+			padding: 30px 50px;
+			font-size: 12px;
+			line-height: 24px;
+			color: #666;
+			.red{
+				color:#c00;
+			}
+		}
+		.text-right{
+			text-align: right;
+		}
+		.text-center{
+			text-align: center;
+		}
+		/*甲方乙方*/
+		.contract-people{
+			display: block;
+			width: 100%;
+			padding: 30px 0 100px;
+			overflow: hidden;
+			font-size: 12px;
+			color: #666;
+			li{
+				float: left;
+				width: 50%;
+				text-align: center;
+			}
+			.people-infor{
+				display: inline-block;
+				text-align: left;
+				p{
+					position: relative;
+					margin-bottom: 12px;
+					text-indent: 3em;
+					line-height: 24px;
+					span{
+						padding-right: 4px;
+					}
+					label{
+						color: #999;
+						font-weight: 400;
+						display: inline;
+					}
+				}
+				input{
+					width: 250px;
+					height: 24px;
+					padding: 0 5px;
+					font-size: 12px;
+					color: #999999;
+					border: 1px solid #dddddd;
+					outline: none;
+				}
+				.stamp{
+					position: absolute;
+					top: 0;
+					left: 110px;
+					display: inline-block;
+					width: 100px;
+					height: 100px;
+					background: url(../../img/iframe/stamp.png) center center no-repeat;
+					&.active{
+						background: url(../../img/iframe/stamp-active.png) center center no-repeat;
+					}
+				}
+			}
+		}
+	}
+}

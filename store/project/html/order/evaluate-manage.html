@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>评价管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/order/evaluate-manage.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['order/evaluate-manage']);</script>
+</head>
+<body>
+	<div class="wrap" id="evaluate-manage">
+		<div class="iframe-title">
+			<p class="title-text">订单中心</p>
+			<p class="title-explain">评价管理</p>
+		</div>
+
+
+		<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+		<form class="form-inline" role="form">
+			<div class="form-group">
+				<label class="control-label">评价等级：</label>
+				<select class="form-control">
+					<option>全部</option>
+					<option>好评</option>
+			    	<option>中评</option>
+			    	<option>差评</option>
+				</select>
+			</div>
+			<div class="columns columns-right btn-group pull-right">
+				<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+					<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+				</button>
+				<div class="export btn-group">
+					<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+						<i class="glyphicon glyphicon-export icon-share"></i>
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+						<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+						<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+						<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+						<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+						<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="pull-right search"><input class="form-control" type="text" placeholder="请输入采购商名称/供应商名称/订单号"></div>
+		</form>
+		<!-- 查询结果 -->
+		<div class="table-responsive tb-h">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>评价等级</th>
+						<th>供应商</th>
+						<th>采购商</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>好评</td>
+						<td>北京同仁堂医药有限公司</td>
+						<td>广东白云山医药股份有限公司</td>
+						<td><a href="#" class="detail">查看评价及回复内容</a></td>
+					</tr>
+				</tbody>
+		  	</table>
+		</div>
+		<!-- 弹窗-查看评价及回复内容 -->
+		<div class="modal fade evaluate-detail" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">查看评价及回复内容</h4>
+					</div>
+					<div class="modal-body">
+						<div class="talk">
+							<h4 class="cg">北京同仁堂（采购商）：</h4>	
+							<div class="time">2017-07-20</div>
+							<!-- 采购商评价 -->
+							<p class="cg-txt">物流速度很快，收到货物验收没有问题。</p>
+							<div class="gy">
+								<span class="arrow"></span>
+								<!-- 供应商回复 -->
+								<p>广东白云山（供应商）回复：感谢您的评价，我们会更加努力！感谢您的评价，我们会更加努力！感谢您的评价，我们会更加努力！感谢您的评价，我们会更加努力！</p>
+							</div>
+						</div>
+						<div class="talk">
+							<h4 class="cg">北京同仁堂（采购商）：</h4>	
+							<div class="time">2017-07-20</div>
+							<!-- 采购商评价 -->
+							<p class="cg-txt">物流速度很快，收到货物验收没有问题。</p>
+							<div class="gy">
+								<span class="arrow"></span>
+								<!-- 供应商回复 -->
+								<p>广东白云山（供应商）回复：感谢您的评价，我们会更加努力！感谢您的评价，我们会更加努力！感谢您的评价，我们会更加努力！感谢您的评价，我们会更加努力！</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">返回</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

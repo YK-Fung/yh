@@ -1,0 +1,44 @@
+@import url(../index/iframes.less);
+@import url(../index/move-el.less);
+
+/*类目管理*/
+#aptitude{
+	li{
+		list-style: none;
+	}
+	/* 标题 */
+	.tit-r{
+		height: 34px;
+		line-height: 31px;
+		border-bottom: 1px solid #ddd;
+		padding:0 10px;
+	}
+	/* 列表内容 */
+	.list-detail{
+		width:76%;
+		min-height: 700px;
+		margin-left: 2%;
+		border:1px solid #ddd;
+		.toggle-ctn{
+			display: none;
+			padding: 50px 0 0 65px;
+		}
+		.overflow{
+			overflow: hidden;
+		}
+		textarea{
+			width: 450px;
+			height: 220px;
+		}
+		.btn{
+			display: block;
+   			margin-left: 60px;
+		}
+	}
+	/* 删除节点 */
+	.delete-node{
+		.modal-dialog{
+			width: 450px;
+		}
+	}
+}

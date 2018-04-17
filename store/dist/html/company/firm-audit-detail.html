@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta name="renderer" content="webkit"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>企业审核详情</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+    <link rel="stylesheet" type="text/css" href="../../css/company/firm-audit-detail.css">
+    <script type="text/javascript" src="../../js/require.js"></script>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script>require(['company/firm-audit-detail']);</script>
+</head>
+<body>
+<div class="wrap" id="audit-detail">
+    <!-- 标题 -->
+    <div class="iframe-title">
+        <p class="title-text">企业审核</p>
+        <p class="title-explain">广州医药公司审核</p>
+    </div>
+    <!-- 编辑 edit -->
+    <div class="wrap-ctn edit">
+        <form class="form-inline">
+            <!-- 单位信息 -->
+            <div class="firm-detail">
+                <!-- 头部 -->
+                <div class="detail-head">
+                    <!-- 标题 -->
+                    <div class="title">单位信息</div>
+                </div>
+                <!-- 单位信息内容 -->
+                <div class="infor">
+                    <div class="infor-detail">
+                        <div class="infor-left">企业编码</div>
+                        <div class="infor-right">4613463467457</div>
+                    </div>
+                    <div class="infor-detail">
+                        <div class="infor-left">企业角色</div>
+                        <div class="infor-right">
+                            <label class="radio-inline">
+                                <input class="radio" type="radio" name="firm-role" value="option1" checked>采购商
+                            </label>
+                            <label class="radio-inline">
+                                <input class="radio" type="radio" name="firm-role" value="option2">供应商
+                            </label>
+                            <label class="radio-inline">
+                                <input class="radio" type="radio" name="firm-role" value="option2">两者皆是
+                            </label>
+                            <span class="text-primary service-tariffing">查看服务费率</span>
+                        </div>
+                    </div>
+                    <div class="infor-detail">
+                        <div class="infor-left">企业类型</div>
+                        <div class="infor-right">
+                            <label class="radio-inline">
+                                <input class="radio firm-type" type="radio" name="firm-type" value="1" checked>医疗机构
+                            </label>
+                            <label class="radio-inline">
+                                <input class="radio firm-type" type="radio" name="firm-type" value="2">单体药店
+                            </label>
+                        </div>
+                    </div>
+                    <div class="infor-detail">
+                        <div class="infor-right firm-type-ctn">
+                            <label class="checkbox-inline">
+                                <input class="checkbox" type="checkbox" value="option1" checked>医疗机构
+                            </label>
+                            <label class="checkbox-inline">
+                                <input class="checkbox" type="checkbox" value="option2">单体药店
+                            </label>
+                        </div>
+                    </div>
+                    <div class="infor-detail">
+                        <div class="infor-left">企业全称</div>
+                        <div class="infor-right">
+                            <input class="form-control w400" type="text" name="">
+                        </div>
+                    </div>
+                    <div class="infor-detail">
+                        <div class="infor-left">企业法人</div>
+                        <div class="infor-right">
+                            <input class="form-control w400" type="text" name="">
+                        </div>
+                    </div>
+                    <div class="infor-detail">
+                        <div class="infor-left">企业联系人</div>
+                        <div class="infor-right">
+                            <input class="form-control w400" type="text" name="">
+                        </div>
+                    </div>
+                    <div class="infor-detail">
+                        <div class="infor-left">手机</div>
+                        <div class="infor-right">
+                            <input class="form-control w400" type="text" name="">
+                        </div>
+                    </div>
+                    <div class="infor-detail">
+                        <div class="infor-left">企业联系电话</div>
+                        <div class="infor-right">
+                            <input class="form-control w400" type="text" name="">
+                        </div>
+                    </div>
+                    <div class="infor-detail">
+                        <div class="infor-left">生产/经营许可证号</div>
+                        <div class="infor-right">
+                            <input class="form-control w400" type="text" name="">
+                        </div>
+                    </div>
+                    <div class="infor-detail">
+                        <div class="infor-left">企业注册地址</div>
+                        <div class="infor-right">
+                            <select class="form-control">
+                                <option value="1">广东省</option>
+                                <option value="2">广西省</option>
+                                <option value="3">新疆维吾尔自治区</option>
+                            </select>
+                            <select class="form-control">
+                                <option value="1">广东市</option>
+                                <option value="2">广西市</option>
+                                <option value="3">新疆维吾尔自治市</option>
+                            </select>
+                            <select class="form-control">
+                                <option value="1">广东区</option>
+                                <option value="2">广西区</option>
+                                <option value="3">新疆维吾尔自治区</option>
+                            </select>
+                            <select class="form-control">
+                                <option value="1">广东街道</option>
+                                <option value="2">广西街道</option>
+                                <option value="3">新疆维吾尔自治街道</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="infor-detail">
+                        <div class="infor-left">企业详细地址</div>
+                        <div class="infor-right">
+                            <input class="form-control w600" type="text" name="" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 经营范围 -->
+            <div class="manage-range">
+                <!-- 头部 -->
+                <div class="detail-head">
+                    <!-- 标题 -->
+                    <div class="title">经营范围</div>
+                </div>
+                <!-- 单位信息内容 -->
+                <div class="infor">
+                    <div class="infor-detail">
+                        <div class="infor-left">经营范围</div>
+                        <div class="infor-right">
+                            <textarea class="form-control w600" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="infor-detail">
+                        <div class="infor-left">
+                            <!-- 经营类型 -->
+                            <select class="form-control manage-type">
+                                <option value="1">全部</option>
+                                <option value="2">类型1</option>
+                                <option value="3">类型2</option>
+                            </select>
+                        </div>
+                        <div class="infor-right manage-type-ctn">
+                            <label class="checkbox-inline">
+                                <input class="checkbox" type="checkbox" value="option1" checked>麻醉药品
+                            </label>
+                            <label class="checkbox-inline">
+                                <input class="checkbox" type="checkbox" value="option2">精神药品
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 资质详情 -->
+            <ul class="qualifications">
+                <!-- 头部 -->
+                <div class="detail-head">
+                    <!-- 标题 -->
+                    <div class="title">资质信息</div>
+                </div>
+                <li>
+                    <!-- 资质文字 -->
+                    <div class="detail-text">
+                        <p>证件名称：企业营业执照<span class="red">（必填项）</span></p>
+                        <p>证件号码：
+                            <input name="" class="form-control" type="text" value="546515121151">
+                        </p>
+                        <p>截止日期：
+                            <input name="" class="form-control date-time" value="2016/02/12">
+                            <label class="long-time">
+                                <input class="checkbox" type="checkbox" value="option1">长期
+                            </label>
+                        </p>
+                    </div>
+                    <!-- 资质图片-系统存档 -->
+                    <div class="detail-ctn detail-up">
+                        <p>资质图片（系统存档）</p>
+                        <!-- 资质图片 -->
+                        <div class="detail-img">
+                            <div class="qualifications-del"></div>
+                            <input class="qualifications-up" type="file" name="">
+                            <img src="../../img/iframe/firm-detail.png">
+                        </div>
+                        <!-- 按钮 -->
+                        <div class="btn btn-sm btn-primary btn-change">更换资质</div>
+                    </div>
+                    <!-- 资质图片-用户上传 -->
+                    <div class="detail-ctn">
+                        <p>资质图片（客户上传）</p>
+                        <!-- 资质图片 -->
+                        <div class="detail-img">
+                            <!-- <div class="detail-tip"><span>无上传图</span></div> -->
+                            <img src="../../img/iframe/firm-detail.png">
+                        </div>
+                        <!-- 按钮 -->
+                        <div class="btn btn-sm btn-primary btn-renewal">更新存档</div>
+                    </div>
+                </li>
+                <li>
+                    <!-- 资质文字 -->
+                    <div class="detail-text">
+                        <p>证件名称：企业营业执照<span class="red">（必填项）</span></p>
+                        <p>证件号码：
+                            <input name="" class="form-control" type="text" value="546515121151">
+                        </p>
+                        <p>截止日期：
+                            <input name="" class="form-control date-time" value="2016/02/12">
+                            <label class="long-time">
+                                <input class="checkbox" type="checkbox" value="option1">长期
+                            </label>
+                        </p>
+                    </div>
+                    <!-- 资质图片-系统存档 -->
+                    <div class="detail-ctn detail-up">
+                        <p>资质图片（系统存档）</p>
+                        <!-- 资质图片 -->
+                        <div class="detail-img qualifications-add">
+                            <div class="qualifications-del"></div>
+                            <input class="qualifications-up" type="file" name="">
+                            <img src="">
+                        </div>
+                        <!-- 按钮 -->
+                        <div class="btn btn-sm btn-primary btn-change">更换资质</div>
+                    </div>
+                    <!-- 资质图片-用户上传 -->
+                    <div class="detail-ctn">
+                        <p>资质图片（客户上传）</p>
+                        <!-- 资质图片 -->
+                        <div class="detail-img">
+                            <div class="detail-tip"><span>无上传图</span></div>
+                            <!-- <img src="../../img/iframe/firm-detail.png"> -->
+                        </div>
+                        <!-- 按钮 -->
+                        <div class="btn btn-sm btn-primary btn-renewal">更新存档</div>
+                    </div>
+                </li>
+            </ul>
+            <!-- 审核 -->
+            <div class="audit">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">企业审核结果：</label>
+                    <div class="col-sm-9 text-left">
+                        <select class="form-control">
+                            <option>待审核</option>
+                            <option>通过</option>
+                            <option>不通过</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">备注：</label>
+                    <div class="col-sm-9 text-left">
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <!-- 按钮 -->
+                <div class="btn-group2">
+                    <div class="btn btn-primary btn-submit">提交</div>
+                    <div class="btn btn-default btn-back">返回</div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- 弹窗-预览图片 -->
+    <div class="modal fade view-img" tabindex="-1" role="dialog">
+        <div class="modal-ctn">
+            <img src="../../img/iframe/firm-detail.png">
+        </div>
+        <div class="action-btn">
+            <i class="icon-plus"></i><i class="icon-minus"></i><i class="icon-rotate"></i><i class="icon-download"></i>
+        </div>
+    </div>
+    <!-- 弹窗-服务费率 -->
+    <div class="modal fade modal-service" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">服务费率</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">收费模式：</label>
+                            <div class="col-sm-10">
+                                <label class="radio-inline">
+                                    <input class="radio service-radio" type="radio" name="service-type" value="option1"
+                                           checked>交易佣金
+                                </label>
+                                <label class="radio-inline">
+                                    <input class="radio service-radio" type="radio" name="service-type" value="option2">会员制
+                                </label>
+                            </div>
+                        </div>
+                        <div class="service-set">
+                            <p class="service-tip">收费类目：（点位计算，如填3.5则为3.5%）</p>
+                            <div class="form-group">
+                                <span class="col-sm-2 text-right">类目名称：</span>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control service-input" id="firstname"
+                                           placeholder="费率">
+                                    <div class="btn btn-sm btn-primary btn-save">保存</div>
+                                    <div class="btn btn-sm btn-danger btn-submit">更新</div>
+                                </div>
+                                <span class="col-sm-2 text-right">类目名称：</span>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control service-input" id="firstname"
+                                           placeholder="费率">
+                                    <div class="btn btn-sm btn-primary btn-save">保存</div>
+                                    <div class="btn btn-sm btn-danger btn-submit">更新</div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-no" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-sm btn-primary btn-yes" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

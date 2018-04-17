@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>优惠券审核</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/setup/discounts-auditing.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['setup/discounts-auditing']);</script>
+</head>
+<body>
+	<div class="wrap" id="discounts">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">系统设置</p>
+			<p class="title-explain">优惠券审核</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+
+				<div class="form-group">
+					<label class="control-label">优惠券类型：</label>
+					<select class="form-control">
+						<option>全部</option>
+						<option>商品券</option>
+						<option>店铺券</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="control-label">推广方式：</label>
+					<select class="form-control">
+						<option>全部</option>
+						<option>定向发放</option>
+						<option>展示到店铺</option>
+						<option>不展示到店铺</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="control-label">审核状态：</label>
+					<select class="form-control">
+						<option>全部</option>
+						<option>待审核</option>
+						<option>已审核</option>
+						<option>未通过</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="control-label">面值：</label>
+					<input class="form-control per-value" type="text">
+					-
+					<input class="form-control per-value" type="text">
+				</div>
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="请输入供应商名称"></div>
+			</form>
+			<!-- 查询结果 -->
+			<div class="table-responsive tb-h">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>供应商名称</th>
+							<th>优惠券名称</th>
+							<th>优惠券类型</th>
+							<th>推广方式</th>
+							<th>面值</th>
+							<th>有效时间</th>
+							<th>使用条件</th>
+							<th>总发行量</th>
+							<th>审核状态</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="">
+							<td>广州白云山药业</td>
+							<td>春节优惠</td>
+							<td>商品券</td>
+							<td>定向发放</td>
+							<td>20</td>
+							<td>2018.01.30-2018.02.10</td>
+							<td>满200</td>
+							<td>20</td>
+							<td class="status">待审核</td>
+							<td class="opt">
+								<a class="btn-pass">通过</a>
+								<a class="btn-nopass">不通过</a>
+							</td>
+						</tr>
+						<tr class="">
+							<td>广州白云山药业</td>
+							<td>开春优惠</td>
+							<td>店铺券</td>
+							<td>展示到店铺</td>
+							<td>50</td>
+							<td>2018.01.30-2018.02.10</td>
+							<td>满100</td>
+							<td>20</td>
+							<td class="status">未通过</td>
+							<td class="opt">
+								<a class="btn-pass">通过</a>
+							</td>
+						</tr>
+						<tr class="">
+							<td>广州白云山药业</td>
+							<td>开店优惠</td>
+							<td>商品券</td>
+							<td>不展示到店铺</td>
+							<td>20</td>
+							<td>2018.01.30-2018.02.10</td>
+							<td>满200</td>
+							<td>20</td>
+							<td class="status">已审核</td>
+							<td class="opt"></td>
+						</tr>
+					</tbody>
+			  	</table>
+			</div>
+			<!-- 分页 -->
+			<div class="pagination-div">
+				<span>共<span class="page-amount text-primary">20</span>页</span>
+				<ul class="pagination pull-right">
+					<li class="page-pre"><a href="#">‹</a></li>
+					<li class="page-number active"><a href="#">1</a></li>
+					<li class="page-number"><a href="#">2</a></li>
+					<li class="page-number"><a href="#">3</a></li>
+					<li class="page-number"><a href="#">4</a></li>
+					<li class="page-number"><a href="#">5</a></li>
+					<li class="page-next"><a href="#">›</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 弹窗-审核不通过 -->
+		<div class="modal fade modal-nopass" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">请填写不通过原因</h4>
+					</div>
+					<div class="modal-body">
+						<!--<input type="" class="text-primary">-->
+						<textarea placeholder="不超过30个字" name="" id="" cols="30" rows="10"></textarea>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary btn-sub" >提交</button>
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">返回</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 弹窗-审核通过 -->
+		<div class="modal fade modal-pass" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content pass">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">提醒</h4>
+					</div>
+					<div class="modal-body">
+						<p>您确定此优惠券审核通过吗？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确认</button>
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

@@ -1,0 +1,53 @@
+@import url(../index/iframes.less);
+
+#type{
+	.wrap-ctn{
+		position: relative;
+		min-height: 672px;
+	}
+	.form-inline{
+		margin-bottom: 20px;
+		&:after{
+			content: '';
+			clear: both;
+			display: block;
+			width: 100%;
+			height: 0;
+		}
+	}
+	/*查看详情*/
+	.detail{
+		cursor: pointer;
+	}
+	/*弹窗-新增and编辑*/
+	.type-add,
+	.type-edit{
+		.row{
+			&>div{
+				margin-top: 10px;
+			}
+			.text-right{
+				line-height: 34px;
+			}
+			textarea{
+				height: 150px;
+			}
+		}
+	}
+	/*弹窗-删除*/
+	.type-del{
+		.modal-body{
+			height: 220px;
+			padding-top: 100px;
+			text-align: center;
+			background: url(../../img/iframe/icon-warn.png) center 30px no-repeat;
+		}
+		.text-primary{
+			color: #1296db;
+			font-size: 18px;
+		}
+		.text-muted{
+			font-size: 12px;
+		}
+	}
+}

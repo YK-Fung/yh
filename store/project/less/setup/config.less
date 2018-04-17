@@ -1,0 +1,56 @@
+@import url(../index/iframes.less);
+
+/*配置类别*/
+#config{
+	.wrap-ctn{
+		position: relative;
+		min-height: 672px;
+	}
+	.form-inline{
+		margin-bottom: 20px;
+		&:after{
+			content: '';
+			clear: both;
+			display: block;
+			width: 100%;
+			height: 0;
+		}
+	}
+	table{
+		td{
+			line-height: 40px;
+		}
+	}
+	/*弹窗*/
+	.modal-del{
+		.modal-body{
+			height: 220px;
+			padding-top: 100px;
+			text-align: center;
+			background: url(../../img/iframe/icon-warn.png) center 30px no-repeat;
+		}
+		.text-primary{
+			color: #1296db;
+			font-size: 18px;
+		}
+		.text-muted{
+			font-size: 12px;
+		}
+	}
+	/*弹窗-新增or详情*/
+	.modal-edit{
+		.modal-dialog{
+			width: 600px;
+			margin-bottom: 60px;
+		}
+		.modal-body{
+			padding: 20px;
+			text-align: right;
+			color: #666;
+			.w186{
+				width: 186px;
+				background: #f8f8f8;
+			}
+		}
+	}
+}

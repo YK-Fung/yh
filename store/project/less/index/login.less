@@ -1,0 +1,122 @@
+@charset 'utf-8';
+
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: '微软雅黑'
+}
+html,
+body{
+	width: 100%;
+	height: 100%;
+}
+a,
+a:hover,
+a:focus{
+	text-decoration: none;
+}
+.wrap{
+	position: relative;
+	height: 100%;
+	min-width: 1440px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background: url(../../img/login/login-bg.png) center center no-repeat;
+	background-size: cover;
+	.login-title{
+		width: 100%;
+		height: 68px;
+		margin: 162px auto 40px;
+		background: url(../../img/login/login-title.png) center center no-repeat;
+	}
+	.login{
+		width: 490px;
+		height: 366px;
+		margin: 0 auto;
+		padding: 58px 56px;
+		background: #fff;
+		border-radius: 10px;
+		box-shadow: 0px 0px 8px 2px #356ac2;
+		.form-group{
+			position: relative;
+			width: 100%;
+			margin-bottom: 18px;
+		}
+		input{
+			height: 46px;
+			color: #333;
+		}
+		/*账号，密码*/
+		.login-input{
+			width: 100%;
+			padding-left: 60px;
+		}
+		.login-zh{
+			background: url(../../img/login/login-zh.png) 20px center no-repeat;
+			&:focus{
+				background: url(../../img/login/login-zh-active.png) 20px center no-repeat;
+				border-color: #1858bc;
+			}
+		}
+		.login-pwd{
+			background: url(../../img/login/login-pwd.png) 20px center no-repeat;
+			&:focus{
+				background: url(../../img/login/login-pwd-active.png) 20px center no-repeat;
+				border-color: #1858bc;
+			}
+		}
+		/*输入提示*/
+		.warn-tip{
+			position: absolute;
+			top: 50%;
+			right: -130px;
+			display: none;
+			width: 120px;
+			height: 20px;
+			margin-top: -10px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 20px;
+			color: #fff;
+			background: #000;
+			border-radius: 3px;
+			&>div{
+				position: absolute;
+				top: 5px;
+				left: -10px;
+				width: 0;
+				height: 0;
+				border-top: 5px solid transparent;
+				border-right: 5px solid #000;
+				border-bottom: 5px solid transparent;
+				border-left: 5px solid transparent;
+			}
+		}
+		/*验证码*/
+		.login-code{
+			margin-bottom: 34px;
+			input{
+				width: 162px;
+				margin-right: 6px;
+			}
+			span{
+				margin-left: 15px;
+				font-size: 12px;
+				cursor: pointer;
+			}
+		}
+	}
+	.copyright{
+		width: 100%;
+		height: 14px;
+		margin: 40px auto 0;
+		font-size: 12px;
+		text-align: center;
+		letter-spacing: 1px;
+		color: #fff;
+		// background: url(../../img/login/login-copyright.png) center center no-repeat;
+	}
+}

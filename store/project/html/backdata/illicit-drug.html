@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>违禁药品数据维护</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/backdata/illicit-drug.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['backdata/illicit-drug']);</script>
+</head>
+<body>
+	<div class="wrap" id="illicit">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">违禁药品数据维护</p>
+			<p class="title-explain">违禁药品数据维护</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">产品名称：</label>
+				    <input class="form-control" type="text">
+				</div>
+				<div class="form-group">
+					<label class="control-label">选择基础库：</label>
+					<!-- 下拉 -->
+				    <select class="form-control type">
+				    	<option>全部</option>
+				    	<option>是</option>
+				    	<option>否</option>
+				    </select>
+				</div>
+				<div class="form-group">
+					<div class="btn btn-primary add-form">新增</div>
+				</div>
+			</form>
+			<h2 class="table-title"><span class="name">违禁药品数据</span><span class="line"></span></h2>
+			<table class="table text-center table-view data">
+				<thead>
+					<tr>
+						<th>产品编码</th>
+						<th>产品名称</th>
+						<th>英文名称</th>
+						<th>剂型</th>
+						<th>产品分类</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>CM1000000001</td>
+						<td>(1,2-二甲基庚基）羟基四氢甲基二苯吡喃</td>
+						<td>3-(1,2-dimethylheptyl)-7,8,9,10-tetrahydro-6,6,9-trimethyl-6Hdibenzo[b,d]pyran-1-ol</td>
+						<td>原料药</td>
+						<td>化学药品</td>
+						<td>
+							<a href="javascript:void(0)" class="cancel-violate">取消违禁</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 弹窗-新增信息 -->
+		<div class="modal fade pop-backdata-add" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">批量上传</h4>
+					</div>
+					<div class="modal-body">
+						<h3>请选择您要上传的数据</h3>
+						<form action="">
+							<input type="file" accept=".xls,.xlsx" class="file-updata">
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" data-dismiss="modal" class="btn btn-primary btn-submit">上传</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-取消违禁 -->
+		<div class="modal fade pop-cancel" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">取消提示</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">您确定取消违禁？</p>
+						<p class="text-muted">一旦取消已有数据将无法保护限制</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">否</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">是</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

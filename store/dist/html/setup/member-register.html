@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员注册</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/setup/member-register.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['setup/member-register']);</script>
+</head>
+<body>
+	<div class="wrap" id="register">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">系统设置</p>
+			<p class="title-explain">会员注册</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group search-table">
+				    <input class="form-control" type="text" placeholder="请输入会员账号、公司名称、联系人或手机号码">
+				</div>
+				<div class="btn btn-primary pull-right add-member">新增</div>
+				<div class="blue pull-right all-delete">批量删除</div>
+			</form>
+			<div class="table-responsive tb-h">
+				<table class="table text-center table-view data">
+					<thead>
+						<tr>
+							<th><input type="checkbox" class="checkbox-all"></th>
+							<th>会员账号</th>
+							<th>公司名称</th>
+							<th>公司注册地</th>
+							<th>联系人姓名</th>
+							<th>手机号码</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>xx</td>
+							<td>xx</td>
+							<td>xx</td>
+							<td>xx</td>
+							<td>xx</td>
+							<td>
+								<a href="javascript:void(0)" class="add-member">修改</a>
+								<a href="javascript:void(0)" class="icon-del">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>xx</td>
+							<td>xx</td>
+							<td>xx</td>
+							<td>xx</td>
+							<td>xx</td>
+							<td>
+								<a href="javascript:void(0)" class="add-member">修改</a>
+								<a href="javascript:void(0)" class="icon-del">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>xx</td>
+							<td>xx</td>
+							<td>xx</td>
+							<td>xx</td>
+							<td>xx</td>
+							<td>
+								<a href="javascript:void(0)" class="add-member">修改</a>
+								<a href="javascript:void(0)" class="icon-del">删除</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade" id="member-delete" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除会员信息</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">删除会员信息</p>
+						<p class="text-muted">确定要删该改会员信息？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-新增 -->
+		<div class="modal fade" id="pop-add-member" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">新增/修改</h4>
+					</div>
+					<div class="modal-body">
+						<div class="form-group form-inline">
+						    <label>用户账号：</label>
+						    <input type="text" class="form-control user-name mustWrite" placeholder="请输入用户名（6-20位，由字母、数字或下划线组成）">
+						</div>
+						<div class="form-group form-inline">
+						    <label>登录密码：</label>
+						    <input type="text" class="form-control new-password mustWrite" placeholder="请输入登录密码(6-20位字母、数字、符号组成)">
+						</div>
+						<div class="form-group form-inline">
+						    <label>确认密码：</label>
+						    <input type="text" class="form-control confirm-password mustWrite" placeholder="请再次输入密码">
+						</div>
+						<div class="form-group form-inline">
+						    <label>公司名称：</label>
+						    <input type="text" class="form-control company-name mustWrite" placeholder="请填写工商局注册的全称（4-50位中英文、数字组成）">
+						</div>
+						<div class="form-group form-inline">
+						    <label>公司注册地：</label>
+						    <div class="address-select">
+								<!-- 下拉框 -->
+								<a href="javascript:void(0)" class="select-choice">
+									<!-- 选中 -->
+									<input class="form-control select-input mustWrite" name="" type="text" placeholder="请选择省市" value="" readonly>
+									<div class="address-arr">
+										<input name="" class="address" type="text" value="">
+										<input name="" class="address" type="text" value="">
+										<input name="" class="address" type="text" value="">
+									</div>
+									<!-- 下拉icon -->
+									<span class="select-arrow">
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<!-- 下拉列表 -->
+								<div class="select-drop">
+									<!-- 地区类型 -->
+									<ul class="select-type">
+										<li class="active">省份</li>
+										<li>城市</li>
+										<li>县区</li>
+										<!-- <li>街道</li> -->
+									</ul>
+									<div class="select-type-ctn">
+										<!-- 省份 -->
+										<ul class="type-main">
+											<li>
+												<!-- 字母 -->
+												<div class="zm">A-G</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li class="">安微</li>
+													<li>安微</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">H-K</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>安微</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">L-S</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>安微</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">T-Z</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>安微</li>
+												</ul>
+											</li>
+										</ul>
+										<!-- 城市 -->
+										<ul class="type-main">
+											<li>
+												<!-- 字母 -->
+												<div class="zm">A-G</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li class="">广州市</li>
+													<li>广州市</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">H-K</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>广州市</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">L-S</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>广州市</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">T-Z</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>广州市</li>
+												</ul>
+											</li>
+										</ul>
+										<!-- 县区 -->
+										<ul class="type-main">
+											<li>
+												<!-- 字母 -->
+												<div class="zm">A-G</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li class="">海珠区</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">H-K</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>海珠区</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">L-S</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>海珠区</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">T-Z</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>海珠区</li>
+												</ul>
+											</li>
+										</ul>
+										<!-- 街道 -->
+										<ul class="type-main">
+											<li>
+												<!-- 字母 -->
+												<div class="zm">A-G</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li class="">洛浦大道</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">H-K</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>洛浦大道</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">L-S</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>洛浦大道</li>
+												</ul>
+											</li>
+											<li>
+												<!-- 字母 -->
+												<div class="zm">T-Z</div>
+												<!-- 字母对应内容 -->
+												<ul class="zm-ctn">
+													<li>洛浦大道</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group form-inline">
+						    <label>联系人姓名：</label>
+						    <input type="text" class="form-control contact-name mustWrite" placeholder="请输入联系人姓名">
+						</div>
+						<div class="form-group form-inline">
+						    <label>手机号码：</label>
+						    <input type="text" class="form-control mobile mustWrite" placeholder="建议填写常用手机">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">返回</button>
+						<button type="button" class="btn btn-primary btn-yes">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="http://localhost:35729/livereload.js"></script><script src="http://localhost:35729/livereload.js"></script></body>
+</html>

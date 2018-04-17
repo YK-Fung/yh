@@ -1,0 +1,63 @@
+@import url(../index/iframes.less);
+
+/* 交易统计 */
+#trade{
+	/* 查询条件 */
+	.search-condition{
+		height: 35px;
+		margin-bottom: 20px;
+		/* 切换供应商 采购商 */
+		.tit-tab{
+			button{
+				width: 150px;
+				margin-right: 5px;
+				&.btn-default{
+					background-color: #eee;
+				}
+			}
+		}
+		.group{
+			margin-right: 10px;
+			height: 35px;
+			line-height: 35px;
+			.type{
+				width: 132px;
+			}
+			.state{
+				width: 90px;
+			}
+		}
+		.tit{
+			line-height: 35px;
+		}
+		.search-txt{
+			width: 260px;
+		}
+		.btn-function{
+			button{
+				background-color: #eee;
+			}
+		}
+	}
+	.nav-inner{
+		width: 100%;
+		margin-bottom: 20px;
+		button{
+			width: 14.28%;
+		}
+	}
+	/*分页*/
+	.pagination-div{
+		overflow: hidden;
+		&>span{
+			float: right;
+			margin-top: 20px;
+			margin-left: 20px;
+			line-height: 34px;
+			white-space: nowrap;
+		}
+		.page-amount{
+			padding: 0 5px;
+		}
+	}
+}

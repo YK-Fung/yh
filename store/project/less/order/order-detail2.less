@@ -1,0 +1,260 @@
+@charset 'utf-8';
+@import url(../index/iframes.less);
+li{
+	list-style: none;
+}
+/* 订单详情 */
+#order-detail2{
+	padding: 12px 30px 120px;
+	background: #fff;
+	/*订单状态*/
+	.order-status{
+		width: 92%;
+		padding: 10px 30px;
+		margin: 38px auto 18px;
+		font-size: 12px;
+		line-height: 30px;
+		color: #333;
+		background: #eaf8ff;
+		border: 1px solid #40bbea;
+		span{
+			color: #666;
+		}
+	}
+	/*类型名字*/
+	.type-name{
+		width: 100%;
+		height: 64px;
+		font-size: 14px;
+		line-height: 64px;
+		text-align: left;
+		color: #333;
+		border-bottom: 1px solid #f2f2f2;
+	}
+	/*订单详情*/
+	.order-infor{
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding: 30px;
+		li{
+			display: inline-block;
+			padding: 0 2%;
+			vertical-align: top;
+			font-size: 12px;
+			text-align: left;
+			line-height: 24px;
+			color: #999;
+			span{
+				color: #666;
+			}
+		}
+		.wid25{
+			width: 25%;
+		}
+		.wid40{
+			width: 40%;
+		}
+		.detail-title{
+			color: #333333;
+		}
+	}
+	/*订单内容*/
+	.order-ctn{
+		display: block;
+		width: 100%;
+		/*padding-left: 90px;*/
+		/*订单表格*/
+		.order-table{
+			position: relative;
+			width: 100%;
+			/*padding-left: 15px;*/
+			padding-bottom: 30px;
+			&:last-child{
+				padding-bottom: 0;
+			}
+			.wid40{
+				width: 40%;
+			}
+			.wid20{
+				width: 20%;
+			}
+		}
+		/*发货时间*/
+		.send-time{
+			position: absolute;
+			top: 0;
+			left: -90px;
+			display: block;
+			width: 90px;
+			font-size: 12px;
+			text-align: center;
+			color: #666;
+			.dot{
+				position: absolute;
+				top: 13px;
+				right: -4px;
+				width: 9px;
+				height: 9px;
+				background: #40bbea;
+				border-radius: 9px;
+				border: 2px solid #c5edfc;
+			}
+			.send-num{
+				margin-bottom: 2px;
+				color: #40bbea;
+			}
+		}
+		/*订单表格头部*/
+		.order-header{
+			display: block;
+			width: 100%;
+			overflow: hidden;
+			font-size: 12px;
+			background: #f6f6f6;
+			li{
+				float: left;
+				line-height: 36px;
+				text-align: center;
+				color: #666;
+			}
+		}
+		/*订单表格内容*/
+		.order-body{
+			&>ul{
+				display: block;
+				width: 100%;
+				overflow: hidden;
+				font-size: 12px;
+				border-bottom: 1px solid #dddddd;
+			}
+			li{
+				float: left;
+				height: 100px;
+				text-align: center;
+				color: #666;
+			}
+			/*订单产品*/
+			.order-product{
+				overflow: hidden;
+				text-align: left;
+				&:after{
+					content: '';
+					display: inline-block;
+					width: 0;
+					height: 100%;
+					vertical-align: middle;
+				}
+				.product-img{
+					float: left;
+					width: 60px;
+					height: 60px;
+					margin-top: 20px;
+					margin-right: 10px;
+					border: 1px solid #dddddd;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.product-name{
+					display: inline-block;
+					width: 38%;
+					padding: 0 10px;
+					vertical-align: middle;
+					p{
+						color: #40bbea;
+					}
+				}
+				.product-firm{
+					display: inline-block;
+					width: 38%;
+					vertical-align: middle;
+				}
+			}
+			.double{
+				display: inline-block;
+				margin-top: 30px;
+				text-align: left;
+				.double-t{
+					border-bottom: 1px dashed #cccccc;
+				}
+				b{
+					color: #cc0000;
+				}
+			}
+			p{
+				line-height: 20px;
+				color: #666;
+				span{
+					color: #999;
+				}
+			}
+		}
+	}
+	/*总计*/
+	.order-total{
+		clear: both;
+		margin-top: 15px;
+		text-align: right;
+		font-size: 12px;
+		.total-ctn{
+			display: inline-block;
+			.total-t{
+				border-bottom: 1px dashed #cccccc;
+			}
+			p{
+				line-height: 20px;
+				color: #666;
+				b{
+					color: #cc0000;
+				}
+			}
+		}
+	}
+	/*返回*/
+	.btn-back{
+		width: 100px;
+		height: 36px;
+		margin: 34px auto 0;
+		font-size: 12px;
+		text-align: center;
+		line-height: 36px;
+		color: #fff;
+		background: #40bbea;
+		display: block;
+	}
+	/*按钮组*/
+	.btn-group{
+		display: block;
+		width: 100%;
+		text-align: center;
+		li{
+			display: inline-block;
+			width: 100px;
+			margin: 0 14px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 34px;
+			color: #fff;
+			background: #40bbea;
+			border-color: #40bbea;
+			cursor: pointer;
+		}
+	}
+	/*分页*/
+	.pagination-div{
+		overflow: hidden;
+		&>span{
+			float: right;
+			margin-top: 20px;
+			margin-left: 20px;
+			line-height: 34px;
+			white-space: nowrap;
+		}
+		.page-amount{
+			padding: 0 5px;
+		}
+	}
+}
+

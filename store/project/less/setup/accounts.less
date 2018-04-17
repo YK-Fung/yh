@@ -1,0 +1,110 @@
+@import url(../index/iframes.less);
+@base:#0078cc;
+li{
+	list-style: none;
+}
+/* 账号管理 */
+#accounts{
+	/* 账号设置 */
+	.accounts-ctn{
+		background-color: #fff;
+		padding:35px 0;
+		overflow: hidden;
+		/* 筛选条件 */
+		.condition{
+			height: 34px;
+			padding-left: 10px;
+			select{
+				width: 100px;
+			}
+		}
+		.tit{
+			color:#666;
+			float: left;
+			line-height: 34px;
+		}
+		/* 筛选结果 */
+		.result{
+			width: 100%;
+			border:1px solid #ececec;
+			padding:0 7px 7px;
+			margin-top: 15px;
+			table{
+				width: 100%;
+				border-collapse: collapse;
+			}
+			thead{
+				color:#2c2e2f;
+				text-align: left;
+				tr{
+					height: 42px;
+				}
+				th:first-child{
+					padding-left: 3%;
+				}
+			}
+			tbody{
+				color:#979898;
+				text-align: left;
+				tr{
+					border: 1px solid #ececec;
+					border-left: 0;
+					border-right:0;
+					height: 42px;
+				}
+				tr:nth-of-type(odd){
+					background-color: #f9f9f9;
+				}
+				td:first-child{
+					padding-left: 3%;
+				}
+				a{
+					cursor: pointer;
+				}
+				a.relieve{
+					color:@base;
+				}
+				span.freeze{
+					color:@base;
+				}
+				td.hide-id{
+					display: none;
+				}
+			}
+		}
+	}
+	/* 添加帐号弹窗 */
+	.add-accounts{
+		.form-group{
+			width: 46%;
+			float: left;
+			margin: 0 2%;
+			label{
+				color: #000;
+				line-height: 32px;
+			}
+		}
+		.tip{
+			color:#cc0000;
+			line-height: 24px;
+			height: 24px;
+		}
+		.modal-body{
+			overflow: hidden;
+		}    
+	}
+	/*分页*/
+	.pagination-div{
+		overflow: hidden;
+		&>span{
+			float: right;
+			margin-top: 20px;
+			margin-left: 20px;
+			line-height: 34px;
+			white-space: nowrap;
+		}
+		.page-amount{
+			padding: 0 5px;
+		}
+	}
+}

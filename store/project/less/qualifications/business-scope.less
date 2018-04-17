@@ -1,0 +1,165 @@
+@import url(../index/iframes.less);
+
+/*产品管理*/
+#business{
+	.tb-h{
+		min-height: 550px;
+	}
+	.form-inline{
+		margin-bottom: 20px;
+		&:after{
+			content: '';
+			clear: both;
+			display: block;
+			width: 100%;
+			height: 0;
+		}
+		/* 搜素 */
+		.search input{
+			width: 200px;
+		}
+		/* 添加类别 */
+		.add-class{
+			font-size: 16px;
+			cursor: pointer;
+			color:#087cce;
+			margin: 9px 0 0 4px;
+		}
+		.dropdown-menu{
+			right: 0;
+		}
+	}
+	.btns{
+		overflow: hidden;
+		margin-bottom: 10px;
+		button{
+			margin-left: 5px;
+			cursor: pointer;
+		}
+	}
+	table{
+		.check-num{
+			float: left;
+			margin: 0;
+		}
+	}
+	/*弹窗 添加类别*/ 
+	.category-add{
+		.function{
+			width: 100%;
+			height: 38px;
+			line-height: 35px;
+			border:1px solid #ddd;
+			padding: 0 10px;
+			span{
+				margin-right: 10px;
+				cursor: pointer; 
+			}
+			.icon-add{
+				color:#76b828;
+			}
+			.icon-up{
+				color:#087cce;
+			}
+			.icon-down{
+				color:#a8e4ff;
+			}
+			.icon-close{
+				color:#f00;
+			}
+		}
+		.list{
+			max-height: 270px;
+			overflow-y:auto;
+			border:1px solid #ddd;
+			border-top:0;
+			min-height: 34px;
+			li{
+				line-height: 24px;
+				padding: 5px 10px;
+				cursor: pointer;
+				.txt{
+					width: 505px;
+					border:0;
+					padding: 0 5px;
+				}
+				&:hover{
+					background-color: #ccebf8;
+				}
+				&.active{
+					background-color: #ccebf8;
+				}
+				.check-num{
+					margin-top:0;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+	.category-more{
+		p{
+			line-height: 24px;
+		}
+		textarea{
+			width: 100%;
+			height: 100px;
+			resize:none;
+			padding: 5px;
+		}	
+		.tips{
+			color:#f00;
+			line-height: 24px;
+			font-size: 12px;
+			display: none;
+		}
+	}
+	/*弹窗 添加经营范围*/ 
+	.business-edit{
+		.modal-dialog{
+			width: 700px;
+			margin-bottom: 60px;
+		}
+		.modal-body{
+			padding: 20px;
+			text-align: right;
+			color: #666;
+			.w186{
+				width: 150px;
+				background: #f8f8f8;
+			}
+			.input{
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				color: #666;
+				background: #fff;
+				border: none;
+				outline: none;
+			}
+			.add{
+				color: #0078cc;
+				cursor: pointer;
+			}
+			.must{
+				color:#f00;
+				margin-right: 5px;
+			}
+		}
+	}
+	/*弹窗 删除经营范围*/ 
+	.business-delete{
+		.modal-body{
+			height: 220px;
+			padding-top: 100px;
+			text-align: center;
+			background: url(../../img/iframe/icon-warn.png) center 30px no-repeat;
+		}
+		.text-primary{
+			color: #1296db;
+			font-size: 18px;
+		}
+		.text-muted{
+			font-size: 12px;
+		}
+	}
+}

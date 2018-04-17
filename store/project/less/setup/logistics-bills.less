@@ -1,0 +1,95 @@
+@import url(../index/iframes.less);
+
+/* 物流公司设置 */
+#logistics-bills{
+	/* 查询条件 */
+	.search-condition{
+		height: 35px;
+		margin-bottom: 20px;
+		/* 切换供应商 采购商 */
+		.tit-tab{
+			button{
+				width: 150px;
+				margin-right: 5px;
+				&.btn-default{
+					background-color: #eee;
+				}
+			}
+		}
+		.group{
+			margin-right: 10px;
+			height: 35px;
+			line-height: 35px;
+			.type{
+				width: 132px;
+			}
+			.state{
+				width: 90px;
+			}
+		}
+		.tit{
+			line-height: 35px;
+		}
+		.search-txt{
+			width: 260px;
+		}
+		.btn-function{
+			button{
+				background-color: #eee;
+			}
+		}
+	}
+	table{
+		td{
+			line-height: 40px;
+		}
+	}
+	/*弹窗*/
+	.delete-link{
+		.modal-body{
+			height: 220px;
+			padding-top: 100px;
+			text-align: center;
+			background: url(../../img/iframe/icon-warn.png) center 30px no-repeat;
+		}
+		.text-primary{
+			color: #1296db;
+			font-size: 18px;
+		}
+		.text-muted{
+			font-size: 12px;
+		}
+	}
+	/*弹窗-详情*/
+	.bills-detail{
+		.modal-dialog{
+			width: 1030px;
+			margin-bottom: 60px;
+		}
+		.modal-body{
+			padding: 20px;
+			text-align: right;
+			color: #666;
+			.w186{
+				width: 186px;
+				background: #f8f8f8;
+			}
+			input{
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				color: #666;
+				background: #fff;
+				border: none;
+				outline: none;
+			}
+			.must{
+				color:#c00;
+			}
+			.add{
+				color: #0078cc;
+				cursor: pointer;
+			}
+		}
+	}
+}

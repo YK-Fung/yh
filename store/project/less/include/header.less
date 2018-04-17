@@ -1,0 +1,112 @@
+/*头部*/
+.header{
+	position: relative;
+	height: 70px;
+	background: #0066cc;
+	padding: 0 25px;
+	/*头部标题*/
+	.logo{
+		width: 370px;
+		height: 70px;
+		background: url(../../img/header-logo.png) left center no-repeat;
+		float: left;
+	}
+	.first-class{
+		line-height: 70px;
+		font-size: 22px;
+		color:#31f3ff;
+		float: left;
+
+	}
+	/* 二级菜单 */
+	.second-menu{
+		line-height: 70px;
+		margin-left: 40px;
+		li{
+			width: 125px;
+			float: left;
+			font-size: 16px;
+			color:#fff;
+			text-align: center;
+			cursor: pointer;
+			&.active{
+				color:#31f3ff;
+				background: #1c7ddd;
+				box-shadow: 0 -4px #31f3ff inset;
+			}
+		}
+	}
+	/* 菜单 */
+	.first-menu{
+		width: 160px;
+		position: relative;
+		&:hover{
+			.title{
+				color:#31f3ff;
+				background:#1c7ddd;
+			}
+			ul{
+				display: block;
+			}
+		}
+		.title{
+			line-height: 70px;
+			color:#fff;
+			display: block;
+			text-align: center;
+			cursor: pointer;
+			font-size: 16px;
+			i{
+				margin-right: 9px;
+   				font-size: 14px;
+			}
+		}
+		ul{
+			display: none;
+			background: #fff;
+			box-shadow: 0px 2px 10px 0px rgba(0, 113, 185, 0.21);
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 70px;
+		}
+		li{
+			line-height: 40px;
+			color:#666;
+			text-align: center;
+			font-size: 14px;
+			cursor: pointer;
+			&:hover{
+				background: #16a1ff;
+				color: #fff;
+
+			}
+		}
+	}
+	/*用户*/
+	.user-message{
+		line-height:68px;
+		/*头像*/
+		.portrait{
+			width: 36px;
+			height: 36px;
+			margin:18px 14px 0 8px;
+			border-radius: 36px;
+			float: left;
+		}
+		.portrait-text{
+			width: 100px;
+			display: block;
+			margin-right: 10px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+    		letter-spacing: normal;
+		}
+		/*头像文字*/
+		.portrait-text,.fa-sign-out{
+			color: #fff;
+			font-size: 18px;
+		}
+	}
+}

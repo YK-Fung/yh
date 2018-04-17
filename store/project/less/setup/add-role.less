@@ -1,0 +1,270 @@
+@import url(../index/iframes.less);
+@base:#40bbea;
+li{
+	list-style: none;
+}
+/* 账号管理 */
+#add-role{
+	ul{
+		margin:0;
+	}
+	/* 列表导航 */
+	.toggle-top{
+		overflow: hidden;
+		.lis-nav{
+			overflow: hidden;
+			float: left;
+			li{
+				height: 38px;
+				line-height: 38px;
+				text-align: center;
+				float: left;
+				color:#333;
+				margin-right: 10px;
+				background-color: #f4f4f4;
+				cursor: pointer;
+				font-size: 14px;
+			}
+			li.active{
+				background-color: #fff;
+			}   
+			a{
+				display: block;
+				padding:0 15px;
+			}
+		}
+		.add{
+			width: 90px;
+			height: 27px;
+			background-color: @base;
+			float: right;
+			border:0;
+			color:#fff;
+			line-height: 27px;
+			text-align: center;
+		}
+	}
+	/* 权限设置 */
+	.jurisdiction-ctn{
+		background-color: #fff;
+		padding:0 5% 100px;
+		overflow: hidden;
+	}
+	/* 角色名称 */
+	.role-name{
+		margin-top: 50px;
+		overflow: hidden;
+		label{
+			width: 6%;
+			text-align: right;
+			color:#2c2e2f;
+			line-height: 32px;
+			margin-right: 2%;
+			float: left;
+		}
+		input{
+			width: 185px;
+			height: 32px;
+			border:1px solid #ddd;
+			padding: 0 5px;
+			float: left;
+		}
+	}
+	.bu-name{
+		height: 32px;
+		margin-top: 20px;
+		label{
+			width: 6%;
+			text-align: right;
+			color:#2c2e2f;
+			line-height: 32px;
+			margin-right: 2%;
+			float: left;
+		}
+		.select-box{
+			width: 185px;
+		}
+	}
+	/* 权限 */
+	.setting{
+		margin-top: 30px;
+		overflow: hidden;
+		label{
+			width: 6%;
+			text-align: right;
+			color:#2c2e2f;
+			line-height: 32px;
+			margin-right:2%;
+			float: left;
+		}
+		.list{
+			width: 92%;
+			border: 1px solid #ddd;
+			float: right;
+			padding:0 17px 17px;
+			margin-bottom: 40px;
+			.hy{
+				overflow: hidden;
+				margin-top: 17px;
+				position: relative;
+				.arrow{
+					width: 23px;
+					height: 11px;
+					position: absolute;
+					left: 50%;
+					top:50%;
+					margin-left: -12px;
+					background: url(../../img/hy-center/arrow.png) no-repeat 0 0;
+				}
+			}
+			h2{
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				font-size: 14px;
+				background-color: #efefef;
+				padding: 0 18px;
+				color:#5c5c5c;
+			}
+		}
+	}
+	/* 提交 */
+	.submit{
+		width: 133px;
+		height: 47px;
+		overflow: hidden;
+		margin:0 auto;
+		cursor: pointer;
+		border:0;
+		display: block;
+		.icon{
+			width: 50px;
+			height:100%;
+			background-color: #2eb4e8;
+			border-right: 1px solid #1baee6;
+			float: left;
+			text-align: center;
+			line-height: 47px;
+			color:#fff;
+			font-size: 16px;
+		}
+		.txt{
+			width: 83px;
+			height: 100%;
+			float: left;
+			background-color: @base;
+			color:#fff;
+			text-align: center;
+			line-height: 47px;
+			font-size: 14px;
+		}
+	}
+	.submit-tips{
+		color:#c00;
+		text-align: center;
+		margin-top:20px;
+		display: none;
+	}
+	/* 功能列表 */
+	.function{
+		width: 46%;
+		margin-right: 8%;
+		float: left;
+		overflow: hidden;
+		.top{
+			width: 100%;
+			line-height: 34px;
+			margin-top: 5px;
+			overflow: hidden;
+			padding: 0 12px;
+			.lf{
+				float: left;
+				color:#6a6a6a;
+				font-weight: bold;
+			}
+			.rt{
+				float: right;
+				color:#ce1a50;
+			}
+		}
+	}	
+	/* 列表 */
+	.function-list{
+		width: 100%;
+		border-left:1px solid #ddd;
+		border-right:1px solid #ddd;
+		border-top: 1px solid #ddd;
+	}
+	.catalog{
+		color:#6a6a6a;
+		overflow: hidden;
+		border-bottom: 1px solid #ddd;
+		&:hover{
+			background-color: #f8f8f8;
+		}
+		/* icon */
+		.fa{
+			color:#7fd3f0;
+			float: right;
+			font-size: 20px;
+			cursor: pointer;
+			display: none;
+		}
+		/* 左侧 */
+		.lf{
+			width: 40%;
+			float: left;
+			text-align: center;
+			position: relative;
+			border-right: 1px solid #ddd;
+			&:hover{
+				background-color: #e3f4fa;
+				.fa{
+					display: block;
+				}
+			}
+			.fa{
+				position: absolute;
+				right: 15px;
+				top:50%;
+				margin-top:-10px;
+			}
+		}
+		/* 右侧 */
+		.rt{
+			width: 60%;
+			float: left;
+			.fa{
+				margin-top: 7px;
+			}
+			li{
+				height: 34px;
+				line-height: 34px;
+				padding:0 20px 0 30px;
+				border-bottom: 1px solid #ddd;
+				&:hover{
+					background-color: #e3f4fa;
+					.fa{
+						display: block;
+					}
+				}
+			}
+			li:last-of-type{
+				border-bottom:0;
+			}
+		}
+	}
+	/* 已选择 */
+	.choose{
+		.function;
+		width: 46%;
+		margin-right: 0;
+		.function-list{
+			border-bottom: 1px solid #ddd;
+		}
+	}
+	/* 表单 */
+	.form-groud{
+		display: none;
+	}
+}

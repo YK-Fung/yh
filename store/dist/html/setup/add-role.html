@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>角色添加</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/setup/add-role.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['setup/add-role']);</script>
+</head>
+<body>
+	<div class="wrap" id="add-role">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">系统设置</p>
+			<p class="title-explain">角色添加</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 权限设置 -->
+			<div class="jurisdiction-ctn">
+				<!-- 角色名称 -->
+				<form action="">
+					<div class="role-name">
+						<label>角色名称</label>
+						<input type="text" id="roleName">
+					</div>
+					<!-- 插入影藏表单 -->
+					<div class="form-groud" id="input-list">
+					
+					</div>
+				</form>
+				<!-- 权限 -->
+				<div class="setting">
+					<label>权限</label>
+					<div class="list">
+						<!-- 会员中心 -->
+						<div class="hy">
+							<h2>会员中心</h2>
+							<!-- 功能列表 -->
+							<div class="function">
+								<div class="top">
+									<span class="lf">功能列表</span>
+									<span class="rt">点击需要添加权限的功能</span>
+								</div>
+								<div class="function-list">
+									<!-- 循环 catalog-->
+									<div class="catalog" id="h-massage">
+										<div class="lf">
+											<span class="name">企业信息</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="a1">
+												<span>修改</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="a2">
+												<span>查看</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+									<div class="catalog" id="h-print">
+										<div class="lf">
+											<span class="name">企业资质打印</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt"></ul>
+									</div>
+									<div class="catalog" id="h-set">
+										<div class="lf">
+											<span class="name">部门设置</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="a5">
+												<span>添加</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="a6">
+												<span>修改</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="a7">
+												<span>删除</span><i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+									<div class="catalog" id="h-role">
+										<div class="lf">
+											<span class="name">角色管理</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="a8">
+												<span>添加</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="a9">
+												<span>修改</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="a10">
+												<span>密码重置</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="a11">
+												<span>删除</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+									<div class="catalog" id="h-account">
+										<div class="lf">
+											<span class="name">帐号设置</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="a12">
+												<span>添加</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="a13">
+												<span>修改</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="a14">
+												<span>密码重置</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="a15">
+												<span>删除</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>	
+							<!-- 已选择 -->
+							<div class="choose">
+								<div class="top">
+									<span class="lf">已选择</span>
+									<span class="rt">点击需要添加权限的功能</span>
+								</div>
+								<div class="function-list">
+									
+								</div>
+							</div>
+							<!-- 箭头 -->
+							<div class="arrow"></div>
+						</div>
+						<!-- 采购商 -->
+						<div class="hy cg">
+							<h2>采购商</h2>
+							<!-- 功能列表 -->
+							<div class="function">
+								<div class="top">
+									<span class="lf">功能列表</span>
+									<span class="rt">点击需要添加权限的功能</span>
+								</div>
+								<div class="function-list">
+									<!-- 循环 catalog-->
+									<div class="catalog" id="c-order">
+										<div class="lf">
+											<span class="name">订单管理</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="b1">
+												<span>浏览订单</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b2">
+												<span>取消订单</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b25">
+												<span>删除订单</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b3">
+												<span>确认订单</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b4">
+												<span>查看物流</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b6">
+												<span>订单异议</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b7">
+												<span>发布/追加评价</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b8">
+												<span>订单回收还原</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b9">
+												<span>订单回收删除</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+
+										</ul>
+									</div>
+									<div class="catalog" id="c-contract">
+										<div class="lf">
+											<span class="name">合同管理</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="b10">
+												<span>合同浏览</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b11">
+												<span>合同签署</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b12">
+												<span>合同打印</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>	
+										</ul>
+									</div>
+									<div class="catalog" id="c-note">
+										<div class="lf">
+											<span class="name">短信推送</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="13">
+												<span>订单状态改变</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b14">
+												<span>合同状态改变</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+									<div class="catalog" id="c-settle-accounts">
+										<div class="lf">
+											<span class="name">结算管理</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="b15">
+												<span>结算详情浏览</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b16">
+												<span>结算详情打印</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b17">
+												<span>结算详情查询</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b18">
+												<span>应付账款浏览</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b19">
+												<span>应付账款查询</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+									<div class="catalog" id="c-client">
+										<div class="lf">
+											<span class="name">客户管理</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="b20">
+												<span>浏览</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b21">
+												<span>查询</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+									<div class="catalog" id="c-evaluate">
+										<div class="lf">
+											<span class="name">评价管理</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="b22">
+												<span>浏览</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b23">
+												<span>回复</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b24">
+												<span>追加评价</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="b25">
+												<span>查询</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>	
+							<!-- 已选择 -->
+							<div class="choose">
+								<div class="top">
+									<span class="lf">已选择</span>
+									<span class="rt">点击需要添加权限的功能</span>
+								</div>
+								<div class="function-list">
+									
+								</div>
+							</div>
+							<!-- 箭头 -->
+							<div class="arrow"></div>
+						</div>
+						<!-- 供应商 -->
+						<div class="hy gy">
+							<h2>供应商</h2>
+							<!-- 功能列表 -->
+							<div class="function">
+								<div class="top">
+									<span class="lf">功能列表</span>
+									<span class="rt">点击需要添加权限的功能</span>
+								</div>
+								<div class="function-list">
+									<!-- 循环 catalog-->
+									<div class="catalog" id="g-order">
+										<div class="lf">
+											<span class="name">订单管理</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="c1">
+												<span>浏览订单</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c2">
+												<span>取消订单</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c25">
+												<span>删除订单</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c3">
+												<span>确认订单</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c36">
+												<span>立即发货</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c4">
+												<span>查看物流</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c6">
+												<span>订单异议</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c7">
+												<span>发布/追加评价</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c8">
+												<span>订单回收还原</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c9">
+												<span>订单回收删除</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>						
+										</ul>
+									</div>
+									<div class="catalog" id="g-contract">
+										<div class="lf">
+											<span class="name">合同管理</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="c10">
+												<span>合同浏览</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c11">
+												<span>合同签署</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c12">
+												<span>合同打印</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>	
+										</ul>
+									</div>
+									<div class="catalog" id="g-store">
+										<div class="lf">
+											<span class="name">店铺设置</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="c27">
+												<span>店铺设置修改</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c28">
+												<span>交易设置</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c29">
+												<span>运费模板设置</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>												</ul>
+									</div>
+									<div class="catalog" id="g-product">
+										<div class="lf">
+											<span class="name">产品管理</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="c37">
+												<span>产品发布（含产品资质上传）</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c38">
+												<span>编辑产品（含产品资质上传）</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c39">
+												<span>新增批号</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c40">
+												<span>上下架产品</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c41">
+												<span>批号管理</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c42">
+												<span>停止促销</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>												
+										</ul>
+									</div>
+									<div class="catalog" id="g-warehouse">
+										<div class="lf">
+											<span class="name">我的仓库</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="c30">
+												<span>编辑</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c31">
+												<span>删除</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+									<div class="catalog" id="g-medicine">
+										<div class="lf">
+											<span class="name">医药产品批量导入</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="c32">
+												<span>导入失败产品重新提交</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c33">
+												<span>申请新规格</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c34">
+												<span>删除导入失败产品</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+									<div class="catalog" id="g-sell">
+										<div class="lf">
+											<span class="name">在销产品批次批量导入</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="c35">
+												<span>删除导入失败批次</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+									<div class="catalog" id="g-note">
+										<div class="lf">
+											<span class="name">短信推送</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="c13">
+												<span>新订单通知</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c14">
+												<span>订单状态改变</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c33">
+												<span>合同状态改变</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+									<div class="catalog" id="g-client">
+										<div class="lf">
+											<span class="name">客户管理</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="c20">
+												<span>浏览</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c21">
+												<span>查询</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+									<div class="catalog" id="g-settle-accounts">
+										<div class="lf">
+											<span class="name">结算管理</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="c15">
+												<span>结算详情浏览</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c16">
+												<span>结算详情打印</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c17">
+												<span>结算详情查询</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c18">
+												<span>应付账款浏览</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c19">
+												<span>应付账款查询</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+									
+									<div class="catalog" id="g-evaluate">
+										<div class="lf">
+											<span class="name">评价管理</span>
+											<i class="fa fa-plus-square add-all"></i>
+										</div>
+										<ul class="rt">
+											<li id="c22">
+												<span>浏览</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c23">
+												<span>回复</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c24">
+												<span>追加评价</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+											<li id="c25">
+												<span>查询</span>
+												<i class="fa fa-plus-square add-single"></i>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>	
+							<!-- 已选择 -->
+							<div class="choose">
+								<div class="top">
+									<span class="lf">已选择</span>
+									<span class="rt">点击需要添加权限的功能</span>
+								</div>
+								<div class="function-list">
+									
+								</div>
+							</div>
+							<!-- 箭头 -->
+							<div class="arrow"></div>
+						</div>
+					</div>
+				</div>
+				<!-- 提交 -->
+				<button class="submit">
+					<span class="icon"><i class="fa fa-check"></i></span>
+					<span class="txt">提交</span>
+				</button>
+				<p class="submit-tips">请输入正确的角色名称和部门名称！</p>
+			</div>
+		</div>
+	</div>	
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

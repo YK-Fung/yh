@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>优惠券管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/setup/discounts.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['setup/discounts']);</script>
+</head>
+<body>
+	<div class="wrap" id="discounts">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">系统设置</p>
+			<p class="title-explain">优惠券管理</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<a class="btn btn-primary btn-add" href="discounts-set.html">创建优惠券+</a>
+				</div>
+				<div class="form-group">
+					<label class="control-label">类型：</label>
+					<select class="form-control">
+						<option>选择类型</option>
+						<option>发放中</option>
+						<option>审核中</option>
+						<option>审核不通过</option>
+						<option>已领完</option>
+						<option>已结束</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="control-label">有效期：</label>
+					<input name="" class="form-control date-time" placeholder="开始时间">
+					-
+					<input name="" class="form-control date-time" placeholder="结束时间">
+				</div>
+
+				<div class="columns columns-right btn-group pull-right">
+					<button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="刷新">
+						<i class="glyphicon glyphicon-refresh icon-refresh"></i>
+					</button>
+					<div class="export btn-group">
+						<button class="btn btn-default dropdown-toggle" aria-label="export type" title="导出数据" data-toggle="dropdown" type="button" aria-expanded="false">
+							<i class="glyphicon glyphicon-export icon-share"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="menuitem" data-type="json"><a href="javascript:void(0)">JSON</a></li>
+							<li role="menuitem" data-type="xml"><a href="javascript:void(0)">XML</a></li>
+							<li role="menuitem" data-type="csv"><a href="javascript:void(0)">CSV</a></li>
+							<li role="menuitem" data-type="txt"><a href="javascript:void(0)">TXT</a></li>
+							<li role="menuitem" data-type="sql"><a href="javascript:void(0)">SQL</a></li>
+							<li role="menuitem" data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="pull-right search"><input class="form-control" type="text" placeholder="请输入优惠券名称搜索"></div>
+			</form>
+			<!-- 查询结果 -->
+			<div class="table-responsive tb-h">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>优惠券名称</th>
+							<th>面值(元)</th>
+							<th>有效时间</th>
+							<th>使用条件</th>
+							<th>总发行量(张)</th>
+							<th>已领取</th>
+							<th>已使用</th>
+							<th>类型</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<!-- 编辑status-edit -->
+						<tr class="">
+							<td>国庆大酬宾[定向发放]</td>
+							<td>100</td>
+							<td>2017.09.21-2017.09.22</td>
+							<td>满200元</td>
+							<td class="amount">
+								<!-- 减少 -->
+								<div class="amount-reduce">-</div>
+								<!-- 数字 -->
+								<input name="" class="amount-input" type="text" value="10" readonly>
+								<!-- 增加 -->
+								<div class="amount-add">+</div>
+							</td>
+							<td>500</td>
+							<td>500</td>
+							<td class="status">发放中</td>
+							<td class="opt">
+								<a class="btn-edit">编辑</a>
+								<a class="btn-end">结束</a>
+								<a class="btn-give">发放</a>
+							</td>
+						</tr>
+						<tr>
+							<td>国庆大酬宾[不展示到店铺]</td>
+							<td>100</td>
+							<td>2017.09.21-2017.09.22</td>
+							<td>满200元</td>
+							<td class="amount">
+								<!-- 减少 -->
+								<div class="amount-reduce">-</div>
+								<!-- 数字 -->
+								<input name="" class="amount-input" type="text" value="10" readonly>
+								<!-- 增加 -->
+								<div class="amount-add">+</div>
+							</td>
+							<td>500</td>
+							<td>500</td>
+							<td class="status">发放中</td>
+							<td class="opt">
+								<a class="btn-edit">编辑</a>
+								<a class="btn-end">结束</a>
+								<a class="btn-alink">获取领券链接</a>
+							</td>
+						</tr>
+						<tr>
+							<td>国庆大酬宾</td>
+							<td>100</td>
+							<td>2017.09.21-2017.09.22</td>
+							<td>满200元</td>
+							<td class="amount">
+								<!-- 减少 -->
+								<div class="amount-reduce">-</div>
+								<!-- 数字 -->
+								<input name="" class="amount-input" type="text" value="10" readonly>
+								<!-- 增加 -->
+								<div class="amount-add">+</div>
+							</td>
+							<td>500</td>
+							<td>500</td>
+							<td class="status">已领完</td>
+							<td class="opt">
+								<a class="btn-edit">编辑</a>
+								<a class="btn-end">结束</a>
+							</td>
+						</tr>
+						<tr>
+							<td>国庆大酬宾[定向发放]</td>
+							<td>100</td>
+							<td>2017.09.21-2017.09.22</td>
+							<td>满200元</td>
+							<td class="amount">
+								<!-- 减少 -->
+								<div class="amount-reduce">-</div>
+								<!-- 数字 -->
+								<input name="" class="amount-input" type="text" value="10" readonly>
+								<!-- 增加 -->
+								<div class="amount-add">+</div>
+							</td>
+							<td>500</td>
+							<td>500</td>
+							<td class="status">已结束</td>
+							<td class="opt">
+								<a class="btn-view" href="discounts-view.html">查看</a>
+								<a class="btn-del">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td>国庆大酬宾</td>
+							<td>100</td>
+							<td>2017.09.21-2017.09.22</td>
+							<td>满200元</td>
+							<td class="amount">
+								<!-- 减少 -->
+								<div class="amount-reduce">-</div>
+								<!-- 数字 -->
+								<input name="" class="amount-input" type="text" value="10" readonly>
+								<!-- 增加 -->
+								<div class="amount-add">+</div>
+							</td>
+							<td>--</td>
+							<td>--</td>
+							<td class="status">审核中</td>
+							<td class="opt">
+								<a class="btn-edit">编辑</a>
+								<a class="btn-end">结束</a>
+							</td>
+						</tr>
+						<tr>
+							<td>国庆大酬宾</td>
+							<td>100</td>
+							<td>2017.09.21-2017.09.22</td>
+							<td>满200元</td>
+							<td class="amount">
+								<!-- 减少 -->
+								<div class="amount-reduce">-</div>
+								<!-- 数字 -->
+								<input name="" class="amount-input" type="text" value="10" readonly>
+								<!-- 增加 -->
+								<div class="amount-add">+</div>
+							</td>
+							<td>--</td>
+							<td>--</td>
+							<td class="status">审核不通过</td>
+							<td class="opt">
+								<a class="btn-check">查看原因</a>
+								<a class="btn-end">结束</a>
+							</td>
+						</tr>
+
+					</tbody>
+			  	</table>
+			</div>
+		</div>
+
+		<!-- 弹窗-结束 -->
+		<div class="modal fade modal-end" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">结束优惠券</h4>
+					</div>
+					<div class="modal-body text-center">
+						<p class="text-primary">确定要结束该优惠券？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 弹窗-发放 -->
+		<div class="modal fade modal-give" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">定向发放</h4>
+					</div>
+					<div class="modal-body">
+						<!-- 发放提示 -->
+						<div class="give-tip">您已经选择了<span>10张优惠券</span>，您可以将该优惠券定向发放给您的客户，系统会自动为您通知发放的客户。</div>
+						<!-- 文字说明 -->
+						<div class="give-explain">请选择发放的人群<span> (每个客户每7天只能发送一次)</span></div>
+						<!-- 客户 -->
+						<div class="client">
+							<div class="client-t">
+								<input type="text" class="search-input" placeholder="请输入关键字搜索">
+								<div class="search-btn">搜索</div>
+								<div class="my-client"><input type="checkbox" value="0">我的客户</div>
+							</div>
+							<div class="client-ctn">
+								<table border="0" cellspacing="0">
+									<thead>
+										<tr>
+											<th class="text-center"><span class="checkbox-all"><input type="checkbox" value="0">全选</span></th>
+											<th class="text-center">企业名称</th>
+											<th class="text-center">企业联系人</th>
+										</tr>
+									</thead>
+									<!-- 50/页 -->
+									<tbody>
+										<tr>
+											<td><span class="checkbox"><input type="checkbox" value="0"></span></td>
+											<td>企业名称</td>
+											<td>企业联系人</td>
+										</tr>
+										<tr>
+											<td><span class="checkbox"><input type="checkbox" value="0"></span></td>
+											<td>企业名称</td>
+											<td>企业联系人</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- 分页 -->
+						<div class="pagination-div">
+							<span>共<span class="page-amount text-primary">20</span>页</span>
+							<ul class="pagination pull-right">
+								<li class="page-pre"><a href="#">‹</a></li>
+								<li class="page-number active"><a href="#">1</a></li>
+								<li class="page-number"><a href="#">2</a></li>
+								<li class="page-number"><a href="#">3</a></li>
+								<li class="page-number"><a href="#">4</a></li>
+								<li class="page-number"><a href="#">5</a></li>
+								<li class="page-next"><a href="#">›</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 弹窗-链接 -->
+		<div class="modal fade modal-alink" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">链接拷贝</h4>
+					</div>
+					<div class="modal-body">
+						<textarea readonly>https://marketing.XXXXX.com/coupon/apply_product_coupon.htm?sellerId=1720197518&couponType=0&couponId=837522184&couponSpreadId=1291290072</textarea>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary btn-copy">复制</button>
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 弹窗-删除 -->
+		<div class="modal fade modal-del" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除优惠券</h4>
+					</div>
+					<div class="modal-body text-center">
+						<p class="text-primary">确定要删除该优惠券？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 弹窗-查看原因 -->
+		<div class="modal fade modal-check" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">查看原因</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-primary">您的信息含有敏感词汇！</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">返回</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="http://localhost:35729/livereload.js"></script></body>
+</html>

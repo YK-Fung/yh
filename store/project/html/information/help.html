@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>帮助中心</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/information/help.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['information/help']);</script>
+	
+</head>
+<body>
+	<div class="wrap" id="help">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">资讯中心</p>
+			<p class="title-explain">帮助中心</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 左侧栏目 -->
+			<div class="nav-l pull-left">
+				<!-- 移动提示语 -->
+				<div class="move"></div>
+				<div class="catalogue">
+					<h3>帮助中心目录</h3>
+					<i class="glyphicon glyphicon-minus-sign"></i>
+					<i class="glyphicon glyphicon-plus-sign"></i>
+				</div>
+				<div class="list">
+					<div class="box cur">
+						<i class="toggle-ctn"></i>
+						<input type="text" class="name one" value="会员中心1" placeholder="菜单名" readonly data="ajaxUrl">
+						<div class="box">
+							<input type="text" class="name two" value="采购商入门2" placeholder="菜单名" readonly data="ajaxUrl">
+						</div>
+					</div>
+					<div class="box">
+						<i class="toggle-ctn"></i>
+						<input type="text" class="name one" value="会员中心7" placeholder="菜单名" readonly data="ajaxUrl">
+						<div class="box" data="1">
+							<input type="text" class="name two" value="采购商入门8" placeholder="菜单名" readonly data="ajaxUrl">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 列表内容 -->
+			<div class="list-detail pull-left">
+				<!-- 标题 -->
+				<h3 class="tit-r" id="menu-title">帮助中心目录</h3>
+				<div id="ueditor_form" class="edit-ctn">
+					<div class="form-group form-inline">
+						<label class="control-label">上级节点：</label>
+						<!-- 下拉 -->
+					    <select class="form-control">
+					    	<option>会员中心</option>
+					    	<option>供应商</option>
+					    </select>
+					</div>
+					<div class="form-group tit">
+						<label class="pull-left">标题：</label>
+						<input type="text" class="form-control pull-left" id="help_title">
+					</div>
+					<script id="editor" type="text/plain"></script>
+					<!-- 发布按钮 -->
+					<div class="groups">
+						<div class="btn btn-primary" onclick="getContent()" id="form_btn">发布</div>
+						<div class="btn btn-default">新增</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 弹窗-删除 -->
+		<div class="modal fade delete-node" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">删除目录</h4>
+					</div>
+					<div class="modal-body">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary btn-yes" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 引入富文本框 -->
+	<script type="text/javascript" src="../../js/ueditor.config.js"></script>
+	<script type="text/javascript" src="../../js/ueditor.all.js"></script>
+	<script>
+		var ue = UE.getEditor('editor',{
+			initialFrameWidth :100+'%',//设置编辑器宽度
+			initialFrameHeight:365,//设置编辑器高度
+			scaleEnabled:true
+		});
+		//获得内容
+		function getContent() {
+	       var html = ue.getContent();
+	       console.log(html)
+	    }
+	    //获取纯文本等 详细内容查看 api
+	</script>
+</body>
+</html>

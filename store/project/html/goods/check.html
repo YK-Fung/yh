@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>产品审核</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/goods/check.css">
+	<script type="text/javascript" src="../../js/require.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script>require(['goods/check']);</script>
+</head>
+<body>
+	<div class="wrap" id="check">
+		<!-- 标题 -->
+		<div class="iframe-title">
+			<p class="title-text">产品中心</p>
+			<p class="title-explain">产品审核</p>
+		</div>
+		<div class="wrap-ctn">
+			<!-- 后端使用的时候加上 form-filtrate 这个样式 -->
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">产品名称：</label>
+				    <input class="form-control" type="text">
+				</div>
+				<div class="form-group">
+					<label class="control-label">批准文号：</label>
+				    <input class="form-control" type="text">
+				</div>
+				<div class="form-group">
+					<label class="control-label">发布企业</label>
+				    <input class="form-control" type="text">
+				</div>
+				<div class="form-group">
+					<label class="control-label">发布时间：</label>
+					<input name="" class="form-control date-time" placeholder="开始时间">
+					-
+					<input name="" class="form-control date-time" placeholder="结束时间">
+				</div>
+				<div class="form-group">
+					<label class="control-label">上架时间：</label>
+					<input name="" class="form-control date-time" placeholder="开始时间">
+					-
+					<input name="" class="form-control date-time" placeholder="结束时间">
+				</div>
+				<div class="form-group">
+					<label class="control-label">审核时间：</label>
+					<input name="" class="form-control date-time" placeholder="开始时间">
+					-
+					<input name="" class="form-control date-time" placeholder="结束时间">
+				</div>
+				<div class="form-group">
+					<label class="control-label">产品分类：</label>
+					<!-- 下拉 -->
+				    <select class="form-control type">
+				    	<option>全部</option>
+				    </select>
+				</div>
+				<div class="form-group">
+					<label class="control-label">状态分类：</label>
+					<!-- 下拉 -->
+				    <select class="form-control type">
+				    	<option>全部</option>
+				    	<option>待审核</option>
+				    	<option>已上架</option>
+				    	<option>已下架</option>
+				    	<option>审核未通过</option>
+				    </select>
+				</div>
+				<!-- f -->
+			</form>
+			<!-- 查询结果 -->
+			<div class="table-responsive tb-h">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>产品名称</th>
+							<th>批准文号</th>
+							<th>产品分类</th>
+							<th>规格</th>
+							<th>发布企业</th>
+							<th>发布时间</th>
+							<th>上架时间</th>
+							<th>状态</th>
+							<th>审核人</th>
+							<th>审核时间</th>
+							<th>审核备注</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<!-- 没有弹窗，没有弹窗，没有弹窗。不要问为什么,产品说的 -->
+					<tbody>	
+						<tr>
+							<td><a href="goods-edit.html">灯盏花素分散片</a></td>
+							<td>161101</td>
+							<td>消化系统药</td>
+							<td>600mg*30s</td>
+							<td>北京四季通药业有限公司</td>
+							<td>2017-10-20 08:58:22</td>
+							<td>2017-10-20 08:58:22</td>
+							<td>待审核</td>
+							<td>叶问</td>
+							<td>2017-10-20 08:58:22</td>
+							<td>这事我审核的</td>
+							<td>
+								<a href="goods-edit.html">编辑</a>
+								<a href="check-detail.html">审核</a>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="goods-edit.html">灯盏花素分散片</a></td>
+							<td>161101</td>
+							<td>消化系统药</td>
+							<td>600mg*30s</td>
+							<td>北京四季通药业有限公司</td>
+							<td>2017-10-20 08:58:22</td>
+							<td>2017-10-20 08:58:22</td>
+							<td>待审核</td>
+							<td>叶问</td>
+							<td>2017-10-20 08:58:22</td>
+							<td>这事我审核的</td>
+							<td>
+								<a href="goods-edit.html">编辑</a>
+								<a>上架</a>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="goods-edit.html">灯盏花素分散片</a></td>
+							<td>161101</td>
+							<td>消化系统药</td>
+							<td>600mg*30s</td>
+							<td>北京四季通药业有限公司</td>
+							<td>2017-10-20 08:58:22</td>
+							<td>2017-10-20 08:58:22</td>
+							<td>待审核</td>
+							<td>叶问</td>
+							<td>2017-10-20 08:58:22</td>
+							<td>这事我审核的</td>
+							<td>
+								<a href="goods-edit.html">编辑</a>
+								<a>下架</a>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="goods-edit.html">灯盏花素分散片</a></td>
+							<td>161101</td>
+							<td>消化系统药</td>
+							<td>600mg*30s</td>
+							<td>北京四季通药业有限公司</td>
+							<td>2017-10-20 08:58:22</td>
+							<td>2017-10-20 08:58:22</td>
+							<td>待审核</td>
+							<td>叶问</td>
+							<td>2017-10-20 08:58:22</td>
+							<td>这事我审核的</td>
+							<td>
+								<a href="goods-edit.html">编辑</a>
+							</td>
+						</tr>
+					</tbody>
+			  	</table>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
